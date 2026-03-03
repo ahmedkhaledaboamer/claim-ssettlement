@@ -3,26 +3,30 @@
     "title": "Page d'accueil"
   },
   "navbar": {
+    "cta": "Réservez votre consultation",
+    "openMenu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation",
+    "navMenu": "Navigation principale",
     "routes": [
       {
         "label": "Accueil",
         "href": "/"
       },
       {
-        "label": "Département",
-        "href": "/department"
-      },
-      {
-        "label": "Contact",
-        "href": "/contact"
-      },
-      {
         "label": "Services",
         "href": "/services"
       },
       {
-        "label": "Articles",
-        "href": "/articles"
+        "label": "Appareil Administratif",
+        "href": "/administrative-department"
+      },
+      {
+        "label": "Identité",
+        "href": "/identity"
+      },
+      {
+        "label": "Exécution",
+        "href": "/execution"
       }
     ]
   },
@@ -53,76 +57,37 @@
           "href": "/"
         },
         {
-          "label": "Nos services",
+          "label": "Services",
           "href": "/services"
         },
         {
-          "label": "Départements",
-          "href": "/department"
+          "label": "Appareil Administratif",
+          "href": "/administrative-department"
         },
         {
-          "label": "FAQ",
-          "href": "/faq"
+          "label": "Identité",
+          "href": "/identity"
         },
         {
-          "label": "Politique de confidentialité",
-          "href": "/privacy"
-        },
-        {
-          "label": "Contactez-nous",
-          "href": "/contact"
+          "label": "Exécution",
+          "href": "/execution"
         }
       ]
     },
-    "ourGroup": {
-      "title": "Notre groupe",
-      "entities": [
-        {
-          "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla pour consultations juridiques",
-          "href": "#"
-        },
-        {
-          "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla pour consultations générales",
-          "href": "#"
-        },
-        {
-          "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla pour l'intelligence artificielle et la recherche",
-          "href": "#"
-        },
-        {
-          "name": "Al Sarh Al Shamekh pour agence de lignes maritimes",
-          "href": "#"
-        },
-        {
-          "name": "84 Star Capital pour investissement immobilier",
-          "href": "#"
-        },
-        {
-          "name": "KIB pour services de règlement de réclamations",
-          "href": "#"
-        },
-        {
-          "name": "KIB pour services aux hommes d'affaires",
-          "href": "#"
-        },
-        {
-          "name": "KIB pour financement",
-          "href": "#"
-        },
-        {
-          "name": "KIB pour commerce",
-          "href": "#"
-        }
-      ]
-    },
-    "description": "Offrir l'excellence juridique avec des normes d'or dans tous les Émirats arabes unis avec un engagement inébranlable envers le succès de nos clients.",
-    "copyright": "© 2024 Sheikh Abdul Aziz Bin Abdullah Al Mualla Legal Consultancy. Tous droits réservés.",
-    "socialMedia": {
+"description": "KEB Financing Brokerage L.L.C — votre bras financier exécutif, vous reliant au partenaire de financement approprié. Nous analysons vos besoins, structurons un dossier solide et négocions les meilleures conditions afin de sécuriser un financement soutenant votre croissance durable et votre stabilité financière.",
+"copyright": "© 2026 KEB Financing Brokerage L.L.C. Tous droits réservés.",
+"socialMedia": {
       "linkedin": "LinkedIn",
       "twitter": "Twitter",
       "instagram": "Instagram",
       "facebook": "Facebook"
     }
+  },
+  "notFound": {
+    "badge": "Page introuvable",
+    "title": "Nous n’avons pas trouvé cette page",
+    "description": "La page que vous recherchez a peut‑être été déplacée, supprimée ou n’a jamais existé. Veuillez vérifier l’URL ou revenir à la page d’accueil.",
+    "cta": "Retour à l’accueil"
   }
 }
 

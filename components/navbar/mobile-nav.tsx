@@ -1,260 +1,193 @@
 "use client";
-import { cn } from "@/utils/cn";
+
+import { AnimatePresence, motion } from "framer-motion";
 import { Link, usePathname } from "@/i18n/routing";
 import { Menu, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import Button from "../button";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { cn } from "@/utils/cn";
 import LocaleSwitcher from "../locale-switcher";
+import Logo from "../logo";
 
 interface Route {
   href: string;
   label: string;
 }
 
-const MobileNavbar = () => {
+const panelTransition = { type: "spring" as const, stiffness: 260, damping: 30 };
+const overlayTransition = { duration: 0.2 };
+const itemStagger = 0.05;
+
+export default function MobileNavbar() {
   const t = useTranslations("navbar");
   const locale = useLocale();
   const isRTL = locale === "ar";
   const routesRaw = t.raw("routes");
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const openButtonRef = useRef<HTMLButtonElement>(null);
+  const canUseDOM = typeof window !== "undefined" && typeof document !== "undefined";
 
-  // Memoize routes processing
   const routes = useMemo<Route[]>(() => {
     if (!Array.isArray(routesRaw)) return [];
     return routesRaw
       .map((route: unknown) => {
         const r = route as { label?: unknown; href?: unknown };
-        return {
-          label: String(r.label || ""),
-          href: String(r.href || ""),
-        };
+        const href = String(r.href ?? "");
+        const label = String(r.label ?? "");
+        return { href, label };
       })
-      .filter((route) => route.href && route.href !== "[object Object]");
+      .filter((r) => r.href && r.href !== "[object Object]");
   }, [routesRaw]);
 
-  // Memoize active route check
   const isActive = useCallback(
     (href: string) => {
-      if (href === "/") {
-        return pathname === "/" || pathname === `/${locale}`;
-      }
+      if (href === "/") return pathname === "/" || pathname === `/${locale}`;
       return pathname === href || pathname.startsWith(`${href}/`);
     },
     [pathname, locale]
   );
 
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
-
-  // Close menu on escape key
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && isOpen) {
-        setIsOpen(false);
-      }
-    };
-    window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
-  }, [isOpen]);
-
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
-
-  const handleLinkClick = () => {
+  const closeMenu = useCallback(() => {
     setIsOpen(false);
-  };
+  }, []);
 
-  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    // Only close if clicking directly on the backdrop, not on the menu
-    if (e.target === e.currentTarget) {
-      setIsOpen(false);
-    }
-  };
+  const toggleMenu = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, []);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (!isOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [isOpen]);
+
+  // Close on Escape
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeMenu();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen, closeMenu]);
+
+  // Return focus to trigger button when menu closes
+  useEffect(() => {
+    if (!isOpen) openButtonRef.current?.focus({ preventScroll: true });
+  }, [isOpen]);
+
+  const panelSide = isRTL ? "left-0" : "right-0";
+  const slideFrom = isRTL ? "-100%" : "100%";
 
   return (
-    <div className="md:hidden relative z-50" dir={isRTL ? "rtl" : "ltr"}>
-      <Button
-        variant="ghost"
+    <div className="md:hidden relative" dir={isRTL ? "rtl" : "ltr"}>
+      <button
+        ref={openButtonRef}
+        type="button"
         onClick={toggleMenu}
-        className="relative z-50"
-        aria-label={isOpen ? "Close menu" : "Open menu"}
+        className="inline-flex items-center justify-center rounded-full bg-white/5 text-white p-2.5 border border-white/10 backdrop-blur-sm transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:ring-offset-2 focus:ring-offset-transparent"
+        aria-label={isOpen ? t("closeMenu") : t("openMenu")}
         aria-expanded={isOpen}
-        aria-controls="mobile-menu"
+        aria-controls="mobile-nav-panel"
       >
-        <div
-          className="relative flex items-center justify-center"
-          style={{
-            width: "clamp(2.5rem, 3vw, 3.5rem)",
-            height: "clamp(2.5rem, 3vw, 3.5rem)",
-          }}
-        >
-          <Menu
-            className={cn(
-              "absolute text-white transition-all duration-300",
-              isOpen ? "opacity-0 rotate-90 scale-0" : "opacity-100 rotate-0 scale-100"
+        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
+
+      {canUseDOM &&
+        createPortal(
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                id="mobile-nav-overlay"
+                role="dialog"
+                aria-modal="true"
+                aria-label={t("navMenu")}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={overlayTransition}
+                className="fixed inset-0 top-0 left-0 right-0 bottom-0 z-100 bg-black/60 backdrop-blur-sm"
+                style={{ isolation: "isolate" }}
+                onClick={closeMenu}
+              >
+                <motion.div
+                  id="mobile-nav-panel"
+                  initial={{ x: slideFrom }}
+                  animate={{ x: 0 }}
+                  exit={{ x: slideFrom }}
+                  transition={panelTransition}
+                  className={cn(
+                    "absolute top-0 bottom-0 w-80 max-w-[85vw] bg-navy-dark shadow-2xl flex flex-col",
+                    panelSide
+                  )}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="flex items-center justify-between px-4 py-4 border-b border-white/10 shrink-0">
+                    <Logo className="w-24 h-auto" size={80} />
+                    <button
+                      type="button"
+                      onClick={closeMenu}
+                      className="inline-flex items-center justify-center rounded-full p-2 text-white hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-gold/50"
+                      aria-label={t("closeMenu")}
+                    >
+                      <X className="w-5 h-5" />
+                    </button>
+                  </div>
+
+                  <nav className="flex-1 overflow-y-auto px-6 py-6" aria-label={t("navMenu")}>
+                    <ul className="space-y-1">
+                      {routes.map((route, index) => (
+                        <motion.li
+                          key={route.href}
+                          initial={{ opacity: 0, x: isRTL ? 16 : -16 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{
+                            duration: 0.25,
+                            delay: index * itemStagger,
+                          }}
+                        >
+                          <Link
+                            href={route.href}
+                            onClick={closeMenu}
+                            className={cn(
+                              "block font-tajawal text-lg py-3 px-2 -mx-2 rounded-lg transition-colors",
+                              isActive(route.href)
+                                ? "text-gold font-semibold bg-gold/10"
+                                : "text-white/80 hover:text-gold hover:bg-white/5"
+                            )}
+                          >
+                            {route.label}
+                          </Link>
+                        </motion.li>
+                      ))}
+                    </ul>
+                    <div className="pt-6 flex justify-center">
+                      <LocaleSwitcher />
+                    </div>
+                  </nav>
+
+                  <div className="px-6 py-4 border-t border-white/10 shrink-0">
+                    <Link
+                      href="/implementation-mechanism"
+                      onClick={closeMenu}
+                      className="block bg-gold text-navy-dark font-cairo font-bold px-6 py-3 rounded-full text-center w-full hover:bg-gold-light transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-navy-dark"
+                      aria-label={t("cta")}
+                    >
+                      {t("cta")}
+                    </Link>
+                  </div>
+                </motion.div>
+              </motion.div>
             )}
-            style={{
-              width: "clamp(1.5rem, 2vw, 2rem)",
-              height: "clamp(1.5rem, 2vw, 2rem)",
-            }}
-            aria-hidden="true"
-          />
-        </div>
-      </Button>
-
-      {/* Backdrop - only visible when menu is open */}
-      {isOpen && (
-        <div
-          className={cn(
-            "fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 z-30",
-            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          )}
-          onClick={handleBackdropClick}
-          aria-hidden="true"
-        />
-      )}
-
-      {/* Mobile Menu */}
-      <div
-        id="mobile-menu"
-        className={cn(
-          "fixed top-0 h-screen w-full bg-secondary z-40",
-          "transition-transform duration-300 ease-in-out",
-          "shadow-2xl",
-          isRTL ? "right-0" : "left-0",
-          isOpen
-            ? isRTL
-              ? "translate-x-0"
-              : "translate-x-0"
-            : isRTL
-            ? "translate-x-full"
-            : "-translate-x-full"
+          </AnimatePresence>,
+          document.body
         )}
-        style={{
-          maxWidth: "clamp(20rem, 30vw, 28rem)",
-        }}
-        dir={isRTL ? "rtl" : "ltr"}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Mobile navigation menu"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex flex-col h-full">
-          {/* Menu Header */}
-          <div
-            className="flex items-center justify-between border-b border-white/10"
-            style={{
-              padding: "clamp(1rem, 2vw, 2rem)",
-            }}
-          >
-            <h2
-              className="text-white font-bold"
-              style={{
-                fontSize: "clamp(1.25rem, 2vw, 1.75rem)",
-              }}
-            >
-              Menu
-            </h2>
-            <Button
-              variant="ghost"
-              onClick={toggleMenu}
-              className="text-white hover:text-primary"
-              aria-label="Close menu"
-            >
-              <X
-                style={{
-                  width: "clamp(1.5rem, 2vw, 2rem)",
-                  height: "clamp(1.5rem, 2vw, 2rem)",
-                }}
-              />
-            </Button>
-          </div>
-
-          {/* Navigation Links */}
-          <nav
-            className="flex-1 overflow-y-auto"
-            style={{
-              paddingTop: "clamp(1rem, 2vw, 2rem)",
-              paddingBottom: "clamp(1rem, 2vw, 2rem)",
-            }}
-            role="navigation"
-          >
-            <ul
-              className="flex flex-col"
-              style={{
-                gap: "clamp(0.5rem, 1vw, 1rem)",
-                paddingLeft: "clamp(1rem, 2vw, 2rem)",
-                paddingRight: "clamp(1rem, 2vw, 2rem)",
-              }}
-            >
-              {routes.map((route, index) => (
-                <li key={route.href}>
-                  <Link
-                    href={route.href}
-                    onClick={handleLinkClick}
-                    className={cn(
-                      "block rounded-lg text-white font-semibold",
-                      "transition-all duration-200",
-                      "hover:bg-white/10 hover:text-primary",
-                      "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-secondary",
-                      isActive(route.href)
-                        ? "bg-primary/20 text-primary border-l-4 border-primary"
-                        : ""
-                    )}
-                    style={{
-                      fontSize: "clamp(1rem, 1.5vw, 1.5rem)",
-                      paddingTop: "clamp(0.75rem, 1.25vw, 1.25rem)",
-                      paddingBottom: "clamp(0.75rem, 1.25vw, 1.25rem)",
-                      paddingLeft: "clamp(1rem, 1.5vw, 1.5rem)",
-                      paddingRight: "clamp(1rem, 1.5vw, 1.5rem)",
-                      borderLeftWidth: isActive(route.href) ? "clamp(2px, 0.5vw, 4px)" : "0",
-                      animationDelay: `${index * 50}ms`,
-                    }}
-                    aria-current={isActive(route.href) ? "page" : undefined}
-                  >
-                    {route.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="flex ">
-              <LocaleSwitcher />
-            </div>
-          </nav>
-
-          {/* Footer with Locale Switcher */}
-          <div
-            className="border-t border-white/10"
-            style={{
-              padding: "clamp(1rem, 2vw, 2rem)",
-            }}
-          >
-            <div className="flex items-center justify-center"></div>
-            <Button
-              variant="primary"
-              className="w-full"
-              onClick={handleLinkClick}
-              aria-label={t("cta")}
-            >
-              {t("cta")}
-            </Button>
-          </div>
-        </div>
-      </div>
     </div>
   );
-};
-
-export default MobileNavbar;
+}

@@ -9,17 +9,21 @@ interface LogoProps {
 }
 export default function Logo({ className, href = "/", size = 100 }: LogoProps) {
   return (
-    <Link href={href} className={className}>
+    <Link
+      href={href}
+      className={cn(
+        "inline-flex items-center justify-center rounded-full border-2 border-white bg-black overflow-hidden",
+        className
+      )}
+      style={{ width: size, height: size }}
+    >
       <Image
-        src="/logo.webp"
+        src="/kib_logo.webp"
         alt="Logo"
         sizes={`(max-width: 768px) ${size / 2}px, ${size}px`}
         width={size}
         height={size}
-        className={cn(
-          className,
-          "rounded-3xl shadow-lg object-contain w-full h-full drop-shadow-2xl drop-shadow-white/10"
-        )}
+        className={cn("object-contain w-3/4 h-3/4")}
         loading="eager"
         priority
       />

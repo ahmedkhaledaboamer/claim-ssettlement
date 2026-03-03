@@ -4,26 +4,29 @@
     },
     "navbar": {
         "cta": "Book Your Consultation",
+        "openMenu": "Open navigation menu",
+        "closeMenu": "Close navigation menu",
+        "navMenu": "Main navigation",
         "routes": [
             {
                 "label": "Home",
                 "href": "/"
             },
             {
-                "label": "Department",
-                "href": "/department"
-            },
-            {
-                "label": "Contact",
-                "href": "/contact"
-            },
-            {
                 "label": "Services",
                 "href": "/services"
             },
             {
-                "label": "Articles",
-                "href": "/articles"
+                "label": "Administrative Department",
+                "href": "/administrative-department"
+            },
+            {
+                "label": "Identity",
+                "href": "/identity"
+            },
+            {
+                "label": "Execution",
+                "href": "/execution"
             }
         ]
     },
@@ -54,75 +57,35 @@
                     "href": "/"
                 },
                 {
-                    "label": "Our Services",
+                    "label": "Services",
                     "href": "/services"
                 },
                 {
-                    "label": "Departments",
-                    "href": "/department"
+                    "label": "Administrative Department",
+                    "href": "/administrative-department"
                 },
                 {
-                    "label": "FAQ",
-                    "href": "/faq"
+                    "label": "Identity",
+                    "href": "/identity"
                 },
                 {
-                    "label": "Privacy Policy",
-                    "href": "/privacy"
-                },
-                {
-                    "label": "Contact Us",
-                    "href": "/contact"
+                    "label": "Execution",
+                    "href": "/execution"
                 }
             ]
         },
-        "ourGroup": {
-            "title": "Our Group",
-            "entities": [
-                {
-                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla for Legal Consultations",
-                    "href": "#"
-                },
-                {
-                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla for General Consultations",
-                    "href": "#"
-                },
-                {
-                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla for Artificial Intelligence and Research",
-                    "href": "#"
-                },
-                {
-                    "name": "Al Sarh Al Shamekh for Maritime Shipping Lines Agency",
-                    "href": "#"
-                },
-                {
-                    "name": "84 Star Capital for Real Estate Investment",
-                    "href": "#"
-                },
-                {
-                    "name": "KIB for Claims Settlement Services",
-                    "href": "#"
-                },
-                {
-                    "name": "KIB for Businessmen Services",
-                    "href": "#"
-                },
-                {
-                    "name": "KIB for Finance",
-                    "href": "#"
-                },
-                {
-                    "name": "KIB for Trade",
-                    "href": "#"
-                }
-            ]
-        },
-        "description": "Delivering legal excellence with gold standards throughout the United Arab Emirates with an unwavering commitment to the success of our clients.",
-        "copyright": "© 2024 Sheikh Abdul Aziz Bin Abdullah Al Mualla Legal Consultancy. All rights reserved.",
-        "socialMedia": {
+"description": "KEB Financing Brokerage L.L.C — your executive financial arm connecting you with the right funding partner. We analyze your needs, structure a strong financing file, and negotiate optimal terms to secure funding that supports sustainable growth and financial stability.",
+"copyright": "© 2026 KEB Financing Brokerage L.L.C. All rights reserved.",        "socialMedia": {
             "linkedin": "LinkedIn",
             "twitter": "Twitter",
             "instagram": "Instagram",
             "facebook": "Facebook"
         }
+    },
+    "notFound": {
+        "badge": "Page Missing",
+        "title": "We couldn’t find this page",
+        "description": "The page you’re looking for may have been moved, deleted, or never existed. Please check the URL or return to the homepage.",
+        "cta": "Back to homepage"
     }
 }

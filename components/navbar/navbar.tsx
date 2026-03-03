@@ -1,6 +1,5 @@
 "use client";
 
-import Button from "@/components/button";
 import { Link, usePathname } from "@/i18n/routing";
 import { cn } from "@/utils/cn";
 import { useLocale, useTranslations } from "next-intl";
@@ -34,6 +33,25 @@ export default function Navbar() {
       .filter((route) => route.href && route.href !== "[object Object]");
   }, [routesRaw]);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   // Memoize active route check
   const isActive = useCallback(
     (href: string) => {
@@ -48,20 +66,20 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "bg-secondary/95 backdrop-blur-sm",
-        "absolute left-1/2 -translate-x-1/2 z-50",
-        "flex justify-between items-center",
-        "shadow-lg shadow-black/20",
+        "fixed inset-x-0 top-0 z-50 px-[5%]",
+        "flex justify-between items-center py-4",
         "transition-all duration-300 ease-in-out",
-        "w-full top-0 rounded-none fixed",
-        'px-4 py-4'
+        "w-full rounded-none ",
+        isScrolled
+          ? "bg-secondary/95 backdrop-blur-sm shadow-lg shadow-black/20"
+          : "bg-transparent backdrop-blur-none shadow-none"
       )}
       role="navigation"
       aria-label="Main navigation"
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Logo */}
-      <Logo className=" transition-transform duration-300 hover:scale-105 w-fit" size={100} />
+      <Logo className=" transition-transform duration-300 hover:scale-105 w-fit" size={80} />
 
       {/* Desktop Navigation Links */}
       <ul
@@ -118,13 +136,7 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <LocaleSwitcher />
         </div>
-        <Button
-          className="hidden lg:flex whitespace-nowrap"
-          variant="primary"
-          aria-label={t("cta")}
-        >
-          {t("cta")}
-        </Button>
+         
         <MobileNavbar />
       </div>
     </nav>
