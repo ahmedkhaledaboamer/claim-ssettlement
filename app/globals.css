@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
-.container {
-  width: min(98%, 98vw);
-  margin-inline: auto;
-}
-
 @theme {
   --color-primary: #fd9908;
   --color-secondary: #181f29;
   --color-tertiary: #00d3ff;
   --color-theme-black: #181f29;
-  
+
+  --color-navy: #0A1628;
+  --color-navy-light: #1A2744;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #C8A45C;
+  --color-warm-gray: #F5F3EF;
+  --color-warm-gray-dark: #E8E4DD;
   /* Responsive font sizes using viewport units */
   --font-xs: clamp(0.75rem, 0.5vw + 0.5rem, 1rem);
   --font-sm: clamp(0.875rem, 0.75vw + 0.625rem, 1.25rem);
@@ -19,7 +20,7 @@
   --font-xl: clamp(1.25rem, 1.5vw + 1rem, 2rem);
   --font-2xl: clamp(1.5rem, 2vw + 1.25rem, 2.5rem);
   --font-3xl: clamp(1.875rem, 2.5vw + 1.5rem, 3rem);
-  
+
   /* Responsive spacing using viewport units */
   --spacing-xs: clamp(0.25rem, 0.25vw, 0.5rem);
   --spacing-sm: clamp(0.5rem, 0.5vw, 1rem);
@@ -28,6 +29,225 @@
   --spacing-xl: clamp(1.5rem, 2vw, 3rem);
   --spacing-2xl: clamp(2rem, 3vw, 4rem);
   --spacing-3xl: clamp(3rem, 4vw, 6rem);
+
+  /* Color palette (migrated from tailwind.config.js) */
+  /* Gold */
+  --color-gold-50: #FFFBEB;
+  --color-gold-100: #FEF3C7;
+  --color-gold-200: #FDE68A;
+  --color-gold-300: #FCD34D;
+  --color-gold-400: #FBBF24;
+  --color-gold-500: #F59E0B;
+  --color-gold-600: #E5A00D;
+  --color-gold-700: #B45309;
+  --color-gold-800: #92400E;
+  --color-gold-900: #78350F;
+  --color-gold-950: #451A03;
+
+  /* Navy */
+  --color-navy-50: #F8FAFC;
+  --color-navy-100: #F1F5F9;
+  --color-navy-200: #E2E8F0;
+  --color-navy-300: #CBD5E1;
+  --color-navy-400: #94A3B8;
+  --color-navy-500: #64748B;
+  --color-navy-600: #475569;
+  --color-navy-700: #334155;
+  --color-navy-800: #1E293B;
+  --color-navy-900: #0F172A;
+  --color-navy-950: #020617;
+
+  /* Teal */
+  --color-teal-50: #F0FDFA;
+  --color-teal-100: #CCFBF1;
+  --color-teal-200: #99F6E4;
+  --color-teal-300: #5EEAD4;
+  --color-teal-400: #2DD4BF;
+  --color-teal-500: #14B8A6;
+  --color-teal-600: #0D9488;
+  --color-teal-700: #0F766E;
+  --color-teal-800: #115E59;
+  --color-teal-900: #134E4A;
+  --color-teal-950: #042F2E;
+
+  /* Coral */
+  --color-coral-50: #FFF1F2;
+  --color-coral-100: #FFE4E6;
+  --color-coral-200: #FECDD3;
+  --color-coral-300: #FDA4AF;
+  --color-coral-400: #FB7185;
+  --color-coral-500: #F43F5E;
+  --color-coral-600: #E11D48;
+  --color-coral-700: #BE123C;
+  --color-coral-800: #9F1239;
+  --color-coral-900: #881337;
+  --color-coral-950: #4C0519;
+
+  /* Cream */
+  --color-cream-50: #FEFDFB;
+  --color-cream-100: #FEF3C7;
+  --color-cream-200: #FDE68A;
+  --color-cream-300: #FCD34D;
+
+  /* Purple */
+  --color-purple-50: #FAF5FF;
+  --color-purple-100: #F3E8FF;
+  --color-purple-200: #E9D5FF;
+  --color-purple-300: #D8B4FE;
+  --color-purple-400: #C084FC;
+  --color-purple-500: #A855F7;
+  --color-purple-600: #9333EA;
+  --color-purple-700: #7C3AED;
+  --color-purple-800: #6B21A8;
+  --color-purple-900: #581C87;
+  --color-purple-950: #3B0764;
+
+  /* Green */
+  --color-green-50: #ECFDF5;
+  --color-green-100: #D1FAE5;
+  --color-green-200: #A7F3D0;
+  --color-green-300: #6EE7B7;
+  --color-green-400: #34D399;
+  --color-green-500: #10B981;
+  --color-green-600: #059669;
+  --color-green-700: #047857;
+  --color-green-800: #065F46;
+  --color-green-900: #064E3B;
+  --color-green-950: #022C22;
+
+  /* Imperial (gold) */
+  --color-imperial-50: #FFFDF5;
+  --color-imperial-100: #FFFBE6;
+  --color-imperial-200: #FFF4CC;
+  --color-imperial-300: #FFEBB3;
+  --color-imperial-400: #FFE199;
+  --color-imperial-500: #FFD700;
+  --color-imperial-600: #E6C200;
+  --color-imperial-700: #CCAC00;
+  --color-imperial-800: #B39600;
+  --color-imperial-900: #998100;
+  --color-imperial-950: #665600;
+
+  /* Sapphire */
+  --color-sapphire-50: #F2F6FC;
+  --color-sapphire-100: #E6EDF9;
+  --color-sapphire-200: #CCDDF3;
+  --color-sapphire-300: #B3CCED;
+  --color-sapphire-400: #80AEE1;
+  --color-sapphire-500: #0F52BA;
+  --color-sapphire-600: #0E4AA7;
+  --color-sapphire-700: #0B3E8C;
+  --color-sapphire-800: #093170;
+  --color-sapphire-900: #07295D;
+  --color-sapphire-950: #051C3E;
+
+  /* Emerald */
+  --color-emerald-50: #F2FAF2;
+  --color-emerald-100: #E6F5E6;
+  --color-emerald-200: #CCECCC;
+  --color-emerald-300: #B3E2B3;
+  --color-emerald-400: #80CF80;
+  --color-emerald-500: #046307;
+  --color-emerald-600: #045906;
+  --color-emerald-700: #034A05;
+  --color-emerald-800: #023B04;
+  --color-emerald-900: #023104;
+  --color-emerald-950: #012103;
+
+  /* Ruby */
+  --color-ruby-50: #FDF2F5;
+  --color-ruby-100: #FBE6EC;
+  --color-ruby-200: #F6CCD9;
+  --color-ruby-300: #F2B3C6;
+  --color-ruby-400: #E980A0;
+  --color-ruby-500: #E0115F;
+  --color-ruby-600: #CA0F56;
+  --color-ruby-700: #A80D47;
+  --color-ruby-800: #860A39;
+  --color-ruby-900: #6E082F;
+  --color-ruby-950: #4A0520;
+
+  /* Royal */
+  --color-royal-50: #F6F4F7;
+  --color-royal-100: #EDE9EF;
+  --color-royal-200: #DCD4DF;
+  --color-royal-300: #CABECF;
+  --color-royal-400: #A793AF;
+  --color-royal-500: #5D3A6B;
+  --color-royal-600: #543460;
+  --color-royal-700: #462C50;
+  --color-royal-800: #382340;
+  --color-royal-900: #2E1D34;
+  --color-royal-950: #1F1324;
+
+  /* Single colors */
+  --color-midnight: #0A0A1A;
+  --color-obsidian: #0B0B0F;
+  --color-onyx: #1B1B1B;
+  --color-pearl: #FDF5E6;
+  --color-ivory: #FFFFF0;
+  --color-champagne: #F7E7CE;
+  --color-alabaster: #F2F0E6;
+
+  /* Font families */
+  --font-cairo: "Cairo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-tajawal: "Tajawal", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Box shadows */
+  --shadow-gold: 0 4px 15px rgba(229, 160, 13, 0.3);
+  --shadow-gold-lg: 0 10px 40px rgba(229, 160, 13, 0.4);
+  --shadow-gold-xl: 0 20px 60px rgba(229, 160, 13, 0.5);
+  --shadow-teal: 0 4px 15px rgba(13, 148, 136, 0.3);
+  --shadow-teal-lg: 0 10px 40px rgba(13, 148, 136, 0.4);
+  --shadow-navy: 0 4px 15px rgba(15, 23, 42, 0.3);
+  --shadow-navy-lg: 0 10px 40px rgba(15, 23, 42, 0.4);
+  --shadow-coral: 0 4px 15px rgba(225, 29, 72, 0.3);
+  --shadow-coral-lg: 0 10px 40px rgba(225, 29, 72, 0.4);
+  --shadow-purple: 0 4px 15px rgba(124, 58, 237, 0.3);
+  --shadow-purple-lg: 0 10px 40px rgba(124, 58, 237, 0.4);
+  --shadow-green: 0 4px 15px rgba(16, 185, 129, 0.3);
+  --shadow-green-lg: 0 10px 40px rgba(16, 185, 129, 0.4);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-card-xl: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+  --shadow-inner-gold: inset 0 2px 10px rgba(229, 160, 13, 0.2);
+  --shadow-inner-teal: inset 0 2px 10px rgba(13, 148, 136, 0.2);
+  --shadow-luxury-1: 0 2px 4px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-luxury-2: 0 10px 30px -10px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+  --shadow-luxury-3: 0 20px 40px -15px rgba(0, 0, 0, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+  --shadow-luxury-4: 0 30px 60px -20px rgba(0, 0, 0, 0.25), 0 15px 30px -15px rgba(0, 0, 0, 0.2);
+  --shadow-luxury-5: 0 50px 100px -30px rgba(0, 0, 0, 0.3);
+  --shadow-imperial-glow: 0 20px 40px -15px rgba(255, 215, 0, 0.3);
+
+  /* Extra spacing scale (numeric) */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-30: 7.5rem;
+
+  /* Border radius */
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+
+  /* Font sizes from config */
+  --text-2xs: 0.625rem;
+  --text-2xs--line-height: 0.75rem;
+  --text-10xl: 10rem;
+  --text-10xl--line-height: 1;
+
+  /* z-index scale */
+  --z-60: 60;
+  --z-70: 70;
+  --z-80: 80;
+  --z-90: 90;
+  --z-100: 100;
+
+  /* Backdrop blur scale */
+  --backdrop-blur-xs: 2px;
+}
+
+.container {
+  width: min(98%, 98vw);
+  margin-inline: auto;
 }
 
 .navbar-text {
@@ -74,4 +294,20 @@
 
 .flag-swiper .swiper-slide-active {
   transform: scale(1.05);
+}
+
+
+.text-balance {
+  text-wrap: balance;
+}
+.section-divider {
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.5), transparent);
+}
+.gold-glow {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+}
+.text-shadow-gold {
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
 }
