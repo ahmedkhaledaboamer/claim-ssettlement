@@ -7,9 +7,12 @@ import {
   SparklesIcon,
   UsersIcon,
   CheckCircleIcon,
-  AwardIcon } from
+  AwardIcon,
+  ArrowRightIcon } from
 'lucide-react';
-export function ConclusionSection() {
+import Image from 'next/image';
+export function ConclusionSection({ locale }: { locale: string }) {
+  const isRTL = locale === 'ar';
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const clientCount = useCountUp({
     end: 850,
@@ -20,11 +23,14 @@ export function ConclusionSection() {
     <section className="relative p-[5%] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop"
           alt="مكتب حديث"
           className="w-full h-full object-cover"
-          loading="lazy" />
+          loading="lazy"
+          width={1920}
+          height={1080}
+          />
 
         <div className="absolute inset-0 bg-white/85" />
       </div>
@@ -89,7 +95,13 @@ export function ConclusionSection() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-8">
 
           <SparklesIcon className="w-4 h-4 text-teal-600" />
-          <span className="text-sm text-slate-600">الخلاصة</span>
+          <span className="text-fluid-label text-slate-600">
+            {locale === 'ar'
+              ? 'الخلاصة'
+              : locale === 'fr'
+              ? 'En résumé'
+              : 'In summary'}
+          </span>
         </motion.div>
 
         {/* Main Title */}
@@ -107,14 +119,32 @@ export function ConclusionSection() {
           {}
           }
           transition={{
-            duration: 0.8,
-            delay: 0.1
+          duration: 0.8,
+          delay: 0.1
           }}
-          className="text-4xl md:text-6xl font-black mb-8">
+          className="text-fluid-section-title font-black mb-8">
 
-          <span className="gradient-text-gold">شريكك الاستراتيجي</span>
-          <br />
-          <span className="text-slate-900">في رحلة التمويل</span>
+          {locale === 'ar' && (
+            <>
+              <span className="gradient-text-gold">شريكك الاستراتيجي</span>
+              <br />
+              <span className="text-slate-900">في رحلة التمويل</span>
+            </>
+          )}
+          {locale === 'en' && (
+            <>
+              <span className="gradient-text-gold">Your strategic partner</span>
+              <br />
+              <span className="text-slate-900">on the financing journey</span>
+            </>
+          )}
+          {locale === 'fr' && (
+            <>
+              <span className="gradient-text-gold">Votre partenaire stratégique</span>
+              <br />
+              <span className="text-slate-900">dans votre parcours de financement</span>
+            </>
+          )}
         </motion.h2>
 
         {/* Description */}
@@ -132,15 +162,37 @@ export function ConclusionSection() {
           {}
           }
           transition={{
-            duration: 0.8,
-            delay: 0.2
+          duration: 0.8,
+          delay: 0.2
           }}
-          className="text-xl text-slate-600   mb-12 leading-relaxed">
+          className="text-fluid-section-lead text-slate-600   mb-12 leading-relaxed">
 
-          جهاز إداري متكامل من{' '}
-          <span className="text-teal-600 font-bold">١٥ منصباً تنفيذياً</span>{' '}
-          يعمل بتناغم تام لتحويل طموحاتك التمويلية إلى واقع ملموس. من التحليل
-          المالي الأولي حتى دعم ما بعد التمويل، نحن معك في كل خطوة.
+          {locale === 'ar' && (
+            <>
+              جهاز إداري متكامل من{' '}
+              <span className="text-teal-600 font-bold">15 منصباً تنفيذياً</span>{' '}
+              يعمل بتناغم تام لتحويل طموحاتك التمويلية إلى واقع ملموس. من التحليل
+              المالي الأولي حتى دعم ما بعد التمويل، نحن معك في كل خطوة.
+            </>
+          )}
+          {locale === 'en' && (
+            <>
+              An integrated administrative apparatus of{' '}
+              <span className="text-teal-600 font-bold">15 executive positions</span>{' '}
+              working in complete harmony to turn your financing ambitions into reality.
+              From initial financial analysis to post‑financing support, we are with you
+              at every step.
+            </>
+          )}
+          {locale === 'fr' && (
+            <>
+              Un appareil administratif intégré composé de{' '}
+              <span className="text-teal-600 font-bold">15 postes exécutifs</span>{' '}
+              qui travaillent en parfaite harmonie pour transformer vos ambitions de
+              financement en réalité. De la première analyse financière à
+              l’accompagnement post‑financement, nous sommes à vos côtés à chaque étape.
+            </>
+          )}
         </motion.p>
 
         {/* Stats Row */}
@@ -166,24 +218,42 @@ export function ConclusionSection() {
           <div className="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl border border-slate-200 shadow-sm">
             <UsersIcon className="w-8 h-8 text-teal-600" />
             <div className="text-right">
-              <div className="text-2xl font-black text-teal-600">
+              <div className="text-fluid-stat font-black text-teal-600">
                 {clientCount}+
               </div>
-              <div className="text-sm text-slate-500">عميل راضٍ</div>
+              <div className="text-fluid-body text-slate-500">
+                {locale === 'ar'
+                  ? 'عميل راضٍ'
+                  : locale === 'fr'
+                  ? 'Clients satisfaits'
+                  : 'Satisfied clients'}
+              </div>
             </div>
           </div>
           <div className="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl border border-slate-200 shadow-sm">
             <CheckCircleIcon className="w-8 h-8 text-data-emerald" />
             <div className="text-right">
-              <div className="text-2xl font-black text-data-emerald">٩٤٪</div>
-              <div className="text-sm text-slate-500">نسبة النجاح</div>
+              <div className="text-fluid-stat font-black text-data-emerald">94٪</div>
+              <div className="text-fluid-body text-slate-500">
+                {locale === 'ar'
+                  ? 'نسبة النجاح'
+                  : locale === 'fr'
+                  ? 'Taux de réussite'
+                  : 'Success rate'}
+              </div>
             </div>
           </div>
           <div className="flex items-center gap-3 bg-white px-6 py-4 rounded-2xl border border-slate-200 shadow-sm">
             <AwardIcon className="w-8 h-8 text-relations-blue" />
             <div className="text-right">
-              <div className="text-2xl font-black text-relations-blue">٥٠+</div>
-              <div className="text-sm text-slate-500">جهة تمويلية</div>
+              <div className="text-fluid-stat font-black text-relations-blue">50+</div>
+              <div className="text-fluid-body text-slate-500">
+                {locale === 'ar'
+                  ? 'جهة تمويلية'
+                  : locale === 'fr'
+                  ? 'Institutions financières'
+                  : 'Funding institutions'}
+              </div>
             </div>
           </div>
         </motion.div>
@@ -208,7 +278,8 @@ export function ConclusionSection() {
           }}
           className="flex flex-col sm:flex-row gap-4 justify-center">
 
-          <motion.button
+          <motion.a
+            href="/execution"
             whileHover={{
               scale: 1.05
             }}
@@ -218,8 +289,12 @@ export function ConclusionSection() {
             className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold text-lg shadow-lg overflow-hidden">
 
             <span className="relative z-10 flex items-center justify-center gap-2">
-              ابدأ رحلتك الآن
-              <ArrowLeftIcon className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
+              {locale === 'ar'
+                ? 'ابدأ رحلتك الآن'
+                : locale === 'fr'
+                ? 'Commencez votre parcours maintenant'
+                : 'Start your journey now'}
+              {isRTL ? <ArrowLeftIcon className="w-5 h-5 transition-transform group-hover:-translate-x-1" /> : <ArrowRightIcon className="w-5 h-5 transition-transform group-hover:-translate-x-1" />}
             </span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-400"
@@ -233,19 +308,8 @@ export function ConclusionSection() {
                 duration: 0.3
               }} />
 
-          </motion.button>
+          </motion.a>
 
-          <motion.button
-            whileHover={{
-              scale: 1.05
-            }}
-            whileTap={{
-              scale: 0.95
-            }}
-            className="px-10 py-4 rounded-full bg-white text-slate-700 font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-colors shadow-sm">
-
-            تواصل مع الفريق
-          </motion.button>
         </motion.div>
 
         {/* Signature */}
@@ -267,9 +331,13 @@ export function ConclusionSection() {
           className="mt-16 pt-8 border-t border-slate-200">
 
           <div className="text-teal-600 font-bold text-lg mb-2">
-            مجلس الإدارة
+            {locale === 'ar'
+              ? 'مجلس الإدارة'
+              : locale === 'fr'
+              ? 'Conseil d’administration'
+              : 'Board of Directors'}
           </div>
-          <div className="text-slate-500 text-sm">KEP Financing Brokerage</div>
+          <div className="text-slate-500 text-sm">KIB Financing Brokerage</div>
         </motion.div>
       </div>
     </section>);

@@ -22,6 +22,7 @@ import {
 'lucide-react';
 import { ContentSection as ContentSectionType } from '@/data/contentData';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 interface ContentSectionsProps {
   sections: ContentSectionType[];
 }
@@ -35,8 +36,6 @@ const images = {
   'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400',
   introExtra1:
   'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400',
-  introExtra2:
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400',
   identity:
   'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
   identityExtra:
@@ -219,6 +218,7 @@ function ImageLightbox({
 
 
 }: {src: string;alt: string;onClose: () => void;}) {
+  const t = useTranslations('identityPage');
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
@@ -260,7 +260,7 @@ function ImageLightbox({
           <button
             onClick={onClose}
             className="absolute -top-12 left-0 p-2 bg-white/20 hover:bg-white/40 rounded-full text-white transition-colors"
-            aria-label="إغلاق">
+            aria-label={t('lightboxClose')}>
 
             <X className="w-6 h-6" />
           </button>
@@ -276,12 +276,13 @@ function ImageLightbox({
 }
 // 1. Intro
 function IntroSection({ data }: {data: ContentSectionType;}) {
+  const t = useTranslations('identityPage');
   return (
     <section id="intro" className="relative p-[5%] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img src={images.intro} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 backdrop-blur-sm bg-kep-text/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-kep-text via-transparent to-kep-text/50" />
+        <div className="absolute inset-0 backdrop-blur-sm bg-KIB-text/75" />
+        <div className="absolute inset-0 bg-gradient-to-t from-KIB-text via-transparent to-KIB-text/50" />
       </div>
       <div className=" mx-auto  relative z-10 text-center">
         <motion.div
@@ -295,17 +296,17 @@ function IntroSection({ data }: {data: ContentSectionType;}) {
 
           <motion.div
             variants={fadeInDown}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-kep-gold/20 border border-kep-gold/30 backdrop-blur-md mb-8 shadow-[0_4px_20px_rgba(197,160,40,0.2)]">
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-KIB-gold/20 border border-KIB-gold/30 backdrop-blur-md mb-8 shadow-[0_4px_20px_rgba(197,160,40,0.2)]">
 
-            <Sparkles className="w-4 h-4 text-kep-gold" />
-            <span className="text-kep-gold font-heading font-bold text-sm tracking-wider">
-              كيه إي بي
+            <Sparkles className="w-4 h-4 text-KIB-gold" />
+            <span className="text-KIB-gold font-heading font-bold text-fluid-label tracking-wider">
+              {t('introBadge')}
             </span>
           </motion.div>
           
           <motion.div
             variants={fadeInUp}
-            className="space-y-6 text-xl md:text-2xl text-gray-200 font-body leading-relaxed   mb-16">
+            className="space-y-6 text-fluid-section-lead text-gray-200 font-body leading-relaxed   mb-16">
 
             {data.content.map((p, i) =>
             <p key={i}>{p}</p>
@@ -318,19 +319,18 @@ function IntroSection({ data }: {data: ContentSectionType;}) {
             viewport={{
               once: true
             }}
-            className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4  ">
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4  ">
 
             {[
             images.introStrip1,
             images.introStrip2,
             images.introStrip3,
-            images.introExtra1,
-            images.introExtra2].
+            images.introExtra1].
             map((src, i) =>
             <motion.div
               key={i}
               variants={scaleIn}
-              className="rounded-2xl overflow-hidden border border-kep-gold/20 shadow-[0_8px_30px_rgba(0,0,0,0.35)] aspect-video group">
+              className="rounded-2xl overflow-hidden border border-KIB-gold/20 shadow-[0_8px_30px_rgba(0,0,0,0.35)] aspect-video group">
 
                 <img
                 src={src}
@@ -358,7 +358,7 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
           alt=""
           className="w-full h-full object-cover" />
 
-        <div className="absolute inset-0 backdrop-blur-xl bg-kep-bg2/85" />
+        <div className="absolute inset-0 backdrop-blur-xl bg-KIB-bg2/85" />
       </div>
       <div className=" relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 md:gap-16 items-center">
@@ -409,7 +409,7 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
             </div>
           </motion.div>
           <motion.div
-            className="w-full lg:w-1/2 mt-8 lg:mt-0"
+            className="w-full lg:w-1/2 mt-8 lg:mt-0 text-center lg:text-start"
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -417,7 +417,7 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
             }}
             variants={fadeInLeft}>
 
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-8">
+            <h2 className="text-fluid-section-title font-heading font-bold text-KIB-text mb-8">
               {data.title}
             </h2>
             <motion.div
@@ -436,13 +436,13 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
                 delay: 0.2,
                 duration: 0.6
               }}
-              className="space-y-6 border-r-4 border-kep-gold pr-8 bg-white/70 backdrop-blur-md p-8 rounded-l-3xl shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+              className="space-y-6 border-r-4 border-KIB-gold pr-8 bg-white/70 backdrop-blur-md p-8 rounded-l-3xl shadow-[0_12px_40px_rgba(0,0,0,0.08)] mx-auto lg:mx-0 max-w-full">
 
-              <Quote className="w-12 h-12 text-kep-gold/25 rotate-180" />
+              <Quote className="w-12 h-12 text-KIB-gold/25 rotate-180" />
               {data.content.map((p, i) =>
               <p
                 key={i}
-                className="text-xl md:text-2xl font-semibold text-kep-text leading-relaxed">
+                className="text-fluid-section-lead font-semibold text-KIB-text leading-relaxed">
 
                   &quot;{p}&quot;
                 </p>
@@ -461,7 +461,7 @@ function PhilosophySection({ data }: {data: ContentSectionType;}) {
       <div className=" ">
         <div className="flex flex-col lg:flex-row gap-12 md:gap-16 items-center">
           <motion.div
-            className="w-full lg:w-1/2"
+            className="w-full lg:w-1/2 text-center lg:text-start"
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -471,13 +471,13 @@ function PhilosophySection({ data }: {data: ContentSectionType;}) {
 
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-8">
+              className="text-fluid-section-title font-heading font-bold text-KIB-text mb-8">
 
               {data.title}
             </motion.h2>
             <motion.div
               variants={fadeInUp}
-              className="space-y-6 text-xl md:text-2xl text-kep-muted font-body leading-relaxed mb-10">
+              className="space-y-6 text-fluid-section-lead text-KIB-muted font-body leading-relaxed mb-10">
 
               {data.content.map((p, i) =>
               <p key={i}>{p}</p>
@@ -504,12 +504,12 @@ function PhilosophySection({ data }: {data: ContentSectionType;}) {
                   type: 'spring',
                   stiffness: 300
                 }}
-                className="flex items-center gap-4 bg-kep-bg1 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100/80 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300">
+                className="flex items-center gap-4 bg-KIB-bg1 p-5 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100/80 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300">
 
-                    <div className="w-12 h-12 rounded-full bg-kep-gold/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-6 h-6 text-kep-gold" />
+                    <div className="w-12 h-12 rounded-full bg-KIB-gold/10 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-KIB-gold" />
                     </div>
-                    <span className="text-lg md:text-xl font-semibold text-kep-text">
+                    <span className="text-fluid-body-lg font-semibold text-KIB-text">
                       {b}
                     </span>
                   </motion.li>
@@ -519,7 +519,7 @@ function PhilosophySection({ data }: {data: ContentSectionType;}) {
             {data.conclusion &&
             <motion.p
               variants={fadeInUp}
-              className="mt-10 text-xl md:text-2xl font-heading font-bold text-kep-gold">
+              className="mt-10 text-fluid-section-lead font-heading font-bold text-KIB-gold">
 
                 {data.conclusion}
               </motion.p>
@@ -542,7 +542,7 @@ function PhilosophySection({ data }: {data: ContentSectionType;}) {
                 height={1000}
                 className="w-full h-full object-cover" />
 
-              <div className="absolute inset-0 bg-kep-gold/10 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-KIB-gold/10 mix-blend-overlay" />
             </div>
           </motion.div>
         </div>
@@ -552,7 +552,6 @@ function PhilosophySection({ data }: {data: ContentSectionType;}) {
 }
 // 4. Mission — Blurred background
 function MissionSection({ data }: {data: ContentSectionType;}) {
-  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
   const icons = [
   <Eye key="eye" />,
   <FileText key="fileText" />,
@@ -571,7 +570,7 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
           alt=""
           className="w-full h-full object-cover" />
 
-        <div className="absolute inset-0 backdrop-blur-xl bg-kep-bg3/80" />
+        <div className="absolute inset-0 backdrop-blur-xl bg-KIB-bg3/80" />
       </div>
       <div className="    relative z-10">
         <motion.div
@@ -583,10 +582,10 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
           }}
           variants={fadeInDown}>
 
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-6">
+          <h2 className="text-fluid-section-title font-heading font-bold text-KIB-text mb-6">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed  ">
+          <p className="text-fluid-section-lead text-KIB-muted font-body leading-relaxed  ">
             {data.content[0]}
           </p>
         </motion.div>
@@ -611,12 +610,7 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
                 stiffness: 300
               }
             }}
-            className="bg-white/80 backdrop-blur-md rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.14)] transition-shadow duration-400 overflow-hidden group cursor-pointer border border-white/60"
-            onClick={() =>
-            setLightboxImg(
-              images.missionImages[i % images.missionImages.length]
-            )
-            }>
+            className="bg-white/80 backdrop-blur-md rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.14)] transition-shadow duration-400 overflow-hidden group border border-white/60">
 
                 <div className="relative h-48 md:h-56 overflow-hidden">
                   <Image
@@ -627,15 +621,12 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  <div className="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-kep-gold shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
+                  <div className="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-KIB-gold shadow-[0_4px_16px_rgba(0,0,0,0.12)]">
                     {icons[i % icons.length]}
-                  </div>
-                  <div className="absolute top-4 left-4 px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-full text-xs font-bold text-kep-gold shadow-sm">
-                    اضغط للتكبير
                   </div>
                 </div>
                 <div className="p-6 md:p-8 text-center">
-                  <h3 className="text-xl md:text-2xl font-bold text-kep-text font-heading">
+                  <h3 className="text-fluid-body-lg font-bold text-KIB-text font-heading">
                     {b}
                   </h3>
                 </div>
@@ -643,42 +634,36 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
           )}
           </motion.div>
         }
-        {data.conclusion &&
-        <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.9
-          }}
-          whileInView={{
-            opacity: 1,
-            scale: 1
-          }}
-          viewport={{
-            once: true
-          }}
-          transition={{
-            delay: 0.3
-          }}
-          className="mt-16 text-center">
+            {data.conclusion &&
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0.9
+              }}
+              whileInView={{
+                opacity: 1,
+                scale: 1
+              }}
+              viewport={{
+                once: true
+              }}
+              transition={{
+                delay: 0.3
+              }}
+              className="mt-16 text-center">
 
-            <span className="inline-block px-10 py-5 bg-kep-gold text-white font-bold rounded-full shadow-[0_10px_35px_rgba(197,160,40,0.4)] text-xl md:text-2xl font-heading">
-              {data.conclusion}
-            </span>
-          </motion.div>
-        }
+              <span className="inline-block px-10 py-5 bg-KIB-gold text-white font-bold rounded-full shadow-[0_10px_35px_rgba(197,160,40,0.4)] text-fluid-section-lead font-heading">
+                {data.conclusion}
+              </span>
+            </motion.div>
+            }
       </div>
-      {lightboxImg &&
-      <ImageLightbox
-        src={lightboxImg}
-        alt="Mission detail"
-        onClose={() => setLightboxImg(null)} />
-
-      }
     </section>);
 
 }
 // 5. Vision — Centered grid
 function VisionSection({ data }: {data: ContentSectionType;}) {
+  const t = useTranslations('identityPage');
   return (
     <section id="vision" className="p-[5%] bg-white overflow-hidden">
       <div className=" ">
@@ -691,10 +676,10 @@ function VisionSection({ data }: {data: ContentSectionType;}) {
           }}
           variants={fadeInUp}>
 
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-6">
+          <h2 className="text-fluid-section-title font-heading font-bold text-KIB-text mb-6">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed  ">
+          <p className="text-fluid-section-lead text-KIB-muted font-body leading-relaxed  ">
             {data.content[0]}
           </p>
         </motion.div>
@@ -729,17 +714,17 @@ function VisionSection({ data }: {data: ContentSectionType;}) {
                 alt=""
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
 
-                  <div className="absolute inset-0 bg-kep-gold/10 mix-blend-multiply" />
+                  <div className="absolute inset-0 bg-KIB-gold/10 mix-blend-multiply" />
                 </div>
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-kep-gold/10 flex items-center justify-center shadow-[0_2px_8px_rgba(197,160,40,0.15)]">
-                    <Eye className="w-5 h-5 text-kep-gold" />
+                  <div className="w-10 h-10 rounded-full bg-KIB-gold/10 flex items-center justify-center shadow-[0_2px_8px_rgba(197,160,40,0.15)]">
+                    <Eye className="w-5 h-5 text-KIB-gold" />
                   </div>
-                  <span className="text-sm font-bold text-kep-gold font-heading tracking-wider">
-                    رؤيتنا
+                  <span className="text-sm font-bold text-KIB-gold font-heading tracking-wider">
+                    {t('visionCardLabel')}
                   </span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-kep-text font-heading">
+                <h3 className="text-fluid-body-lg font-bold text-KIB-text font-heading">
                   {b}
                 </h3>
               </motion.div>
@@ -756,7 +741,7 @@ function VisionSection({ data }: {data: ContentSectionType;}) {
           variants={fadeInUp}
           className="mt-16 text-center">
 
-            <p className="text-xl md:text-2xl font-heading font-bold text-kep-gold">
+            <p className="text-fluid-section-lead font-heading font-bold text-KIB-gold">
               {data.conclusion}
             </p>
           </motion.div>
@@ -770,7 +755,7 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
   return (
     <section
       id="principles"
-      className="p-[5%] bg-kep-bg4 relative overflow-hidden">
+      className="p-[5%] bg-KIB-bg4 relative overflow-hidden">
 
       <div className="  relative z-10">
         <motion.div
@@ -782,16 +767,16 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
           }}
           variants={fadeInDown}>
 
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-6">
+          <h2 className="text-fluid-section-title font-heading font-bold text-KIB-text mb-6">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed">
+          <p className="text-fluid-section-lead text-KIB-muted font-body leading-relaxed">
             {data.content[0]}
           </p>
         </motion.div>
         {data.bullets &&
         <div className="relative  ">
-            <div className="absolute right-1/2 top-0 bottom-0 w-0.5 bg-kep-gold/20 transform translate-x-1/2 hidden md:block" />
+            <div className="absolute right-1/2 top-0 bottom-0 w-0.5 bg-KIB-gold/20 transform translate-x-1/2 hidden md:block" />
             <div className="space-y-16">
               {data.bullets.map((b, i) => {
               const isEven = i % 2 === 0;
@@ -823,7 +808,7 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
                       className={`bg-white p-0 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_50px_rgba(0,0,0,0.12)] transition-shadow duration-300 border border-gray-100 w-full  relative overflow-hidden ${isEven ? 'md:mr-auto' : 'md:ml-auto'}`}>
 
                         <div
-                        className="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-kep-gold rounded-full hidden md:block ring-4 ring-kep-bg4 z-20 shadow-[0_2px_8px_rgba(197,160,40,0.4)]"
+                        className="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-KIB-gold rounded-full hidden md:block ring-4 ring-KIB-bg4 z-20 shadow-[0_2px_8px_rgba(197,160,40,0.4)]"
                         style={{
                           [isEven ? 'right' : 'left']: '-2.75rem'
                         }} />
@@ -841,12 +826,12 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
                           className="w-full h-full object-cover" />
 
                           <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
-                          <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-kep-gold text-white flex items-center justify-center font-bold text-lg shadow-[0_4px_16px_rgba(197,160,40,0.4)]">
+                          <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-KIB-gold text-white flex items-center justify-center font-bold text-fluid-body-lg shadow-[0_4px_16px_rgba(197,160,40,0.4)]">
                             {i + 1}
                           </div>
                         </div>
-                        <div className="p-6 md:p-8">
-                          <h3 className="text-xl md:text-2xl font-bold text-kep-text font-heading">
+                        <div className="p-6 md:p-8 text-center md:text-start">
+                          <h3 className="text-fluid-body-lg font-bold text-KIB-text font-heading">
                             {b}
                           </h3>
                         </div>
@@ -936,17 +921,17 @@ function ReadingSection({ data }: {data: ContentSectionType;}) {
           }}
           variants={fadeInUp}>
 
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-6">
+          <h2 className="text-fluid-section-title font-heading font-bold text-KIB-text mb-6">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed  ">
+          <p className="text-fluid-section-lead text-KIB-muted font-body leading-relaxed  ">
             {data.content[0]}
           </p>
         </motion.div>
         {data.bullets &&
         <div className="relative">
-            <div className="hidden lg:block absolute top-1/2 left-8 right-8 h-0.5 border-t-2 border-dashed border-kep-gold/25 -translate-y-1/2 z-0" />
-            <div className="flex flex-wrap justify-center gap-8 md:gap-10 lg:gap-12 py-8">
+            <div className="hidden lg:block absolute top-1/2 left-8 right-8 h-0.5 border-t-2 border-dashed border-KIB-gold/25 -translate-y-1/2 z-0" />
+            <div className="flex flex-wrap justify-between gap-8 md:gap-10 lg:gap-12 py-8 md:flex-row flex-col">
               {data.bullets.map((b, i) => {
               const color = nodeColors[i % nodeColors.length];
               return (
@@ -997,7 +982,7 @@ function ReadingSection({ data }: {data: ContentSectionType;}) {
                         {readingIcons[i % readingIcons.length]}
                       </div>
                     </motion.div>
-                    <span className="text-lg md:text-xl font-bold text-kep-text font-heading text-center max-w-[140px]">
+                    <span className="text-fluid-body-lg font-bold text-KIB-text font-heading text-center ">
                       {b}
                     </span>
                   </motion.div>);
@@ -1022,9 +1007,9 @@ function ReadingSection({ data }: {data: ContentSectionType;}) {
           transition={{
             delay: 0.2
           }}
-          className="mt-16 p-8 md:p-10 bg-kep-text rounded-3xl text-center shadow-[0_20px_55px_rgba(0,0,0,0.18)]">
+          className="mt-16 p-8 md:p-10 bg-KIB-text rounded-3xl text-center shadow-[0_20px_55px_rgba(0,0,0,0.18)]">
 
-            <p className="text-xl md:text-2xl font-heading font-bold text-white">
+            <p className="text-fluid-section-lead font-heading font-bold text-white">
               {data.conclusion}
             </p>
           </motion.div>
@@ -1036,7 +1021,7 @@ function ReadingSection({ data }: {data: ContentSectionType;}) {
 // 8. Building
 function BuildingSection({ data }: {data: ContentSectionType;}) {
   return (
-    <section id="building" className="p-[5%] bg-kep-bg5">
+    <section id="building" className="p-[5%] bg-KIB-bg5">
       <div className=" ">
         <div className="flex flex-col lg:flex-row gap-12 md:gap-16">
           <motion.div
@@ -1048,11 +1033,11 @@ function BuildingSection({ data }: {data: ContentSectionType;}) {
             }}
             variants={fadeInRight}>
 
-            <div className="lg:sticky lg:top-28">
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-8 leading-tight">
+            <div className="lg:sticky lg:top-28 text-center lg:text-start">
+              <h2 className="text-fluid-section-title font-heading font-bold text-KIB-text mb-8 leading-tight">
                 {data.title}
               </h2>
-              <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed mb-10">
+              <p className="text-fluid-section-lead text-KIB-muted font-body leading-relaxed mb-10">
                 {data.content[0]}
               </p>
               <motion.div
@@ -1096,9 +1081,9 @@ function BuildingSection({ data }: {data: ContentSectionType;}) {
                 transition={{
                   delay: 0.3
                 }}
-                className="p-6 md:p-8 bg-white rounded-2xl shadow-[0_6px_24px_rgba(0,0,0,0.07)] border-r-4 border-kep-gold">
+                className="p-6 md:p-8 bg-white rounded-2xl shadow-[0_6px_24px_rgba(0,0,0,0.07)] border-r-4 border-KIB-gold">
 
-                  <p className="text-xl font-bold text-kep-text font-heading">
+                  <p className="text-fluid-body-lg font-bold text-KIB-text font-heading">
                     {data.conclusion}
                   </p>
                 </motion.div>
@@ -1141,10 +1126,10 @@ function BuildingSection({ data }: {data: ContentSectionType;}) {
                 }}
                 className="bg-white p-6 md:p-8 rounded-2xl shadow-[0_6px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.1)] border border-gray-50 flex gap-4 items-start transition-shadow duration-300">
 
-                    <span className="text-kep-gold font-bold text-2xl font-heading leading-none mt-1">
+                    <span className="text-KIB-gold font-bold text-fluid-body-lg font-heading leading-none mt-1">
                       0{i + 1}
                     </span>
-                    <h3 className="text-lg md:text-xl font-bold text-kep-text font-heading">
+                    <h3 className="text-fluid-body-lg font-bold text-KIB-text font-heading">
                       {b}
                     </h3>
                   </motion.div>
@@ -1185,11 +1170,11 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
             <img
               src={images.partners}
               alt="Handshake"
-              className="rounded-full w-full  aspect-square object-cover shadow-[0_24px_60px_rgba(0,0,0,0.14)] border-8 border-kep-bg1" />
+              className="rounded-full w-full  aspect-square object-cover shadow-[0_24px_60px_rgba(0,0,0,0.14)] border-8 border-KIB-bg1" />
 
           </motion.div>
           <motion.div
-            className="w-full lg:w-7/12"
+            className="w-full lg:w-7/12 text-center lg:text-start"
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -1199,13 +1184,13 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
 
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-8">
+              className="text-fluid-section-title font-heading font-bold text-KIB-text mb-8">
 
               {data.title}
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed mb-10">
+              className="text-fluid-section-lead text-KIB-muted font-body leading-relaxed mb-10">
 
               {data.content[0]}
             </motion.p>
@@ -1227,9 +1212,9 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
                   scale: 1.05,
                   y: -2
                 }}
-                className="px-6 py-4 bg-white border border-gray-200 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] font-bold text-kep-text flex items-center gap-3 text-lg transition-shadow duration-300 cursor-default">
+                className="px-6 py-4 bg-white border border-gray-200 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] font-bold text-KIB-text flex items-center gap-3 text-fluid-body-lg transition-shadow duration-300 cursor-default">
 
-                    <Shield className="w-5 h-5 text-kep-gold" />
+                    <Shield className="w-5 h-5 text-KIB-gold" />
                     {b}
                   </motion.span>
               )}
@@ -1238,7 +1223,7 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
             {data.conclusion &&
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl font-heading font-bold text-kep-gold">
+              className="text-fluid-section-lead font-heading font-bold text-KIB-gold">
 
                 {data.conclusion}
               </motion.p>
@@ -1252,7 +1237,7 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
 // 10. Clients
 function ClientsSection({ data }: {data: ContentSectionType;}) {
   return (
-    <section id="clients" className="p-[5%] bg-kep-bg6">
+    <section id="clients" className="p-[5%] bg-KIB-bg6">
       <div className=" ">
         <motion.div
           initial="hidden"
@@ -1264,7 +1249,7 @@ function ClientsSection({ data }: {data: ContentSectionType;}) {
           className="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col md:flex-row">
 
           <motion.div
-            className="w-full md:w-1/2 p-10 md:p-14 lg:p-16 flex flex-col justify-center"
+            className="w-full md:w-1/2 p-10 md:p-14 lg:p-16 flex flex-col justify-center text-center md:text-start"
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -1274,13 +1259,13 @@ function ClientsSection({ data }: {data: ContentSectionType;}) {
 
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-8">
+              className="text-fluid-section-title font-heading font-bold text-KIB-text mb-8">
 
               {data.title}
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed mb-10">
+              className="text-fluid-section-lead text-KIB-muted font-body leading-relaxed mb-10">
 
               {data.content[0]}
             </motion.p>
@@ -1298,9 +1283,9 @@ function ClientsSection({ data }: {data: ContentSectionType;}) {
               <motion.li
                 key={i}
                 variants={fadeInUp}
-                className="flex items-center gap-4 text-kep-text font-semibold text-lg md:text-xl">
+                className="flex items-center gap-4 text-KIB-text font-semibold text-fluid-body-lg">
 
-                    <div className="w-3 h-3 rounded-full bg-kep-gold flex-shrink-0 shadow-[0_0_8px_rgba(197,160,40,0.4)]" />
+                    <div className="w-3 h-3 rounded-full bg-KIB-gold flex-shrink-0 shadow-[0_0_8px_rgba(197,160,40,0.4)]" />
                     {b}
                   </motion.li>
               )}
@@ -1309,7 +1294,7 @@ function ClientsSection({ data }: {data: ContentSectionType;}) {
             {data.conclusion &&
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl font-bold text-kep-gold italic font-heading">
+              className="text-fluid-section-lead font-bold text-KIB-gold italic font-heading">
 
                 &quot;{data.conclusion}&quot;
               </motion.p>
@@ -1369,16 +1354,16 @@ function AdminSection({ data }: {data: ContentSectionType;}) {
           variants={fadeInDown}
           className="mb-16 md:mb-20">
 
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-6">
+          <h2 className="text-fluid-section-title font-heading font-bold text-KIB-text mb-6">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed  ">
+          <p className="text-fluid-section-lead text-KIB-muted font-body leading-relaxed  ">
             {data.content[0]}
           </p>
         </motion.div>
         {data.bullets &&
         <div className="relative flex flex-wrap justify-center gap-8 md:gap-12 py-8">
-            <div className="hidden lg:block absolute top-1/2 left-12 right-12 h-0.5 border-t-2 border-dashed border-kep-gold/30 -translate-y-1/2 z-0" />
+            <div className="hidden lg:block absolute top-1/2 left-12 right-12 h-0.5 border-t-2 border-dashed border-KIB-gold/30 -translate-y-1/2 z-0" />
             {data.bullets.map((b, i) =>
           <motion.div
             key={i}
@@ -1407,12 +1392,12 @@ function AdminSection({ data }: {data: ContentSectionType;}) {
                 stiffness: 300
               }
             }}
-            className="w-36 h-36 md:w-44 md:h-44 rounded-full bg-white shadow-[0_10px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_16px_44px_rgba(0,0,0,0.14)] border-4 border-kep-bg1 flex flex-col items-center justify-center text-center p-5 hover:border-kep-gold transition-all duration-300 relative z-10">
+            className="w-36 h-36 md:w-44 md:h-44 rounded-full bg-white shadow-[0_10px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_16px_44px_rgba(0,0,0,0.14)] border-4 border-KIB-bg1 flex flex-col items-center justify-center text-center p-5 hover:border-KIB-gold transition-all duration-300 relative z-10">
 
-                <span className="text-sm font-bold text-kep-gold mb-2">
+                <span className="text-sm font-bold text-KIB-gold mb-2">
                   0{i + 1}
                 </span>
-                <span className="font-bold text-kep-text font-heading text-base md:text-lg">
+                <span className="font-bold text-KIB-text font-heading text-fluid-body">
                   {b}
                 </span>
               </motion.div>
@@ -1435,7 +1420,7 @@ function AdminSection({ data }: {data: ContentSectionType;}) {
           transition={{
             delay: 0.3
           }}
-          className="mt-16 text-xl md:text-2xl font-bold text-kep-muted font-heading">
+          className="mt-16 text-fluid-section-lead font-bold text-KIB-muted font-heading">
 
             {data.conclusion}
           </motion.p>
@@ -1457,7 +1442,7 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
           alt=""
           className="w-full h-full object-cover" />
 
-        <div className="absolute inset-0 backdrop-blur-xl bg-kep-text/80" />
+        <div className="absolute inset-0 backdrop-blur-xl bg-KIB-text/80" />
       </div>
       <div className="  relative z-10 text-white">
         <motion.div
@@ -1469,10 +1454,10 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
           }}
           variants={fadeInDown}>
 
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]">
+          <h2 className="text-fluid-section-title font-heading font-bold mb-6 drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-white/70 font-body leading-relaxed  ">
+          <p className="text-fluid-section-lead text-white/70 font-body leading-relaxed  ">
             {data.content[0]}
           </p>
         </motion.div>
@@ -1497,7 +1482,7 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
             </div>
           </motion.div>
           <motion.div
-            className="w-full lg:w-1/2 flex flex-col gap-6"
+            className="w-full lg:w-1/2 flex flex-col gap-6 text-center lg:text-start"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -1520,8 +1505,8 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
               className="bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/15 flex flex-col shadow-[0_6px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_36px_rgba(0,0,0,0.18)] transition-shadow duration-300">
 
                   <div className="flex items-center gap-4 mb-4">
-                    <BarChart3 className="w-7 h-7 text-kep-gold" />
-                    <h3 className="text-xl md:text-2xl font-bold font-heading">
+                    <BarChart3 className="w-7 h-7 text-KIB-gold" />
+                    <h3 className="text-fluid-body-lg font-bold font-heading">
                       {b}
                     </h3>
                   </div>
@@ -1541,7 +1526,7 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
                     delay: 0.5 + i * 0.15,
                     ease: 'easeOut'
                   }}
-                  className="h-full bg-kep-gold rounded-full shadow-[0_0_12px_rgba(197,160,40,0.4)]" />
+                  className="h-full bg-KIB-gold rounded-full shadow-[0_0_12px_rgba(197,160,40,0.4)]" />
 
                   </div>
                 </motion.div>
@@ -1549,9 +1534,9 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
             {data.conclusion &&
             <motion.div
               variants={fadeInUp}
-              className="mt-6 p-6 md:p-8 bg-kep-gold/15 backdrop-blur-md rounded-2xl border border-kep-gold/30 text-center shadow-[0_6px_24px_rgba(197,160,40,0.15)]">
+              className="mt-6 p-6 md:p-8 bg-KIB-gold/15 backdrop-blur-md rounded-2xl border border-KIB-gold/30 text-center shadow-[0_6px_24px_rgba(197,160,40,0.15)]">
 
-                <p className="text-xl md:text-2xl font-bold text-kep-goldLight font-heading">
+                <p className="text-fluid-section-lead font-bold text-KIB-goldLight font-heading">
                   {data.conclusion}
                 </p>
               </motion.div>

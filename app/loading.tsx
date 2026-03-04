@@ -1,8 +1,6 @@
 import Logo from "@/components/logo";
 
 const styleTag = `
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400&display=swap');
-
   @keyframes rotate-slow {
     to { transform: rotate(360deg); }
   }
@@ -219,7 +217,7 @@ export default function Loading() {
         <div
           className="label flex items-center gap-2"
           style={{
-            fontFamily: "'Outfit', sans-serif",
+            fontFamily: "var(--font-cairo)",
             fontSize: 10,
             fontWeight: 300,
             letterSpacing: "0.45em",
@@ -286,7 +284,7 @@ export default function Loading() {
       <div
         className="absolute bottom-7"
         style={{
-          fontFamily: "'Bebas Neue', sans-serif",
+          fontFamily: "var(--font-cairo)",
           fontSize: 11,
           letterSpacing: "0.3em",
           color: "rgba(255,255,255,0.1)",

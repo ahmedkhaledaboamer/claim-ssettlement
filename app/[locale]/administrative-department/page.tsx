@@ -10,32 +10,39 @@ import { QualityStandardsSection } from '@/components/screens/administrative-dep
 import { ClientTypesSection } from '@/components/screens/administrative-department/ClientTypesSection';
 import { FAQSection } from '@/components/screens/administrative-department/FAQSection';
 import { ConclusionSection } from '@/components/screens/administrative-department/ConclusionSection';
+import { useLocale } from 'next-intl';
+
 export default function AdministrativeApparatusPage() {
+  const locale = useLocale();
+
   return (
     <div className="relative min-h-screen bg-white">
       <ParticleCanvas />
-      <main>
-        <HeroSection />
+      <main
+        dir={locale === 'ar' ? 'rtl' : 'ltr'}
+        className={`text-center ${locale === 'ar' ? 'text-right' : 'text-left'}`}
+      >
+        <HeroSection locale={locale} />
         <div className="section-divider" />
-        <IntroductionSection />
+        <IntroductionSection locale={locale} />
         <div className="section-divider" />
-        <TeamShowcase />
+        <TeamShowcase locale={locale} />
         <div className="section-divider" />
-        <WhatWeDoSection />
+        <WhatWeDoSection locale={locale} />
         <div className="section-divider" />
-        <ClientJourneySection />
+        <ClientJourneySection locale={locale} />
         <div className="section-divider" />
-        <OperatingSystemSection />
+        <OperatingSystemSection locale={locale} />
         <div className="section-divider" />
-        <ServiceLevelsSection />
+        <ServiceLevelsSection locale={locale} />
         <div className="section-divider" />
-        <QualityStandardsSection />
+        <QualityStandardsSection locale={locale} />
         <div className="section-divider" />
-        <ClientTypesSection />
+        <ClientTypesSection locale={locale} />
         <div className="section-divider" />
-        <FAQSection />
-        <ConclusionSection />
+        <FAQSection locale={locale} />
+        <ConclusionSection locale={locale} />
       </main>
-    </div>);
-
+    </div>
+  );
 }

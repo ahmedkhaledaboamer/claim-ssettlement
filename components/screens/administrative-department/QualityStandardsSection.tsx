@@ -11,11 +11,11 @@ function QualityGauge({
   standard,
   index,
   isVisible
-
-
-
-
-}: {standard: (typeof qualityStandards)[0];index: number;isVisible: boolean;}) {
+}: {
+  standard: (typeof qualityStandards)[0];
+  index: number;
+  isVisible: boolean;
+}) {
   const count = useCountUp({
     end: standard.value,
     duration: 2000,
@@ -85,7 +85,7 @@ function QualityGauge({
         {/* Center Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span
-            className="text-3xl font-black"
+            className="font-black text-fluid-2xl"
             style={{
               color: standard.color
             }}>
@@ -111,12 +111,27 @@ function QualityGauge({
       </div>
 
       {/* Title */}
-      <h3 className="text-lg font-bold text-slate-900">{standard.titleAr}</h3>
+      <h3 className="text-fluid-body-lg font-bold text-slate-900">
+        {standard.titleAr}
+      </h3>
     </motion.div>);
 
 }
-export function QualityStandardsSection() {
+export function QualityStandardsSection({ locale }: { locale: string }) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const headingTitle =
+    locale === 'ar'
+      ? { main: 'معايير', highlight: ' الجودة' }
+      : locale === 'fr'
+      ? { main: 'Normes de', highlight: ' qualité' }
+      : { main: 'Quality', highlight: ' standards' };
+
+  const headingDescription =
+    locale === 'ar'
+      ? 'نلتزم بأعلى معايير الجودة في كل جانب من جوانب عملنا'
+      : locale === 'fr'
+      ? 'Nous nous engageons à respecter les normes de qualité les plus élevées dans tous les aspects de notre travail.'
+      : 'We are committed to the highest quality standards in every aspect of our work.';
   return (
     <section id="quality" className="relative p-[5%] overflow-hidden bg-white">
       <div ref={ref} className="relative z-10  ">
@@ -139,12 +154,12 @@ export function QualityStandardsSection() {
           }}
           className="text-center mb-16">
 
-          <h2 className="text-3xl md:text-5xl font-black mb-6">
-            <span className="text-slate-900">معايير</span>
-            <span className="gradient-text-gold"> الجودة</span>
+          <h2 className="text-fluid-section-title font-black mb-6">
+            <span className="text-slate-900">{headingTitle.main}</span>
+            <span className="gradient-text-gold">{headingTitle.highlight}</span>
           </h2>
-          <p className="text-lg text-slate-600  ">
-            نلتزم بأعلى معايير الجودة في كل جانب من جوانب عملنا
+          <p className="text-fluid-section-lead text-slate-600  ">
+            {headingDescription}
           </p>
         </motion.div>
 
@@ -153,7 +168,15 @@ export function QualityStandardsSection() {
           {qualityStandards.map((standard, index) =>
           <QualityGauge
             key={standard.id}
-            standard={standard}
+            standard={{
+              ...standard,
+              titleAr:
+                locale === 'ar'
+                  ? standard.titleAr
+                  : locale === 'fr'
+                  ? standard.titleFr
+                  : standard.titleEn
+            }}
             index={index}
             isVisible={isVisible} />
 
@@ -182,9 +205,25 @@ export function QualityStandardsSection() {
 
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white border border-slate-200 shadow-sm">
             <Icons.AwardIcon className="w-6 h-6 text-teal-600" />
-            <span className="text-slate-700 font-medium">
-              معتمدون من أكثر من{' '}
-              <span className="text-teal-600 font-bold">٥٠</span> جهة تمويلية
+            <span className="text-slate-700 font-medium text-fluid-body">
+              {locale === 'ar' && (
+                <>
+                  معتمدون من أكثر من{' '}
+                  <span className="text-teal-600 font-bold">٥٠</span> جهة تمويلية
+                </>
+              )}
+              {locale === 'en' && (
+                <>
+                  Approved by more than{' '}
+                  <span className="text-teal-600 font-bold">50</span> funding institutions
+                </>
+              )}
+              {locale === 'fr' && (
+                <>
+                  Approuvés par plus de{' '}
+                  <span className="text-teal-600 font-bold">50</span> institutions financières
+                </>
+              )}
             </span>
           </div>
         </motion.div>

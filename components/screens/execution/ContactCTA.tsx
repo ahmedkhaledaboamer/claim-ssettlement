@@ -2,18 +2,30 @@
 import { motion } from 'framer-motion';
 import {
   ArrowLeft,
+  ArrowRight,
   ShieldCheck,
   Lock,
   Award,
   Sparkles,
   Phone,
-  MessageCircle } from
-'lucide-react';
+  MessageCircle } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
+import { useTranslations, useLocale } from 'next-intl';
+
 export function ContactCTA() {
+  const t = useTranslations('executionPage.contactCta');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
   const { ref, controls, variants } = useScrollReveal();
+  const ArrowIcon = isRTL ? ArrowLeft : ArrowRight;
+  const trustBadges = [
+    { key: 'governance' as const, icon: ShieldCheck },
+    { key: 'security' as const, icon: Lock },
+    { key: 'confidentiality' as const, icon: Award },
+    { key: 'support' as const, icon: MessageCircle },
+  ];
   return (
-    <section className="relative py-36 md:py-48 bg-cream-50 overflow-hidden">
+    <section className="relative px-[5%] py-[2%] bg-cream-50 overflow-hidden">
       {/* Background photo - visible and light */}
       <div className="absolute inset-0 z-0">
         <img
@@ -48,7 +60,7 @@ export function ContactCTA() {
         }} />
 
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="w-full mx-auto px-4 md:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Photo side */}
           <motion.div
@@ -109,194 +121,91 @@ export function ContactCTA() {
             initial="hidden"
             animate={controls}
             variants={variants}
-            className="lg:w-1/2 text-center lg:text-right">
-
-            {/* Badge */}
+            className={`lg:w-1/2 text-center ${isRTL ? 'lg:text-right' : 'lg:text-left'}`}
+          >
             <motion.div
-              initial={{
-                opacity: 0,
-                y: 30
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              className="mb-10 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gold-500/30 bg-gold-500/10">
-
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-10 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-gold-500/30 bg-gold-500/10"
+            >
               <Sparkles className="w-5 h-5 text-gold-600" />
               <span className="text-gold-700 text-sm md:text-base font-bold tracking-wider">
-                بصوت مجلس الإدارة
+                {t('badge')}
               </span>
             </motion.div>
 
-            {/* Headline */}
             <motion.h2
-              initial={{
-                opacity: 0,
-                y: 40
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              transition={{
-                delay: 0.1
-              }}
-              className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-navy-900 mb-8 leading-[1.15]">
-
-              التمويل ليس معاملة...{' '}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-navy-900 mb-8 leading-[1.15]"
+            >
+              {t('title')}{' '}
               <span className="text-gradient-gold block mt-2">
-                بل صناعة تُدار بمنهج وتُغلق بثقة
+                {t('titleHighlight')}
               </span>
             </motion.h2>
 
-            {/* Description */}
             <motion.p
-              initial={{
-                opacity: 0,
-                y: 30
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              transition={{
-                delay: 0.2
-              }}
-              className="text-lg md:text-xl text-gray-600 leading-[1.9] mb-14 font-light">
-
-              وفي ختام هذا المسار، يؤكد مجلس إدارة كيه إي بي أن هذا النموذج
-              التنفيذي لم يُبنَ ليكون مجرد إطار تنظيمي، بل ليكون درعًا ماليًا
-              يحمي العميل من المخاطر.
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-lg md:text-xl text-gray-600 leading-[1.9] mb-14 font-light"
+            >
+              {t('lead')}
             </motion.p>
 
-            {/* CTA Buttons */}
             <motion.div
-              initial={{
-                opacity: 0,
-                y: 30
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              transition={{
-                delay: 0.3
-              }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 mb-14">
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-14"
+            >
 
-              {/* Primary CTA */}
-              <motion.button
-                whileHover={{
-                  scale: 1.05
-                }}
-                whileTap={{
-                  scale: 0.95
-                }}
-                className="group inline-flex items-center justify-center gap-3 bg-gold-500 hover:bg-gold-600 text-navy-900 px-12 py-6 md:px-16 md:py-7 rounded-full font-bold text-xl md:text-2xl transition-all shadow-lg hover:shadow-gold-500/30">
-
-                <span>ابدأ معنا اليوم</span>
-                <ArrowLeft className="w-6 h-6 group-hover:-translate-x-2 transition-transform" />
-              </motion.button>
-
-              {/* Secondary CTA */}
               <motion.a
-                href="tel:+966112345678"
-                whileHover={{
-                  scale: 1.05
-                }}
-                whileTap={{
-                  scale: 0.95
-                }}
-                className="flex items-center gap-3 bg-navy-900 hover:bg-navy-800 text-white px-10 py-6 rounded-full font-bold text-lg transition-all shadow-lg">
-
+                href="tel:+0000000000"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center gap-3 bg-navy-900 hover:bg-navy-800 text-white px-10 py-6 rounded-full font-bold text-lg transition-all shadow-lg cursor-pointer"
+              >
                 <Phone className="w-5 h-5" />
-                <span>اتصل الآن</span>
+                <span>{t('ctaSecondary')}</span>
               </motion.a>
             </motion.div>
 
-            {/* Trust Badges */}
             <motion.div
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              transition={{
-                delay: 0.4
-              }}
-              className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6">
-
-              {[
-              {
-                icon: ShieldCheck,
-                text: 'حوكمة معتمدة'
-              },
-              {
-                icon: Lock,
-                text: 'أمان 100%'
-              },
-              {
-                icon: Award,
-                text: 'سرية تامة'
-              },
-              {
-                icon: MessageCircle,
-                text: 'دعم 24/7'
-              }].
-              map((badge, i) =>
-              <motion.div
-                key={badge.text}
-                whileHover={{
-                  scale: 1.05,
-                  y: -5
-                }}
-                className="flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-gray-200 shadow-sm">
-
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-wrap justify-center gap-4 md:gap-6"
+            >
+              {trustBadges.map((badge) => (
+                <motion.div
+                  key={badge.key}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white border border-gray-200 shadow-sm"
+                >
                   <badge.icon className="w-5 h-5 text-gold-600" />
                   <span className="text-navy-900 text-sm font-medium">
-                    {badge.text}
+                    {t(badge.key)}
                   </span>
                 </motion.div>
-              )}
+              ))}
             </motion.div>
 
-            {/* Final message */}
             <motion.p
-              initial={{
-                opacity: 0
-              }}
-              whileInView={{
-                opacity: 1
-              }}
-              viewport={{
-                once: true
-              }}
-              transition={{
-                delay: 0.5
-              }}
-              className="mt-12 text-gray-500 text-base md:text-lg">
-
-              ودع المسار التنفيذي يصبح الطريق الذي يرفع مشروعك إلى مستوى أعلى من
-              الاستقرار، والنمو، والقدرة على المنافسة.
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="mt-12 text-gray-500 text-base md:text-lg text-center lg:text-start"
+            >
+              {t('finalMessage')}
             </motion.p>
           </motion.div>
         </div>

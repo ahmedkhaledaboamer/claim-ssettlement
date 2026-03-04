@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   UserCheck,
@@ -46,7 +46,9 @@ import {
   ChevronLeft,
   ChevronRight } from
 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
+
 const allSteps = [
 {
   id: 1,
@@ -410,7 +412,7 @@ function Station({
       whileHover={{
         scale: 1.15
       }}
-      className={`relative group flex flex-col items-center`}>
+      className="relative group flex flex-col items-center cursor-pointer">
 
       {/* Station dot */}
       <div
@@ -452,91 +454,83 @@ function Station({
 function StepModal({
   step,
   onClose,
-  phaseColor
-
-
-
-
-}: {step: (typeof allSteps)[0] | null;onClose: () => void;phaseColor: string;}) {
+  phaseColor,
+  t,
+  isRTL,
+}: {
+  step: (typeof allSteps)[0] | null;
+  onClose: () => void;
+  phaseColor: string;
+  t: (key: string) => string;
+  isRTL: boolean;
+}) {
   if (!step) return null;
   const Icon = step.icon;
   return (
     <motion.div
-      initial={{
-        opacity: 0
-      }}
-      animate={{
-        opacity: 1
-      }}
-      exit={{
-        opacity: 0
-      }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-navy-950/90 backdrop-blur-xl"
-      onClick={onClose}>
-
+      onClick={onClose}
+    >
       <motion.div
-        initial={{
-          scale: 0.9,
-          y: 50
-        }}
-        animate={{
-          scale: 1,
-          y: 0
-        }}
-        exit={{
-          scale: 0.9,
-          y: 50
-        }}
+        initial={{ scale: 0.9, y: 50 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.9, y: 50 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative bg-navy-900 rounded-3xl p-8 md:p-10   w-full border border-white/10 shadow-2xl">
-
-        {/* Close button */}
+        className="max-w-4xl mx-auto relative bg-navy-900 rounded-3xl p-8 md:p-10 w-full border border-white/10 shadow-2xl"
+      >
         <button
           onClick={onClose}
-          className="absolute top-4 left-4 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/20 transition-all">
-
+          className={`absolute top-4 ${!isRTL ? 'right-4' : 'left-4'} w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/20 transition-all cursor-pointer`}
+        >
           <X className="w-5 h-5" />
         </button>
 
-        {/* Step number */}
         <div
-          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${phaseColor} text-white text-sm font-bold mb-6`}>
-
-          <span>المرحلة {step.id}</span>
+          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${phaseColor} text-white text-sm font-bold mb-6`}
+        >
+          <span>{t('stepPhase')} {step.id}</span>
         </div>
 
-        {/* Icon */}
         <div
-          className={`w-20 h-20 rounded-2xl ${phaseColor} flex items-center justify-center mb-6 shadow-lg`}>
-
+          className={`w-20 h-20 rounded-2xl ${phaseColor} flex items-center justify-center mb-6 shadow-lg`}
+        >
           <Icon className="w-10 h-10 text-white" />
         </div>
 
-        {/* Title */}
-        <h3 className="text-2xl md:text-3xl font-tajawal font-bold text-white mb-4">
+        <h3 className={`text-2xl md:text-3xl font-tajawal font-bold text-white mb-4 text-center  ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
           {step.title}
         </h3>
 
-        {/* Description */}
-        <p className="text-gray-300 text-lg leading-relaxed">{step.desc}</p>
+        <p className={`text-gray-300 text-lg leading-relaxed text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>{step.desc}</p>
 
-        {/* Phase indicator */}
         <div className="mt-8 pt-6 border-t border-white/10">
-          <p className="text-sm text-gray-500">
-            ضمن مرحلة:{' '}
+          <p className={`text-sm text-gray-500 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+            {t('withinPhase')}{' '}
             <span className="text-gold-400 font-medium">
-              {phases.find((p) => p.id === step.phase)?.title}
+              {t(`phases.${step.phase}.title`)}
             </span>
           </p>
         </div>
       </motion.div>
-    </motion.div>);
-
-}
-export function ExecutivePathSection() {
-  const [selectedStep, setSelectedStep] = useState<(typeof allSteps)[0] | null>(
-    null
+    </motion.div>
   );
+}
+export function ExecutivePathSection({ isRTL: isRTLProp }: { isRTL: boolean; }) {
+  const t = useTranslations('executionPage.executivePath');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
+  const stepsTranslated = useMemo(() =>
+    allSteps.map((s) => ({
+      ...s,
+      title: t(`steps.${s.id}.title`),
+      desc: t(`steps.${s.id}.desc`),
+    })),
+    [t]
+  );
+  const [selectedStep, setSelectedStep] = useState<(typeof allSteps)[0] | null>(null);
   const [activePhase, setActivePhase] = useState(1);
   const { ref, controls, variants } = useScrollReveal();
   const getPhaseColor = (phaseId: number) => {
@@ -546,7 +540,7 @@ export function ExecutivePathSection() {
   return (
     <section
       id="executive-path"
-      className="py-28 md:py-40 bg-gradient-to-b from-white via-cream-50 to-white relative overflow-hidden">
+      className="px-[5%] py-[2%] bg-gradient-to-b from-white via-cream-50 to-white relative overflow-hidden">
 
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.04]">
@@ -585,77 +579,64 @@ export function ExecutivePathSection() {
         }} />
 
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="w-full mx-auto px-4 md:px-6 relative z-10">
         {/* Header */}
         <motion.div
           ref={ref}
           initial="hidden"
           animate={controls}
           variants={variants}
-          className="text-center   mb-16 md:mb-24">
-
+          className="text-center mb-16 md:mb-24"
+        >
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 20
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gold-500/10 border border-gold-500/30 mb-6">
-
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-gold-500/10 border border-gold-500/30 mb-6"
+          >
             <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
-            <span className="text-gold-700 text-sm font-medium">
-              40 مرحلة متكاملة
-            </span>
+            <span className="text-gold-700 text-sm font-medium">{t('badge')}</span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-gradient-gold mb-6">
-            المسار التنفيذي
+            {t('title')}
           </h2>
-          <p className="text-lg md:text-xl text-gray-500 font-light leading-relaxed ">
-            رحلة مدروسة عبر 40 محطة تضمن انتقال ملفك التمويلي بدقة متناهية، من
-            التحليل الأولي وحتى الإغلاق الناجح
+          <p className="text-lg md:text-xl text-gray-500 font-light leading-relaxed text-center">
+            {t('lead')}
           </p>
         </motion.div>
 
         {/* Phase Navigation */}
         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12 md:mb-16">
-          {phases.map((phase) =>
-          <motion.button
-            key={phase.id}
-            onClick={() => setActivePhase(phase.id)}
-            whileHover={{
-              scale: 1.05
-            }}
-            whileTap={{
-              scale: 0.95
-            }}
-            className={`relative px-5 md:px-8 py-3 md:py-4 rounded-2xl font-bold text-sm md:text-base transition-all ${activePhase === phase.id ? `bg-gradient-to-r ${phase.gradient} text-white shadow-lg` : 'bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 border border-gray-200'}`}>
-
-              <span className="flex items-center gap-2">
-                <span className={`w-3 h-3 rounded-full ${phase.bgColor}`} />
-                {phase.title}
-              </span>
-              {activePhase === phase.id &&
-            <motion.div
-              layoutId="activePhaseIndicator"
-              className="absolute inset-0 rounded-2xl border-2 border-white/30" />
-
-            }
-            </motion.button>
-          )}
+          {phases.map((phase) => {
+            return (
+              <motion.button
+                key={phase.id}
+                onClick={() => setActivePhase(phase.id)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`relative px-5 md:px-8 py-3 md:py-4 rounded-2xl font-bold text-sm md:text-base transition-all cursor-pointer ${activePhase === phase.id ? `bg-gradient-to-r ${phase.gradient} text-white shadow-lg` : 'bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 border border-gray-200'}`}
+              >
+                <span className="flex items-center gap-2">
+                  <span className={`w-3 h-3 rounded-full ${phase.bgColor}`} />
+                  {t(`phases.${phase.id}.title`)}
+                </span>
+                {activePhase === phase.id && (
+                  <motion.div
+                    layoutId="activePhaseIndicator"
+                    className="absolute inset-0 rounded-2xl border-2 border-white/30"
+                  />
+                )}
+              </motion.button>
+            );
+          })}
         </div>
 
         {/* Subway Map Visualization */}
         <div className="relative">
           {/* Phase sections */}
           {phases.map((phase) => {
-            const phaseSteps = allSteps.filter((s) => s.phase === phase.id);
+            const phaseSteps = stepsTranslated.filter((s) => s.phase === phase.id);
             const isActive = activePhase === phase.id;
             return (
               <motion.div
@@ -676,18 +657,18 @@ export function ExecutivePathSection() {
                 {isActive &&
                 <div className="relative">
                     {/* Phase header */}
-                    <div className="flex items-center gap-4 mb-10">
+                    <div className="flex items-center gap-4 mb-10 px-5">
                       <div
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${phase.gradient} flex items-center justify-center text-white font-bold text-2xl shadow-xl`}>
 
                         {phase.id}
                       </div>
-                      <div>
+                      <div className="text-center md:text-left">
                         <h3 className="text-2xl md:text-3xl font-tajawal font-bold text-navy-950">
-                          مرحلة {phase.title}
+                          {t('phaseLabel')} {t(`phases.${phase.id}.title`)}
                         </h3>
                         <p className="text-gray-500">
-                          {phase.subtitle} • {phase.steps} محطات
+                          {t(`phases.${phase.id}.subtitle`)} • {phase.steps} {t('stations')}
                         </p>
                       </div>
                       <div className="flex-1 h-1 bg-gradient-to-l from-transparent via-gray-200 to-transparent mr-4" />
@@ -716,24 +697,6 @@ export function ExecutivePathSection() {
                       }} />
 
 
-                      {/* Animated train */}
-                      <motion.div
-                      className={`absolute top-1/2 -translate-y-1/2 w-8 h-8 ${phase.bgColor} rounded-lg shadow-lg z-20`}
-                      animate={{
-                        x: ['0%', '100%']
-                      }}
-                      transition={{
-                        duration: 10,
-                        repeat: Infinity,
-                        ease: 'linear'
-                      }}
-                      style={{
-                        left: '-2%'
-                      }}>
-
-                        <div className="absolute inset-0 rounded-lg bg-white/20" />
-                      </motion.div>
-
                       {/* Stations grid */}
                       <div className="relative grid grid-cols-5 md:grid-cols-10 gap-4 md:gap-6">
                         {phaseSteps.map((step, index) =>
@@ -759,54 +722,49 @@ export function ExecutivePathSection() {
         {/* Progress indicator */}
         <div className="mt-16 flex justify-center">
           <div className="flex items-center gap-2">
-            {phases.map((phase) =>
+            {phases.map((phase) => (
             <button
               key={phase.id}
               onClick={() => setActivePhase(phase.id)}
-              className={`w-3 h-3 rounded-full transition-all ${activePhase === phase.id ? `${phase.bgColor} scale-125` : 'bg-gray-300 hover:bg-gray-400'}`} />
-
-            )}
+              className={`w-3 h-3 rounded-full transition-all cursor-pointer ${activePhase === phase.id ? `${phase.bgColor} scale-125` : 'bg-gray-300 hover:bg-gray-400'}`}
+              aria-label={t(`phases.${phase.id}.title`)}
+            />
+            ))}
           </div>
         </div>
 
-        {/* Navigation arrows */}
-        <div className="flex justify-center gap-4 mt-8">
+        {/* Navigation arrows - prev/next direction-aware */}
+        <div className="flex justify-center items-center gap-4 mt-8">
           <motion.button
-            whileHover={{
-              scale: 1.1
-            }}
-            whileTap={{
-              scale: 0.9
-            }}
-            onClick={() => setActivePhase((prev) => prev > 1 ? prev - 1 : 4)}
-            className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-navy-900 hover:bg-gold-500 hover:text-white transition-all border border-gray-200">
-
-            <ChevronRight className="w-6 h-6" />
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setActivePhase((prev) => (prev > 1 ? prev - 1 : 4))}
+            className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-navy-900 hover:bg-gold-500 hover:text-white transition-all border border-gray-200 cursor-pointer"
+          >
+            {isRTL ? <ChevronRight className="w-6 h-6" /> : <ChevronLeft className="w-6 h-6" />}
           </motion.button>
           <motion.button
-            whileHover={{
-              scale: 1.1
-            }}
-            whileTap={{
-              scale: 0.9
-            }}
-            onClick={() => setActivePhase((prev) => prev < 4 ? prev + 1 : 1)}
-            className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-navy-900 hover:bg-gold-500 hover:text-white transition-all border border-gray-200">
-
-            <ChevronLeft className="w-6 h-6" />
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setActivePhase((prev) => (prev < 4 ? prev + 1 : 1))}
+            className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-navy-900 hover:bg-gold-500 hover:text-white transition-all border border-gray-200 cursor-pointer"
+          >
+            {isRTL ? <ChevronLeft className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}
           </motion.button>
         </div>
       </div>
 
       {/* Step detail modal */}
       <AnimatePresence>
-        {selectedStep &&
+        {selectedStep && (
         <StepModal
           step={selectedStep}
           onClose={() => setSelectedStep(null)}
-          phaseColor={getPhaseColor(selectedStep.phase)} />
-
-        }
+          phaseColor={getPhaseColor(selectedStep.phase)}
+          t={t}
+          isRTL={isRTL}
+        />
+        )}
       </AnimatePresence>
 
       {/* Bottom Wave Divider */}

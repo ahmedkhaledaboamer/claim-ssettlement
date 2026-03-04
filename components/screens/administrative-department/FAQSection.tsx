@@ -8,10 +8,36 @@ import {
   HelpCircleIcon,
   MessageCircleIcon } from
 'lucide-react';
-export function FAQSection() {
+import Link from 'next/link';
+import Image from 'next/image';
+export function FAQSection({ locale }: { locale: string }) {
+  const isRTL = locale === 'ar';
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const categories = [...new Set(faqItems.map((item) => item.category))];
+  const categories = [
+    ...new Set(
+      faqItems.map((item) =>
+        locale === 'ar'
+          ? item.category
+          : locale === 'fr'
+          ? item.categoryFr
+          : item.categoryEn
+      )
+    )
+  ];
+  const headingTitle =
+    locale === 'ar'
+      ? { main: 'الأسئلة', highlight: ' الشائعة' }
+      : locale === 'fr'
+      ? { main: 'Questions', highlight: ' fréquentes' }
+      : { main: 'Frequently', highlight: ' asked questions' };
+
+  const headingDescription =
+    locale === 'ar'
+      ? 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا وآلية عملنا'
+      : locale === 'fr'
+      ? 'Des réponses aux questions les plus fréquentes sur nos services et notre façon de travailler.'
+      : 'Answers to the most common questions about our services and how we work.';
   return (
     <section id="faq" className="relative p-[5%] overflow-hidden bg-white">
       <div ref={ref} className="relative z-10  ">
@@ -34,12 +60,12 @@ export function FAQSection() {
           }}
           className="text-center mb-16">
 
-          <h2 className="text-3xl md:text-5xl font-black mb-6">
-            <span className="text-slate-900">الأسئلة</span>
-            <span className="gradient-text-gold"> الشائعة</span>
+          <h2 className="text-fluid-section-title font-black mb-6">
+            <span className="text-slate-900">{headingTitle.main}</span>
+            <span className="gradient-text-gold">{headingTitle.highlight}</span>
           </h2>
-          <p className="text-lg text-slate-600  ">
-            إجابات على أكثر الأسئلة شيوعاً حول خدماتنا وآلية عملنا
+          <p className="text-fluid-section-lead text-slate-600  ">
+            {headingDescription}
           </p>
         </motion.div>
 
@@ -63,20 +89,38 @@ export function FAQSection() {
           }}
           className="flex flex-wrap justify-center gap-3 mb-12">
 
-          {categories.map((category) =>
-          <span
-            key={category}
-            className="px-4 py-2 rounded-full bg-slate-100 text-sm text-slate-600">
-
+          {categories.map((category) => (
+            <span
+              key={category}
+              className="px-4 py-2 rounded-full bg-slate-100 text-fluid-body text-slate-600"
+            >
               {category}
             </span>
-          )}
+          ))}
         </motion.div>
 
         {/* FAQ Accordion */}
         <div className="space-y-4">
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;
+            const question =
+              locale === 'ar'
+                ? item.questionAr
+                : locale === 'fr'
+                ? item.questionFr
+                : item.questionEn;
+            const answer =
+              locale === 'ar'
+                ? item.answerAr
+                : locale === 'fr'
+                ? item.answerFr
+                : item.answerEn;
+            const categoryLabel =
+              locale === 'ar'
+                ? item.category
+                : locale === 'fr'
+                ? item.categoryFr
+                : item.categoryEn;
             return (
               <motion.div
                 key={item.id}
@@ -96,12 +140,12 @@ export function FAQSection() {
                   duration: 0.5,
                   delay: index * 0.05
                 }}
-                className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                className="cursor-pointer bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
 
                 {/* Question */}
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center gap-4 p-6 text-right hover:bg-slate-50 transition-colors">
+                  className="cursor-pointer w-full flex items-center gap-4 p-6 text-right hover:bg-slate-50 transition-colors">
 
                   <div
                     className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${isOpen ? 'bg-teal-50' : 'bg-slate-100'}`}>
@@ -111,9 +155,9 @@ export function FAQSection() {
 
                   </div>
                   <span
-                    className={`flex-1 font-bold transition-colors duration-300 ${isOpen ? 'text-teal-600' : 'text-slate-900'}`}>
+                    className={`${!isRTL ? 'text-left' : 'text-right'} flex-1 font-bold text-fluid-body-lg transition-colors duration-300 ${isOpen ? 'text-teal-600' : 'text-slate-900'}`}>
 
-                    {item.questionAr}
+                    {question}
                   </span>
                   <motion.div
                     animate={{
@@ -151,12 +195,12 @@ export function FAQSection() {
                     className="overflow-hidden">
 
                       <div className="px-6 pb-6 pr-20">
-                        <p className="text-slate-600 leading-relaxed">
-                          {item.answerAr}
+                        <p className="text-fluid-body text-slate-600 leading-relaxed">
+                          {answer}
                         </p>
-                        <div className="mt-4 flex items-center gap-2 text-sm text-teal-600">
+                        <div className="mt-4 flex items-center gap-2 text-fluid-body text-teal-600">
                           <span className="px-3 py-1 rounded-full bg-teal-50">
-                            {item.category}
+                            {categoryLabel}
                           </span>
                         </div>
                       </div>
@@ -192,27 +236,42 @@ export function FAQSection() {
             <div className="grid md:grid-cols-2">
               {/* Image Side */}
               <div className="relative h-48 md:h-auto">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&h=400&fit=crop"
                   alt="فريق الدعم"
                   className="w-full h-full object-cover"
-                  loading="lazy" />
+                  loading="lazy"
+                  width={800}
+                  height={400}
+                  />
 
                 <div className="absolute inset-0 bg-gradient-to-l from-teal-900/60 to-transparent md:bg-gradient-to-r" />
               </div>
 
               {/* Content Side */}
-              <div className="p-8 flex flex-col justify-center">
+              <div className="p-8 flex flex-col justify-center items-center">
                 <MessageCircleIcon className="w-12 h-12 text-teal-600 mb-4" />
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  لم تجد إجابة لسؤالك؟
+                <h3 className="text-fluid-body-lg font-bold text-slate-900 mb-2">
+                  {locale === 'ar'
+                    ? 'لم تجد إجابة لسؤالك؟'
+                    : locale === 'fr'
+                    ? 'Vous n’avez pas trouvé de réponse à votre question ?'
+                    : 'Didn’t find an answer to your question?'}
                 </h3>
-                <p className="text-slate-600 mb-6">
-                  فريقنا جاهز للإجابة على جميع استفساراتك على مدار الساعة
+                <p className="text-fluid-body text-slate-600 mb-6">
+                  {locale === 'ar'
+                    ? 'فريقنا جاهز للإجابة على جميع استفساراتك على مدار الساعة'
+                    : locale === 'fr'
+                    ? 'Notre équipe est prête à répondre à toutes vos questions à tout moment.'
+                    : 'Our team is ready to answer all your questions around the clock.'}
                 </p>
-                <button className="px-8 py-3 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold hover:opacity-90 transition-opacity w-fit">
-                  تواصل معنا
-                </button>
+                <Link href="/execution" className="px-8 py-3 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold text-fluid-body hover:opacity-90 transition-opacity w-fit">
+                  {locale === 'ar'
+                    ? 'تواصل معنا'
+                    : locale === 'fr'
+                    ? 'Contactez‑nous'
+                    : 'Contact us'}
+                </Link>
               </div>
             </div>
           </div>

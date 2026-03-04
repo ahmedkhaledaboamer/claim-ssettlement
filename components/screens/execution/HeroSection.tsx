@@ -10,6 +10,7 @@ import {
 'framer-motion';
 import {
   ArrowLeft,
+  ArrowRight,
   ChevronDown,
   ShieldCheck,
   TrendingUp,
@@ -19,6 +20,7 @@ import {
   Play,
   Star } from
 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 import { useCountUp } from '@/hooks/useCountUpSec';
 
 type ParticleConfig = {
@@ -167,8 +169,12 @@ export function HeroSection() {
     mouseX.set(0);
     mouseY.set(0);
   };
-  const titleText = 'المسار التنفيذي';
+  const t = useTranslations('executionPage.hero');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
+  const titleText = t('title');
   const titleWords = titleText.split(' ');
+  const ArrowCta = isRTL ? ArrowLeft : ArrowRight;
   // Generate particles
   const particles = PARTICLE_CONFIGS;
   // Sparkle positions
@@ -460,7 +466,7 @@ export function HeroSection() {
 
       {/* Main Content */}
       <div
-        className="container relative z-20 mx-auto px-4 md:px-8 lg:px-12 flex flex-col items-center text-center pt-24 pb-40"
+        className="relative z-20 w-full mx-auto px-4 md:px-8 lg:px-12 flex flex-col items-center justify-center text-center py-[5%] min-h-screen pt-24 pb-40"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}>
 
@@ -500,9 +506,9 @@ export function HeroSection() {
               repeat: Infinity
             }} />
 
-          <span className="relative text-gold-400 text-sm md:text-base font-semibold tracking-wider flex items-center gap-2">
+          <span className="relative text-gold-400 text-sm md:text-base font-semibold tracking-wider flex items-center justify-center gap-2">
             <Sparkles className="w-4 h-4" />
-            كيه إي بي للتمويل
+            {t('badge')}
           </span>
         </motion.div>
 
@@ -552,10 +558,9 @@ export function HeroSection() {
             duration: 1,
             delay: 1
           }}
-          className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-200   leading-relaxed mb-14 font-light">
+          className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-200 leading-relaxed mb-14 font-light text-center md:text-center">
 
-          البنية التشغيلية التي تُدار بالحوكمة، وتُنفّذ بالانضباط، وتُغلق بثقة
-          مجلس الإدارة
+          {t('subtitle')}
         </motion.p>
 
         {/* CTA Buttons with Magnetic Effect */}
@@ -572,7 +577,7 @@ export function HeroSection() {
             duration: 0.8,
             delay: 1.2
           }}
-          className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto mb-16">
+          className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto mb-16">
 
           {/* Primary CTA - Magnetic Button */}
           <motion.button
@@ -586,7 +591,8 @@ export function HeroSection() {
             whileTap={{
               scale: 0.95
             }}
-            className="relative w-full sm:w-auto group flex items-center justify-center gap-3 px-10 py-5 md:px-14 md:py-6 rounded-full font-bold text-lg md:text-xl transition-all overflow-hidden">
+            className="relative w-full sm:w-auto group flex items-center justify-center gap-3 px-10 py-5 md:px-14 md:py-6 rounded-full font-bold text-lg md:text-xl transition-all overflow-hidden cursor-pointer"
+          >
 
             {/* Animated gradient background */}
             <div className="absolute inset-0 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 bg-[length:200%_100%] animate-gradient-shift" />
@@ -607,9 +613,9 @@ export function HeroSection() {
 
             </div>
             <span className="relative text-navy-950 z-10">
-              ابدأ رحلتك التمويلية
+              {t('ctaPrimary')}
             </span>
-            <ArrowLeft className="relative w-5 h-5 md:w-6 md:h-6 text-navy-950 z-10 group-hover:-translate-x-2 transition-transform" />
+            <ArrowCta className={`relative w-5 h-5 md:w-6 md:h-6 text-navy-950 z-10 transition-transform ${isRTL ? 'group-hover:translate-x-2' : 'group-hover:-translate-x-2'}`} />
           </motion.button>
 
           {/* Secondary CTA */}
@@ -621,10 +627,10 @@ export function HeroSection() {
             whileTap={{
               scale: 0.97
             }}
-            className="w-full sm:w-auto flex items-center justify-center gap-3 bg-white/5 hover:bg-white/15 text-white border border-white/30 hover:border-gold-500/60 px-10 py-5 md:px-14 md:py-6 rounded-full font-bold text-lg md:text-xl transition-all backdrop-blur-md group">
-
+            className="w-full sm:w-auto flex items-center justify-center gap-3 bg-white/5 hover:bg-white/15 text-white border border-white/30 hover:border-gold-500/60 px-10 py-5 md:px-14 md:py-6 rounded-full font-bold text-lg md:text-xl transition-all backdrop-blur-md group cursor-pointer"
+          >
             <Play className="w-5 h-5 group-hover:text-gold-400 transition-colors" />
-            <span>اكتشف المسار</span>
+            <span>{t('ctaSecondary')}</span>
           </motion.a>
         </motion.div>
 
@@ -644,21 +650,21 @@ export function HeroSection() {
           <FloatingStatCard
             icon={<TrendingUp className="w-5 h-5 md:w-6 md:h-6" />}
             value="40+"
-            label="مرحلة تنفيذية"
+            label={t('statStage')}
             color="bg-gradient-to-br from-gold-500 to-gold-700"
             delay={1.6} />
 
           <FloatingStatCard
             icon={<ShieldCheck className="w-5 h-5 md:w-6 md:h-6" />}
             value="100%"
-            label="حوكمة وامتثال"
+            label={t('statGovernance')}
             color="bg-gradient-to-br from-teal-500 to-teal-700"
             delay={1.8} />
 
           <FloatingStatCard
             icon={<Star className="w-5 h-5 md:w-6 md:h-6" />}
-            value="معتمد"
-            label="من مجلس الإدارة"
+            value={t('statBoardValue')}
+            label={t('statBoard')}
             color="bg-gradient-to-br from-fuchsia-500 to-fuchsia-700"
             delay={2.0} />
 
@@ -672,13 +678,13 @@ export function HeroSection() {
         }}
         className="absolute bottom-0 left-0 right-0 z-30 bg-navy-950/95 backdrop-blur-2xl border-t border-gold-500/20">
 
-        <div className="container mx-auto px-4 py-8 md:py-10">
+        <div className="w-full mx-auto px-4 py-8 md:py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-x-reverse divide-white/10">
             <StatItem
               icon={<TrendingUp />}
               value={40}
               suffix="+"
-              label="مرحلة تنفيذية"
+              label={t('statStage')}
               delay={1.2}
               color="gold" />
 
@@ -686,7 +692,7 @@ export function HeroSection() {
               icon={<ShieldCheck />}
               value={100}
               suffix="%"
-              label="حوكمة وامتثال"
+              label={t('statGovernance')}
               delay={1.4}
               color="teal" />
 
@@ -694,7 +700,7 @@ export function HeroSection() {
               icon={<Users />}
               value={360}
               suffix="°"
-              label="رقابة شاملة"
+              label={t('stat360')}
               delay={1.6}
               color="coral" />
 
@@ -702,7 +708,7 @@ export function HeroSection() {
               icon={<Clock />}
               value={24}
               suffix="/7"
-              label="متابعة مستمرة"
+              label={t('stat24')}
               delay={1.8}
               color="fuchsia" />
 
@@ -710,38 +716,6 @@ export function HeroSection() {
         </div>
       </motion.div>
 
-      {/* Scroll Indicator */}
-      <motion.a
-        href="#about"
-        initial={{
-          opacity: 0
-        }}
-        animate={{
-          opacity: 1
-        }}
-        transition={{
-          delay: 2.5,
-          duration: 1
-        }}
-        className="absolute bottom-44 left-1/2 -translate-x-1/2 z-20 text-white/60 hover:text-gold-400 transition-colors hidden md:flex flex-col items-center gap-3 group">
-
-        <span className="text-sm font-medium tracking-[0.2em] uppercase">
-          اكتشف المزيد
-        </span>
-        <motion.div
-          animate={{
-            y: [0, 12, 0]
-          }}
-          transition={{
-            duration: 1.8,
-            repeat: Infinity,
-            ease: 'easeInOut'
-          }}
-          className="p-2 rounded-full border border-current group-hover:border-gold-400">
-
-          <ChevronDown className="w-5 h-5" />
-        </motion.div>
-      </motion.a>
     </section>);
 
 }

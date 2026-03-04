@@ -130,7 +130,6 @@ export default async function NotFound() {
                   fontWeight: 900,
                   letterSpacing: "-0.05em",
                   lineHeight: 1,
-                  fontFamily: "'Georgia', serif",
                   color: "transparent",
                   WebkitTextStroke: "1px rgba(201,168,76,0.12)",
                   userSelect: "none",
@@ -177,7 +176,6 @@ export default async function NotFound() {
               >
                 <span
                   style={{
-                    fontFamily: "'Georgia', serif",
                     fontSize: 15,
                     fontWeight: 700,
                     color: "#C9A84C",
@@ -197,7 +195,6 @@ export default async function NotFound() {
                     letterSpacing: "0.3em",
                     textTransform: "uppercase",
                     color: "rgba(201,168,76,0.85)",
-                    fontFamily: "monospace",
                   }}
                 >
                   {t("badge")}
@@ -266,7 +263,6 @@ export default async function NotFound() {
             style={{
               color: "rgba(255,255,255,0.2)",
               letterSpacing: "0.15em",
-              fontFamily: "monospace",
               textTransform: "uppercase",
             }}
           >

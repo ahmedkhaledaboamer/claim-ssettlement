@@ -8,66 +8,20 @@ import {
   LineChart,
   Clock,
   Key,
-  Award } from
-'lucide-react';
+  Award } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
-const benefits = [
-{
-  icon: ShieldCheck,
-  title: 'حوكمة صارمة',
-  desc: 'إطار تنظيمي يضمن سلامة الإجراءات وتوافقها مع الأنظمة.',
-  color: 'teal',
-  percent: 100
-},
-{
-  icon: Lock,
-  title: 'أمان مالي',
-  desc: 'حماية كاملة لمصالح العميل وتقليل المخاطر المحتملة.',
-  color: 'gold',
-  percent: 99
-},
-{
-  icon: Eye,
-  title: 'رقابة شاملة',
-  desc: 'متابعة دقيقة لكل خطوة في مسار التمويل لضمان الجودة.',
-  color: 'coral',
-  percent: 100
-},
-{
-  icon: CheckCircle,
-  title: 'شفافية كاملة',
-  desc: 'وضوح تام في الشروط، الرسوم، والالتزامات دون مفاجآت.',
-  color: 'green',
-  percent: 100
-},
-{
-  icon: LineChart,
-  title: 'تحليل عميق',
-  desc: 'دراسة مستفيضة للبيانات المالية لضمان القدرة على السداد.',
-  color: 'navy',
-  percent: 98
-},
-{
-  icon: Clock,
-  title: 'متابعة مستمرة',
-  desc: 'دعم متواصل حتى بعد صرف التمويل لضمان استقرار العميل.',
-  color: 'purple',
-  percent: 100
-},
-{
-  icon: Key,
-  title: 'سرية تامة',
-  desc: 'بروتوكولات صارمة لحماية بيانات العميل ومعلوماته الحساسة.',
-  color: 'teal',
-  percent: 100
-},
-{
-  icon: Award,
-  title: 'جودة عالية',
-  desc: 'معايير مهنية رفيعة في إعداد الملفات والتفاوض مع الجهات.',
-  color: 'gold',
-  percent: 99
-}];
+import { useTranslations, useLocale } from 'next-intl';
+
+const benefitsConfig = [
+  { key: 'governance', icon: ShieldCheck, color: 'teal', percent: 100 },
+  { key: 'security', icon: Lock, color: 'gold', percent: 99 },
+  { key: 'oversight', icon: Eye, color: 'coral', percent: 100 },
+  { key: 'transparency', icon: CheckCircle, color: 'green', percent: 100 },
+  { key: 'analysis', icon: LineChart, color: 'navy', percent: 98 },
+  { key: 'followUp', icon: Clock, color: 'purple', percent: 100 },
+  { key: 'confidentiality', icon: Key, color: 'teal', percent: 100 },
+  { key: 'quality', icon: Award, color: 'gold', percent: 99 },
+];
 
 const colorConfig = {
   teal: {
@@ -108,9 +62,12 @@ const colorConfig = {
   }
 };
 export function BenefitsSection() {
+  const t = useTranslations('executionPage.benefits');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
   const { ref, controls, variants } = useScrollReveal();
   return (
-    <section className="p-[5%] bg-white relative overflow-hidden">
+    <section className="px-[5%] py-[2%] bg-white relative overflow-hidden">
       {/* Subtle background pattern */}
       <div
         className="absolute inset-0 opacity-[0.02]"
@@ -146,33 +103,31 @@ export function BenefitsSection() {
         }} />
 
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="w-full mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div className="lg:w-2/3">
+          <div className="lg:w-2/3 w-full">
             <motion.div
               ref={ref}
               initial="hidden"
               animate={controls}
               variants={variants}
-              className="text-center lg:text-right mb-14">
-
+              className={`text-center mb-14 ${isRTL ? 'lg:text-right' : 'lg:text-left'}`}
+            >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-tajawal font-bold text-navy-900 mb-5">
-                القيمة <span className="text-gradient-gold">المضافة</span>
+                {t('title')} <span className="text-gradient-gold">{t('titleHighlight')}</span>
               </h2>
-              <p className="text-gray-500 text-base md:text-lg   leading-relaxed">
-                نحن لا نعد العميل بتمويل فقط، بل نعده بمنظومة متكاملة تعمل خلفه
-                بثبات وتدير ملفه بثقة.
+              <p className="text-gray-500 text-base md:text-lg leading-relaxed">
+                {t('lead')}
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
-              {benefits.map((benefit, index) => {
-                const config =
-                colorConfig[benefit.color as keyof typeof colorConfig];
+              {benefitsConfig.map((benefit, index) => {
+                const config = colorConfig[benefit.color as keyof typeof colorConfig];
                 return (
                   <motion.div
-                    key={index}
+                    key={benefit.key}
                     initial={{
                       opacity: 0,
                       scale: 0.9
@@ -192,21 +147,21 @@ export function BenefitsSection() {
                     className="relative bg-white rounded-2xl p-5 md:p-7 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 border border-gray-100 hover:border-gold-300 overflow-hidden">
 
                     {/* Large Background Number */}
-                    <span className="absolute -top-2 -right-2 text-7xl md:text-8xl font-bold text-gray-100 opacity-40 font-tajawal select-none">
+                    <span className={`absolute -top-2 text-7xl md:text-8xl font-bold text-gray-100 opacity-40 font-tajawal select-none ${isRTL ? '-right-2' : '-left-2'}`}>
                       {String(index + 1).padStart(2, '0')}
                     </span>
 
-                    <div className="relative z-10">
+                    <div className="relative z-10 text-center md:text-left">
                       <div
-                        className={`w-12 h-12 md:w-14 md:h-14 rounded-full ${config.light} flex items-center justify-center ${config.text} mb-4 shadow-inner`}>
-
+                        className={`w-12 h-12 md:w-14 md:h-14 rounded-full ${config.light} flex items-center justify-center ${config.text} mb-4 shadow-inner mx-auto md:mx-0`}
+                      >
                         <benefit.icon className="w-6 h-6 md:w-7 md:h-7" />
                       </div>
                       <h3 className="text-lg md:text-xl font-tajawal font-bold text-navy-900 mb-2">
-                        {benefit.title}
+                        {t(`${benefit.key}.title`)}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                        {benefit.desc}
+                        {t(`${benefit.key}.desc`)}
                       </p>
 
                       {/* Progress Bar */}

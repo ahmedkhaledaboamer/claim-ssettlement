@@ -15,9 +15,23 @@ const layerImages: string[] = [
 'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&h=400&fit=crop',
 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop'];
 
-export function OperatingSystemSection() {
+export function OperatingSystemSection({ locale }: { locale: string }) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const [activeLayer, setActiveLayer] = useState(0);
+  const isRTL = locale === 'ar';
+  const headingTitle =
+    locale === 'ar'
+      ? { main: 'نظام', highlight: ' التشغيل' }
+      : locale === 'fr'
+      ? { main: 'Système', highlight: ' opérationnel' }
+      : { main: 'Operating', highlight: ' system' };
+
+  const headingDescription =
+    locale === 'ar'
+      ? '٥ طبقات متكاملة تعمل بتناغم لضمان أفضل النتائج'
+      : locale === 'fr'
+      ? '5 couches intégrées qui fonctionnent en harmonie pour garantir les meilleurs résultats.'
+      : '5 integrated layers working in harmony to deliver the best results.';
   return (
     <section id="system" className="relative p-[5%] overflow-hidden bg-white">
       <div ref={ref} className="relative z-10  ">
@@ -40,12 +54,12 @@ export function OperatingSystemSection() {
           }}
           className="text-center mb-16">
 
-          <h2 className="text-3xl md:text-5xl font-black mb-6">
-            <span className="text-slate-900">نظام</span>
-            <span className="gradient-text-gold"> التشغيل</span>
+          <h2 className="text-fluid-section-title font-black mb-6">
+            <span className="text-slate-900">{headingTitle.main}</span>
+            <span className="gradient-text-gold">{headingTitle.highlight}</span>
           </h2>
-          <p className="text-lg text-slate-600  ">
-            ٥ طبقات متكاملة تعمل بتناغم لضمان أفضل النتائج
+          <p className="text-fluid-section-lead text-slate-600  ">
+            {headingDescription}
           </p>
         </motion.div>
 
@@ -71,10 +85,16 @@ export function OperatingSystemSection() {
             }}
             className="relative">
 
-            <div className="space-y-3">
+            <div className="space-y-3 p-5">
               {operatingLayers.map((layer, index) => {
                 const IconComponent = lucideIcons[layer.icon] || Icons.LayersIcon;
                 const isActive = activeLayer === index;
+                const layerTitle =
+                  locale === 'ar'
+                    ? layer.titleAr
+                    : locale === 'fr'
+                    ? layer.titleFr
+                    : layer.titleEn;
                 return (
                   <motion.button
                     key={layer.id}
@@ -82,9 +102,12 @@ export function OperatingSystemSection() {
                       x: 10
                     }}
                     onClick={() => setActiveLayer(index)}
-                    className={`w-full flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border ${isActive ? 'bg-teal-50 border-teal-200' : 'bg-white border-slate-200 hover:bg-slate-50'}`}
+                    className={`cursor-pointer w-full flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border ${isActive ? 'bg-teal-50 border-teal-200' : 'bg-white border-slate-200 hover:bg-slate-50'}`}
                     style={{
-                      borderRight: isActive ?
+                      borderRight: isRTL && isActive ?
+                      `4px solid ${layer.color}` :
+                      '4px solid transparent',
+                      borderLeft: !isRTL && isActive ?
                       `4px solid ${layer.color}` :
                       '4px solid transparent'
                     }}>
@@ -119,18 +142,13 @@ export function OperatingSystemSection() {
 
                     {/* Title */}
                     <span
-                      className={`font-bold transition-colors duration-300 ${isActive ? 'text-slate-900' : 'text-slate-600'}`}>
+                      className={`${!isRTL ? 'text-left' : 'text-right'} md:text-center font-bold text-fluid-body-lg transition-colors duration-300 ${isActive ? 'text-slate-900' : 'text-slate-600'}`}>
 
-                      {layer.titleAr}
+                      {layerTitle}
                     </span>
 
                     {/* Arrow */}
-                    <Icons.ChevronLeftIcon
-                      className={`w-5 h-5 mr-auto transition-all duration-300 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-2'}`}
-                      style={{
-                        color: layer.color
-                      }} />
-
+                    {!isRTL ? <Icons.ChevronRightIcon className="w-5 h-5 mr-auto transition-all duration-300" /> : <Icons.ChevronLeftIcon className="w-5 h-5 mr-auto transition-all duration-300" />}
                   </motion.button>);
 
               })}
@@ -220,17 +238,29 @@ export function OperatingSystemSection() {
                         color: operatingLayers[activeLayer].color
                       }}>
 
-                      الطبقة {operatingLayers[activeLayer].id}
+                      {locale === 'ar'
+                        ? `الطبقة ${operatingLayers[activeLayer].id}`
+                        : locale === 'fr'
+                        ? `Couche ${operatingLayers[activeLayer].id}`
+                        : `Layer ${operatingLayers[activeLayer].id}`}
                     </span>
-                    <h3 className="text-2xl font-bold text-slate-900 mt-2">
-                      {operatingLayers[activeLayer].titleAr}
+                    <h3 className="text-fluid-2xl font-bold text-slate-900 mt-2">
+                      {locale === 'ar'
+                        ? operatingLayers[activeLayer].titleAr
+                        : locale === 'fr'
+                        ? operatingLayers[activeLayer].titleFr
+                        : operatingLayers[activeLayer].titleEn}
                     </h3>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-slate-600 leading-relaxed text-lg">
-                  {operatingLayers[activeLayer].descriptionAr}
+                <p className="text-fluid-body text-slate-600 leading-relaxed">
+                  {locale === 'ar'
+                    ? operatingLayers[activeLayer].descriptionAr
+                    : locale === 'fr'
+                    ? operatingLayers[activeLayer].descriptionFr
+                    : operatingLayers[activeLayer].descriptionEn}
                 </p>
 
                 {/* Visual Indicator */}

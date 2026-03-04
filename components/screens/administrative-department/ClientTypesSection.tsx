@@ -4,6 +4,7 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { clientTypes } from '@/data/journeyData';
 import * as Icons from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import Image from 'next/image';
 
 const lucideIcons = Icons as unknown as Record<string, LucideIcon>;
 // Client type images
@@ -17,8 +18,22 @@ const clientImages: Record<number, string> = {
   7: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=300&fit=crop',
   8: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=300&fit=crop'
 };
-export function ClientTypesSection() {
+export function ClientTypesSection({ locale }: { locale: string }) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
+  const isRTL = locale === 'ar';
+  const headingTitle =
+    locale === 'ar'
+      ? { main: 'من', highlight: ' نخدم' }
+      : locale === 'fr'
+      ? { main: 'Qui', highlight: ' servons‑nous ?' }
+      : { main: 'Who', highlight: ' do we serve?' };
+
+  const headingDescription =
+    locale === 'ar'
+      ? 'نقدم حلولاً تمويلية متخصصة لمختلف أنواع العملاء والقطاعات'
+      : locale === 'fr'
+      ? 'Nous proposons des solutions de financement spécialisées pour différents types de clients et de secteurs.'
+      : 'We provide specialized financing solutions for different client types and sectors.';
   return (
     <section
       id="clients"
@@ -44,12 +59,12 @@ export function ClientTypesSection() {
           }}
           className="text-center mb-16">
 
-          <h2 className="text-3xl md:text-5xl font-black mb-6">
-            <span className="text-slate-900">من</span>
-            <span className="gradient-text-gold"> نخدم</span>
+          <h2 className="text-fluid-section-title font-black mb-6">
+            <span className="text-slate-900">{headingTitle.main}</span>
+            <span className="gradient-text-gold">{headingTitle.highlight}</span>
           </h2>
-          <p className="text-lg text-slate-600  ">
-            نقدم حلولاً تمويلية متخصصة لمختلف أنواع العملاء والقطاعات
+          <p className="text-fluid-section-lead text-slate-600  ">
+            {headingDescription}
           </p>
         </motion.div>
 
@@ -58,6 +73,18 @@ export function ClientTypesSection() {
           {clientTypes.map((client, index) => {
             const IconComponent =
               lucideIcons[client.icon] || Icons.UserIcon;
+            const title =
+              locale === 'ar'
+                ? client.titleAr
+                : locale === 'fr'
+                ? client.titleFr
+                : client.titleEn;
+            const description =
+              locale === 'ar'
+                ? client.descriptionAr
+                : locale === 'fr'
+                ? client.descriptionFr
+                : client.descriptionEn;
             return (
               <motion.div
                 key={client.id}
@@ -80,18 +107,21 @@ export function ClientTypesSection() {
                 whileHover={{
                   y: -8
                 }}
-                className="group bg-white rounded-2xl overflow-hidden cursor-pointer border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300"
+                className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300"
                 style={{
                   borderBottom: `3px solid ${client.color}`
                 }}>
 
                 {/* Client Image */}
                 <div className="relative h-36 overflow-hidden">
-                  <img
+                  <Image
                     src={clientImages[client.id]}
-                    alt={client.titleAr}
+                    alt={title}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    loading="lazy" />
+                    loading="lazy"
+                    width={400}
+                    height={300}
+                    />
 
                   <div
                     className="absolute inset-0 opacity-30"
@@ -101,7 +131,7 @@ export function ClientTypesSection() {
 
 
                   {/* Icon Badge */}
-                  <div className="absolute bottom-3 right-3 w-12 h-12 rounded-xl bg-white shadow-lg flex items-center justify-center">
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 md:left-auto md:right-3 md:translate-x-0 w-12 h-12 rounded-xl bg-white shadow-lg flex items-center justify-center">
                     <IconComponent
                       className="w-6 h-6"
                       style={{
@@ -111,37 +141,19 @@ export function ClientTypesSection() {
                   </div>
                 </div>
 
-                <div className="p-6">
+                <div className={`p-6 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
                   {/* Content */}
                   <h3
-                    className="text-xl font-bold mb-3 transition-colors duration-300 group-hover:text-slate-900"
+                    className="text-fluid-card-title font-bold mb-3 transition-colors duration-300 group-hover:text-slate-900"
                     style={{
                       color: client.color
                     }}>
 
-                    {client.titleAr}
+                    {title}
                   </h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">
-                    {client.descriptionAr}
+                  <p className="text-fluid-body text-slate-500 leading-relaxed">
+                    {description}
                   </p>
-
-                  {/* Arrow */}
-                  <div className="mt-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span
-                      className="text-sm font-medium"
-                      style={{
-                        color: client.color
-                      }}>
-
-                      اكتشف المزيد
-                    </span>
-                    <Icons.ArrowLeftIcon
-                      className="w-4 h-4"
-                      style={{
-                        color: client.color
-                      }} />
-
-                  </div>
                 </div>
               </motion.div>);
 

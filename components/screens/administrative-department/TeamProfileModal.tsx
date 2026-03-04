@@ -4,6 +4,7 @@ import * as Icons from 'lucide-react';
 import { TeamMember } from '@/data/teamData';
 import { departmentColors } from '@/data/departmentColors';
 import type { LucideIcon } from 'lucide-react';
+import Image from 'next/image';
 
 const lucideIcons = Icons as unknown as Record<string, LucideIcon>;
 // Map team member IDs to professional portrait photos
@@ -28,17 +29,43 @@ interface TeamProfileModalProps {
   member: TeamMember | null;
   isOpen: boolean;
   onClose: () => void;
+  locale: string;
 }
 export function TeamProfileModal({
   member,
   isOpen,
-  onClose
+  onClose,
+  locale
 }: TeamProfileModalProps) {
   if (!member) return null;
   const department = departmentColors[member.departmentId];
   const IconComponent =
     lucideIcons[member.icon] || Icons.UserIcon;
   const photoUrl = teamPhotos[member.id] || teamPhotos[1];
+  const name =
+    locale === 'ar'
+      ? member.titleAr
+      : locale === 'fr'
+      ? member.titleFr
+      : member.titleEn;
+  const departmentName =
+    locale === 'ar'
+      ? member.departmentAr
+      : locale === 'fr'
+      ? member.departmentFr
+      : member.departmentEn;
+  const description =
+    locale === 'ar'
+      ? member.descriptionAr
+      : locale === 'fr'
+      ? member.descriptionFr
+      : member.descriptionEn;
+  const responsibilities =
+    locale === 'ar'
+      ? member.responsibilitiesAr
+      : locale === 'fr'
+      ? member.responsibilitiesFr
+      : member.responsibilitiesEn;
   return (
     <AnimatePresence>
       {isOpen &&
@@ -52,7 +79,7 @@ export function TeamProfileModal({
         exit={{
           opacity: 0
         }}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 "
         onClick={onClose}>
 
           {/* Backdrop */}
@@ -91,7 +118,7 @@ export function TeamProfileModal({
             damping: 25
           }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full   overflow-y-auto bg-white rounded-3xl shadow-2xl border border-slate-200"
+          className="relative w-full max-w-6xl mx-auto  overflow-y-auto bg-white rounded-3xl shadow-2xl border border-slate-200"
           style={{
             borderTop: `4px solid ${department.primary}`
           }}>
@@ -99,18 +126,21 @@ export function TeamProfileModal({
             {/* Close Button */}
             <button
             onClick={onClose}
-            className="absolute top-4 left-4 z-10 w-10 h-10 rounded-full bg-white/90 shadow-lg flex items-center justify-center hover:bg-white transition-colors">
+            className="cursor-pointer absolute top-4 left-4 z-10 w-10 h-10 rounded-full bg-white/90 shadow-lg flex items-center justify-center hover:bg-white transition-colors">
 
               <Icons.XIcon className="w-5 h-5 text-slate-600" />
             </button>
 
             {/* Header with Photo */}
             <div className="relative h-56 overflow-hidden">
-              <img
+              <Image
               src={photoUrl}
-              alt={member.titleAr}
+              alt={name}
               className="w-full h-full object-cover"
-              loading="lazy" />
+              loading="lazy"
+              width={400}
+              height={400}
+              />
 
               {/* Gradient Overlay */}
               <div
@@ -164,14 +194,14 @@ export function TeamProfileModal({
                 y: 0
               }}
               transition={{
-                delay: 0.1
+              delay: 0.1
               }}
-              className="text-3xl font-black mb-2"
+              className="text-fluid-2xl font-black mb-2"
               style={{
                 color: department.primary
               }}>
 
-                {member.titleAr}
+                {name}
               </motion.h2>
 
               {/* Department */}
@@ -185,7 +215,7 @@ export function TeamProfileModal({
                 y: 0
               }}
               transition={{
-                delay: 0.15
+              delay: 0.15
               }}
               className="flex items-center gap-2 mb-6">
 
@@ -195,8 +225,8 @@ export function TeamProfileModal({
                   backgroundColor: department.primary
                 }} />
 
-                <span className="text-lg text-slate-600">
-                  {member.departmentAr}
+                <span className="text-fluid-body-lg text-slate-600">
+                  {departmentName}
                 </span>
               </motion.div>
 
@@ -211,11 +241,11 @@ export function TeamProfileModal({
                 y: 0
               }}
               transition={{
-                delay: 0.2
+              delay: 0.2
               }}
-              className="text-slate-600 leading-relaxed mb-8">
+              className="text-fluid-body text-slate-600 leading-relaxed mb-8">
 
-                {member.description}
+                {description}
               </motion.p>
 
               {/* Responsibilities */}
@@ -232,17 +262,21 @@ export function TeamProfileModal({
                 delay: 0.25
               }}>
 
-                <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <h3 className="text-fluid-body-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
                   <Icons.ClipboardListIcon
                   className="w-5 h-5"
                   style={{
                     color: department.primary
                   }} />
 
-                  المسؤوليات الرئيسية
+                  {locale === 'ar'
+                    ? 'المسؤوليات الرئيسية'
+                    : locale === 'fr'
+                    ? 'Principales responsabilités'
+                    : 'Main responsibilities'}
                 </h3>
                 <div className="space-y-3">
-                  {member.responsibilities.map((resp, index) =>
+                  {responsibilities.map((resp, index) =>
                 <motion.div
                   key={index}
                   initial={{
@@ -259,7 +293,7 @@ export function TeamProfileModal({
                   className="flex items-start gap-3 p-3 rounded-xl bg-slate-50">
 
                       <div
-                    className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                    className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5"
                     style={{
                       backgroundColor: `${department.primary}15`
                     }}>
@@ -271,7 +305,7 @@ export function TeamProfileModal({
                       }} />
 
                       </div>
-                      <span className="text-slate-700">{resp}</span>
+                      <span className="text-fluid-body text-slate-700">{resp}</span>
                     </motion.div>
                 )}
                 </div>
@@ -292,20 +326,6 @@ export function TeamProfileModal({
               }}
               className="mt-8 flex gap-4">
 
-                <button
-                className="flex-1 py-3 rounded-xl font-bold text-white transition-all hover:opacity-90"
-                style={{
-                  backgroundColor: department.primary
-                }}>
-
-                  تواصل مباشرة
-                </button>
-                <button
-                onClick={onClose}
-                className="px-6 py-3 rounded-xl font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-all">
-
-                  إغلاق
-                </button>
               </motion.div>
             </div>
           </motion.div>

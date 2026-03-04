@@ -1,7 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
 import { ChevronDownIcon, SparklesIcon } from 'lucide-react';
-export function HeroSection() {
+import Image from 'next/image';
+
+interface HeroSectionProps {
+  locale: string;
+}
+
+export function HeroSection({ locale }: HeroSectionProps) {
   const scrollToTeam = () => {
     document.getElementById('team')?.scrollIntoView({
       behavior: 'smooth'
@@ -14,14 +20,17 @@ export function HeroSection() {
 
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop"
           alt="مبنى مكتبي حديث"
           className="w-full h-full object-cover"
-          loading="eager" />
+          loading="eager"
+          width={1920}
+          height={1080}
+          />
 
         {/* Light overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-white/80 to-white/95" />
       </div>
 
       {/* Animated Gradient Orbs */}
@@ -78,8 +87,8 @@ export function HeroSection() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-8">
 
           <SparklesIcon className="w-4 h-4 text-teal-600" />
-          <span className="text-sm text-slate-600">
-            KEP Financing Brokerage
+          <span className="text-fluid-label text-slate-600">
+            KIB Financing Brokerage
           </span>
         </motion.div>
 
@@ -97,11 +106,29 @@ export function HeroSection() {
             duration: 0.8,
             delay: 0.2
           }}
-          className="text-5xl md:text-7xl lg:text-8xl font-black mb-6">
+          className="text-fluid-hero font-black mb-6">
 
-          <span className="gradient-text-gold">الجهاز الإداري</span>
-          <br />
-          <span className="text-slate-900">المتكامل</span>
+          {locale === 'ar' && (
+            <>
+              <span className="gradient-text-gold">الجهاز الإداري</span>
+              <br />
+              <span className="text-slate-900">المتكامل</span>
+            </>
+          )}
+          {locale === 'en' && (
+            <>
+              <span className="gradient-text-gold">The administrative</span>
+              <br />
+              <span className="text-slate-900">powerhouse</span>
+            </>
+          )}
+          {locale === 'fr' && (
+            <>
+              <span className="gradient-text-gold">Le dispositif</span>
+              <br />
+              <span className="text-slate-900">administratif intégré</span>
+            </>
+          )}
         </motion.h1>
 
         {/* Subtitle */}
@@ -118,13 +145,35 @@ export function HeroSection() {
             duration: 0.8,
             delay: 0.4
           }}
-          className="text-xl md:text-2xl text-slate-600   mb-12 leading-relaxed">
+          className="text-fluid-section-lead text-slate-600   mb-12 leading-relaxed">
 
-          فريق متكامل من{' '}
-          <span className="text-teal-600 font-bold">١٥ منصباً تنفيذياً</span>{' '}
-          يعمل بتناغم تام
-          <br className="hidden md:block" />
-          لتحويل طموحاتك التمويلية إلى واقع ملموس
+          {locale === 'ar' && (
+            <>
+              فريق متكامل من{' '}
+              <span className="text-teal-600 font-bold">15 منصباً تنفيذياً</span>{' '}
+              يعمل بتناغم تام
+              <br className="hidden md:block" />
+              لتحويل طموحاتك التمويلية إلى واقع ملموس
+            </>
+          )}
+          {locale === 'en' && (
+            <>
+              An integrated team of{' '}
+              <span className="text-teal-600 font-bold">15 executive positions</span>{' '}
+              working in complete harmony
+              <br className="hidden md:block" />
+              to turn your financing ambitions into tangible results.
+            </>
+          )}
+          {locale === 'fr' && (
+            <>
+              Une équipe intégrée composée de{' '}
+              <span className="text-teal-600 font-bold">15 postes exécutifs</span>{' '}
+              qui travaillent en parfaite harmonie
+              <br className="hidden md:block" />
+              pour transformer vos ambitions de financement en résultats concrets.
+            </>
+          )}
         </motion.p>
 
         {/* Stats Row */}
@@ -144,28 +193,52 @@ export function HeroSection() {
           className="flex flex-wrap justify-center gap-8 md:gap-16 mb-16">
 
           <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
-            <div className="text-4xl md:text-5xl font-black gradient-text-gold mb-2">
-              ١٥
+            <div className="text-fluid-stat font-black gradient-text-gold mb-2">
+              15
             </div>
-            <div className="text-sm text-slate-500">منصب تنفيذي</div>
+            <div className="text-fluid-body text-slate-500">
+              {locale === 'ar'
+                ? 'منصب تنفيذي'
+                : locale === 'fr'
+                ? 'Postes exécutifs'
+                : 'Executive positions'}
+            </div>
           </div>
           <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
-            <div className="text-4xl md:text-5xl font-black gradient-text-gold mb-2">
-              ٩
+            <div className="text-fluid-stat font-black gradient-text-gold mb-2">
+              9
             </div>
-            <div className="text-sm text-slate-500">مراحل متكاملة</div>
+            <div className="text-fluid-body text-slate-500">
+              {locale === 'ar'
+                ? 'مراحل متكاملة'
+                : locale === 'fr'
+                ? 'Étapes intégrées'
+                : 'Integrated stages'}
+            </div>
           </div>
           <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
-            <div className="text-4xl md:text-5xl font-black gradient-text-gold mb-2">
-              ٥
+            <div className="text-fluid-stat font-black gradient-text-gold mb-2">
+              5
             </div>
-            <div className="text-sm text-slate-500">مستويات خدمة</div>
+            <div className="text-fluid-body text-slate-500">
+              {locale === 'ar'
+                ? 'مستويات خدمة'
+                : locale === 'fr'
+                ? 'Niveaux de service'
+                : 'Service levels'}
+            </div>
           </div>
           <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
-            <div className="text-4xl md:text-5xl font-black gradient-text-gold mb-2">
-              ٩٤٪
+            <div className="text-fluid-stat font-black gradient-text-gold mb-2">
+              94٪
             </div>
-            <div className="text-sm text-slate-500">نسبة النجاح</div>
+            <div className="text-fluid-body text-slate-500">
+              {locale === 'ar'
+                ? 'نسبة النجاح'
+                : locale === 'fr'
+                ? 'Taux de réussite'
+                : 'Success rate'}
+            </div>
           </div>
         </motion.div>
 
@@ -190,9 +263,15 @@ export function HeroSection() {
             scale: 0.95
           }}
           onClick={scrollToTeam}
-          className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold text-lg shadow-lg overflow-hidden">
+          className="cursor-pointer group relative px-8 py-4 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold text-fluid-body-lg shadow-lg overflow-hidden">
 
-          <span className="relative z-10">اكتشف الفريق التنفيذي</span>
+          <span className="relative z-10">
+            {locale === 'ar'
+              ? 'اكتشف الفريق التنفيذي'
+              : locale === 'fr'
+              ? "Découvrez l'équipe exécutive"
+              : 'Discover the executive team'}
+          </span>
           <motion.div
             className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-400"
             initial={{
@@ -207,35 +286,6 @@ export function HeroSection() {
 
         </motion.button>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{
-            opacity: 0
-          }}
-          animate={{
-            opacity: 1
-          }}
-          transition={{
-            delay: 1.2
-          }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2">
-
-          <motion.div
-            animate={{
-              y: [0, 10, 0]
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: 'easeInOut'
-            }}
-            className="flex flex-col items-center gap-2 cursor-pointer"
-            onClick={scrollToTeam}>
-
-            <span className="text-xs text-slate-400">اكتشف المزيد</span>
-            <ChevronDownIcon className="w-6 h-6 text-teal-600" />
-          </motion.div>
-        </motion.div>
       </div>
 
       {/* Bottom Fade */}
