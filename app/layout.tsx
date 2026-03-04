@@ -1,10 +1,10 @@
-import { Gilda_Display } from "next/font/google";
+import { Cairo } from "next/font/google";
 import "./globals.css";
 
-const gildaDisplay = Gilda_Display({
-  variable: "--font-gilda-display",
-  subsets: ["latin"],
-  weight: ["400"],
+const cairo = Cairo({
+  variable: "--font-cairo",
+  subsets: ["latin", "arabic"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className={`${gildaDisplay.variable} antialiased`}>{children}</body>
+      <body className={`${cairo.variable} antialiased`}>{children}</body>
     </html>
   );
 }

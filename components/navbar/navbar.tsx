@@ -100,7 +100,7 @@ export default function Navbar() {
                 isActive(route.href) ? "text-primary" : "hover:opacity-90"
               )}
               style={{
-                fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                fontSize: "clamp(1rem, 0.55rem + 0.5vw, 1.75rem)",
                 paddingTop: "clamp(0.25rem, 0.5vw, 0.5rem)",
                 paddingBottom: "clamp(0.25rem, 0.5vw, 0.5rem)",
                 paddingLeft: "clamp(0.5rem, 0.75vw, 1rem)",

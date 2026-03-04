@@ -8,82 +8,86 @@ import {
   HomeIcon,
   CpuIcon,
   TrendingUpIcon,
-  RocketIcon } from
-'lucide-react';
+  RocketIcon
+} from 'lucide-react';
 import { FadeUp } from './ScrollAnimations';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
 const clientTypes = [
-{
-  icon: UserIcon,
-  title: 'رجال ورواد الأعمال',
-  count: '+120',
-  image:
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
-  color: 'gold',
-  size: 'large'
-},
-{
-  icon: Building2Icon,
-  title: 'الشركات الصغيرة والمتوسطة',
-  count: '+85',
-  image:
-  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
-  color: 'teal',
-  size: 'large'
-},
-{
-  icon: BuildingIcon,
-  title: 'الشركات الكبرى',
-  count: '+45',
-  image:
-  'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&q=80',
-  color: 'coral',
-  size: 'medium'
-},
-{
-  icon: FactoryIcon,
-  title: 'المشاريع التجارية والصناعية',
-  count: '+60',
-  image:
-  'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80',
-  color: 'green',
-  size: 'medium'
-},
-{
-  icon: HomeIcon,
-  title: 'المستثمرون العقاريون',
-  count: '+90',
-  image:
-  'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
-  color: 'gold',
-  size: 'small'
-},
-{
-  icon: CpuIcon,
-  title: 'المشاريع التقنية والابتكارية',
-  count: '+35',
-  image:
-  'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
-  color: 'purple',
-  size: 'small'
-},
-{
-  icon: TrendingUpIcon,
-  title: 'الشركات الراغبة في توسع أو إعادة هيكلة',
-  count: '+50',
-  image:
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
-  color: 'teal',
-  size: 'small'
-},
-{
-  icon: RocketIcon,
-  title: 'المشاريع الاستثمارية الجديدة',
-  count: '+75',
-  image:
-  'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80',
-  color: 'coral',
-  size: 'small'
-}];
+  {
+    id: 'entrepreneurs',
+    icon: UserIcon,
+    count: '+120',
+    image:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    color: 'gold',
+    size: 'large'
+  },
+  {
+    id: 'sme',
+    icon: Building2Icon,
+    count: '+85',
+    image:
+      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
+    color: 'teal',
+    size: 'large'
+  },
+  {
+    id: 'largeCorporates',
+    icon: BuildingIcon,
+    count: '+45',
+    image:
+      'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&q=80',
+    color: 'coral',
+    size: 'medium'
+  },
+  {
+    id: 'industrialCommercial',
+    icon: FactoryIcon,
+    count: '+60',
+    image:
+      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80',
+    color: 'green',
+    size: 'medium'
+  },
+  {
+    id: 'realEstateInvestors',
+    icon: HomeIcon,
+    count: '+90',
+    image:
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
+    color: 'gold',
+    size: 'small'
+  },
+  {
+    id: 'techInnovative',
+    icon: CpuIcon,
+    count: '+35',
+    image:
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
+    color: 'purple',
+    size: 'small'
+  },
+  {
+    id: 'expansionRestructuring',
+    icon: TrendingUpIcon,
+    count: '+50',
+    image:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
+    color: 'teal',
+    size: 'small'
+  },
+  {
+    id: 'newInvestments',
+    icon: RocketIcon,
+    count: '+75',
+    image:
+      'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80',
+    color: 'coral',
+    size: 'small'
+  }
+];
 
 const colorMap: Record<
   string,
@@ -170,6 +174,7 @@ function BentoCard({
   }];
 
   const animation = animations[index % animations.length];
+  const t = useTranslations('home.clients.types');
   return (
     <motion.div
       initial={{
@@ -190,14 +195,16 @@ function BentoCard({
         duration: 0.6,
         delay: index * 0.1
       }}
-      className={`relative rounded-3xl overflow-hidden group cursor-pointer ${sizeClasses[client.size as keyof typeof sizeClasses]} ${client.size === 'large' ? 'min-h-[300px] md:min-h-[400px]' : client.size === 'medium' ? 'min-h-[250px] md:min-h-[400px]' : 'min-h-[200px]'}`}>
+      className={`relative rounded-3xl overflow-hidden group ${sizeClasses[client.size as keyof typeof sizeClasses]} ${client.size === 'large' ? 'min-h-[300px] md:min-h-[400px]' : client.size === 'medium' ? 'min-h-[250px] md:min-h-[400px]' : 'min-h-[200px]'}`}>
 
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
+          width={100}
+          height={100}
           src={client.image}
-          alt={client.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          alt={t(client.id)}
+          className="w-full h-full object-cover img-fluid-cover transition-transform duration-700 group-hover:scale-110" />
 
         <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/40 to-transparent" />
       </div>
@@ -214,7 +221,7 @@ function BentoCard({
 
 
       {/* Content */}
-      <div className="absolute inset-0 p-6 flex flex-col justify-end">
+      <div className="absolute inset-0 p-6 flex flex-col justify-end text-center md:text-left">
         {/* Count Badge */}
         <motion.div
           initial={{
@@ -228,7 +235,7 @@ function BentoCard({
           transition={{
             delay: index * 0.1 + 0.3
           }}
-          className={`absolute top-4 left-4 ${colors.badge} text-white px-3 py-1.5 rounded-full font-cairo font-bold text-sm ${colors.shadow}`}>
+          className={`absolute top-4 left-4 ${colors.badge} text-white px-3 py-1.5 rounded-full font-cairo font-bold text-fluid-body ${colors.shadow}`}>
 
           {client.count}
         </motion.div>
@@ -239,16 +246,16 @@ function BentoCard({
             scale: 1.1,
             rotate: 5
           }}
-          className={`w-14 h-14 md:w-16 md:h-16 ${colors.badge} rounded-2xl flex items-center justify-center mb-4 ${colors.shadow}`}>
+          className={`w-14 h-14 md:w-16 md:h-16 ${colors.badge} rounded-2xl flex items-center justify-center mb-4 mx-auto md:mx-0 ${colors.shadow}`}>
 
           <IconComponent className="w-7 h-7 md:w-8 md:h-8 text-white" />
         </motion.div>
 
         {/* Title */}
         <h3
-          className={`font-cairo font-bold text-white leading-tight ${client.size === 'large' ? 'text-2xl md:text-3xl' : client.size === 'medium' ? 'text-xl md:text-2xl' : 'text-lg md:text-xl'}`}>
+          className={`font-cairo font-bold text-white leading-tight ${client.size === 'large' ? 'text-fluid-2xl' : client.size === 'medium' ? 'text-fluid-body-lg' : 'text-fluid-card-title'}`}>
 
-          {client.title}
+          {t(client.id)}
         </h3>
 
         {/* Hover Arrow */}
@@ -287,32 +294,34 @@ function BentoCard({
 
 }
 export function ClientsSection() {
+  const t = useTranslations('home.clients');
   return (
-    <section className="relative bg-pearl py-24 md:py-32 overflow-hidden">
+    <section className="relative bg-pearl py-24 md:py-32 overflow-hidden px-[5%] py-[2%]">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-80 h-80 bg-teal-400 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-20 w-60 h-60 bg-gold-400 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <FadeUp>
-            <span className="inline-block text-teal-600 font-cairo font-bold text-sm tracking-wider mb-4">
-              شركاء النجاح
+            <span className="inline-block text-teal-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+              {t('badge')}
             </span>
           </FadeUp>
 
           <FadeUp delay={0.1}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-cairo font-bold text-navy-900 mb-6">
-              من <span className="gradient-text-teal">نخدم؟</span>
+            <h2 className="text-fluid-section-title font-cairo font-bold text-navy-900 mb-6">
+              {t('titleMain')}{' '}
+              <span className="gradient-text-teal">{t('titleHighlight')}</span>
             </h2>
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <p className="text-lg md:text-xl text-navy-600 font-tajawal max-w-2xl mx-auto">
-              نفخر بخدمة مجموعة متنوعة من العملاء في مختلف القطاعات
+            <p className="text-fluid-section-lead text-navy-600 mx-auto">
+              {t('lead')}
             </p>
           </FadeUp>
         </div>

@@ -1,91 +1,716 @@
 {
-    "page": {
-        "title": "Home Page"
-    },
-    "navbar": {
-        "cta": "Book Your Consultation",
-        "openMenu": "Open navigation menu",
-        "closeMenu": "Close navigation menu",
-        "navMenu": "Main navigation",
-        "routes": [
-            {
-                "label": "Home",
-                "href": "/"
-            },
-            {
-                "label": "Services",
-                "href": "/services"
-            },
-            {
-                "label": "Administrative Department",
-                "href": "/administrative-department"
-            },
-            {
-                "label": "Identity",
-                "href": "/identity"
-            },
-            {
-                "label": "Execution",
-                "href": "/execution"
-            }
-        ]
-    },
-    "content": {
-        "title": "My Component",
-        "description": "My Component Description"
-    },
-    "header": {
-        "title": "Premium Legal Counsel",
-        "subtitle": "Trusted Legal Expertise with a Gold‑Standard",
-        "cta": {
-            "bookConsultation": "Book Your Consultation",
-            "exploreServices": "Explore Our Services"
-        }
-    },
-    "footer": {
-        "contact": {
-            "title": "Contact Us",
-            "phone": "+971 521068882",
-            "email": "info@shazmlc.com",
-            "location": "United Arab Emirates"
-        },
-        "quickLinks": {
-            "title": "Quick Links",
-            "links": [
-                {
-                    "label": "Home",
-                    "href": "/"
-                },
-                {
-                    "label": "Services",
-                    "href": "/services"
-                },
-                {
-                    "label": "Administrative Department",
-                    "href": "/administrative-department"
-                },
-                {
-                    "label": "Identity",
-                    "href": "/identity"
-                },
-                {
-                    "label": "Execution",
-                    "href": "/execution"
-                }
-            ]
-        },
-"description": "KEB Financing Brokerage L.L.C — your executive financial arm connecting you with the right funding partner. We analyze your needs, structure a strong financing file, and negotiate optimal terms to secure funding that supports sustainable growth and financial stability.",
-"copyright": "© 2026 KEB Financing Brokerage L.L.C. All rights reserved.",        "socialMedia": {
-            "linkedin": "LinkedIn",
-            "twitter": "Twitter",
-            "instagram": "Instagram",
-            "facebook": "Facebook"
-        }
-    },
-    "notFound": {
-        "badge": "Page Missing",
-        "title": "We couldn’t find this page",
-        "description": "The page you’re looking for may have been moved, deleted, or never existed. Please check the URL or return to the homepage.",
-        "cta": "Back to homepage"
+  "page": {
+    "title": "Home Page"
+  },
+  "navbar": {
+    "cta": "Book Your Consultation",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "navMenu": "Main navigation",
+    "routes": [
+      { "label": "Home", "href": "/" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Administrative Department", "href": "/administrative-department" },
+      { "label": "Identity", "href": "/identity" },
+      { "label": "Execution", "href": "/execution" }
+    ]
+  },
+  "content": {
+    "title": "My Component",
+    "description": "My Component Description"
+  },
+  "header": {
+    "title": "Premium Legal Counsel",
+    "subtitle": "Trusted Legal Expertise with a Gold‑Standard",
+    "cta": {
+      "bookConsultation": "Book Your Consultation",
+      "exploreServices": "Explore Our Services"
     }
+  },
+  "footer": {
+    "contact": {
+      "title": "Contact Us",
+      "phone": "+971 521068882",
+      "email": "info@shazmlc.com",
+      "location": "United Arab Emirates"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": [
+        { "label": "Home", "href": "/" },
+        { "label": "Services", "href": "/services" },
+        { "label": "Administrative Department", "href": "/administrative-department" },
+        { "label": "Identity", "href": "/identity" },
+        { "label": "Execution", "href": "/execution" }
+      ]
+    },
+    "description": "KIB Financing Brokerage L.L.C — your executive financial arm connecting you with the right funding partner. We analyze your needs, structure a strong financing file, and negotiate optimal terms to secure funding that supports sustainable growth and financial stability.",
+    "copyright": "© 2026 KIB Financing Brokerage L.L.C. All rights reserved.",
+    "socialMedia": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    }
+  },
+  "notFound": {
+    "badge": "Page Missing",
+    "title": "We couldn’t find this page",
+    "description": "The page you’re looking for may have been moved, deleted, or never existed. Please check the URL or return to the homepage.",
+    "cta": "Back to homepage"
+  },
+  "home": {
+    "hero": {
+      "badge": "KIB Financing Brokerage L.L.C",
+      "headlineLine1": "We connect you with the right financing...",
+      "headlineLine2": "and design for you a financial path that is",
+      "headlineHighlight": "secure for growth",
+      "subheadline": "In a financial environment where conditions change rapidly and expansion requirements are rising, we become your executive financial arm — we analyze, structure, negotiate, and close the financing that fits your size and your ambition.",
+      "backgroundAlt": "Luxury financial district skyline at night",
+      "stats": {
+        "clients": "Satisfied clients",
+        "fundingVolume": "Billion AED in financing",
+        "fundingPartners": "Funding partners",
+        "approvalRate": "Approval rate"
+      },
+      "scrollCta": "Discover the journey"
+    },
+    "about": {
+      "badge": "Get to know us",
+      "titleMain": "Who",
+      "titleHighlight": "are we?",
+      "lead": "We are a company specialized in financing brokerage, providing advanced financial solutions for companies, entrepreneurs, and investment projects.",
+      "helpIntro": "We help you access the right financing through:",
+      "bulletPoints": [
+        "Analyzing your financial needs",
+        "Assessing your operational position",
+        "Selecting the most suitable funding partner",
+        "Preparing a strong financing file",
+        "Negotiating the best terms",
+        "Following up the request until final approval"
+      ],
+      "expertiseTitle": "Our areas of expertise",
+      "expertise": {
+        "financialAnalysis": "Financial analysis",
+        "negotiation": "Negotiation",
+        "filePreparation": "File preparation",
+        "followUp": "Follow-up"
+      },
+      "commitmentText": "We are not looking for “just financing”... we look for the right financing that serves your goal, strengthens your growth, and reduces your risks.",
+      "missionCardTitle": "Our mission",
+      "missionCardParagraph": "To be the entity that gives the client financial clarity and leads them to the right financing through professional management that guarantees better terms, less time, and lower risk.",
+      "missionCardBoxText": "Our mission is not just words… it is an operational commitment that we apply in every file, at every step, and with every client.",
+      "visionCardTitle": "Our vision",
+      "visionIntro": "To become the financial entity referenced when people talk about:",
+      "visionTags": [
+        "Professional brokerage",
+        "Strong files",
+        "Consistent results",
+        "Fast execution",
+        "Complete confidentiality"
+      ],
+      "visionQuote": "We do not aspire to be “the biggest”... we aspire to be the most precise, the strongest, and the most trusted.",
+      "images": {
+        "team": "Professional team in a strategy meeting",
+        "workspace": "Elegant and modern workspace",
+        "collaboration": "High‑performance collaboration and teamwork",
+        "meeting": "Executive business meeting"
+      }
+    },
+    "services": {
+      "badge": "Integrated financing solutions",
+      "titleMain": "Our core",
+      "titleHighlight": "services",
+      "lead": "We offer a comprehensive financing brokerage system that covers all your financial needs.",
+      "items": {
+        "commercial": {
+          "badge": "Commercial",
+          "title": "Commercial financing brokerage",
+          "description": "Integrated financing solutions for commercial activities."
+        },
+        "investment": {
+          "badge": "Investment",
+          "title": "Investment financing brokerage",
+          "description": "Financing for promising investment projects."
+        },
+        "realEstate": {
+          "badge": "Real estate",
+          "title": "Real estate financing brokerage",
+          "description": "Financing for property acquisition and development."
+        },
+        "corporate": {
+          "badge": "Corporate",
+          "title": "Corporate financing brokerage",
+          "description": "Structured financial solutions for large companies."
+        },
+        "sme": {
+          "badge": "SME",
+          "title": "SME financing brokerage",
+          "description": "Supporting the growth of small and medium enterprises."
+        },
+        "islamic": {
+          "badge": "Islamic",
+          "title": "Islamic financing brokerage",
+          "description": "Financing solutions compliant with Islamic Sharia."
+        },
+        "expansion": {
+          "badge": "Expansion",
+          "title": "Expansion and development financing",
+          "description": "Financing for expansion and growth plans."
+        },
+        "newProjects": {
+          "badge": "New",
+          "title": "New projects financing",
+          "description": "Financing for new ideas and projects."
+        },
+        "innovationTech": {
+          "badge": "Tech",
+          "title": "Innovation & technology financing",
+          "description": "Financing innovative technology projects."
+        },
+        "fdi": {
+          "badge": "International",
+          "title": "External financing (FDI) brokerage",
+          "description": "Attracting foreign direct investment."
+        },
+        "workingCapital": {
+          "badge": "Liquidity",
+          "title": "Working capital financing",
+          "description": "Fast liquidity solutions for obligations and cash flows."
+        },
+        "mergersAcquisitions": {
+          "badge": "M&A",
+          "title": "M&A financing brokerage",
+          "description": "Structuring and financing merger and acquisition deals."
+        }
+      }
+    },
+    "offerings": {
+      "badge": "Real added value",
+      "titleMain": "What do",
+      "titleHighlight": "we offer?",
+      "lead": "We provide an integrated financing brokerage system that includes everything you need to reach the right financing.",
+      "hint": "Click any item to learn more.",
+      "items": {
+        "needsAnalysis": {
+          "title": "Analyze your financial needs",
+          "description": "We understand your requirements precisely and identify the optimal solution."
+        },
+        "lenderSelection": {
+          "title": "Select the right funding partner",
+          "description": "We match your needs with the best funding institutions."
+        },
+        "filePreparation": {
+          "title": "Prepare a professional financing file",
+          "description": "We build a strong file that increases the likelihood of approval."
+        },
+        "termNegotiation": {
+          "title": "Negotiate the best terms",
+          "description": "We secure for you the best rate, tenor, and covenants."
+        },
+        "followUp": {
+          "title": "Follow-up until approval",
+          "description": "We accompany you at every step until the funding is disbursed."
+        },
+        "postFundingSupport": {
+          "title": "Support after financing",
+          "description": "We help you manage obligations and cash flows."
+        },
+        "financialAdvisory": {
+          "title": "Provide financial advisory",
+          "description": "We help you make sound financial decisions."
+        }
+      }
+    },
+    "stats": {
+      "badge": "Numbers that speak for us",
+      "titleMain": "Our achievements",
+      "titleHighlight": "in numbers",
+      "lead": "We are proud of our clients’ trust and our outstanding results over years of professional work.",
+      "items": {
+        "clients": "Satisfied clients",
+        "fundingVolume": "Billion AED in financing",
+        "fundingPartners": "Funding institutions",
+        "approvalRate": "Approval rate",
+        "yearsExperience": "Years of experience",
+        "fundedProjects": "Funded projects",
+        "countries": "Countries",
+        "bankingPartners": "Banking partners"
+      }
+    },
+    "journey": {
+      "badge": "A clear and defined path",
+      "titleMain": "The client journey",
+      "titleHighlight": "with us",
+      "lead": "Your financing journey with us is not just a transaction… it is a complete financial path that we accompany you on step by step.",
+      "steps": {
+        "discovery": {
+          "title": "Discovery and needs analysis session",
+          "description": "We listen to you, study your project, and precisely define your financial need."
+        },
+        "evaluation": {
+          "title": "Financial and operational assessment",
+          "description": "We analyze cash flows, obligations, and repayment capacity."
+        },
+        "lenderSelection": {
+          "title": "Selecting the right funding institution",
+          "description": "We shortlist the best options based on your activity and size."
+        },
+        "filePreparation": {
+          "title": "Preparing a professional financing file",
+          "description": "We organize documents and build a strong file that increases approval chances."
+        },
+        "negotiation": {
+          "title": "Negotiating terms",
+          "description": "We secure for you the best pricing, tenor, and covenants."
+        },
+        "approval": {
+          "title": "Follow-up until approval",
+          "description": "We stay with you until contract signing and funding disbursement."
+        },
+        "postFunding": {
+          "title": "Post‑financing support",
+          "description": "We help you manage obligations and optimize cash flows."
+        }
+      }
+    },
+    "system": {
+      "badge": "An integrated working methodology",
+      "titleMain": "The financial",
+      "titleHighlight": "operating system",
+      "lead": "Our system is built on precise operational layers that work together to deliver the best outcome.",
+      "layers": {
+        "financialAnalysis": {
+          "title": "Financial analysis layer",
+          "description": "We read the numbers, indicators, and financing capacity.",
+          "details": "We analyze financial data in depth to understand your current position and define the optimal financing path."
+        },
+        "operationalAssessment": {
+          "title": "Operational assessment layer",
+          "description": "We evaluate the strength and sustainability of the project.",
+          "details": "We review operations and organizational structure to ensure your readiness for financing."
+        },
+        "matching": {
+          "title": "Financing matching layer",
+          "description": "We match your need with the right institution.",
+          "details": "From our network of partners, we select the funding institution that best fits your project."
+        },
+        "negotiation": {
+          "title": "Negotiation layer",
+          "description": "We secure the best possible terms.",
+          "details": "We negotiate professionally to obtain the best pricing and conditions."
+        },
+        "closure": {
+          "title": "Closure and follow‑up layer",
+          "description": "We close the deal and follow through to the end.",
+          "details": "We accompany you until funding is received and continue supporting you to ensure project success."
+        }
+      }
+    },
+    "serviceLevels": {
+      "badge": "Services tailored to every need",
+      "titleMain": "Service",
+      "titleHighlight": "levels",
+      "lead": "We deliver our services through different execution levels tailored to each client.",
+      "mostRequested": "Most requested",
+      "levels": {
+        "basic": {
+          "title": "Basic level",
+          "description": "File preparation and submission to the funding institution.",
+          "features": [
+            "File preparation",
+            "Submission to the funding institution"
+          ]
+        },
+        "advanced": {
+          "title": "Advanced level",
+          "description": "Analysis, file preparation, follow‑up, and negotiation.",
+          "features": [
+            "Financial analysis",
+            "File preparation",
+            "Follow‑up",
+            "Negotiation"
+          ]
+        },
+        "executive": {
+          "title": "Executive level",
+          "description": "Managing the entire process until approval.",
+          "features": [
+            "End‑to‑end management",
+            "Ongoing follow‑up",
+            "Professional negotiation",
+            "Until approval"
+          ]
+        },
+        "strategic": {
+          "title": "Strategic level",
+          "description": "Building a financing plan, selecting institutions, and managing multiple negotiations.",
+          "features": [
+            "Financing plan",
+            "Selecting institutions",
+            "Multiple negotiations"
+          ]
+        },
+        "businessOwners": {
+          "title": "Business owners level",
+          "description": "Personal service with full confidentiality and handling sensitive files.",
+          "features": [
+            "Personalized service",
+            "Full confidentiality",
+            "Sensitive files"
+          ]
+        },
+        "strategicPartnership": {
+          "title": "Strategic partnership level",
+          "description": "Ongoing financing management and long‑term expansion planning.",
+          "features": [
+            "Managing relationships with funding institutions",
+            "Expansion planning",
+            "Financial restructuring when needed",
+            "Future financing opportunities"
+          ]
+        }
+      }
+    },
+    "quality": {
+      "badge": "Our commitment to you",
+      "titleMain": "Our values",
+      "titleHighlight": "and principles",
+      "qualityStandardsTitle": "Quality standards",
+      "entityLanguageTitle": "Entity language",
+      "dealingPrinciplesTitle": "Dealing principles",
+      "qualityStandards": [
+        "Accuracy in need analysis",
+        "Speed in file preparation",
+        "Transparency at every step",
+        "Continuous follow‑up",
+        "Commitment to results",
+        "Total confidentiality"
+      ],
+      "entityLanguage": [
+        "A language grounded in numbers",
+        "A language that respects the client’s time",
+        "A language built on information",
+        "A language without exaggerated promises",
+        "A language that relies only on results",
+        "A language that is transparent at every step"
+      ],
+      "dealingPrinciples": [
+        "We commit before we promise",
+        "We clarify before we ask",
+        "We follow up before you have to ask",
+        "We work quietly… and let the results speak",
+        "We place the client’s interest above all else",
+        "We take full responsibility for the work path"
+      ]
+    },
+    "clients": {
+      "badge": "Partners in success",
+      "titleMain": "Who",
+      "titleHighlight": "do we serve?",
+      "lead": "We are proud to serve a diverse group of clients across multiple sectors.",
+      "types": {
+        "entrepreneurs": "Entrepreneurs and business owners",
+        "sme": "Small and medium enterprises",
+        "largeCorporates": "Large corporations",
+        "industrialCommercial": "Commercial and industrial projects",
+        "realEstateInvestors": "Real estate investors",
+        "techInnovative": "Technology & innovation projects",
+        "expansionRestructuring": "Companies seeking expansion or restructuring",
+        "newInvestments": "New investment projects"
+      }
+    },
+    "promise": {
+      "title": "Our promise to you",
+      "lines": [
+        "We commit to being the partner that opens the doors of financing for you,",
+        "enhances your financial strength,",
+        "and delivers solutions that support your growth and expansion with stability."
+      ],
+      "badges": {
+        "fullCommitment": "Full commitment",
+        "totalTransparency": "Total transparency",
+        "absoluteConfidentiality": "Absolute confidentiality"
+      }
+    },
+    "contactCta": {
+      "badge": "Start now",
+      "titleMain": "Contact",
+      "titleHighlight": "us",
+      "lead": "Begin your journey towards the right financing. We are here to connect you with the right institution at the right time.",
+      "primaryCta": "Get a consultation",
+      "whatsappCta": "Chat on WhatsApp"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "Integrated financing solutions",
+      "headlinePrefix": "Everything you need from",
+      "headlineHighlight": "financing services",
+      "headlineSuffix": "in one place",
+      "subheadline": "From financing brokerage to advanced financial advisory, we provide more than 30 financing services designed to make it easier for your business to grow and achieve its goals with confidence.",
+      "primaryCta": "Browse services",
+      "meta": "+30 financing services • Over 15 years of experience",
+      "cardTitle": "2B+ AED in completed financing",
+      "cardSubtitle": "Partnerships with more than 50 funding institutions"
+    },
+    "features": {
+      "items": {
+        "customizedSolutions": {
+          "title": "Customized solutions",
+          "description": "We design financing solutions tailored to your unique needs"
+        },
+        "highReliability": {
+          "title": "High reliability",
+          "description": "Partnerships with leading licensed financial institutions"
+        },
+        "speed": {
+          "title": "Speed of execution",
+          "description": "Fast approvals and streamlined processes"
+        },
+        "continuousSupport": {
+          "title": "Ongoing support",
+          "description": "A specialized team that supports you at every step"
+        }
+      }
+    },
+    "grid": {
+      "badge": "Our comprehensive services",
+      "title": "More than 30 financing services",
+      "lead": "We provide a complete range of financing solutions tailored to the needs of individuals and companies of all sizes.",
+      "services": {
+        "financeBrokerage": {
+          "title": "Financing brokerage",
+          "description": "We connect you with the right funding institutions on the best possible terms.",
+          "feature1": "Needs analysis",
+          "feature2": "Professional financing file preparation",
+          "feature3": "Negotiation",
+          "feature4": "Final closing"
+        },
+        "companyFinance": {
+          "title": "Corporate financing",
+          "description": "Financial solutions that support company expansion and growth.",
+          "feature1": "Working capital",
+          "feature2": "Asset acquisition",
+          "feature3": "Operational expansion"
+        },
+        "commercialProjects": {
+          "title": "Commercial project financing",
+          "description": "Dedicated financing for projects that need an operational boost.",
+          "feature1": "Start‑up phase",
+          "feature2": "Operations",
+          "feature3": "Expansion"
+        },
+        "industrialProjects": {
+          "title": "Industrial project financing",
+          "description": "Financial support for factories and production lines.",
+          "feature1": "Equipment",
+          "feature2": "Raw materials",
+          "feature3": "Industrial expansion"
+        },
+        "realEstateFinance": {
+          "title": "Real estate financing",
+          "description": "Property solutions for investors and developers.",
+          "feature1": "Acquisition",
+          "feature2": "Development",
+          "feature3": "Refinancing"
+        },
+        "tradeFinance": {
+          "title": "Trade financing",
+          "description": "Financing for sales, purchasing, and supply operations.",
+          "feature1": "Purchase orders",
+          "feature2": "Supply and procurement",
+          "feature3": "Collections"
+        },
+        "islamicFinance": {
+          "title": "Islamic financing",
+          "description": "Sharia‑compliant financing solutions.",
+          "feature1": "Murabaha",
+          "feature2": "Ijara",
+          "feature3": "Mudaraba and other structures"
+        },
+        "lettersOfCredit": {
+          "title": "Letters of credit",
+          "description": "Comprehensive support for international trade.",
+          "feature1": "Documentary credits (LC)",
+          "feature2": "Bank guarantees",
+          "feature3": "Shipment follow‑up"
+        },
+        "investmentFinance": {
+          "title": "Investment financing brokerage",
+          "description": "We connect you with the right investor at the right time.",
+          "feature1": "Investment deal structuring",
+          "feature2": "Strategic partnerships",
+          "feature3": "Terms negotiation"
+        },
+        "financialAdvisory": {
+          "title": "Financial advisory",
+          "description": "Financial insight that helps you make strong decisions.",
+          "feature1": "Financial analysis",
+          "feature2": "Risk assessment",
+          "feature3": "Financing plans"
+        },
+        "entrepreneursFinance": {
+          "title": "Entrepreneurs financing",
+          "description": "Flexible solutions for business owners.",
+          "feature1": "Start‑up funding",
+          "feature2": "Expansion funding",
+          "feature3": "Equipment financing"
+        },
+        "corporateExpansion": {
+          "title": "Institutional expansion financing",
+          "description": "Supporting the growth of established companies.",
+          "feature1": "New branches",
+          "feature2": "Systems development",
+          "feature3": "Regional expansion"
+        },
+        "innovationTechFinance": {
+          "title": "Innovation & technology financing",
+          "description": "Support for digital and technology‑driven projects.",
+          "feature1": "Software financing",
+          "feature2": "Systems and platforms",
+          "feature3": "Advanced tech projects"
+        },
+        "newProjectsFinance": {
+          "title": "New projects financing",
+          "description": "Financing that covers set‑up and early operations.",
+          "feature1": "Project set‑up",
+          "feature2": "Initial operations",
+          "feature3": "Early expansion"
+        },
+        "partnershipFinance": {
+          "title": "Partnership financing",
+          "description": "Financial solutions for joint ventures.",
+          "feature1": "Joint ventures (JV)",
+          "feature2": "Business alliances",
+          "feature3": "Cross‑border partnerships"
+        },
+        "internationalTradeFinance": {
+          "title": "International trade financing",
+          "description": "Full support for import and export operations.",
+          "feature1": "Import",
+          "feature2": "Export",
+          "feature3": "International shipments"
+        },
+        "overseasProjects": {
+          "title": "Overseas project financing",
+          "description": "Safe expansion outside your home country.",
+          "feature1": "International projects",
+          "feature2": "Foreign assets",
+          "feature3": "Regional expansion"
+        },
+        "shippingLogisticsFinance": {
+          "title": "Shipping & logistics financing",
+          "description": "Financial solutions for logistics operations.",
+          "feature1": "Marine freight",
+          "feature2": "Air freight",
+          "feature3": "Commercial transport"
+        },
+        "foreignDirectInvestment": {
+          "title": "Foreign direct investment (FDI) brokerage",
+          "description": "Connecting you with global capital.",
+          "feature1": "FDI transaction structuring",
+          "feature2": "Investment file preparation",
+          "feature3": "International negotiations"
+        },
+        "smeFinance": {
+          "title": "SME project financing",
+          "description": "Flexible and fast solutions.",
+          "feature1": "Capital financing",
+          "feature2": "Growth and expansion",
+          "feature3": "Equipment financing"
+        },
+        "restructuringFinance": {
+          "title": "Restructuring finance",
+          "description": "Reorganizing your financial obligations.",
+          "feature1": "Debt scheduling",
+          "feature2": "Refinancing",
+          "feature3": "Cash‑flow optimization"
+        },
+        "supplyChainFinance": {
+          "title": "Supply chain finance",
+          "description": "Comprehensive support for your supply chain.",
+          "feature1": "Inventory financing",
+          "feature2": "Supplier financing",
+          "feature3": "Supply contracts"
+        },
+        "governmentContracts": {
+          "title": "Government contracts financing",
+          "description": "Solutions for public‑sector projects.",
+          "feature1": "Contract execution financing",
+          "feature2": "Equipment and preparations",
+          "feature3": "Advance payment financing"
+        },
+        "heavyEquipmentFinance": {
+          "title": "Heavy equipment financing",
+          "description": "Support for industrial and construction projects.",
+          "feature1": "Equipment financing",
+          "feature2": "Asset financing",
+          "feature3": "Operational financing"
+        },
+        "franchiseFinance": {
+          "title": "Franchise financing",
+          "description": "Supporting your entry into the franchise world.",
+          "feature1": "Franchise fees",
+          "feature2": "Branch fit‑out",
+          "feature3": "Operating capital"
+        },
+        "digitalTransformationFinance": {
+          "title": "Digital transformation financing",
+          "description": "Support for systems and technology upgrades.",
+          "feature1": "ERP systems",
+          "feature2": "Automation",
+          "feature3": "Cloud solutions"
+        },
+        "internationalExpansion": {
+          "title": "International expansion financing",
+          "description": "Support for entering new markets.",
+          "feature1": "Overseas branches",
+          "feature2": "International assets",
+          "feature3": "External operations"
+        },
+        "acquisitionFinance": {
+          "title": "Acquisition financing",
+          "description": "Solutions for buying companies and equity stakes.",
+          "feature1": "Acquisition deals",
+          "feature2": "Mergers",
+          "feature3": "Equity purchases"
+        },
+        "ventureCapitalFinance": {
+          "title": "Venture capital financing",
+          "description": "Support for high‑growth startups.",
+          "feature1": "Investment rounds",
+          "feature2": "Rapid expansion",
+          "feature3": "New product funding"
+        },
+        "serviceProjectsFinance": {
+          "title": "Service‑sector project financing",
+          "description": "Solutions for non‑industrial sectors.",
+          "feature1": "Healthcare projects",
+          "feature2": "Education projects",
+          "feature3": "Logistics and services"
+        }
+      }
+    },
+    "whyUs": {
+      "badge": "Why us?",
+      "title": "Your trusted partner on the road to financial success",
+      "description": "We bring more than 15 years of experience in financial brokerage and financing, and we are proud of our partnerships with leading financial institutions in the region.",
+      "bullets": {
+        "partners": {
+          "title": "Extensive partner network",
+          "subtitle": "50+ licensed financial institutions"
+        },
+        "successRate": {
+          "title": "High success rate",
+          "subtitle": "95% of financing applications obtain approval"
+        },
+        "expertSupport": {
+          "title": "Specialized support",
+          "subtitle": "A team of certified financial experts"
+        }
+      },
+      "cardSubtitle": "AED in completed financings"
+    }
+  }
 }

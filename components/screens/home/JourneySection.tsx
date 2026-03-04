@@ -8,73 +8,69 @@ import {
   FileTextIcon,
   HandshakeIcon,
   CheckCircle2Icon,
-  HeadphonesIcon } from
-'lucide-react';
+  HeadphonesIcon
+} from 'lucide-react';
 import { FadeUp } from './ScrollAnimations';
+import { useTranslations, useLocale } from 'next-intl';
+
 const journeySteps = [
-{
-  number: '01',
-  icon: MessageSquareIcon,
-  title: 'جلسة فهم وتحليل احتياج',
-  description: 'نستمع لك، نقرأ مشروعك، ونحدد احتياجك المالي بدقة.',
-  image:
-  'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&q=80',
-  color: 'teal'
-},
-{
-  number: '02',
-  icon: BarChart3Icon,
-  title: 'تقييم الوضع المالي والتشغيلي',
-  description: 'نحلل التدفقات، الالتزامات، والقدرة على السداد.',
-  image:
-  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&q=80',
-  color: 'gold'
-},
-{
-  number: '03',
-  icon: SearchIcon,
-  title: 'اختيار الجهة التمويلية المناسبة',
-  description: 'نرشّح لك أفضل الخيارات حسب نشاطك وحجمك.',
-  image:
-  'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&q=80',
-  color: 'coral'
-},
-{
-  number: '04',
-  icon: FileTextIcon,
-  title: 'تجهيز ملف تمويلي احترافي',
-  description: 'نرتّب المستندات ونبني ملفًا قويًا يزيد فرص الموافقة.',
-  image:
-  'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=300&q=80',
-  color: 'teal'
-},
-{
-  number: '05',
-  icon: HandshakeIcon,
-  title: 'التفاوض على الشروط',
-  description: 'نضمن لك أفضل سعر، مدة، وضمانات.',
-  image:
-  'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=300&q=80',
-  color: 'gold'
-},
-{
-  number: '06',
-  icon: CheckCircle2Icon,
-  title: 'المتابعة حتى الموافقة',
-  description: 'نرافقك حتى توقيع العقد واستلام التمويل.',
-  image:
-  'https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=300&q=80',
-  color: 'coral'
-},
-{
-  number: '07',
-  icon: HeadphonesIcon,
-  title: 'دعم ما بعد التمويل',
-  description: 'نساعدك في إدارة الالتزامات وتحسين التدفقات.',
-  image:
-  'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=300&q=80',
-  color: 'teal'
-}];
+  {
+    id: 'discovery',
+    number: '01',
+    icon: MessageSquareIcon,
+    image:
+      'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&q=80',
+    color: 'teal'
+  },
+  {
+    id: 'evaluation',
+    number: '02',
+    icon: BarChart3Icon,
+    image:
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&q=80',
+    color: 'gold'
+  },
+  {
+    id: 'lenderSelection',
+    number: '03',
+    icon: SearchIcon,
+    image:
+      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&q=80',
+    color: 'coral'
+  },
+  {
+    id: 'filePreparation',
+    number: '04',
+    icon: FileTextIcon,
+    image:
+      'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=300&q=80',
+    color: 'teal'
+  },
+  {
+    id: 'negotiation',
+    number: '05',
+    icon: HandshakeIcon,
+    image:
+      'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=300&q=80',
+    color: 'gold'
+  },
+  {
+    id: 'approval',
+    number: '06',
+    icon: CheckCircle2Icon,
+    image:
+      'https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=300&q=80',
+    color: 'coral'
+  },
+  {
+    id: 'postFunding',
+    number: '07',
+    icon: HeadphonesIcon,
+    image:
+      'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=300&q=80',
+    color: 'teal'
+  }
+];
 
 const colorMap: Record<
   string,
@@ -119,6 +115,7 @@ function JourneyCard({
 }: {step: (typeof journeySteps)[0];index: number;isRight: boolean;}) {
   const IconComponent = step.icon;
   const colors = colorMap[step.color];
+  const t = useTranslations('home.journey.steps');
   return (
     <motion.div
       initial={{
@@ -149,8 +146,8 @@ function JourneyCard({
 
           <img
             src={step.image}
-            alt={step.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            alt={t(`${step.id}.title`)}
+            className="w-full h-full object-cover img-fluid-cover group-hover:scale-110 transition-transform duration-500" />
 
         </div>
 
@@ -162,11 +159,11 @@ function JourneyCard({
             <IconComponent className="w-5 h-5 text-white" />
           </div>
 
-          <h3 className="text-xl font-cairo font-bold text-navy-900 mb-2">
-            {step.title}
+          <h3 className="text-fluid-body-lg font-cairo font-bold text-navy-900 mb-2">
+            {t(`${step.id}.title`)}
           </h3>
-          <p className="text-navy-600 font-tajawal text-base leading-relaxed">
-            {step.description}
+          <p className="text-navy-600 font-tajawal text-fluid-body leading-relaxed">
+            {t(`${step.id}.description`)}
           </p>
         </div>
       </div>
@@ -174,6 +171,9 @@ function JourneyCard({
 
 }
 export function JourneySection() {
+  const t = useTranslations('home.journey');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
   const containerRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -185,32 +185,32 @@ export function JourneySection() {
   return (
     <section
       id="journey"
-      className="relative bg-alabaster py-24 md:py-32 overflow-hidden"
+      className="relative bg-alabaster py-24 md:py-32 overflow-hidden px-[5%] py-[2%]"
       ref={containerRef}>
 
       {/* Decorative Elements */}
       <div className="absolute top-40 left-10 w-72 h-72 bg-jade/10 rounded-full blur-3xl" />
       <div className="absolute bottom-40 right-10 w-60 h-60 bg-imperial-500/10 rounded-full blur-3xl" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
           <FadeUp>
-            <span className="inline-block text-jade font-cairo font-bold text-sm tracking-wider mb-4">
-              مسار واضح ومحدد
+            <span className="inline-block text-jade font-cairo font-bold text-fluid-label tracking-wider mb-4">
+              {t('badge')}
             </span>
           </FadeUp>
 
           <FadeUp delay={0.1}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-cairo font-bold text-midnight mb-6">
-              رحلة العميل <span className="gradient-text-teal">معنا</span>
+            <h2 className="text-fluid-section-title font-cairo font-bold text-midnight mb-6">
+              {t('titleMain')}{' '}
+              <span className="gradient-text-teal">{t('titleHighlight')}</span>
             </h2>
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <p className="text-lg md:text-xl text-midnight/70 font-tajawal max-w-2xl mx-auto">
-              رحلتك التمويلية معنا ليست معاملة… هي مسار مالي كامل نرافقك فيه
-              خطوة بخطوة
+            <p className="text-fluid-section-lead text-midnight/70 mx-auto">
+              {t('lead')}
             </p>
           </FadeUp>
         </div>
@@ -272,7 +272,7 @@ export function JourneySection() {
                     <div
                       className={`w-14 h-14 ${colors.bg} rounded-full flex items-center justify-center shadow-lg ${colors.glow} ring-4 ring-alabaster`}>
 
-                      <span className="text-white font-cairo font-bold text-lg">
+                      <span className="text-white font-cairo font-bold text-fluid-body-lg">
                         {step.number}
                       </span>
                     </div>
@@ -280,9 +280,7 @@ export function JourneySection() {
 
                   {/* Right Card (for odd indices) */}
                   <div className={!isRight ? 'invisible' : ''}>
-                    {isRight &&
-                    <JourneyCard step={step} index={index} isRight={true} />
-                    }
+                    {isRight && <JourneyCard step={step} index={index} isRight={true} />}
                   </div>
                 </div>);
 
@@ -333,16 +331,16 @@ export function JourneySection() {
                       <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0">
                         <img
                           src={step.image}
-                          alt={step.title}
-                          className="w-full h-full object-cover" />
+                          alt={t(`steps.${step.id}.title`)}
+                          className="w-full h-full object-cover img-fluid-cover" />
 
                       </div>
                       <div>
-                        <h3 className="text-lg font-cairo font-bold text-navy-900 mb-1">
-                          {step.title}
+                        <h3 className="text-fluid-body-lg font-cairo font-bold text-navy-900 mb-1">
+                          {t(`steps.${step.id}.title`)}
                         </h3>
-                        <p className="text-navy-600 font-tajawal text-sm leading-relaxed">
-                          {step.description}
+                        <p className="text-navy-600 font-tajawal text-fluid-body leading-relaxed">
+                          {t(`steps.${step.id}.description`)}
                         </p>
                       </div>
                     </div>

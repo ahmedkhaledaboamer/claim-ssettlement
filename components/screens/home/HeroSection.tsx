@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { ArrowLeftIcon, SparklesIcon } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 
 interface StatItemProps {
   value: number;
@@ -11,9 +12,10 @@ interface StatItemProps {
   borderColor: string;
 }
 const heroImages = [
-'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80',
-'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1920&q=80',
-'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=1920&q=80'];
+  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80',
+  'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1920&q=80',
+  'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=1920&q=80'
+];
 
 // Luxury particles (champagne bubbles effect)
 const particles = Array.from({
@@ -62,20 +64,20 @@ function StatItem({ value, suffix, label, delay, borderColor }: StatItemProps) {
         duration: 0.8,
         ease: 'easeOut'
       }}
-      className={`text-center relative p-4 border-r border-white/10`}>
-
+      className="text-center relative p-4 border-r border-white/10"
+    >
       <div className="absolute right-0 top-1/4 bottom-1/4 w-[2px] bg-gradient-to-b from-transparent via-imperial-500 to-transparent opacity-50" />
-      <div className="text-4xl md:text-5xl lg:text-6xl font-cairo font-bold gradient-text-imperial text-gold-400 mb-2 drop-shadow-lg">
+      <div className="text-fluid-stat font-cairo font-bold gradient-text-imperial text-gold-400 mb-2 drop-shadow-lg">
         {suffix === '%' ? count : `+${count}`}
         {suffix === '%' ? '%' : ''}
       </div>
-      <div className="text-white/70 font-tajawal text-sm md:text-base tracking-wide">
+      <div className="text-white/70 font-tajawal text-fluid-body tracking-wide">
         {label}
       </div>
-    </motion.div>);
-
+    </motion.div>
+  );
 }
-function TypingText({ text, delay = 0 }: {text: string;delay?: number;}) {
+function TypingText({ text, delay = 0 }: { text: string; delay?: number }) {
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
   useEffect(() => {
@@ -98,10 +100,13 @@ function TypingText({ text, delay = 0 }: {text: string;delay?: number;}) {
     <span>
       {displayText}
       {showCursor && <span className="animate-blink text-imperial-400">|</span>}
-    </span>);
-
+    </span>
+  );
 }
 export function HeroSection() {
+  const t = useTranslations('home.hero');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, 300]);
@@ -128,7 +133,7 @@ export function HeroSection() {
           <motion.img
             key={currentImageIndex}
             src={heroImages[currentImageIndex]}
-            alt="Luxury Financial District"
+            alt={t('backgroundAlt')}
             initial={{
               opacity: 0,
               scale: 1.05
@@ -144,7 +149,7 @@ export function HeroSection() {
               duration: 2,
               ease: 'easeInOut'
             }}
-            className="absolute inset-0 w-full h-full object-cover" />
+            className="absolute inset-0 w-full h-full object-cover img-fluid-cover" />
 
         </AnimatePresence>
         {/* Luxury Dark Overlay */}
@@ -247,8 +252,8 @@ export function HeroSection() {
           <div className="absolute inset-0 bg-imperial-500/20 blur-xl rounded-full group-hover:bg-imperial-500/30 transition-all duration-500" />
           <div className="relative glass-luxury rounded-full px-6 py-2.5 flex items-center gap-3">
             <SparklesIcon className="w-4 h-4 text-imperial-400 animate-pulse" />
-            <span className="text-white/90 font-tajawal text-sm tracking-wider">
-              كيه إي بي لوساطة التمويل ش.ذ.م.م
+            <span className="text-white/90 font-tajawal text-fluid-label tracking-wider">
+              {t('badge')}
             </span>
             <SparklesIcon className="w-4 h-4 text-imperial-400 animate-pulse" />
           </div>
@@ -270,13 +275,14 @@ export function HeroSection() {
               duration: 1,
               ease: 'easeOut'
             }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-cairo font-bold text-white leading-[1.1] drop-shadow-2xl">
-
-            نربطك بالتمويل المناسب...
+            className="text-fluid-hero font-cairo font-bold text-white leading-[1.1] drop-shadow-2xl"
+            dir={isRTL ? 'rtl' : 'ltr'}
+          >
+            {t('headlineLine1')}
             <br />
-            ونصنع لك طريقًا ماليًا{' '}
+            {t('headlineLine2')}{' '}
             <span className="gradient-text-imperial relative inline-block">
-              آمنًا للنمو
+              {t('headlineHighlight')}
               <motion.span
                 className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-imperial-400 to-transparent"
                 initial={{
@@ -306,12 +312,10 @@ export function HeroSection() {
             delay: 1.2,
             duration: 1
           }}
-          className="text-lg md:text-xl lg:text-2xl text-white/70 font-tajawal max-w-4xl mx-auto mb-16 leading-relaxed min-h-[5rem] font-light">
-
-          <TypingText
-            text="في بيئة مالية تتغير فيها الشروط بسرعة، وتزداد فيها متطلبات التوسع، نحن ذراعك المالية التنفيذية — نحلل، نرتّب، نفاوض، ونغلق لك التمويل الذي يناسب حجمك وطموحك."
-            delay={1400} />
-
+          className="text-fluid-section-lead text-white/70 font-tajawal max-w-4xl mx-auto mb-16 leading-relaxed min-h-[5rem] font-light"
+          dir={isRTL ? 'rtl' : 'ltr'}
+        >
+          <TypingText text={t('subheadline')} delay={1400} />
         </motion.p>
 
         {/* Luxury Stats Strip */}
@@ -336,28 +340,28 @@ export function HeroSection() {
               <StatItem
                 value={500}
                 suffix="+"
-                label="عميل راضٍ"
+                label={t('stats.clients')}
                 delay={2000}
                 borderColor="border-imperial-500" />
 
               <StatItem
                 value={2}
                 suffix="+"
-                label="مليار درهم تمويل"
+                label={t('stats.fundingVolume')}
                 delay={2200}
                 borderColor="border-sapphire-500" />
 
               <StatItem
                 value={50}
                 suffix="+"
-                label="جهة تمويلية"
+                label={t('stats.fundingPartners')}
                 delay={2400}
                 borderColor="border-emerald-500" />
 
               <StatItem
                 value={98}
                 suffix="%"
-                label="نسبة الموافقة"
+                label={t('stats.approvalRate')}
                 delay={2600}
                 borderColor="border-ruby-500" />
 
@@ -378,10 +382,10 @@ export function HeroSection() {
           delay: 2.5,
           duration: 1
         }}
-        className="cursor-pointer absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3">
-
-        <span className="cursor-pointer text-imperial-400/70 font-tajawal text-lg uppercase tracking-[0.2em]">
-          اكتشف المسار
+        className="cursor-pointer absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3"
+      >
+        <span className="cursor-pointer text-imperial-400/70 font-tajawal text-fluid-body-lg uppercase tracking-[0.2em]">
+          {t('scrollCta')}
         </span>
         <div className="w-[1px] h-16 bg-white/10 relative overflow-hidden">
           <motion.div

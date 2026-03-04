@@ -1,6 +1,6 @@
 'use client';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useRef, useEffect, type HTMLAttributes } from 'react';
+import { motion } from 'framer-motion';
 import {
   SearchIcon,
   UsersIcon,
@@ -9,397 +9,219 @@ import {
   ClipboardCheckIcon,
   HeadphonesIcon,
   MessageCircleIcon,
-  SparklesIcon } from
-'lucide-react';
+  SparklesIcon
+} from 'lucide-react';
 import { FadeUp } from './ScrollAnimations';
+import { useTranslations, useLocale } from 'next-intl';
+
 const offerings = [
-{
-  icon: SearchIcon,
-  title: 'تحليل احتياجاتك المالية',
-  description: 'نفهم متطلباتك بدقة ونحدد الحل الأمثل',
-  angle: 0
-},
-{
-  icon: UsersIcon,
-  title: 'اختيار الجهة التمويلية المناسبة',
-  description: 'نطابق احتياجك مع أفضل الجهات التمويلية',
-  angle: 51.4
-},
-{
-  icon: FileTextIcon,
-  title: 'تجهيز ملف تمويلي احترافي',
-  description: 'نبني ملفًا قويًا يزيد فرص الموافقة',
-  angle: 102.8
-},
-{
-  icon: HandshakeIcon,
-  title: 'التفاوض على أفضل الشروط',
-  description: 'نضمن لك أفضل سعر ومدة وضمانات',
-  angle: 154.3
-},
-{
-  icon: ClipboardCheckIcon,
-  title: 'متابعة الطلب حتى الموافقة',
-  description: 'نرافقك في كل خطوة حتى استلام التمويل',
-  angle: 205.7
-},
-{
-  icon: HeadphonesIcon,
-  title: 'دعمك بعد الحصول على التمويل',
-  description: 'نساعدك في إدارة الالتزامات والتدفقات',
-  angle: 257.1
-},
-{
-  icon: MessageCircleIcon,
-  title: 'تقديم استشارات مالية',
-  description: 'نساعدك على اتخاذ قرارات مالية صحيحة',
-  angle: 308.5
-}];
+  { id: 'needsAnalysis', icon: SearchIcon, angle: 0 },
+  { id: 'lenderSelection', icon: UsersIcon, angle: 51.4 },
+  { id: 'filePreparation', icon: FileTextIcon, angle: 102.8 },
+  { id: 'termNegotiation', icon: HandshakeIcon, angle: 154.3 },
+  { id: 'followUp', icon: ClipboardCheckIcon, angle: 205.7 },
+  { id: 'postFundingSupport', icon: HeadphonesIcon, angle: 257.1 },
+  { id: 'financialAdvisory', icon: MessageCircleIcon, angle: 308.5 }
+];
 
-function OrbitNode({
-  offering,
-  index,
-  isActive,
-  onClick,
-  radius
-}: {offering: (typeof offerings)[0];index: number;isActive: boolean;onClick: () => void;radius: number;}) {
-  const IconComponent = offering.icon;
-  const angleRad = offering.angle * Math.PI / 180;
-  const x = Math.cos(angleRad) * radius;
-  const y = Math.sin(angleRad) * radius;
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        scale: 0
-      }}
-      animate={{
-        opacity: 1,
-        scale: 1
-      }}
-      transition={{
-        delay: index * 0.1 + 0.5,
-        type: 'spring',
-        stiffness: 200
-      }}
-      className="absolute"
-      style={{
-        left: `calc(50% + ${x}px)`,
-        top: `calc(50% + ${y}px)`,
-        transform: 'translate(-50%, -50%)'
-      }}>
+const RADIUS   = 200;
+const NODE_R   = 40;   // node circle radius
+const SVG_SIZE = 600;
+const CX       = SVG_SIZE / 2;
+const CY       = SVG_SIZE / 2;
 
-      {/* Connection Line */}
-      <svg
-        className="absolute pointer-events-none"
-        style={{
-          width: radius + 40,
-          height: radius + 40,
-          left: '50%',
-          top: '50%',
-          transform: `translate(-50%, -50%) rotate(${offering.angle + 180}deg)`
-        }}>
-
-        <motion.line
-          x1="50%"
-          y1="50%"
-          x2="100%"
-          y2="50%"
-          stroke="url(#lineGradientLight)"
-          strokeWidth="2"
-          strokeDasharray="8 4"
-          initial={{
-            pathLength: 0
-          }}
-          animate={{
-            pathLength: 1
-          }}
-          transition={{
-            delay: index * 0.1 + 0.8,
-            duration: 0.5
-          }} />
-
-        {/* Animated Particle */}
-        <motion.circle
-          r="3"
-          fill="#E5A00D"
-          animate={{
-            cx: ['50%', '100%', '50%']
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            delay: index * 0.3,
-            ease: 'linear'
-          }}
-          cy="50%" />
-
-      </svg>
-
-      {/* Node */}
-      <motion.button
-        onClick={onClick}
-        whileHover={{
-          scale: 1.15
-        }}
-        whileTap={{
-          scale: 0.95
-        }}
-        className={`relative z-10 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center transition-all duration-300 ${isActive ? 'bg-gold-500 shadow-gold-lg' : 'bg-white border-2 border-gold-300 hover:border-gold-500 shadow-lg'}`}>
-
-        <IconComponent
-          className={`w-7 h-7 md:w-8 md:h-8 ${isActive ? 'text-navy-900' : 'text-gold-600'}`} />
-
-
-        {/* Pulse Ring */}
-        {isActive &&
-        <motion.div
-          className="absolute inset-0 rounded-full border-2 border-gold-400"
-          animate={{
-            scale: [1, 1.5],
-            opacity: [0.8, 0]
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity
-          }} />
-
-        }
-      </motion.button>
-
-      {/* Expanded Content */}
-      <AnimatePresence>
-        {isActive &&
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 10,
-            scale: 0.9
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            scale: 1
-          }}
-          exit={{
-            opacity: 0,
-            y: 10,
-            scale: 0.9
-          }}
-          className="absolute top-full mt-4 right-1/2 translate-x-1/2 w-64 bg-white rounded-xl p-4 border border-gold-200 shadow-xl z-20">
-
-            <h4 className="text-gold-600 font-cairo font-bold text-base mb-2 text-center">
-              {offering.title}
-            </h4>
-            <p className="text-navy-600 font-tajawal text-sm text-center leading-relaxed">
-              {offering.description}
-            </p>
-          </motion.div>
-        }
-      </AnimatePresence>
-    </motion.div>);
-
+function pos(angle: number) {
+  const r = (angle * Math.PI) / 180;
+  return { x: CX + Math.cos(r) * RADIUS, y: CY + Math.sin(r) * RADIUS };
 }
+
 export function OfferingsSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const radius =
-  typeof window !== 'undefined' && window.innerWidth < 768 ? 120 : 200;
+  const [rot, setRot] = useState(0);
+  const rafRef = useRef<number | null>(null);
+  const t = useTranslations('home.offerings');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
+
+  useEffect(() => {
+    let f = 0;
+    const tick = () => {
+      f++;
+      setRot((f * 0.25) % 360);
+      rafRef.current = requestAnimationFrame(tick);
+    };
+    rafRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, []);
+
   return (
     <section className="relative bg-alabaster py-24 md:py-32 overflow-hidden min-h-screen">
-      {/* Decorative Blurs */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold-400/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-teal-400/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-teal-400/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-16 md:mb-24">
+      <div className="relative z-10">
+        {/* Header */}
+        <div dir={isRTL ? 'rtl' : 'ltr'} className="text-center mb-16 md:mb-24 mx-auto px-4">
           <FadeUp>
-            <span className="inline-block text-gold-600 font-cairo font-bold text-sm tracking-wider mb-4">
-              قيمة مضافة حقيقية
+            <span className="inline-block text-gold-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+              {t('badge')}
             </span>
           </FadeUp>
-
           <FadeUp delay={0.1}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-cairo font-bold text-navy-900 mb-6">
-              ماذا <span className="gradient-text-gold">نقدّم؟</span>
+            <h2 className="text-fluid-section-title font-cairo font-bold text-navy-900 mb-6">
+              {t('titleMain')}{' '}
+              <span className="gradient-text-gold">{t('titleHighlight')}</span>
             </h2>
           </FadeUp>
-
           <FadeUp delay={0.2}>
-            <p className="text-lg md:text-xl text-navy-600 font-tajawal max-w-2xl mx-auto">
-              نقدّم منظومة وساطة تمويلية متكاملة تشمل كل ما تحتاجه للوصول إلى
-              التمويل المناسب
+            <p className="text-fluid-section-lead text-navy-600 mx-auto">
+              {t('lead')}
             </p>
           </FadeUp>
         </div>
 
-        {/* Desktop: Orbital Constellation */}
-        <div className="hidden md:block relative h-[600px]">
-          {/* SVG Gradient Definition */}
-          <svg className="absolute w-0 h-0">
+        {/* Desktop SVG orbit — direction:ltr on the SVG itself makes it RTL-immune */}
+        <div className="hidden md:block">
+          <svg
+            viewBox={`0 0 ${SVG_SIZE} ${SVG_SIZE}`}
+            style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: SVG_SIZE, height: 'auto', overflow: 'visible', direction: 'ltr' }}
+          >
             <defs>
-              <linearGradient
-                id="lineGradientLight"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%">
-
-                <stop offset="0%" stopColor="#E5A00D" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#E5A00D" stopOpacity="0.1" />
-              </linearGradient>
+              <radialGradient id="hubGrad" cx="40%" cy="35%" r="60%">
+                <stop offset="0%" stopColor="#FBBF24" />
+                <stop offset="100%" stopColor="#D97706" />
+              </radialGradient>
             </defs>
+
+            {/* Orbit ring */}
+            <circle cx={CX} cy={CY} r={RADIUS} fill="none" stroke="#E5A00D" strokeWidth="1" strokeDasharray="6 5" strokeOpacity="0.4" />
+
+            {/* Rotating inner ring */}
+            <circle cx={CX} cy={CY} r={72} fill="none" stroke="#E5A00D" strokeWidth="1.5" strokeDasharray="5 6" strokeOpacity="0.5" transform={`rotate(${rot} ${CX} ${CY})`} />
+
+            {/* Hub glow + circle */}
+            <circle cx={CX} cy={CY} r={80} fill="#E5A00D" fillOpacity="0.1" />
+            <circle cx={CX} cy={CY} r={64} fill="url(#hubGrad)" style={{ filter: 'drop-shadow(0 8px 30px rgba(229,160,13,0.5))' }} />
+
+            {/* Hub icon */}
+            <foreignObject x={CX - 20} y={CY - 20} width={40} height={40} style={{ pointerEvents: 'none' }}>
+              <div {...{ xmlns: 'http://www.w3.org/1999/xhtml', style: { display:'flex', alignItems:'center', justifyContent:'center', width:'100%', height:'100%' } } as HTMLAttributes<HTMLDivElement> & { xmlns: string }}>
+                <SparklesIcon style={{ width:28, height:28, color:'#0F172A' }} />
+              </div>
+            </foreignObject>
+
+            {/* Spokes + nodes */}
+            {offerings.map((o, i) => {
+              const { x, y } = pos(o.angle);
+              const active   = activeIndex === i;
+              const Icon     = o.icon;
+              const tipAbove = y > CY;
+              const TW = 230, TH = 84;
+              const tx = Math.min(Math.max(x - TW / 2, 8), SVG_SIZE - TW - 8);
+              const ty = tipAbove ? y - NODE_R - TH - 14 : y + NODE_R + 14;
+
+              return (
+                <g key={i}>
+                  {/* Dashed spoke */}
+                  <line x1={CX} y1={CY} x2={x} y2={y} stroke="#E5A00D" strokeWidth="1.5" strokeDasharray="6 4" strokeOpacity="0.5" />
+
+                  {/* Travelling dot */}
+                  <circle r="3" fill="#E5A00D">
+                    <animateMotion dur={`${2.5 + i * 0.35}s`} repeatCount="indefinite" path={`M${CX},${CY} L${x},${y} L${CX},${CY}`} />
+                  </circle>
+
+                  {/* Node shadow */}
+                  <circle cx={x} cy={y} r={NODE_R + 2} fill="rgba(0,0,0,0.07)" />
+
+                  {/* Node circle */}
+                  <circle
+                    cx={x} cy={y} r={NODE_R}
+                    fill={active ? '#F59E0B' : 'white'}
+                    stroke={active ? '#F59E0B' : '#FCD34D'}
+                    strokeWidth="2"
+                    style={{ cursor:'pointer' }}
+                    onClick={() => setActiveIndex(active ? null : i)}
+                  />
+
+                  {/* Pulse when active */}
+                  {active && (
+                    <circle cx={x} cy={y} r={NODE_R} fill="none" stroke="#FBBF24" strokeWidth="2">
+                      <animate attributeName="r" values={`${NODE_R};${NODE_R * 1.7}`} dur="1.5s" repeatCount="indefinite" />
+                      <animate attributeName="stroke-opacity" values="0.7;0" dur="1.5s" repeatCount="indefinite" />
+                    </circle>
+                  )}
+
+                  {/* Node icon */}
+                  <foreignObject x={x - NODE_R} y={y - NODE_R} width={NODE_R * 2} height={NODE_R * 2} style={{ pointerEvents:'none' }}>
+                    <div {...{ xmlns: 'http://www.w3.org/1999/xhtml', style: { display:'flex', alignItems:'center', justifyContent:'center', width:'100%', height:'100%' } } as HTMLAttributes<HTMLDivElement> & { xmlns: string }}>
+                      <Icon style={{ width:26, height:26, color: active ? '#0F172A' : '#D97706' }} />
+                    </div>
+                  </foreignObject>
+
+                  {/* Bigger transparent hit area */}
+                  <circle cx={x} cy={y} r={NODE_R + 10} fill="transparent" style={{ cursor:'pointer' }} onClick={() => setActiveIndex(active ? null : i)} />
+
+                  {/* Tooltip */}
+                  {active && (
+                    <g>
+                      <rect x={tx} y={ty} width={TW} height={TH} rx="12" fill="white" stroke="#FCD34D" strokeWidth="1.5" style={{ filter:'drop-shadow(0 8px 20px rgba(0,0,0,0.12))' }} />
+                      <foreignObject x={tx} y={ty} width={TW} height={TH}>
+                        <div {...{ xmlns: 'http://www.w3.org/1999/xhtml', dir: 'rtl', style: { width:'100%', height:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', padding:'8px 14px', boxSizing:'border-box' } } as HTMLAttributes<HTMLDivElement> & { xmlns: string }}>
+                          <p style={{ margin:0, fontWeight:700, fontSize:13, color:'#D97706', textAlign:'center', lineHeight:1.4 }}>
+                            {t(`items.${o.id}.title`)}
+                          </p>
+                          <p style={{ margin:'4px 0 0', fontSize:11, color:'#475569', textAlign:'center', lineHeight:1.5 }}>
+                            {t(`items.${o.id}.description`)}
+                          </p>
+                        </div>
+                      </foreignObject>
+                    </g>
+                  )}
+                </g>
+              );
+            })}
           </svg>
 
-          {/* Orbit Ring */}
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.8
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1
-            }}
-            transition={{
-              duration: 1
-            }}
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-dashed border-gold-300/50" />
-
-
-          {/* Central Hub */}
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1
-            }}
-            transition={{
-              type: 'spring',
-              stiffness: 200,
-              delay: 0.3
-            }}
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-
-            {/* Glow */}
-            <motion.div
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.2, 0.4, 0.2]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity
-              }}
-              className="absolute inset-0 bg-gold-400/30 rounded-full blur-2xl scale-150" />
-
-
-            {/* Hub Circle */}
-            <div className="relative w-32 h-32 bg-gradient-to-br from-gold-500 to-gold-600 rounded-full flex items-center justify-center shadow-gold-xl">
-              <SparklesIcon className="w-12 h-12 text-navy-900" />
-            </div>
-
-            {/* Rotating Ring */}
-            <motion.div
-              animate={{
-                rotate: 360
-              }}
-              transition={{
-                duration: 20,
-                repeat: Infinity,
-                ease: 'linear'
-              }}
-              className="absolute inset-0 rounded-full border-2 border-dashed border-gold-400/50"
-              style={{
-                margin: '-8px'
-              }} />
-
-          </motion.div>
-
-          {/* Orbit Nodes */}
-          {offerings.map((offering, index) =>
-          <OrbitNode
-            key={index}
-            offering={offering}
-            index={index}
-            isActive={activeIndex === index}
-            onClick={() =>
-            setActiveIndex(activeIndex === index ? null : index)
-            }
-            radius={radius} />
-
-          )}
+          <p dir={isRTL ? 'rtl' : 'ltr'} className="text-center text-navy-400 font-tajawal text-fluid-body mt-6">
+            {t('hint')}
+          </p>
         </div>
 
-        {/* Mobile: Vertical List with Connecting Line */}
-        <div className="md:hidden relative">
-          {/* Vertical Line */}
-          <div className="absolute right-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold-500 via-teal-500 to-coral-500" />
-
+        {/* Mobile list */}
+        <div dir={isRTL ? 'rtl' : 'ltr'} className="md:hidden relative px-4">
           <div className="space-y-6">
-            {offerings.map((offering, index) => {
-              const IconComponent = offering.icon;
+            {offerings.map((o, i) => {
+              const Icon = o.icon;
               return (
                 <motion.div
-                  key={index}
-                  initial={{
-                    opacity: 0,
-                    x: 20
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0
-                  }}
-                  viewport={{
-                    once: true
-                  }}
-                  transition={{
-                    delay: index * 0.1
-                  }}
-                  className="relative flex items-start gap-4 pr-4">
-
-                  {/* Node */}
-                  <div className="relative z-10 w-12 h-12 bg-white border-2 border-gold-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                    <IconComponent className="w-5 h-5 text-gold-600" />
+                  key={i}
+                  initial={{ opacity:0, x:20 }}
+                  whileInView={{ opacity:1, x:0 }}
+                  viewport={{ once:true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="relative flex flex-col items-center text-center gap-3 pr-4"
+                >
+                  <div className="relative z-10 w-12 h-12 bg-white border-2 border-gold-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg mb-2">
+                    <Icon className="w-5 h-5 text-gold-600" />
                   </div>
-
-                  {/* Content */}
-                  <div className="flex-1 bg-white rounded-xl p-4 border border-navy-100 shadow-lg">
-                    <h4 className="text-gold-600 font-cairo font-bold text-base mb-1">
-                      {offering.title}
+                  <div className="w-full bg-white rounded-xl p-4 border border-navy-100 shadow-lg">
+                    <h4 className="text-gold-600 font-cairo font-bold text-fluid-body mb-1">
+                      {t(`items.${o.id}.title`)}
                     </h4>
-                    <p className="text-navy-600 font-tajawal text-sm">
-                      {offering.description}
+                    <p className="text-navy-600 font-tajawal text-fluid-body">
+                      {t(`items.${o.id}.description`)}
                     </p>
                   </div>
-                </motion.div>);
-
+                </motion.div>
+              );
             })}
           </div>
         </div>
-
-        {/* Instruction Text */}
-        <motion.p
-          initial={{
-            opacity: 0
-          }}
-          animate={{
-            opacity: 1
-          }}
-          transition={{
-            delay: 2
-          }}
-          className="hidden md:block text-center text-navy-400 font-tajawal text-sm mt-12">
-
-          انقر على أي عنصر لمعرفة المزيد
-        </motion.p>
       </div>
 
-      {/* Gradient Fade to Next Section */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-pearl to-transparent" />
-    </section>);
-
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-pearl to-transparent pointer-events-none" />
+    </section>
+  );
 }

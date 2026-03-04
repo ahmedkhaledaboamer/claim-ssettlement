@@ -7,69 +7,76 @@ import {
   TargetIcon,
   ShieldIcon,
   StarIcon,
-  SparklesIcon } from
-'lucide-react';
+  SparklesIcon,
+  RocketIcon
+} from 'lucide-react';
 import { FadeUp, StaggerContainer, StaggerItem } from './ScrollAnimations';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
 const serviceLevels = [
-{
-  icon: FileTextIcon,
-  title: 'المستوى الأساسي',
-  description: 'تجهيز ملف + تقديمه للجهة التمويلية.',
-  features: ['تجهيز الملف', 'تقديم للجهة التمويلية'],
-  highlighted: false,
-  color: 'teal',
-  image:
-  'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80'
-},
-{
-  icon: TrendingUpIcon,
-  title: 'المستوى المتقدم',
-  description: 'تحليل + تجهيز ملف + متابعة + تفاوض.',
-  features: ['تحليل مالي', 'تجهيز الملف', 'متابعة', 'تفاوض'],
-  highlighted: false,
-  color: 'coral',
-  image:
-  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80'
-},
-{
-  icon: CrownIcon,
-  title: 'المستوى التنفيذي',
-  description: 'إدارة العملية بالكامل حتى الموافقة.',
-  features: ['إدارة كاملة', 'متابعة مستمرة', 'تفاوض احترافي', 'حتى الموافقة'],
-  highlighted: true,
-  color: 'gold',
-  image:
-  'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80'
-},
-{
-  icon: TargetIcon,
-  title: 'المستوى الاستراتيجي',
-  description: 'بناء خطة تمويل + اختيار جهات + إدارة مفاوضات متعددة.',
-  features: ['خطة تمويل', 'اختيار جهات', 'مفاوضات متعددة'],
-  highlighted: false,
-  color: 'purple',
-  image:
-  'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80'
-},
-{
-  icon: ShieldIcon,
-  title: 'المستوى الخاص برجال الأعمال',
-  description: 'خدمة شخصية بسرية كاملة وإدارة ملفات حساسة.',
-  features: ['خدمة شخصية', 'سرية كاملة', 'ملفات حساسة'],
-  highlighted: false,
-  color: 'navy',
-  image:
-  'https://images.unsplash.com/photo-1507679799987-c73b7651ba67?w=600&q=80'
-}];
+  {
+    id: 'basic',
+    icon: FileTextIcon,
+    highlighted: false,
+    color: 'teal',
+    image:
+      'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80'
+  },
+  {
+    id: 'advanced',
+    icon: TrendingUpIcon,
+    highlighted: false,
+    color: 'coral',
+    image:
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80'
+  },
+  {
+    id: 'executive',
+    icon: CrownIcon,
+    highlighted: true,
+    color: 'gold',
+    image:
+      'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80'
+  },
+  {
+    id: 'strategic',
+    icon: TargetIcon,
+    highlighted: false,
+    color: 'purple',
+    image:
+      'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80'
+  },
+  {
+    id: 'businessOwners',
+    icon: ShieldIcon,
+    highlighted: false,
+    color: 'navy',
+    image:
+      'https://images.unsplash.com/photo-1507679799987-c73b7651ba67?w=600&q=80'
+  },
+  {
+    id: 'strategicPartnership',
+    icon: RocketIcon,
+    highlighted: false,
+    color: 'indigo',
+    image:
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80'
+  }
+];
 
 export function ServiceLevelsSection() {
+  const t = useTranslations('home.serviceLevels');
+  const levelsT = useTranslations('home.serviceLevels.levels');
   return (
-    <section className="relative section-padding overflow-hidden">
+    <section className="relative section-padding overflow-hidden px-[5%] py-[2%]">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
+          width={100}
+          height={100}
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
-          alt="خلفية"
+          alt={t('badge')}
           className="w-full h-full object-cover opacity-5" />
 
         <div className="absolute inset-0 bg-gradient-to-b from-champagne to-alabaster" />
@@ -79,24 +86,25 @@ export function ServiceLevelsSection() {
       <div className="absolute top-20 right-10 w-60 h-60 bg-imperial-400/20 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-80 h-80 bg-jade/10 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
           <FadeUp>
-            <span className="inline-block text-gold-600 font-cairo font-bold text-sm tracking-wider mb-4">
-              خدمات مخصصة لكل احتياج
+            <span className="inline-block text-gold-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+              {t('badge')}
             </span>
           </FadeUp>
 
           <FadeUp delay={0.1}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-cairo font-bold text-navy-900 mb-6">
-              مستويات <span className="gradient-text-gold">الخدمة</span>
+            <h2 className="text-fluid-section-title font-cairo font-bold text-navy-900 mb-6">
+              {t('titleMain')}{' '}
+              <span className="gradient-text-gold">{t('titleHighlight')}</span>
             </h2>
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <p className="text-lg md:text-xl text-navy-600 font-tajawal max-w-2xl mx-auto">
-              نقدّم خدماتنا عبر مستويات تشغيل مختلفة تناسب كل عميل
+            <p className="text-fluid-section-lead text-navy-600 mx-auto">
+              {t('lead')}
             </p>
           </FadeUp>
         </div>
@@ -108,8 +116,9 @@ export function ServiceLevelsSection() {
 
           {serviceLevels.map((level, index) => {
             const IconComponent = level.icon;
+            const features = levelsT.raw(`${level.id}.features`) as string[];
             return (
-              <StaggerItem key={index}>
+              <StaggerItem key={level.id}>
                 <motion.div
                   whileHover={{
                     y: -8,
@@ -128,10 +137,12 @@ export function ServiceLevelsSection() {
                   <div className="relative z-10 h-full flex flex-col">
                     {/* Header Image */}
                     <div className="h-40 w-full relative overflow-hidden">
-                      <img
+                      <Image
+                        width={100}
+                        height={100}
                         src={level.image}
-                        alt={level.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        alt={levelsT(`${level.id}.title`)}
+                        className="w-full h-full object-cover img-fluid-cover transition-transform duration-500 group-hover:scale-105" />
 
                       {/* Gradient Overlay */}
                       <div
@@ -140,9 +151,9 @@ export function ServiceLevelsSection() {
 
                       {/* Recommended Badge */}
                       {level.highlighted &&
-                      <div className="absolute top-4 right-4 bg-navy-900 text-gold-400 px-4 py-1 rounded-full text-xs font-cairo font-bold flex items-center gap-1 shadow-lg z-20">
+                        <div className="absolute top-4 right-4 bg-navy-900 text-gold-400 px-4 py-1 rounded-full text-fluid-label font-cairo font-bold flex items-center gap-1 shadow-lg z-20">
                           <StarIcon className="w-3 h-3" />
-                          الأكثر طلبًا
+                          {t('mostRequested')}
                         </div>
                       }
                     </div>
@@ -185,7 +196,7 @@ export function ServiceLevelsSection() {
 
                       {/* Icon */}
                       <div
-                        className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 -mt-8 relative z-20 shadow-lg ${level.highlighted ? 'bg-navy-900/20 backdrop-blur-sm' : level.color === 'teal' ? 'bg-teal-50 text-teal-600' : level.color === 'coral' ? 'bg-coral-50 text-coral-600' : level.color === 'purple' ? 'bg-purple-50 text-purple-600' : level.color === 'navy' ? 'bg-navy-50 text-navy-600' : 'bg-gold-50 text-gold-600'}`}>
+                        className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 -mt-8 relative z-20 shadow-lg mx-auto lg:mx-0 ${level.highlighted ? 'bg-navy-900/20 backdrop-blur-sm' : level.color === 'teal' ? 'bg-teal-50 text-teal-600' : level.color === 'coral' ? 'bg-coral-50 text-coral-600' : level.color === 'purple' ? 'bg-purple-50 text-purple-600' : level.color === 'navy' ? 'bg-navy-50 text-navy-600' : 'bg-gold-50 text-gold-600'}`}>
 
                         <IconComponent
                           className={`w-7 h-7 ${level.highlighted ? 'text-navy-900' : ''}`} />
@@ -194,46 +205,31 @@ export function ServiceLevelsSection() {
 
                       {/* Title */}
                       <h3
-                        className={`text-xl font-cairo font-bold mb-4 ${level.highlighted ? 'text-navy-900' : 'text-navy-900'}`}>
-
-                        {level.title}
+                        className={`text-fluid-body-lg font-cairo font-bold mb-4 ${level.highlighted ? 'text-navy-900' : 'text-navy-900'}`}>
+                        {levelsT(`${level.id}.title`)}
                       </h3>
 
                       {/* Description */}
                       <p
-                        className={`text-base font-tajawal mb-6 leading-relaxed ${level.highlighted ? 'text-navy-800' : 'text-navy-600'}`}>
-
-                        {level.description}
+                        className={`text-fluid-body font-tajawal mb-6 leading-relaxed ${level.highlighted ? 'text-navy-800' : 'text-navy-600'}`}>
+                        {levelsT(`${level.id}.description`)}
                       </p>
 
                       {/* Features */}
-                      <ul className="space-y-3 mb-8 flex-1">
-                        {level.features.map((feature, fIndex) =>
-                        <li key={fIndex} className="flex items-center gap-2">
+                      <ul className="space-y-3 mb-8 flex-1 text-start">
+                        {features.map((feature, fIndex) => (
+                          <li key={feature} className="flex items-center gap-2">
                             <div
                             className={`w-1.5 h-1.5 rounded-full ${level.highlighted ? 'bg-navy-900' : level.color === 'teal' ? 'bg-teal-500' : level.color === 'coral' ? 'bg-coral-500' : level.color === 'purple' ? 'bg-purple-500' : level.color === 'navy' ? 'bg-navy-500' : 'bg-gold-500'}`} />
 
                             <span
-                            className={`text-base font-tajawal ${level.highlighted ? 'text-navy-800' : 'text-navy-600'}`}>
+                            className={`text-fluid-body font-tajawal ${level.highlighted ? 'text-navy-800' : 'text-navy-600'}`}>
 
                               {feature}
                             </span>
                           </li>
-                        )}
+                        ))}
                       </ul>
-
-                      {/* CTA Button */}
-                      <motion.button
-                        className={`w-full py-4 rounded-xl font-cairo font-bold text-base transition-all mt-auto ${level.highlighted ? 'bg-navy-900 text-gold-400 hover:bg-navy-800' : 'bg-navy-900/10 text-navy-900 hover:bg-navy-900 hover:text-white'}`}
-                        whileHover={{
-                          scale: 1.02
-                        }}
-                        whileTap={{
-                          scale: 0.98
-                        }}>
-
-                        اختر هذا المستوى
-                      </motion.button>
                     </div>
                   </div>
                 </motion.div>

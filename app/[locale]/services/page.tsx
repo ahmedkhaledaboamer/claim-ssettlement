@@ -1,26 +1,19 @@
-import { HeroSection } from '@/components/screens/services/HeroSection';
-import { AboutSection } from '@/components/screens/services/AboutSection';
-import { MissionVisionSection } from '@/components/screens/services/MissionVisionSection';
+import { FeaturesSection } from '@/components/screens/services/FeaturesSection';
 import { ServicesSection } from '@/components/screens/services/ServicesSection';
-import { ClientJourneySection } from '@/components/screens/services/ClientJourneySection';
-import { OperatingSystemSection } from '@/components/screens/services/OperatingSystemSection';
-import { ServiceLevelsSection } from '@/components/screens/services/ServiceLevelsSection';
-import { QualityPrinciplesSection } from '@/components/screens/services/QualityPrinciplesSection';
-import { WhoWeServeSection } from '@/components/screens/services/WhoWeServeSection';
-import { ContactSection } from '@/components/screens/services/ContactSection';
-export default function ServicesPage() {
-  return (
-    <main className="flex flex-col min-h-screen w-full overflow-x-hidden">
-      <HeroSection />
-      <AboutSection />
-      <MissionVisionSection />
-      <ServicesSection />
-      <ClientJourneySection />
-      <OperatingSystemSection />
-      <ServiceLevelsSection />
-      <QualityPrinciplesSection />
-      <WhoWeServeSection />
-      <ContactSection />
-    </main>);
+import { WhyUsSection } from '@/components/screens/services/WhyUsSection';
+import { HeroSection } from '@/components/screens/services/HeroSection';
+import { useLocale } from 'next-intl';
 
+export default function ServicesPage() {
+  const locale = useLocale();
+  return (
+    <div className="min-h-screen bg-[#FDF8F3]" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+      <main>
+        <HeroSection locale={locale}/>
+        <FeaturesSection />
+        <ServicesSection />
+        <WhyUsSection locale={locale}/>
+      </main>
+    </div>
+  );
 }

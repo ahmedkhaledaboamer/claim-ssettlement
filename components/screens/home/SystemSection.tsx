@@ -7,56 +7,48 @@ import {
   LinkIcon,
   MessageSquareIcon,
   CheckCircle2Icon,
-  ChevronDownIcon } from
-'lucide-react';
+  ChevronDownIcon
+} from 'lucide-react';
 import { FadeUp } from './ScrollAnimations';
+import { useTranslations } from 'next-intl';
+
 const systemLayers = [
-{
-  icon: BarChart3Icon,
-  title: 'طبقة التحليل المالي',
-  description: 'نقرأ الأرقام، المؤشرات، والقدرة التمويلية.',
-  color: 'teal',
-  details:
-  'نحلل البيانات المالية بدقة لفهم وضعك الحالي وتحديد أفضل مسار للتمويل.',
-  image:
-  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&q=80'
-},
-{
-  icon: SettingsIcon,
-  title: 'طبقة التقييم التشغيلي',
-  description: 'نقيّم قوة المشروع واستدامته.',
-  color: 'navy',
-  details: 'نراجع العمليات التشغيلية والهيكل الإداري لضمان جاهزيتك للتمويل.',
-  image:
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&q=80'
-},
-{
-  icon: LinkIcon,
-  title: 'طبقة المطابقة التمويلية',
-  description: 'نطابق احتياجك مع الجهة المناسبة.',
-  color: 'gold',
-  details: 'نختار من شبكة شركائنا الجهة التمويلية الأنسب لطبيعة مشروعك.',
-  image:
-  'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=300&q=80'
-},
-{
-  icon: MessageSquareIcon,
-  title: 'طبقة التفاوض',
-  description: 'نضمن لك أفضل الشروط الممكنة.',
-  color: 'teal',
-  details: 'نتفاوض باحترافية للحصول على أفضل معدلات الفائدة والشروط.',
-  image:
-  'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&q=80'
-},
-{
-  icon: CheckCircle2Icon,
-  title: 'طبقة الإغلاق والمتابعة',
-  description: 'نغلق الصفقة ونتابع التنفيذ حتى النهاية.',
-  color: 'navy',
-  details: 'نرافقك حتى استلام التمويل ونتابع معك لضمان نجاح المشروع.',
-  image:
-  'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&q=80'
-}];
+  {
+    id: 'financialAnalysis',
+    icon: BarChart3Icon,
+    color: 'teal',
+    image:
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&q=80'
+  },
+  {
+    id: 'operationalAssessment',
+    icon: SettingsIcon,
+    color: 'navy',
+    image:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&q=80'
+  },
+  {
+    id: 'matching',
+    icon: LinkIcon,
+    color: 'gold',
+    image:
+      'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=300&q=80'
+  },
+  {
+    id: 'negotiation',
+    icon: MessageSquareIcon,
+    color: 'teal',
+    image:
+      'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&q=80'
+  },
+  {
+    id: 'closure',
+    icon: CheckCircle2Icon,
+    color: 'navy',
+    image:
+      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&q=80'
+  }
+];
 
 const colorMap: Record<
   string,
@@ -95,14 +87,15 @@ function LayerCard({
   index,
   isActive,
   onClick
-
-
-
-
-
-}: {layer: (typeof systemLayers)[0];index: number;isActive: boolean;onClick: () => void;}) {
+}: {
+  layer: (typeof systemLayers)[0];
+  index: number;
+  isActive: boolean;
+  onClick: () => void;
+}) {
   const IconComponent = layer.icon;
   const colors = colorMap[layer.color];
+  const t = useTranslations('home.system.layers');
   return (
     <motion.div
       initial={{
@@ -150,11 +143,11 @@ function LayerCard({
         onClick={onClick}
         className={`bg-white rounded-2xl shadow-lg border-t-4 ${colors.border} overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl md:mr-8 group`}>
 
-        <div className="p-6 md:p-8">
-          <div className="flex items-start gap-4 md:gap-5">
+            <div className="p-6 md:p-8">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-5 text-center sm:text-left">
             {/* Layer Number */}
             <div className="hidden sm:flex w-12 h-16 items-center justify-center flex-shrink-0">
-              <span className="text-4xl md:text-5xl font-cairo font-bold text-navy-100">
+              <span className="text-fluid-stat font-cairo font-bold text-navy-100">
                 {String(index + 1).padStart(2, '0')}
               </span>
             </div>
@@ -163,14 +156,14 @@ function LayerCard({
             <div className="hidden sm:block w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 shadow-sm">
               <img
                 src={layer.image}
-                alt={layer.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                alt={t(`${layer.id}.title`)}
+                className="w-full h-full object-cover img-fluid-cover transition-transform duration-500 group-hover:scale-110" />
 
             </div>
 
             {/* Icon */}
             <div
-              className={`w-12 h-12 md:w-14 md:h-14 ${colors.iconBg} rounded-xl flex items-center justify-center flex-shrink-0`}>
+              className={`w-12 h-12 md:w-14 md:h-14 ${colors.iconBg} rounded-xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0`}>
 
               <IconComponent
                 className={`w-6 h-6 md:w-7 md:h-7 ${colors.iconColor}`} />
@@ -180,12 +173,12 @@ function LayerCard({
             {/* Content */}
             <div className="flex-1 min-w-0">
               <h3
-                className={`text-xl md:text-2xl font-cairo font-bold ${colors.text} mb-2`}>
-
-                {layer.title}
+                className={`text-fluid-body-lg font-cairo font-bold ${colors.text} mb-2`}
+              >
+                {t(`${layer.id}.title`)}
               </h3>
-              <p className="text-navy-600 font-tajawal text-base leading-relaxed">
-                {layer.description}
+              <p className="text-navy-600 font-tajawal text-fluid-body leading-relaxed">
+                {t(`${layer.id}.description`)}
               </p>
 
               {/* Expanded Details */}
@@ -211,8 +204,8 @@ function LayerCard({
                   className="overflow-hidden">
 
                     <div className="mt-4 pt-4 border-t border-navy-100">
-                      <p className="text-navy-500 font-tajawal text-sm leading-relaxed">
-                        {layer.details}
+                      <p className="text-navy-500 font-tajawal text-fluid-body leading-relaxed">
+                        {t(`${layer.id}.details`)}
                       </p>
                     </div>
                   </motion.div>
@@ -242,31 +235,33 @@ function LayerCard({
 }
 export function SystemSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const t = useTranslations('home.system');
   return (
-    <section className="relative bg-pearl py-24 md:py-32 overflow-hidden">
+    <section className="relative bg-pearl py-24 md:py-32 overflow-hidden px-[5%] py-[2%]">
       {/* Decorative Blurs */}
       <div className="absolute top-20 right-20 w-72 h-72 bg-teal-400/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-20 w-56 h-56 bg-gold-400/10 rounded-full blur-3xl" />
       <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-navy-400/5 rounded-full blur-3xl" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <FadeUp>
-            <span className="inline-block text-navy-600 font-cairo font-bold text-sm tracking-wider mb-4">
-              منهجية عمل متكاملة
+            <span className="inline-block text-navy-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+              {t('badge')}
             </span>
           </FadeUp>
 
           <FadeUp delay={0.1}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-cairo font-bold text-navy-900 mb-6">
-              نظام التشغيل <span className="gradient-text-navy">المالي</span>
+            <h2 className="text-fluid-section-title font-cairo font-bold text-navy-900 mb-6">
+              {t('titleMain')}{' '}
+              <span className="gradient-text-navy">{t('titleHighlight')}</span>
             </h2>
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <p className="text-lg md:text-xl text-navy-600 font-tajawal max-w-2xl mx-auto">
-              نظامنا مبني على طبقات تشغيلية دقيقة تعمل معًا لتقديم أفضل نتيجة
+            <p className="text-fluid-section-lead text-navy-600 mx-auto">
+              {t('lead')}
             </p>
           </FadeUp>
         </div>

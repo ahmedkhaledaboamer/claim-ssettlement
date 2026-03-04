@@ -89,7 +89,7 @@ export default async function Footer() {
               <p
                 className="text-white/80 leading-relaxed text-center md:text-start max-w-full"
                 style={{
-                  fontSize: "clamp(0.875rem, 1vw, 1.125rem)",
+                  fontSize: "clamp(0.875rem, 0.5rem + 0.5vw, 1.5rem)",
                 }}
               >
                 {t("description")}
@@ -102,7 +102,7 @@ export default async function Footer() {
             <h3
               className="text-primary font-bold"
               style={{
-                fontSize: "clamp(1.25rem, 1.75vw, 2rem)",
+                fontSize: "clamp(1.25rem, 1rem + 1vw, 2.5rem)",
               }}
             >
               {t("quickLinks.title")}
@@ -114,7 +114,7 @@ export default async function Footer() {
                     href={link.href}
                     className="text-white/80 hover:text-primary transition-colors font-medium block"
                     style={{
-                      fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                      fontSize: "clamp(1rem, 0.55rem + 0.5vw, 1.75rem)",
                       paddingTop: "clamp(0.25rem, 0.5vw, 0.5rem)",
                       paddingBottom: "clamp(0.25rem, 0.5vw, 0.5rem)",
                     }}
@@ -132,7 +132,7 @@ export default async function Footer() {
             <h3
               className="text-primary font-bold"
               style={{
-                fontSize: "clamp(1.25rem, 1.75vw, 2rem)",
+                fontSize: "clamp(1.25rem, 1rem + 1vw, 2.5rem)",
               }}
             >
               {contact.title}
@@ -156,7 +156,7 @@ export default async function Footer() {
                 />
                 <span
                   style={{
-                    fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                    fontSize: "clamp(1rem, 0.55rem + 0.5vw, 1.75rem)",
                   }}
                 >
                   {contact.phone}
@@ -182,7 +182,7 @@ export default async function Footer() {
                 <span
                   className="break-all"
                   style={{
-                    fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                    fontSize: "clamp(1rem, 0.55rem + 0.5vw, 1.75rem)",
                   }}
                 >
                   {contact.email}
@@ -206,7 +206,7 @@ export default async function Footer() {
                 />
                 <span
                   style={{
-                    fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                    fontSize: "clamp(1rem, 0.55rem + 0.5vw, 1.75rem)",
                   }}
                 >
                   {contact.location}
@@ -253,7 +253,7 @@ export default async function Footer() {
           )}
           style={{
             paddingTop: "clamp(1.5rem, 2vw, 2.5rem)",
-            fontSize: "clamp(0.875rem, 1vw, 1.125rem)",
+            fontSize: "clamp(0.875rem, 0.5rem + 0.5vw, 1.25rem)",
           }}
         >
           <p>{t("copyright")}</p>

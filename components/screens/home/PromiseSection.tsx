@@ -2,15 +2,24 @@
 import { motion } from 'framer-motion';
 import { SparklesIcon, CheckCircleIcon, ShieldCheckIcon } from 'lucide-react';
 import { FadeUp } from './ScrollAnimations';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
 export function PromiseSection() {
+  const t = useTranslations('home.promise');
+  const lines = t.raw('lines') as string[];
+  const badges = t.raw('badges') as { fullCommitment: string; totalTransparency: string; absoluteConfidentiality: string };
+
   return (
-    <section className="relative section-padding overflow-hidden">
+    <section className="relative section-padding overflow-hidden px-[5%] py-[2%]">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
+          width={100}
+          height={100}
           src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
           alt="خلفية"
-          className="w-full h-full object-cover" />
+          className="w-full h-full object-cover img-fluid-cover" />
 
         <div className="absolute inset-0 bg-gradient-to-br from-imperial-500/95 via-imperial-500/90 to-imperial-600/95" />
       </div>
@@ -66,7 +75,7 @@ export function PromiseSection() {
         )}
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Trust Seal */}
         <FadeUp>
           <div className="relative inline-block mb-8">
@@ -108,23 +117,22 @@ export function PromiseSection() {
 
         {/* Title */}
         <FadeUp delay={0.1}>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-cairo font-bold text-navy-900 mb-12">
-            وعدنا لك
+          <h2 className="text-fluid-7xl font-cairo font-bold text-navy-900 mb-12">
+            {t('title')}
           </h2>
         </FadeUp>
 
         {/* Promise Text */}
         <FadeUp delay={0.2}>
           <div className="space-y-8">
-            <p className="text-2xl md:text-3xl lg:text-4xl font-tajawal text-navy-800 leading-relaxed">
-              نلتزم بأن نكون الشريك الذي يفتح لك أبواب التمويل،
-            </p>
-            <p className="text-2xl md:text-3xl lg:text-4xl font-tajawal text-navy-800 leading-relaxed">
-              ويعزّز قوتك المالية،
-            </p>
-            <p className="text-2xl md:text-3xl lg:text-4xl font-tajawal text-navy-800 leading-relaxed">
-              ويمنحك حلولًا تدعم نموك وتوسعك بثبات.
-            </p>
+            {lines.map((line) => (
+              <p
+                key={line}
+                className="text-fluid-2xl font-tajawal text-navy-800 leading-relaxed"
+              >
+                {line}
+              </p>
+            ))}
           </div>
         </FadeUp>
 
@@ -178,20 +186,20 @@ export function PromiseSection() {
           <div className="flex flex-wrap justify-center gap-5 mt-14">
             <div className="flex items-center gap-2 bg-navy-900/10 rounded-full px-5 py-2.5">
               <CheckCircleIcon className="w-5 h-5 text-navy-900" />
-              <span className="font-tajawal text-navy-900 text-base">
-                التزام كامل
+              <span className="font-tajawal text-navy-900 text-fluid-body">
+                {badges.fullCommitment}
               </span>
             </div>
             <div className="flex items-center gap-2 bg-navy-900/10 rounded-full px-5 py-2.5">
               <SparklesIcon className="w-5 h-5 text-navy-900" />
-              <span className="font-tajawal text-navy-900 text-base">
-                شفافية تامة
+              <span className="font-tajawal text-navy-900 text-fluid-body">
+                {badges.totalTransparency}
               </span>
             </div>
             <div className="flex items-center gap-2 bg-navy-900/10 rounded-full px-5 py-2.5">
               <ShieldCheckIcon className="w-5 h-5 text-navy-900" />
-              <span className="font-tajawal text-navy-900 text-base">
-                سرية مطلقة
+              <span className="font-tajawal text-navy-900 text-fluid-body">
+                {badges.absoluteConfidentiality}
               </span>
             </div>
           </div>

@@ -15,78 +15,92 @@ import {
   HeartIcon,
   MessageSquareIcon,
   VolumeXIcon,
-  UsersIcon } from
-'lucide-react';
+  UsersIcon,
+  ShieldCheckIcon
+} from 'lucide-react';
 import { FadeUp } from './ScrollAnimations';
+import { useTranslations } from 'next-intl';
+
 const qualityStandards = [
-{
-  icon: TargetIcon,
-  text: 'دقة في تحليل الاحتياج'
-},
-{
-  icon: ZapIcon,
-  text: 'سرعة في تجهيز الملفات'
-},
-{
-  icon: EyeIcon,
-  text: 'شفافية في كل خطوة'
-},
-{
-  icon: RefreshCwIcon,
-  text: 'متابعة مستمرة'
-},
-{
-  icon: CheckCircleIcon,
-  text: 'التزام بالنتيجة'
-},
-{
-  icon: LockIcon,
-  text: 'سرية تامة في التعامل'
-}];
+  {
+    id: 'accuracy',
+    icon: TargetIcon
+  },
+  {
+    id: 'speed',
+    icon: ZapIcon
+  },
+  {
+    id: 'transparency',
+    icon: EyeIcon
+  },
+  {
+    id: 'followUp',
+    icon: RefreshCwIcon
+  },
+  {
+    id: 'commitment',
+    icon: CheckCircleIcon
+  },
+  {
+    id: 'confidentiality',
+    icon: LockIcon
+  }
+];
 
 const entityLanguage = [
-{
-  icon: HashIcon,
-  text: 'لغة تعتمد على الأرقام'
-},
-{
-  icon: ClockIcon,
-  text: 'لغة تحترم وقت العميل'
-},
-{
-  icon: FileTextIcon,
-  text: 'لغة مبنية على المعلومة'
-},
-{
-  icon: AlertCircleIcon,
-  text: 'لغة بلا وعود مبالغ فيها'
-},
-{
-  icon: AwardIcon,
-  text: 'لغة تعتمد على النتيجة فقط'
-}];
+  {
+    id: 'numbers',
+    icon: HashIcon
+  },
+  {
+    id: 'time',
+    icon: ClockIcon
+  },
+  {
+    id: 'information',
+    icon: FileTextIcon
+  },
+  {
+    id: 'noExaggeration',
+    icon: AlertCircleIcon
+  },
+  {
+    id: 'resultsOnly',
+    icon: AwardIcon
+  },
+  {
+    id: 'transparent',
+    icon: EyeIcon
+  }
+];
 
 const dealingPrinciples = [
-{
-  icon: HeartIcon,
-  text: 'نلتزم قبل أن نعد'
-},
-{
-  icon: MessageSquareIcon,
-  text: 'نوضح قبل أن نطلب'
-},
-{
-  icon: RefreshCwIcon,
-  text: 'نتابع قبل أن تُسأل'
-},
-{
-  icon: VolumeXIcon,
-  text: 'نعمل بصمت… ونُظهر النتائج فقط'
-},
-{
-  icon: UsersIcon,
-  text: 'نضع مصلحة العميل فوق كل شيء'
-}];
+  {
+    id: 'commitBeforePromise',
+    icon: HeartIcon
+  },
+  {
+    id: 'clarifyBeforeRequest',
+    icon: MessageSquareIcon
+  },
+  {
+    id: 'followUpProactively',
+    icon: RefreshCwIcon
+  },
+  {
+    id: 'workQuietly',
+    icon: VolumeXIcon
+  },
+  {
+    id: 'clientFirst',
+    icon: UsersIcon
+  },
+  {
+    id: 'fullResponsibility',
+    icon: ShieldCheckIcon
+  }
+];
 
 function HexagonItem({
   icon: Icon,
@@ -156,7 +170,7 @@ function HexagonItem({
 
         <div className="flex flex-col items-center justify-center h-full text-center">
           <Icon className={`w-6 h-6 md:w-8 md:h-8 ${colors.icon} mb-2`} />
-          <span className="text-navy-800 font-tajawal text-xs md:text-sm leading-tight font-medium">
+          <span className="text-navy-800 font-tajawal text-fluid-body leading-tight font-medium">
             {text}
           </span>
         </div>
@@ -222,14 +236,14 @@ function CategoryHeader({
 
         {/* Count Badge */}
         <div
-          className={`absolute -top-2 -right-2 w-8 h-8 ${colors.bg} rounded-full flex items-center justify-center text-white font-cairo font-bold text-sm shadow-lg`}>
+          className={`absolute -top-2 -right-2 w-8 h-8 ${colors.bg} rounded-full flex items-center justify-center text-white font-cairo font-bold text-fluid-label shadow-lg`}>
 
           {count}
         </div>
       </div>
 
       <h3
-        className={`text-2xl md:text-3xl font-cairo font-bold ${colors.text}`}>
+        className={`text-fluid-2xl font-cairo font-bold ${colors.text}`}>
 
         {title}
       </h3>
@@ -237,8 +251,9 @@ function CategoryHeader({
 
 }
 export function QualitySection() {
+  const t = useTranslations('home.quality');
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden bg-champagne">
+    <section className="relative py-24 md:py-32 overflow-hidden bg-champagne px-[5%] py-[2%]">
       {/* Decorative Blurs */}
       <div className="absolute top-20 right-20 w-80 h-80 bg-gold-400/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-20 w-60 h-60 bg-teal-400/10 rounded-full blur-3xl" />
@@ -270,18 +285,19 @@ export function QualitySection() {
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
           <FadeUp>
-            <span className="inline-block text-gold-600 font-cairo font-bold text-sm tracking-wider mb-4">
-              التزامنا تجاهك
+            <span className="inline-block text-gold-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+              {t('badge')}
             </span>
           </FadeUp>
 
           <FadeUp delay={0.1}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-cairo font-bold text-navy-900 mb-6">
-              قيمنا <span className="gradient-text-gold">ومبادئنا</span>
+            <h2 className="text-fluid-section-title font-cairo font-bold text-navy-900 mb-6">
+              {t('titleMain')}{' '}
+              <span className="gradient-text-gold">{t('titleHighlight')}</span>
             </h2>
           </FadeUp>
         </div>
@@ -292,22 +308,22 @@ export function QualitySection() {
           <div>
             <CategoryHeader
               icon={CheckCircleIcon}
-              title="معايير الجودة"
+              title={t('qualityStandardsTitle')}
               count={qualityStandards.length}
               color="gold" />
 
 
             {/* Honeycomb Grid */}
             <div className="grid grid-cols-2 gap-3">
-              {qualityStandards.map((item, index) =>
-              <HexagonItem
-                key={index}
-                icon={item.icon}
-                text={item.text}
-                color="gold"
-                delay={index * 0.1} />
-
-              )}
+              {qualityStandards.map((item, index) => (
+                <HexagonItem
+                  key={item.id}
+                  icon={item.icon}
+                  text={t(`qualityStandards.${index}`)}
+                  color="gold"
+                  delay={index * 0.1}
+                />
+              ))}
             </div>
           </div>
 
@@ -315,22 +331,22 @@ export function QualitySection() {
           <div>
             <CategoryHeader
               icon={MessageSquareIcon}
-              title="لغة الكيان"
+              title={t('entityLanguageTitle')}
               count={entityLanguage.length}
               color="teal" />
 
 
             {/* Honeycomb Grid */}
             <div className="grid grid-cols-2 gap-3">
-              {entityLanguage.map((item, index) =>
-              <HexagonItem
-                key={index}
-                icon={item.icon}
-                text={item.text}
-                color="teal"
-                delay={index * 0.1 + 0.3} />
-
-              )}
+              {entityLanguage.map((item, index) => (
+                <HexagonItem
+                  key={item.id}
+                  icon={item.icon}
+                  text={t(`entityLanguage.${index}`)}
+                  color="teal"
+                  delay={index * 0.1 + 0.3}
+                />
+              ))}
               {/* Empty cell for odd number */}
               <div className="hidden md:block" />
             </div>
@@ -340,22 +356,22 @@ export function QualitySection() {
           <div>
             <CategoryHeader
               icon={HeartIcon}
-              title="مبادئ التعامل"
+              title={t('dealingPrinciplesTitle')}
               count={dealingPrinciples.length}
               color="coral" />
 
 
             {/* Honeycomb Grid */}
             <div className="grid grid-cols-2 gap-3">
-              {dealingPrinciples.map((item, index) =>
-              <HexagonItem
-                key={index}
-                icon={item.icon}
-                text={item.text}
-                color="coral"
-                delay={index * 0.1 + 0.6} />
-
-              )}
+              {dealingPrinciples.map((item, index) => (
+                <HexagonItem
+                  key={item.id}
+                  icon={item.icon}
+                  text={t(`dealingPrinciples.${index}`)}
+                  color="coral"
+                  delay={index * 0.1 + 0.6}
+                />
+              ))}
               {/* Empty cell for odd number */}
               <div className="hidden md:block" />
             </div>

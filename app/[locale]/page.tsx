@@ -9,11 +9,17 @@ import { ServiceLevelsSection } from '@/components/screens/home/ServiceLevelsSec
 import { QualitySection } from '@/components/screens/home/QualitySection';
 import { ClientsSection } from '@/components/screens/home/ClientsSection';
 import { PromiseSection } from '@/components/screens/home/PromiseSection';
-import { PartnersSection } from '@/components/screens/home/PartnersSection';
 import { ContactCTASection } from '@/components/screens/home/ContactCTASection';
+import { useLocale } from 'next-intl';
+
 export default function Home() {
+  const locale = useLocale();
+
   return (
-    <main>
+    <main
+      dir={locale === 'ar' ? 'rtl' : 'ltr'}
+      className={`text-center ${(locale === 'ar') ? 'text-right' : 'text-left'}`}
+    >
       <HeroSection />
       <AboutSection />
       <ServicesSection />
@@ -25,8 +31,7 @@ export default function Home() {
       <QualitySection />
       <ClientsSection />
       <PromiseSection />
-      <PartnersSection />
-      <ContactCTASection />
-    </main>);
-
+      <ContactCTASection locale={locale} />
+    </main>
+  );
 }
