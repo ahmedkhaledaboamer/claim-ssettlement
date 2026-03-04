@@ -207,7 +207,7 @@ export function WhatWeDoSection({ locale }: { locale: string }) {
                 : service.descriptionEn;
             return (
               <motion.div
-                key={service.title}
+                key={title}
                 initial={{
                   opacity: 0,
                   y: 30
