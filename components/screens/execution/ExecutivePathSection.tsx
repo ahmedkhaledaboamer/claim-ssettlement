@@ -441,7 +441,7 @@ function Station({
 
       {/* Station name */}
       <span
-        className={`mt-2 text-xs md:text-sm font-medium text-center max-w-[100px] leading-tight transition-colors ${isActive ? 'text-navy-950' : 'text-gray-500 group-hover:text-navy-900'}`}>
+        className={`mt-2 text-xs md:text-sm font-medium text-center   leading-tight transition-colors ${isActive ? 'text-navy-950' : 'text-gray-500 group-hover:text-navy-900'}`}>
 
         {step.title.split(' ').slice(0, 2).join(' ')}
       </span>
@@ -488,7 +488,7 @@ function StepModal({
           y: 50
         }}
         onClick={(e) => e.stopPropagation()}
-        className="relative bg-navy-900 rounded-3xl p-8 md:p-10 max-w-lg w-full border border-white/10 shadow-2xl">
+        className="relative bg-navy-900 rounded-3xl p-8 md:p-10   w-full border border-white/10 shadow-2xl">
 
         {/* Close button */}
         <button
@@ -592,7 +592,7 @@ export function ExecutivePathSection() {
           initial="hidden"
           animate={controls}
           variants={variants}
-          className="text-center max-w-4xl mx-auto mb-16 md:mb-24">
+          className="text-center   mb-16 md:mb-24">
 
           <motion.div
             initial={{
@@ -617,7 +617,7 @@ export function ExecutivePathSection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-gradient-gold mb-6">
             المسار التنفيذي
           </h2>
-          <p className="text-lg md:text-xl text-gray-500 font-light leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-500 font-light leading-relaxed ">
             رحلة مدروسة عبر 40 محطة تضمن انتقال ملفك التمويلي بدقة متناهية، من
             التحليل الأولي وحتى الإغلاق الناجح
           </p>

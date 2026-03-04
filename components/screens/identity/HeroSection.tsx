@@ -105,7 +105,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      className="relative min-h-screen flex items-center justify-center p-[5%] overflow-hidden">
 
       {/* Animated Background */}
       <AnimatePresence custom={direction} mode="popLayout">
@@ -164,7 +164,7 @@ export function HeroSection() {
 
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+      <div className="relative z-10    px-6 sm:px-8 lg:px-12 text-center">
         <motion.div
           initial={{
             opacity: 0,
@@ -201,7 +201,7 @@ export function HeroSection() {
                 {slide.titleAccent}
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 font-body max-w-4xl mx-auto leading-relaxed mb-12 font-medium">
+            <p className="text-xl md:text-2xl text-white/80 font-body   leading-relaxed mb-12 font-medium">
               {slide.subtitle}
             </p>
           </motion.div>

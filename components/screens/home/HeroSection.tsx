@@ -108,14 +108,20 @@ export function HeroSection() {
   const locale = useLocale();
   const isRTL = locale === 'ar';
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [hasMounted, setHasMounted] = useState(false);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, 300]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
     }, 6000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    setHasMounted(true);
   }, []);
   return (
     <section
@@ -168,33 +174,34 @@ export function HeroSection() {
 
       </motion.div>
 
-      {/* Rising Golden Particles (Champagne Effect) */}
+      {/* Rising Golden Particles (Champagne Effect) - render only after mount to avoid hydration mismatch */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
-        {particles.map((particle, index) =>
-        <motion.div
-          key={index}
-          className="absolute rounded-full bg-imperial-400"
-          style={{
-            left: particle.x,
-            bottom: '-5%',
-            width: particle.size,
-            height: particle.size,
-            boxShadow: '0 0 10px rgba(255, 215, 0, 0.5)',
-            opacity: 0
-          }}
-          animate={{
-            y: ['0vh', '-110vh'],
-            x: [0, particle.horizontalOffset],
-            opacity: [0, 0.8, 0]
-          }}
-          transition={{
-            duration: particle.duration,
-            repeat: Infinity,
-            delay: particle.delay,
-            ease: 'linear'
-          }} />
-
-        )}
+        {hasMounted &&
+          particles.map((particle, index) => (
+            <motion.div
+              key={index}
+              className="absolute rounded-full bg-imperial-400"
+              style={{
+                left: particle.x,
+                bottom: '-5%',
+                width: particle.size,
+                height: particle.size,
+                boxShadow: '0 0 10px rgba(255, 215, 0, 0.5)',
+                opacity: 0
+              }}
+              animate={{
+                y: ['0vh', '-110vh'],
+                x: [0, particle.horizontalOffset],
+                opacity: [0, 0.8, 0]
+              }}
+              transition={{
+                duration: particle.duration,
+                repeat: Infinity,
+                delay: particle.delay,
+                ease: 'linear'
+              }}
+            />
+          ))}
       </div>
 
       {/* Elegant Floating Rings */}

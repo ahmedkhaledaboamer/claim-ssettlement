@@ -53,9 +53,9 @@ export function ClientJourney() {
   return (
     <section
       id="journey"
-      className="py-24 md:py-32 bg-kep-bg2 relative overflow-hidden">
+      className=" p-[5%] bg-kep-bg2 relative overflow-hidden">
 
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className=" ">
         <motion.div
           initial={{
             opacity: 0,

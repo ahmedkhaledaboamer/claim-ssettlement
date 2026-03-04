@@ -15,7 +15,7 @@ const partners = [
 export function PartnersSection() {
   const { ref, controls, variants } = useScrollReveal();
   return (
-    <section className="py-20 md:py-24 bg-cream-100 relative overflow-hidden">
+    <section className="p-[5%] bg-cream-100 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-gold-400/10 blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-teal-500/10 blur-3xl" />

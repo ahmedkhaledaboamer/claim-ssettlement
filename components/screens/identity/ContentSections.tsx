@@ -255,7 +255,7 @@ function ImageLightbox({
             damping: 25,
             stiffness: 300
           }}
-          className="relative max-w-4xl w-full max-h-[85vh] z-10">
+          className="relative  w-full   z-10">
 
           <button
             onClick={onClose}
@@ -277,13 +277,13 @@ function ImageLightbox({
 // 1. Intro
 function IntroSection({ data }: {data: ContentSectionType;}) {
   return (
-    <section id="intro" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="intro" className="relative p-[5%] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img src={images.intro} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 backdrop-blur-sm bg-kep-text/75" />
         <div className="absolute inset-0 bg-gradient-to-t from-kep-text via-transparent to-kep-text/50" />
       </div>
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
+      <div className=" mx-auto  relative z-10 text-center">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -302,15 +302,10 @@ function IntroSection({ data }: {data: ContentSectionType;}) {
               كيه إي بي
             </span>
           </motion.div>
-          <motion.h2
-            variants={fadeInUp}
-            className="text-4xl md:text-5xl font-heading font-bold text-white mb-8 drop-shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
-
-            {data.title}
-          </motion.h2>
+          
           <motion.div
             variants={fadeInUp}
-            className="space-y-6 text-xl md:text-2xl text-gray-200 font-body leading-relaxed max-w-5xl mx-auto mb-16">
+            className="space-y-6 text-xl md:text-2xl text-gray-200 font-body leading-relaxed   mb-16">
 
             {data.content.map((p, i) =>
             <p key={i}>{p}</p>
@@ -323,7 +318,7 @@ function IntroSection({ data }: {data: ContentSectionType;}) {
             viewport={{
               once: true
             }}
-            className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4 max-w-5xl mx-auto">
+            className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4  ">
 
             {[
             images.introStrip1,
@@ -355,7 +350,7 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
   return (
     <section
       id="identity-section"
-      className="py-24 md:py-32 relative overflow-hidden">
+      className="p-[5%] relative overflow-hidden">
 
       <div className="absolute inset-0 z-0">
         <img
@@ -365,7 +360,7 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
 
         <div className="absolute inset-0 backdrop-blur-xl bg-kep-bg2/85" />
       </div>
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className=" relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 md:gap-16 items-center">
           <motion.div
             className="w-full lg:w-1/2"
@@ -462,8 +457,8 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
 // 3. Philosophy
 function PhilosophySection({ data }: {data: ContentSectionType;}) {
   return (
-    <section id="philosophy" className="py-24 md:py-32 bg-white">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="philosophy" className="p-[5%] bg-white">
+      <div className=" ">
         <div className="flex flex-col lg:flex-row gap-12 md:gap-16 items-center">
           <motion.div
             className="w-full lg:w-1/2"
@@ -567,7 +562,7 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
   <Shield key="shield" />];
 
   return (
-    <section id="mission" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="mission" className="p-[5%] relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           width={1000}
@@ -578,7 +573,7 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
 
         <div className="absolute inset-0 backdrop-blur-xl bg-kep-bg3/80" />
       </div>
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="    relative z-10">
         <motion.div
           className="text-center mb-16 md:mb-20"
           initial="hidden"
@@ -591,13 +586,13 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-6">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed  ">
             {data.content[0]}
           </p>
         </motion.div>
         {data.bullets &&
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8  "
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -685,8 +680,8 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
 // 5. Vision — Centered grid
 function VisionSection({ data }: {data: ContentSectionType;}) {
   return (
-    <section id="vision" className="py-24 md:py-32 bg-white overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="vision" className="p-[5%] bg-white overflow-hidden">
+      <div className=" ">
         <motion.div
           className="text-center mb-16 md:mb-20"
           initial="hidden"
@@ -699,13 +694,13 @@ function VisionSection({ data }: {data: ContentSectionType;}) {
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-6">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed  ">
             {data.content[0]}
           </p>
         </motion.div>
         {data.bullets &&
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8  "
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -775,9 +770,9 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
   return (
     <section
       id="principles"
-      className="py-24 md:py-32 bg-kep-bg4 relative overflow-hidden">
+      className="p-[5%] bg-kep-bg4 relative overflow-hidden">
 
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="  relative z-10">
         <motion.div
           className="text-center mb-16 md:mb-20"
           initial="hidden"
@@ -795,7 +790,7 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
           </p>
         </motion.div>
         {data.bullets &&
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative  ">
             <div className="absolute right-1/2 top-0 bottom-0 w-0.5 bg-kep-gold/20 transform translate-x-1/2 hidden md:block" />
             <div className="space-y-16">
               {data.bullets.map((b, i) => {
@@ -825,7 +820,7 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
 
                     <div className="w-full md:w-1/2 flex justify-center md:justify-start relative">
                       <div
-                      className={`bg-white p-0 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_50px_rgba(0,0,0,0.12)] transition-shadow duration-300 border border-gray-100 w-full max-w-md relative overflow-hidden ${isEven ? 'md:mr-auto' : 'md:ml-auto'}`}>
+                      className={`bg-white p-0 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_50px_rgba(0,0,0,0.12)] transition-shadow duration-300 border border-gray-100 w-full  relative overflow-hidden ${isEven ? 'md:mr-auto' : 'md:ml-auto'}`}>
 
                         <div
                         className="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-kep-gold rounded-full hidden md:block ring-4 ring-kep-bg4 z-20 shadow-[0_2px_8px_rgba(197,160,40,0.4)]"
@@ -920,7 +915,7 @@ function ReadingSection({ data }: {data: ContentSectionType;}) {
   }];
 
   return (
-    <section id="reading" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="reading" className="p-[5%] relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           width={1000}
@@ -931,7 +926,7 @@ function ReadingSection({ data }: {data: ContentSectionType;}) {
 
         <div className="absolute inset-0 bg-white/95 backdrop-blur-sm" />
       </div>
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="  relative z-10">
         <motion.div
           className="text-center mb-16 md:mb-20"
           initial="hidden"
@@ -944,7 +939,7 @@ function ReadingSection({ data }: {data: ContentSectionType;}) {
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-6">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed  ">
             {data.content[0]}
           </p>
         </motion.div>
@@ -1041,8 +1036,8 @@ function ReadingSection({ data }: {data: ContentSectionType;}) {
 // 8. Building
 function BuildingSection({ data }: {data: ContentSectionType;}) {
   return (
-    <section id="building" className="py-24 md:py-32 bg-kep-bg5">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="building" className="p-[5%] bg-kep-bg5">
+      <div className=" ">
         <div className="flex flex-col lg:flex-row gap-12 md:gap-16">
           <motion.div
             className="w-full lg:w-5/12"
@@ -1167,7 +1162,7 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
   return (
     <section
       id="partners"
-      className="py-24 md:py-32 bg-white relative overflow-hidden">
+      className="p-[5%] bg-white relative overflow-hidden">
 
       <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block">
         <img
@@ -1176,7 +1171,7 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
           className="w-full h-full object-cover opacity-[0.06]" />
 
       </div>
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="  relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-16">
           <motion.div
             className="w-full lg:w-5/12 flex justify-center"
@@ -1190,7 +1185,7 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
             <img
               src={images.partners}
               alt="Handshake"
-              className="rounded-full w-full max-w-xs md:max-w-sm aspect-square object-cover shadow-[0_24px_60px_rgba(0,0,0,0.14)] border-8 border-kep-bg1" />
+              className="rounded-full w-full  aspect-square object-cover shadow-[0_24px_60px_rgba(0,0,0,0.14)] border-8 border-kep-bg1" />
 
           </motion.div>
           <motion.div
@@ -1257,8 +1252,8 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
 // 10. Clients
 function ClientsSection({ data }: {data: ContentSectionType;}) {
   return (
-    <section id="clients" className="py-24 md:py-32 bg-kep-bg6">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+    <section id="clients" className="p-[5%] bg-kep-bg6">
+      <div className=" ">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -1364,7 +1359,7 @@ function AdminSection({ data }: {data: ContentSectionType;}) {
 
         <div className="absolute inset-0 bg-white/90 backdrop-blur-sm" />
       </div>
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
+      <div className="  text-center relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -1377,7 +1372,7 @@ function AdminSection({ data }: {data: ContentSectionType;}) {
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-6">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed  ">
             {data.content[0]}
           </p>
         </motion.div>
@@ -1453,7 +1448,7 @@ function AdminSection({ data }: {data: ContentSectionType;}) {
 function ResultsSection({ data }: {data: ContentSectionType;}) {
   const progressWidths = ['92%', '85%', '98%', '88%', '95%'];
   return (
-    <section id="results" className="py-24 md:py-32 relative overflow-hidden">
+    <section id="results" className="p-[5%] relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           width={1000}
@@ -1464,7 +1459,7 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
 
         <div className="absolute inset-0 backdrop-blur-xl bg-kep-text/80" />
       </div>
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-white">
+      <div className="  relative z-10 text-white">
         <motion.div
           className="text-center mb-16 md:mb-20"
           initial="hidden"
@@ -1477,7 +1472,7 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]">
             {data.title}
           </h2>
-          <p className="text-xl md:text-2xl text-white/70 font-body leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/70 font-body leading-relaxed  ">
             {data.content[0]}
           </p>
         </motion.div>

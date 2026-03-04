@@ -44,8 +44,8 @@ const features = [
 export function IntroductionSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   return (
-    <section className="relative py-24 overflow-hidden bg-slate-50">
-      <div ref={ref} className="relative z-10 max-w-6xl mx-auto px-6">
+    <section className="relative p-[5%] overflow-hidden bg-slate-50">
+      <div ref={ref} className="relative z-10 ">
         {/* Section Header */}
         <motion.div
           initial={{
@@ -69,7 +69,7 @@ export function IntroductionSection() {
             <span className="text-slate-900">المركز التشغيلي</span>
             <span className="gradient-text-gold"> المتكامل</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-600   leading-relaxed">
             جهاز إداري متكامل يجمع بين الخبرة العميقة والتنسيق المحكم، حيث يعمل
             ١٥ منصباً تنفيذياً بتناغم تام لإدارة ملفك التمويلي من اللحظة الأولى
             حتى ما بعد الإغلاق.
@@ -176,7 +176,7 @@ export function IntroductionSection() {
           }}
           className="mt-16">
 
-          <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative  rounded-2xl overflow-hidden shadow-lg">
             <img
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=500&fit=crop"
               alt="فريق العمل في اجتماع"
@@ -215,7 +215,7 @@ export function IntroductionSection() {
           }}
           className="mt-16 text-center">
 
-          <blockquote className="text-xl md:text-2xl text-slate-700 italic max-w-4xl mx-auto">
+          <blockquote className="text-xl md:text-2xl text-slate-700 italic ">
             &quot;نحن لا نقدم خدمة تمويل فحسب، بل نقدم شراكة استراتيجية تضمن نجاحك
             المالي&quot;
           </blockquote>

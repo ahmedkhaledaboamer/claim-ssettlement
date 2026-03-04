@@ -61,7 +61,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <div className="relative z-10   text-center">
         {/* Badge */}
         <motion.div
           initial={{
@@ -118,7 +118,7 @@ export function HeroSection() {
             duration: 0.8,
             delay: 0.4
           }}
-          className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed">
+          className="text-xl md:text-2xl text-slate-600   mb-12 leading-relaxed">
 
           فريق متكامل من{' '}
           <span className="text-teal-600 font-bold">١٥ منصباً تنفيذياً</span>{' '}

@@ -552,7 +552,7 @@ export function HeroSection() {
             duration: 1,
             delay: 1
           }}
-          className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-14 font-light">
+          className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-200   leading-relaxed mb-14 font-light">
 
           البنية التشغيلية التي تُدار بالحوكمة، وتُنفّذ بالانضباط، وتُغلق بثقة
           مجلس الإدارة

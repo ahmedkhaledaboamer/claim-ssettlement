@@ -19,8 +19,8 @@ export function OperatingSystemSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const [activeLayer, setActiveLayer] = useState(0);
   return (
-    <section id="system" className="relative py-24 overflow-hidden bg-white">
-      <div ref={ref} className="relative z-10 max-w-6xl mx-auto px-6">
+    <section id="system" className="relative p-[5%] overflow-hidden bg-white">
+      <div ref={ref} className="relative z-10  ">
         {/* Section Header */}
         <motion.div
           initial={{
@@ -44,7 +44,7 @@ export function OperatingSystemSection() {
             <span className="text-slate-900">نظام</span>
             <span className="gradient-text-gold"> التشغيل</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600  ">
             ٥ طبقات متكاملة تعمل بتناغم لضمان أفضل النتائج
           </p>
         </motion.div>

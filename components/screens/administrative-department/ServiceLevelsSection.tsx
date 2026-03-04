@@ -11,8 +11,8 @@ export function ServiceLevelsSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const [selectedLevel, setSelectedLevel] = useState(2);
   return (
-    <section id="levels" className="relative py-24 overflow-hidden bg-slate-50">
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
+    <section id="levels" className="relative p-[5%] overflow-hidden bg-slate-50">
+      <div ref={ref} className="relative z-10  ">
         {/* Section Header */}
         <motion.div
           initial={{
@@ -36,7 +36,7 @@ export function ServiceLevelsSection() {
             <span className="text-slate-900">مستويات</span>
             <span className="gradient-text-gold"> الخدمة</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600  ">
             ٥ مستويات خدمة مصممة لتلبية احتياجاتك مهما كان حجم مشروعك
           </p>
         </motion.div>
@@ -168,7 +168,7 @@ export function ServiceLevelsSection() {
           transition={{
             duration: 0.3
           }}
-          className="mt-12 bg-white rounded-3xl p-8 max-w-4xl mx-auto border border-slate-200 shadow-md"
+          className="mt-12 bg-white rounded-3xl p-8   border border-slate-200 shadow-md"
           style={{
             borderTop: `4px solid ${serviceLevels[selectedLevel].color}`
           }}>

@@ -110,7 +110,7 @@ const colorConfig = {
 export function BenefitsSection() {
   const { ref, controls, variants } = useScrollReveal();
   return (
-    <section className="py-28 md:py-36 bg-white relative overflow-hidden">
+    <section className="p-[5%] bg-white relative overflow-hidden">
       {/* Subtle background pattern */}
       <div
         className="absolute inset-0 opacity-[0.02]"
@@ -160,7 +160,7 @@ export function BenefitsSection() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-tajawal font-bold text-navy-900 mb-5">
                 القيمة <span className="text-gradient-gold">المضافة</span>
               </h2>
-              <p className="text-gray-500 text-base md:text-lg max-w-2xl leading-relaxed">
+              <p className="text-gray-500 text-base md:text-lg   leading-relaxed">
                 نحن لا نعد العميل بتمويل فقط، بل نعده بمنظومة متكاملة تعمل خلفه
                 بثبات وتدير ملفه بثقة.
               </p>

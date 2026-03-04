@@ -22,9 +22,9 @@ export function ClientTypesSection() {
   return (
     <section
       id="clients"
-      className="relative py-24 overflow-hidden bg-slate-50">
+      className="relative p-[5%] overflow-hidden bg-slate-50">
 
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
+      <div ref={ref} className="relative z-10 ">
         {/* Section Header */}
         <motion.div
           initial={{
@@ -48,7 +48,7 @@ export function ClientTypesSection() {
             <span className="text-slate-900">من</span>
             <span className="gradient-text-gold"> نخدم</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600  ">
             نقدم حلولاً تمويلية متخصصة لمختلف أنواع العملاء والقطاعات
           </p>
         </motion.div>

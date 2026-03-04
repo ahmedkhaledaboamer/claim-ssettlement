@@ -13,8 +13,8 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const categories = [...new Set(faqItems.map((item) => item.category))];
   return (
-    <section id="faq" className="relative py-24 overflow-hidden bg-white">
-      <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6">
+    <section id="faq" className="relative p-[5%] overflow-hidden bg-white">
+      <div ref={ref} className="relative z-10  ">
         {/* Section Header */}
         <motion.div
           initial={{
@@ -38,7 +38,7 @@ export function FAQSection() {
             <span className="text-slate-900">الأسئلة</span>
             <span className="gradient-text-gold"> الشائعة</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600  ">
             إجابات على أكثر الأسئلة شيوعاً حول خدماتنا وآلية عملنا
           </p>
         </motion.div>

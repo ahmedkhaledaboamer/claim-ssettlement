@@ -47,8 +47,8 @@ export function TeamShowcase() {
   };
   const departments = Object.values(departmentColors);
   return (
-    <section id="team" className="relative py-24 overflow-hidden bg-white">
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
+    <section id="team" className="relative p-[5%] overflow-hidden bg-white">
+      <div ref={ref} className="relative z-10  ">
         {/* Section Header */}
         <motion.div
           initial={{
@@ -72,7 +72,7 @@ export function TeamShowcase() {
             <span className="text-slate-900">الفريق</span>
             <span className="gradient-text-gold"> التنفيذي</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600  ">
             ١٥ منصباً تنفيذياً يعملون بتناغم تام لضمان نجاح ملفك التمويلي
           </p>
         </motion.div>

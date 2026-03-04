@@ -118,8 +118,8 @@ function QualityGauge({
 export function QualityStandardsSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   return (
-    <section id="quality" className="relative py-24 overflow-hidden bg-white">
-      <div ref={ref} className="relative z-10 max-w-6xl mx-auto px-6">
+    <section id="quality" className="relative p-[5%] overflow-hidden bg-white">
+      <div ref={ref} className="relative z-10  ">
         {/* Section Header */}
         <motion.div
           initial={{
@@ -143,7 +143,7 @@ export function QualityStandardsSection() {
             <span className="text-slate-900">معايير</span>
             <span className="gradient-text-gold"> الجودة</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600  ">
             نلتزم بأعلى معايير الجودة في كل جانب من جوانب عملنا
           </p>
         </motion.div>

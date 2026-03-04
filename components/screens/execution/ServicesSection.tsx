@@ -255,7 +255,7 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-32 md:py-44 bg-white relative overflow-hidden">
+      className="p-[5%] bg-white relative overflow-hidden">
 
       {/* Subtle Background */}
       <div className="absolute inset-0 z-0">
@@ -298,7 +298,7 @@ export function ServicesSection() {
           initial="hidden"
           animate={controls}
           variants={variants}
-          className="text-center max-w-4xl mx-auto mb-20">
+          className="text-center   mb-20">
 
           <motion.div
             initial={{
@@ -355,7 +355,7 @@ export function ServicesSection() {
             transition={{
               delay: 0.2
             }}
-            className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            className="text-gray-600 text-lg md:text-xl leading-relaxed ">
 
             نقدم مجموعة متكاملة من الحلول المالية المصممة خصيصاً لتلبية احتياجات
             قطاع الأعمال والأفراد وفق أعلى معايير الجودة والامتثال.

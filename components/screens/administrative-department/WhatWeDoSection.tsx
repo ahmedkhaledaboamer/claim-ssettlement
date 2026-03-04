@@ -98,8 +98,8 @@ const services = [
 export function WhatWeDoSection() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   return (
-    <section id="services" className="relative py-24 overflow-hidden bg-white">
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
+    <section id="services" className="relative p-[5%] overflow-hidden bg-white">
+      <div ref={ref} className="relative z-10  ">
         {/* Section Header */}
         <motion.div
           initial={{
@@ -123,7 +123,7 @@ export function WhatWeDoSection() {
             <span className="text-slate-900">ماذا</span>
             <span className="gradient-text-gold"> نقدم</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600  ">
             خدمات متكاملة تغطي كل جوانب رحلتك التمويلية من البداية حتى ما بعد
             الإغلاق
           </p>

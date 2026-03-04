@@ -9,10 +9,10 @@ import {
 import { motion } from 'framer-motion';
 export function OrganizationalChart() {
   return (
-    <section className="py-20 md:py-28 bg-white relative overflow-hidden border-y border-gray-100">
+    <section className="p-[5%] bg-white relative overflow-hidden border-y border-gray-100">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] mix-blend-multiply" />
 
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="  relative z-10">
         <motion.div
           initial={{
             opacity: 0,
@@ -66,7 +66,7 @@ export function OrganizationalChart() {
           </motion.div>
 
           {/* Horizontal Connector */}
-          <div className="w-full max-w-5xl h-0.5 bg-kep-gold/30 relative mb-12 hidden md:block">
+          <div className="w-full   h-0.5 bg-kep-gold/30 relative mb-12 hidden md:block">
             {/* Vertical lines down to departments */}
             <div className="absolute left-[12.5%] top-0 w-0.5 h-12 bg-kep-gold/30" />
             <div className="absolute left-[37.5%] top-0 w-0.5 h-12 bg-kep-gold/30" />
@@ -75,7 +75,7 @@ export function OrganizationalChart() {
           </div>
 
           {/* Departments Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full  ">
             <DeptNode
               icon={<TrendingUp />}
               title="التحليل والمخاطر"

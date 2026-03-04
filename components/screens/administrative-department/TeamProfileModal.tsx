@@ -91,7 +91,7 @@ export function TeamProfileModal({
             damping: 25
           }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl border border-slate-200"
+          className="relative w-full   overflow-y-auto bg-white rounded-3xl shadow-2xl border border-slate-200"
           style={{
             borderTop: `4px solid ${department.primary}`
           }}>

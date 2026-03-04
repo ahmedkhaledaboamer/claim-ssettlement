@@ -17,7 +17,7 @@ export function ConclusionSection() {
     enabled: isVisible
   });
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative p-[5%] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -67,7 +67,7 @@ export function ConclusionSection() {
 
       <div
         ref={ref}
-        className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        className="relative z-10   text-center">
 
         {/* Badge */}
         <motion.div
@@ -135,7 +135,7 @@ export function ConclusionSection() {
             duration: 0.8,
             delay: 0.2
           }}
-          className="text-xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed">
+          className="text-xl text-slate-600   mb-12 leading-relaxed">
 
           جهاز إداري متكامل من{' '}
           <span className="text-teal-600 font-bold">١٥ منصباً تنفيذياً</span>{' '}

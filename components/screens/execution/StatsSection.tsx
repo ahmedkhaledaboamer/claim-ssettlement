@@ -260,7 +260,7 @@ export function StatsSection() {
   const y1 = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
   const y2 = useTransform(scrollYProgress, [0, 1], ['0%', '-20%']);
   return (
-    <section className="relative py-32 md:py-44 bg-gradient-to-b from-cream-50 via-white to-cream-50 overflow-hidden">
+    <section className="relative p-[5%] bg-gradient-to-b from-cream-50 via-white to-cream-50 overflow-hidden">
       {/* Subtle background pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -388,13 +388,13 @@ export function StatsSection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-navy-900 mb-5">
             أرقام تتحدث عن <span className="text-gradient-gold">نجاحنا</span>
           </h2>
-          <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-gray-500 text-lg md:text-xl  ">
             نتائج حقيقية تعكس التزامنا بالتميز وثقة عملائنا
           </p>
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 ">
           {stats.map((stat, index) =>
           <StatBox
             key={index}

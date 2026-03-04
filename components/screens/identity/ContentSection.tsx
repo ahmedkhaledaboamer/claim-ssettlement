@@ -9,12 +9,12 @@ export function ContentSection({ data, index }: ContentSectionProps) {
   const isEven = index % 2 === 0;
   return (
     <div
-      className={`py-16 ${isEven ? 'bg-kep-dark' : 'bg-kep-card'} relative overflow-hidden`}>
+      className={`p-[5%] ${isEven ? 'bg-kep-dark' : 'bg-kep-card'} relative overflow-hidden`}>
 
       {/* Decorative background element */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-kep-gold/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="  relative z-10">
         <div className="flex items-center gap-4 mb-8">
           <div className="w-12 h-1 bg-kep-gold rounded-full" />
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white text-shadow-section">

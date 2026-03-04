@@ -23,9 +23,9 @@ export function ClientJourneySection() {
   return (
     <section
       id="journey"
-      className="relative py-24 overflow-hidden bg-slate-50">
+      className="relative p-[5%] overflow-hidden bg-slate-50">
 
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
+      <div ref={ref} className="relative z-10   ">
         {/* Section Header */}
         <motion.div
           initial={{
@@ -49,7 +49,7 @@ export function ClientJourneySection() {
             <span className="text-slate-900">رحلة</span>
             <span className="gradient-text-gold"> العميل</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600  ">
             ٩ مراحل متكاملة نرافقك فيها من اللحظة الأولى حتى ما بعد التمويل
           </p>
         </motion.div>
@@ -161,7 +161,7 @@ export function ClientJourneySection() {
             transition={{
               duration: 0.3
             }}
-            className="mt-12 bg-white rounded-3xl overflow-hidden max-w-3xl mx-auto border border-slate-200 shadow-md"
+            className="mt-12 bg-white rounded-3xl overflow-hidden   border border-slate-200 shadow-md"
             style={{
               borderTop: `4px solid ${journeySteps[activeStep].color}`
             }}>
