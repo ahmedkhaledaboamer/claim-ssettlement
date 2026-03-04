@@ -3,51 +3,24 @@ import { motion } from 'framer-motion';
 import {
   CheckCircle2,
   ArrowLeft,
+  ArrowRight,
   TrendingUp,
   Shield,
   Users,
   Lock,
   Clock,
-  Award } from
-'lucide-react';
+  Award } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
-const reasons = [
-{
-  text: 'منهجية مؤسسية لا تعتمد على الاجتهاد الفردي.',
-  icon: Shield,
-  color: 'gold',
-  percent: 100
-},
-{
-  text: 'تحليل مالي استراتيجي يضمن القدرة على السداد.',
-  icon: TrendingUp,
-  color: 'teal',
-  percent: 98
-},
-{
-  text: 'تفاوض تنفيذي يحسن الشروط لصالح العميل.',
-  icon: Users,
-  color: 'coral',
-  percent: 95
-},
-{
-  text: 'حماية تامة للبيانات والمعلومات الحساسة.',
-  icon: Lock,
-  color: 'green',
-  percent: 100
-},
-{
-  text: 'متابعة مستمرة حتى بعد الإغلاق المالي.',
-  icon: Clock,
-  color: 'purple',
-  percent: 100
-},
-{
-  text: 'فريق متخصص يضم نخبة من الخبراء الماليين.',
-  icon: Award,
-  color: 'navy',
-  percent: 99
-}];
+import { useTranslations, useLocale } from 'next-intl';
+
+const reasonsConfig = [
+  { key: 'reason1', icon: Shield, color: 'gold' as const, percent: 100 },
+  { key: 'reason2', icon: TrendingUp, color: 'teal' as const, percent: 98 },
+  { key: 'reason3', icon: Users, color: 'coral' as const, percent: 95 },
+  { key: 'reason4', icon: Lock, color: 'green' as const, percent: 100 },
+  { key: 'reason5', icon: Clock, color: 'purple' as const, percent: 100 },
+  { key: 'reason6', icon: Award, color: 'navy' as const, percent: 99 },
+];
 
 const colorConfig = {
   gold: {
@@ -82,11 +55,15 @@ const colorConfig = {
   }
 };
 export function WhyUsSection() {
+  const t = useTranslations('executionPage.whyUs');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
   const { ref, controls, variants } = useScrollReveal();
+  const ArrowIcon = isRTL ? ArrowLeft : ArrowRight;
   return (
     <section
       id="why-us"
-      className="py-28 md:py-36 bg-white relative overflow-hidden">
+      className="px-[5%] py-[2%] bg-white relative overflow-hidden">
 
       {/* Decorative Background Shape */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-teal-500/5 blur-3xl" />
@@ -100,25 +77,16 @@ export function WhyUsSection() {
         }} />
 
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="w-full mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           {/* Image Side */}
           <motion.div
-            initial={{
-              opacity: 0,
-              x: 50
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              duration: 0.8
-            }}
-            className="lg:w-1/2 relative">
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="lg:w-1/2 relative w-full flex justify-center"
+          >
 
             <div className="space-y-6">
               {/* Primary Image */}
@@ -158,9 +126,9 @@ export function WhyUsSection() {
                 <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                   <CheckCircle2 size={28} />
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <p className="font-tajawal font-bold text-navy-900 text-lg">
-                    نسبة نجاح
+                    {t('successRate')}
                   </p>
                   <p className="text-3xl font-bold text-gold-500">98%</p>
                 </div>
@@ -174,48 +142,35 @@ export function WhyUsSection() {
             initial="hidden"
             animate={controls}
             variants={variants}
-            className="lg:w-1/2">
-
+            className={`lg:w-1/2 w-full text-center md:text-center ${isRTL ? 'lg:text-right' : 'lg:text-left'}`}
+          >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-tajawal font-bold text-navy-900 mb-5">
-              لماذا تختار <span className="text-gradient-gold">كيه إي بي؟</span>
+              {t('title')} <span className="text-gradient-gold">{t('titleHighlight')}</span>
             </h2>
             <p className="text-gray-600 text-base md:text-lg mb-10 leading-[1.8]">
-              نحن نقدم درعًا ماليًا يحمي العميل من المخاطر، ويضمن له مسارًا
-              آمنًا، وقرارًا مدروسًا، ونتيجة يمكن الاعتماد عليها في مواجهة
-              متطلبات الجهات التمويلية.
+              {t('lead')}
             </p>
 
             <ul className="space-y-4">
-              {reasons.map((reason, index) => {
-                const config =
-                colorConfig[reason.color as keyof typeof colorConfig];
+              {reasonsConfig.map((reason, index) => {
+                const config = colorConfig[reason.color];
                 return (
                   <motion.li
-                    key={index}
-                    initial={{
-                      opacity: 0,
-                      x: -20
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      x: 0
-                    }}
-                    viewport={{
-                      once: true
-                    }}
-                    transition={{
-                      delay: index * 0.1 + 0.3
-                    }}
-                    className="flex items-start gap-4 bg-gray-50 p-4 md:p-5 rounded-xl hover:bg-white hover:shadow-lg transition-all">
-
+                    key={reason.key}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 + 0.3 }}
+                    className={`flex items-start gap-4 bg-gray-50 p-4 md:p-5 rounded-xl hover:bg-white hover:shadow-lg transition-all ${isRTL ? 'flex-row-reverse' : ''}`}
+                  >
                     <div
-                      className={`mt-0.5 flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-full ${config.bg} flex items-center justify-center ${config.text}`}>
-
+                      className={`mt-0.5 flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-full ${config.bg} flex items-center justify-center ${config.text}`}
+                    >
                       <reason.icon size={20} />
                     </div>
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 text-start">
                       <span className="text-base md:text-lg text-navy-800 font-medium block mb-2 leading-snug">
-                        {reason.text}
+                        {t(reason.key)}
                       </span>
                       <div className="flex items-center gap-3">
                         <div className="flex-1 h-1.5 bg-gray-200 rounded-full overflow-hidden">
@@ -246,27 +201,6 @@ export function WhyUsSection() {
               })}
             </ul>
 
-            {/* CTA Button */}
-            <motion.button
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              transition={{
-                delay: 0.8
-              }}
-              className="mt-10 group flex items-center gap-3 bg-gold-500 hover:bg-gold-600 text-navy-900 px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg transition-all shadow-lg hover:shadow-gold-500/30">
-
-              <span>ابدأ رحلتك معنا</span>
-              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-2 transition-transform" />
-            </motion.button>
           </motion.div>
         </div>
       </div>

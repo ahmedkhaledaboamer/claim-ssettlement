@@ -29,39 +29,78 @@ interface TeamCardProps {
   member: TeamMember;
   index: number;
   onClick: () => void;
+  locale: string;
 }
-export function TeamCard({ member, index, onClick }: TeamCardProps) {
+
+export function TeamCard({ member, index, onClick, locale }: TeamCardProps) {
+  const isRTL = locale === 'ar';
   const [isHovered, setIsHovered] = useState(false);
   const department = departmentColors[member.departmentId];
   const IconComponent =
     lucideIcons[member.icon] || Icons.UserIcon;
+
   const tierStyles = {
     ceo: {
       cardClass: 'md:col-span-2 lg:col-span-1',
       height: 'min-h-[420px]',
       imageHeight: 'h-48',
-      nameSize: 'text-2xl',
-      badge: 'الرئيس التنفيذي',
+      nameSize: 'text-fluid-2xl',
       badgeColor: '#D97706'
     },
     director: {
       cardClass: '',
       height: 'min-h-[380px]',
       imageHeight: 'h-40',
-      nameSize: 'text-xl',
-      badge: 'مدير',
+      nameSize: 'text-fluid-body-lg',
       badgeColor: '#0E7490'
     },
     manager: {
       cardClass: '',
       height: 'min-h-[360px]',
       imageHeight: 'h-36',
-      nameSize: 'text-lg',
-      badge: 'مدير قسم',
+      nameSize: 'text-fluid-card-title',
       badgeColor: '#64748B'
     }
   };
+
   const style = tierStyles[member.tier];
+  const name =
+    locale === 'ar'
+      ? member.titleAr
+      : locale === 'fr'
+      ? member.titleFr
+      : member.titleEn;
+  const departmentName =
+    locale === 'ar'
+      ? member.departmentAr
+      : locale === 'fr'
+      ? member.departmentFr
+      : member.departmentEn;
+  const responsibilities =
+    locale === 'ar'
+      ? member.responsibilitiesAr
+      : locale === 'fr'
+      ? member.responsibilitiesFr
+      : member.responsibilitiesEn;
+
+  const tierBadgeLabel =
+    member.tier === 'ceo'
+      ? locale === 'ar'
+        ? 'الرئيس التنفيذي'
+        : locale === 'fr'
+        ? 'PDG'
+        : 'CEO'
+      : member.tier === 'director'
+      ? locale === 'ar'
+        ? 'مدير'
+        : locale === 'fr'
+        ? 'Directeur'
+        : 'Director'
+      : locale === 'ar'
+      ? 'مدير قسم'
+      : locale === 'fr'
+      ? 'Chef de département'
+      : 'Department manager';
   const photoUrl = teamPhotos[member.id] || teamPhotos[1];
   return (
     <motion.div
@@ -88,14 +127,15 @@ export function TeamCard({ member, index, onClick }: TeamCardProps) {
         onClick={onClick}
         className={`relative bg-white rounded-2xl overflow-hidden cursor-pointer ${style.height} border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-slate-300`}
         style={{
-          borderRight: `4px solid ${department.primary}`
+          borderRight: !isRTL ? 'none' : `4px solid ${department.primary}`,
+          borderLeft: !isRTL ? `4px solid ${department.primary}` : 'none'
         }}>
 
         {/* Image Area with Photo */}
         <div className={`relative ${style.imageHeight} overflow-hidden`}>
           <motion.img
             src={photoUrl}
-            alt={member.titleAr}
+            alt={name}
             className="w-full h-full object-cover"
             loading="lazy"
             animate={{
@@ -116,12 +156,12 @@ export function TeamCard({ member, index, onClick }: TeamCardProps) {
 
           {/* Tier Badge */}
           <div
-            className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold text-white"
+            className="absolute top-4 left-4 px-3 py-1 rounded-full text-fluid-label font-bold text-white"
             style={{
               backgroundColor: style.badgeColor
             }}>
 
-            {style.badge}
+            {tierBadgeLabel}
           </div>
 
           {/* Icon Badge */}
@@ -152,7 +192,7 @@ export function TeamCard({ member, index, onClick }: TeamCardProps) {
               color: isHovered ? department.primary : '#0F172A'
             }}>
 
-            {member.titleAr}
+            {name}
           </h3>
 
           {/* Department */}
@@ -163,14 +203,14 @@ export function TeamCard({ member, index, onClick }: TeamCardProps) {
                 backgroundColor: department.primary
               }} />
 
-            <span className="text-sm text-slate-500">
-              {member.departmentAr}
+            <span className="text-fluid-body text-slate-500">
+              {departmentName}
             </span>
           </div>
 
           {/* Responsibilities Preview */}
           <div className="space-y-2">
-            {member.responsibilities.slice(0, 3).map((resp, i) =>
+            {responsibilities.slice(0, 3).map((resp, i) =>
             <motion.div
               key={i}
               initial={{
@@ -179,7 +219,7 @@ export function TeamCard({ member, index, onClick }: TeamCardProps) {
               animate={{
                 opacity: isHovered ? 1 : 0.7
               }}
-              className="flex items-start gap-2 text-sm text-slate-500">
+              className="flex items-start gap-2 text-fluid-body text-slate-500">
 
                 <span
                 style={{
@@ -206,12 +246,17 @@ export function TeamCard({ member, index, onClick }: TeamCardProps) {
             className="mt-4 text-center">
 
             <span
-              className="text-sm font-medium"
+              className="text-fluid-body font-medium"
               style={{
                 color: department.primary
               }}>
 
-              عرض الملف الكامل ←
+              {locale === 'ar' &&
+                (!isRTL ? 'عرض الملف الكامل →' : 'عرض الملف الكامل ←')}
+              {locale === 'en' &&
+                (!isRTL ? 'View full profile →' : 'View full profile ←')}
+              {locale === 'fr' &&
+                (!isRTL ? 'Voir le profil complet →' : 'Voir le profil complet ←')}
             </span>
           </motion.div>
         </div>

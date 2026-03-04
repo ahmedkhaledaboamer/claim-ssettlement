@@ -164,7 +164,7 @@ export function ContactCTASection({ locale }: { locale: string }) {
             </a>
 
             <a
-              href="mailto:info@kep.ae"
+              href="mailto:info@KIB.ae"
               className="flex flex-col items-center gap-3 bg-white rounded-2xl p-7 md:p-8 hover:shadow-xl transition-shadow group border border-navy-100 shadow-lg">
 
               <div className="w-16 h-16 bg-teal-100 group-hover:bg-teal-200 rounded-xl flex items-center justify-center transition-colors">

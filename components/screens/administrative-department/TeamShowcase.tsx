@@ -29,7 +29,7 @@ const filterOptions: {
   label: 'مديرو الأقسام'
 }];
 
-export function TeamShowcase() {
+export function TeamShowcase({ locale }: { locale: string }) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const [filter, setFilter] = useState<FilterType>('all');
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
@@ -46,6 +46,31 @@ export function TeamShowcase() {
     setIsModalOpen(true);
   };
   const departments = Object.values(departmentColors);
+
+  const headingTitle =
+    locale === 'ar'
+      ? { main: 'الفريق', highlight: ' التنفيذي' }
+      : locale === 'fr'
+      ? { main: "L'équipe", highlight: ' exécutive' }
+      : { main: 'Executive', highlight: ' team' };
+
+  const headingDescription =
+    locale === 'ar'
+      ? '15 منصباً تنفيذياً يعملون بتناغم تام لضمان نجاح ملفك التمويلي'
+      : locale === 'fr'
+      ? "15 postes exécutifs qui travaillent en parfaite harmonie pour assurer le succès de votre dossier de financement."
+      : '15 executive positions working in full harmony to ensure your financing file succeeds.';
+
+  const filterLabel =
+    locale === 'ar' ? 'تصفية:' : locale === 'fr' ? 'Filtrer :' : 'Filter:';
+
+  const filterLabelByValue: Record<FilterType, { ar: string; en: string; fr: string }> =
+    {
+      all: { ar: 'الجميع', en: 'All', fr: 'Tous' },
+      ceo: { ar: 'الرئيس التنفيذي', en: 'CEO', fr: 'PDG' },
+      director: { ar: 'المديرون', en: 'Directors', fr: 'Directeurs' },
+      manager: { ar: 'مديرو الأقسام', en: 'Department managers', fr: 'Chefs de département' }
+    };
   return (
     <section id="team" className="relative p-[5%] overflow-hidden bg-white">
       <div ref={ref} className="relative z-10  ">
@@ -68,12 +93,12 @@ export function TeamShowcase() {
           }}
           className="text-center mb-12">
 
-          <h2 className="text-3xl md:text-5xl font-black mb-6">
-            <span className="text-slate-900">الفريق</span>
-            <span className="gradient-text-gold"> التنفيذي</span>
+          <h2 className="text-fluid-section-title font-black mb-6">
+            <span className="text-slate-900">{headingTitle.main}</span>
+            <span className="gradient-text-gold">{headingTitle.highlight}</span>
           </h2>
-          <p className="text-lg text-slate-600  ">
-            ١٥ منصباً تنفيذياً يعملون بتناغم تام لضمان نجاح ملفك التمويلي
+          <p className="text-fluid-section-lead text-slate-600  ">
+            {headingDescription}
           </p>
         </motion.div>
 
@@ -100,7 +125,7 @@ export function TeamShowcase() {
           {departments.slice(0, 8).map((dept) =>
           <div
             key={dept.id}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-xs shadow-sm">
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-fluid-body shadow-sm">
 
               <div
               className="w-2 h-2 rounded-full"
@@ -108,7 +133,9 @@ export function TeamShowcase() {
                 backgroundColor: dept.primary
               }} />
 
-              <span className="text-slate-600">{dept.nameAr}</span>
+              <span className="text-slate-600">
+                {locale === 'ar' ? dept.nameAr : dept.name}
+              </span>
             </div>
           )}
         </motion.div>
@@ -135,15 +162,19 @@ export function TeamShowcase() {
 
           <div className="flex items-center gap-2 text-slate-500 ml-4">
             <FilterIcon className="w-4 h-4" />
-            <span className="text-sm">تصفية:</span>
+            <span className="text-fluid-body">{filterLabel}</span>
           </div>
           {filterOptions.map((option) =>
           <button
             key={option.value}
             onClick={() => setFilter(option.value)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === option.value ? 'bg-teal-600 text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}>
+            className={`cursor-pointer px-4 py-2 rounded-full text-fluid-body font-medium transition-all duration-300 ${filter === option.value ? 'bg-teal-600 text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'}`}>
 
-              {option.label}
+              {locale === 'ar'
+                ? filterLabelByValue[option.value].ar
+                : locale === 'fr'
+                ? filterLabelByValue[option.value].fr
+                : filterLabelByValue[option.value].en}
             </button>
           )}
         </motion.div>
@@ -158,7 +189,9 @@ export function TeamShowcase() {
             key={member.id}
             member={member}
             index={index}
-            onClick={() => handleCardClick(member)} />
+            onClick={() => handleCardClick(member)}
+            locale={locale}
+            />
 
           )}
         </motion.div>
@@ -184,24 +217,48 @@ export function TeamShowcase() {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
 
           <div className="bg-white rounded-2xl p-6 text-center border border-slate-200 shadow-sm">
-            <div className="text-3xl font-black gradient-text-gold mb-2">١</div>
-            <div className="text-sm text-slate-500">رئيس تنفيذي</div>
-          </div>
-          <div className="bg-white rounded-2xl p-6 text-center border border-slate-200 shadow-sm">
-            <div className="text-3xl font-black text-executive-burgundy mb-2">
-              ٦
+            <div className="text-fluid-stat font-black gradient-text-gold mb-2">1</div>
+            <div className="text-fluid-body text-slate-500">
+              {locale === 'ar'
+                ? 'رئيس تنفيذي'
+                : locale === 'fr'
+                ? 'PDG'
+                : 'Chief Executive Officer'}
             </div>
-            <div className="text-sm text-slate-500">مديرون</div>
           </div>
           <div className="bg-white rounded-2xl p-6 text-center border border-slate-200 shadow-sm">
-            <div className="text-3xl font-black text-operations-steel mb-2">
-              ٨
+            <div className="text-fluid-stat font-black text-executive-burgundy mb-2">
+              6
             </div>
-            <div className="text-sm text-slate-500">مديرو أقسام</div>
+            <div className="text-fluid-body text-slate-500">
+              {locale === 'ar'
+                ? 'مديرون'
+                : locale === 'fr'
+                ? 'Directeurs'
+                : 'Directors'}
+            </div>
           </div>
           <div className="bg-white rounded-2xl p-6 text-center border border-slate-200 shadow-sm">
-            <div className="text-3xl font-black text-data-emerald mb-2">١٤</div>
-            <div className="text-sm text-slate-500">قسم متخصص</div>
+            <div className="text-fluid-stat font-black text-operations-steel mb-2">
+              8
+            </div>
+            <div className="text-fluid-body text-slate-500">
+              {locale === 'ar'
+                ? 'مديرو أقسام'
+                : locale === 'fr'
+                ? 'Chefs de département'
+                : 'Department managers'}
+            </div>
+          </div>
+          <div className="bg-white rounded-2xl p-6 text-center border border-slate-200 shadow-sm">
+            <div className="text-fluid-stat font-black text-data-emerald mb-2">14</div>
+            <div className="text-fluid-body text-slate-500">
+              {locale === 'ar'
+                ? 'قسم متخصص'
+                : locale === 'fr'
+                ? 'Départements spécialisés'
+                : 'Specialized departments'}
+            </div>
           </div>
         </motion.div>
       </div>
@@ -210,7 +267,8 @@ export function TeamShowcase() {
       <TeamProfileModal
         member={selectedMember}
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)} />
+        onClose={() => setIsModalOpen(false)}
+        locale={locale} />
 
     </section>);
 

@@ -3,7 +3,12 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform, type Variants } from 'framer-motion';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
 import { TrendingUp, Shield, Award, Sparkles } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
+
 export function AboutSection() {
+  const t = useTranslations('executionPage.about');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
   const { ref, controls } = useScrollReveal();
   const variants: Variants = {
     hidden: { opacity: 0, y: 50 },
@@ -28,7 +33,7 @@ export function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="p-[5%] bg-section-cream relative overflow-hidden">
+      className="px-[5%] py-[2%] bg-section-cream relative overflow-hidden">
 
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gold-500/5 to-transparent" />
@@ -66,7 +71,7 @@ export function AboutSection() {
         }} />
 
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="w-full mx-auto px-4 md:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           {/* Text Content */}
           <motion.div
@@ -74,7 +79,8 @@ export function AboutSection() {
             initial="hidden"
             animate={controls}
             variants={variants}
-            className="lg:w-1/2">
+            className={`lg:w-1/2 text-center md:text-center ${isRTL ? 'lg:text-right' : 'lg:text-left'}`}
+          >
 
             {/* Section badge */}
             <motion.div
@@ -89,13 +95,13 @@ export function AboutSection() {
               viewport={{
                 once: true
               }}
-              className="flex items-center gap-4 mb-8">
-
-              <div className="h-px w-16 bg-gradient-to-r from-gold-500 to-transparent" />
+              className="flex items-center justify-center lg:justify-start gap-4 mb-8"
+            >
+              <div className={`h-px w-16 bg-gradient-to-r from-gold-500 to-transparent ${isRTL ? '' : 'rotate-180'}`} />
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/30">
                 <Sparkles className="w-4 h-4 text-gold-500" />
                 <span className="text-gold-600 font-bold tracking-wider text-sm uppercase">
-                  من نحن
+                  {t('badge')}
                 </span>
               </span>
             </motion.div>
@@ -115,11 +121,11 @@ export function AboutSection() {
               transition={{
                 delay: 0.1
               }}
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-tajawal font-black text-navy-900 mb-8 leading-[1.15]">
-
-              في قطاع مالي لا يرحم التردد،{' '}
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-tajawal font-black text-navy-900 mb-8 leading-[1.15]"
+            >
+              {t('titlePart1')}{' '}
               <span className="text-gradient-teal">
-                ولا يتسامح مع القرارات غير المحسوبة
+                {t('titlePart2')}
               </span>
             </motion.h2>
 
@@ -138,12 +144,9 @@ export function AboutSection() {
                 }}
                 transition={{
                   delay: 0.2
-                }}>
-
-                اعتمد مجلس إدارة كيه إي بي مسارًا تنفيذيًا يمثل الإطار الذي
-                تُدار من خلاله كل خطوة في رحلة العميل التمويلية، مسارًا لا يقوم
-                على الاجتهاد الفردي، بل على منهج مؤسسي يجمع بين الحوكمة، الأمان،
-                الامتثال، الرقابة، والتحليل العميق.
+                }}
+              >
+                {t('p1')}
               </motion.p>
 
               <motion.p
@@ -160,12 +163,9 @@ export function AboutSection() {
                 }}
                 transition={{
                   delay: 0.3
-                }}>
-
-                هذا المسار لم يُصمم ليكون مجرد سلسلة إجراءات، بل ليكون بنية
-                تشغيلية متكاملة تضمن أن كل ملف ينتقل عبر مراحل مدروسة تُبنى على
-                بيانات دقيقة، وتقييم صارم، وتخطيط محكم، وتفاوض محسوب، وإغلاق لا
-                يترك مجالًا للخطأ.
+                }}
+              >
+                {t('p2')}
               </motion.p>
 
               {/* Enhanced Quote Block */}
@@ -184,18 +184,17 @@ export function AboutSection() {
                 transition={{
                   delay: 0.4
                 }}
-                className="relative mt-10">
-
+                className="relative mt-10"
+              >
                 <div
                   className="absolute -inset-1 bg-gradient-to-r from-gold-500 via-teal-500 to-gold-500 rounded-2xl opacity-30 blur-sm animate-gradient-shift"
                   style={{
                     backgroundSize: '200% 200%'
-                  }} />
-
-                <div className="relative bg-white rounded-xl shadow-xl p-6 border-r-4 border-gold-500">
+                  }}
+                />
+                <div className={`relative bg-white rounded-xl shadow-xl p-6 ${isRTL ? 'border-r-4' : 'border-l-4'} border-gold-500`}>
                   <p className="font-bold text-navy-800 text-xl leading-[1.9]">
-                    نحن لا نبحث عن التمويل كغاية، بل نبحث عن قرار مالي آمن،
-                    مستدام، ومبني على رؤية مجلس إدارة.
+                    {t('quote')}
                   </p>
                 </div>
               </motion.div>
@@ -217,32 +216,32 @@ export function AboutSection() {
               transition={{
                 delay: 0.5
               }}
-              className="flex items-center gap-6 mt-12">
-
-              <div className="flex -space-x-4 space-x-reverse">
+              className="flex items-center justify-center lg:justify-start gap-6 mt-12"
+            >
+              <div className={`flex -space-x-4 ${isRTL ? 'space-x-reverse' : ''}`}>
                 {[
-                'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80',
-                'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80',
-                'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80',
-                'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&q=80'].
-                map((src, i) =>
-                <motion.img
-                  key={i}
-                  src={src}
-                  alt=""
-                  className="w-14 h-14 rounded-full border-4 border-white shadow-lg object-cover"
-                  whileHover={{
-                    scale: 1.1,
-                    zIndex: 10
-                  }} />
-
-                )}
+                  'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80',
+                  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80',
+                  'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80',
+                  'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&q=80',
+                ].map((src, i) => (
+                  <motion.img
+                    key={i}
+                    src={src}
+                    alt=""
+                    className="w-14 h-14 rounded-full border-4 border-white shadow-lg object-cover"
+                    whileHover={{
+                      scale: 1.1,
+                      zIndex: 10
+                    }}
+                  />
+                ))}
               </div>
-              <div>
+              <div className="text-center lg:text-left">
                 <p className="text-lg font-bold text-navy-900">
-                  +500 عميل راضٍ
+                  {t('teamLabel')}
                 </p>
-                <p className="text-sm text-gray-500">يثقون في خدماتنا</p>
+                <p className="text-sm text-gray-500">{t('teamSub')}</p>
               </div>
             </motion.div>
           </motion.div>
@@ -420,7 +419,7 @@ export function AboutSection() {
               <span className="text-2xl md:text-3xl font-black text-gold-400">
                 100%
               </span>
-              <span className="text-xs font-tajawal text-center">حوكمة</span>
+              <span className="text-xs font-tajawal text-center">{t('governance')}</span>
             </motion.div>
 
             {/* Floating Badge - Steps */}
@@ -446,7 +445,7 @@ export function AboutSection() {
 
               <TrendingUp className="w-6 h-6 text-white mb-1" />
               <span className="text-xl md:text-2xl font-black">40+</span>
-              <span className="text-xs font-tajawal">مرحلة</span>
+              <span className="text-xs font-tajawal">{t('phase')}</span>
             </motion.div>
 
             {/* Floating Badge - Award */}
@@ -471,7 +470,7 @@ export function AboutSection() {
 
               <Award className="w-5 h-5 mb-1" />
               <span className="text-lg md:text-xl font-black">99%</span>
-              <span className="text-[10px] font-tajawal">رضا</span>
+              <span className="text-[10px] font-tajawal">{t('satisfaction')}</span>
             </motion.div>
           </div>
         </div>

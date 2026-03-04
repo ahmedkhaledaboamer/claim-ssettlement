@@ -2,6 +2,31 @@
   "page": {
     "title": "Page d'accueil"
   },
+  "seo": {
+    "siteName": "KIB Financing Brokerage",
+    "pages": {
+      "home": {
+        "title": "Accueil | KIB Financing Brokerage – Médiation de financement et solutions financières exécutives aux EAU",
+        "description": "KIB Financing Brokerage L.L.C connecte les entreprises et les entrepreneurs au financement adapté aux EAU. Nous analysons vos besoins, structurons des dossiers de financement solides et négocions les meilleures conditions pour le financement commercial, corporate, immobilier et PME. Votre partenaire de médiation financière pour une croissance durable et une stabilité financière."
+      },
+      "services": {
+        "title": "Services | KIB Financing Brokerage – Solutions de financement commercial, corporate et PME",
+        "description": "Découvrez les services de financement de KIB Financing Brokerage : médiation commerciale, financement d'investissement et immobilier, solutions corporate et PME. Nous adaptons les options de financement à la taille et aux objectifs de votre entreprise aux EAU. Préparation de dossiers, négociation et suivi jusqu'à l'acceptation."
+      },
+      "administrativeDepartment": {
+        "title": "Département administratif | KIB Financing Brokerage – Équipe d'experts et excellence opérationnelle",
+        "description": "Découvrez l'équipe administrative de KIB Financing Brokerage et notre système opérationnel. Nous garantissons des normes de qualité, des parcours clients clairs et un accompagnement dédié pour chaque dossier de financement aux EAU. Méthodologie, niveaux de service et engagement envers l'excellence."
+      },
+      "identity": {
+        "title": "Identité | KIB Financing Brokerage – Notre mission, vision et valeurs",
+        "description": "Découvrez l'identité de KIB Financing Brokerage : notre mission, vision, valeurs et philosophie. Nous sommes votre partenaire de médiation financière de confiance aux EAU, engagés pour la clarté, des dossiers solides, des résultats constants, une exécution rapide et une confidentialité totale."
+      },
+      "execution": {
+        "title": "Exécution | KIB Financing Brokerage – Règlement de créances et services d'exécution",
+        "description": "Services d'exécution et de règlement de créances KIB Financing Brokerage aux EAU. Du dépôt du dossier au règlement, nous vous accompagnons sur le parcours exécutif avec une expertise en exécution de créances, avantages, soutien dédié et résultats éprouvés. Un partenaire de confiance."
+      }
+    }
+  },
   "navbar": {
     "cta": "Réservez votre consultation",
     "openMenu": "Ouvrir le menu de navigation",
@@ -711,6 +736,379 @@
         }
       },
       "cardSubtitle": "AED de financements réalisés"
+    }
+  },
+  "identityPage": {
+    "hero": {
+      "badge": "KIB Courtage en financement",
+      "exploreCta": "Découvrez notre identité",
+      "journeyCta": "Parcours client",
+      "scrollAria": "Défiler vers le bas",
+      "goToSlideAria": "Aller à {label}",
+      "slides": [
+        {
+          "title": "Identité financière",
+          "titleAccent": "qui nous définit",
+          "subtitle": "Pas seulement un courtier… une entité financière dotée d’une vision, d’une méthodologie et d’une capacité opérationnelle pilotée au niveau du conseil d’administration.",
+          "label": "Notre identité"
+        },
+        {
+          "title": "Vision stratégique",
+          "titleAccent": "du financement",
+          "subtitle": "Nous lisons la réalité financière en profondeur et construisons des dossiers de financement selon des normes professionnelles qui garantissent les meilleures conditions et les risques les plus maîtrisés.",
+          "label": "Notre vision"
+        },
+        {
+          "title": "Résultats fiables",
+          "titleAccent": "et durables",
+          "subtitle": "Nous mesurons notre succès par les taux d’approbation, la qualité des conditions et la satisfaction du client. Nous ne promettons pas un financement… nous promettons un chemin clair pour y parvenir.",
+          "label": "Nos résultats"
+        }
+      ]
+    },
+    "journey": {
+      "title": "Parcours",
+      "titleHighlight": "client",
+      "lead": "Un chemin maîtrisé qui assure une clarté financière et un résultat sur lequel vous pouvez compter",
+      "stepLabel": "Étape {n}",
+      "steps": [
+        { "title": "Analyse et évaluation", "desc": "Lecture précise de la réalité financière et évaluation mesurée des risques" },
+        { "title": "Construction du dossier", "desc": "Rédaction professionnelle et documents organisés selon un plan clair" },
+        { "title": "Conformité et appariement", "desc": "Vérification que les dossiers respectent les réglementations et les normes des institutions" },
+        { "title": "Négociation", "desc": "Choix réfléchi de l’institution et négociation professionnelle des conditions" },
+        { "title": "Clôture", "desc": "Clôture rigoureuse, suivi continu et accompagnement après financement" }
+      ]
+    },
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "content": [
+          "Face aux mutations accélérées du secteur financier, à l’augmentation des exigences des financeurs et à la complexité des critères d’approbation, le conseil d’administration de KIB Courtage en financement présente une identité financière conçue avec soin, formalisée par une méthodologie et construite sur des bases solides d’expérience et de discipline. Notre identité repose sur une conviction claire : le financement n’est pas une formalité administrative, mais une décision stratégique qui détermine l’avenir des entreprises. C’est dans cet esprit que nous avons adopté un modèle opérationnel qui garantit au client une clarté financière, un chemin maîtrisé, un dossier solide et un résultat fiable.",
+          "KIB n’est pas seulement un courtier… c’est une entité financière dotée d’une vision, d’une méthodologie et d’une capacité opérationnelle pilotée au niveau du conseil d’administration."
+        ]
+      },
+      "identity": {
+        "title": "Définition de notre identité financière",
+        "content": [
+          "Notre identité financière est le cadre qui définit notre façon de penser, notre processus de décision et le niveau de qualité auquel nous nous engageons.",
+          "Ce n’est pas un document interne… c’est un système opérationnel financier qui se reflète dans chaque dossier, chaque étape, chaque négociation et chaque résultat."
+        ]
+      },
+      "philosophy": {
+        "title": "Notre philosophie du financement",
+        "content": [
+          "Le conseil d’administration considère que le bon financement ne se mesure pas au montant, mais à son adéquation au client, à sa capacité à soutenir la croissance, à réduire les risques et à améliorer la stabilité financière.",
+          "Notre philosophie repose donc sur :"
+        ],
+        "bullets": [
+          "Une lecture précise de la réalité financière",
+          "Une évaluation mesurée des risques",
+          "Un choix réfléchi de l’institution adaptée",
+          "Une négociation professionnelle",
+          "Une clôture rigoureuse"
+        ],
+        "conclusion": "Nous ne cherchons pas le financement le plus rapide… nous cherchons le plus viable."
+      },
+      "mission": {
+        "title": "Notre mission financière",
+        "content": ["Notre mission est de fournir un système financier qui offre au client :"],
+        "bullets": [
+          "Une clarté de vision",
+          "Un dossier solide",
+          "Une confiance dans la décision",
+          "Une rapidité d’exécution",
+          "De meilleures conditions",
+          "Un risque moindre"
+        ],
+        "conclusion": "Nous nous engageons à ce que le client soit serein avant d’être financé."
+      },
+      "vision": {
+        "title": "Notre vision financière",
+        "content": ["Le conseil d’administration affirme que notre vision est de devenir l’entité reconnue pour :"],
+        "bullets": [
+          "La solidité des dossiers",
+          "La précision de l’analyse",
+          "La rigueur de la qualité",
+          "La rapidité d’exécution",
+          "La confidentialité des échanges",
+          "La constance des résultats"
+        ],
+        "conclusion": "Nous ne rivalisons pas sur le volume… nous rivalisons sur l’excellence."
+      },
+      "principles": {
+        "title": "Principes de notre identité financière",
+        "content": ["Le conseil d’administration a adopté sept principes fondamentaux qui forment le cœur de notre identité :"],
+        "bullets": [
+          "L’analyse avant la soumission",
+          "La clarté avant la négociation",
+          "La confidentialité avant le partage",
+          "La qualité avant la rapidité",
+          "Le résultat avant les promesses",
+          "L’engagement avant la réalisation",
+          "Le professionnalisme avant tout"
+        ]
+      },
+      "reading": {
+        "title": "Notre façon de lire la réalité financière",
+        "content": ["Nous ne lisons pas seulement les chiffres… nous lisons :"],
+        "bullets": [
+          "Le comportement des flux",
+          "Le schéma des engagements",
+          "La solidité de l’exploitation",
+          "Le niveau de risque",
+          "La capacité de remboursement",
+          "Les points faibles",
+          "Les points forts",
+          "Les opportunités de financement",
+          "Les probabilités de refus"
+        ],
+        "conclusion": "Cette lecture en profondeur est ce qui rend nos décisions précises et nos dossiers solides."
+      },
+      "building": {
+        "title": "Notre façon de construire les dossiers de financement",
+        "content": ["Chaque dossier de financement validé par l’appareil administratif comporte :"],
+        "bullets": [
+          "Une analyse financière complète",
+          "Une rédaction professionnelle",
+          "Des documents organisés",
+          "Un plan de remboursement clair",
+          "Des justifications solides",
+          "Un traitement préalable des points faibles",
+          "Une présentation financière convaincante",
+          "Une vision opérationnelle qui étaye la décision"
+        ],
+        "conclusion": "Nous ne soumettons pas un dossier… nous soumettons un cas financier complet."
+      },
+      "partners": {
+        "title": "Relation avec les financeurs",
+        "content": ["Les financeurs nous font confiance parce que :"],
+        "bullets": [
+          "Nos dossiers sont solides",
+          "Nos risques sont calculés",
+          "Nos échanges sont professionnels",
+          "Notre engagement est constant",
+          "Nos résultats sont clairs"
+        ],
+        "conclusion": "Nous ne demandons pas l’approbation… nous présentons un dossier qui la mérite."
+      },
+      "clients": {
+        "title": "Relation avec les clients",
+        "content": ["Nous traitons le client en partenaire financier, et non en transaction."],
+        "bullets": [
+          "Nous écoutons avant de parler",
+          "Nous analysons avant de décider",
+          "Nous clarifions avant de demander",
+          "Nous assurons le suivi avant d’être sollicités",
+          "Nous travaillons dans le silence… et ne montrons que les résultats"
+        ],
+        "conclusion": "Telle est la culture de relation adoptée par le conseil d’administration."
+      },
+      "admin": {
+        "title": "Identité de l’appareil administratif",
+        "content": ["L’appareil administratif est l’épine dorsale de notre identité et se compose d’un système opérationnel comprenant :"],
+        "bullets": [
+          "L’analyse",
+          "L’évaluation",
+          "L’appariement",
+          "La négociation",
+          "La clôture",
+          "Le suivi",
+          "L’accompagnement après financement"
+        ],
+        "conclusion": "Chaque étape est calculée… chaque décision s’appuie sur les données… chaque dossier porte notre marque."
+      },
+      "results": {
+        "title": "Identité des résultats",
+        "content": ["Nous mesurons notre succès par :"],
+        "bullets": [
+          "Le taux d’approbation",
+          "La rapidité d’exécution",
+          "La qualité des conditions",
+          "La satisfaction du client",
+          "La continuité de la relation"
+        ],
+        "conclusion": "Nous ne vous promettons pas un financement… nous vous promettons un chemin clair pour y parvenir."
+      }
+    },
+    "conclusion": "Pour conclure, le conseil d’administration de KIB affirme que cette entité n’a pas été créée pour être un courtier traditionnel, mais pour incarner une identité financière établie qui se tient fermement aux côtés du client, gère son dossier avec confiance, ouvre des portes qui ne s’ouvriraient pas autrement et trace un chemin financier sans égal. Nous sommes l’entité qui ne hausse pas la voix… car ses résultats parlent pour elle ; qui n’en fait pas trop en promesses… car la qualité de son travail suffit ; et qui ne demande pas la confiance… car elle la gagne dès la première étape. Le financement n’est pas le hasard… c’est un métier, et le succès n’est pas la chance… c’est une méthodologie. Commencez avec nous aujourd’hui, et laissez notre identité financière devenir la force qui porte votre projet vers une plus grande stabilité, croissance et compétitivité.",
+    "introBadge": "KIB",
+    "lightboxClose": "Fermer",
+    "visionCardLabel": "Notre vision"
+  },
+  "executionPage": {
+    "hero": {
+      "title": "Parcours exécutif",
+      "subtitle": "Une structure opérationnelle pilotée par la gouvernance, exécutée avec discipline et clôturée en toute confiance — Conseil d'administration",
+      "badge": "KIB Financement",
+      "ctaPrimary": "Démarrez votre parcours de financement",
+      "ctaSecondary": "Découvrir le parcours",
+      "scrollMore": "Découvrir plus",
+      "statStage": "Étape exécutive",
+      "statGovernance": "Gouvernance et conformité",
+      "statBoard": "Approuvé par le conseil",
+      "statBoardValue": "Certifié",
+      "stat360": "Contrôle complet",
+      "stat24": "Suivi continu"
+    },
+    "about": {
+      "badge": "Qui sommes-nous",
+      "titlePart1": "Dans un secteur financier qui ne tolère pas l'hésitation,",
+      "titlePart2": "ni ne pardonne les décisions non calculées",
+      "p1": "Le conseil d'administration de KIB a adopté un parcours exécutif qui représente le cadre par lequel chaque étape du parcours de financement du client est gérée — non pas sur l'effort individuel, mais sur une méthodologie institutionnelle alliant gouvernance, sécurité, conformité, contrôle et analyse approfondie.",
+      "p2": "Ce parcours n'a pas été conçu comme une simple série de procédures, mais comme une structure opérationnelle intégrée garantissant que chaque dossier passe par des étapes étudiées, basées sur des données précises, une évaluation stricte, une planification rigoureuse, une négociation calculée et une clôture sans erreur.",
+      "quote": "Nous ne cherchons pas le financement comme une fin en soi ; nous cherchons une décision financière sûre, durable et fondée sur la vision du conseil.",
+      "teamLabel": "+500 clients satisfaits",
+      "teamSub": "Ils nous font confiance",
+      "governance": "Gouvernance",
+      "phase": "Étape",
+      "satisfaction": "Satisfaction"
+    },
+    "executivePath": {
+      "badge": "40 étapes intégrées",
+      "title": "Parcours exécutif",
+      "lead": "Un parcours étudié à travers 40 stations garantissant que votre dossier de financement progresse avec précision, de l'analyse initiale à la clôture réussie",
+      "phaseLabel": "Phase",
+      "stations": "stations",
+      "stepPhase": "Étape",
+      "withinPhase": "Dans la phase :",
+      "phases": {
+        "1": { "title": "Accueil et vérification", "subtitle": "Analyse et évaluation" },
+        "2": { "title": "Exécution et clôture", "subtitle": "Soumission et négociation" },
+        "3": { "title": "Contrôle et conformité", "subtitle": "Qualité et suivi" },
+        "4": { "title": "Développement et durabilité", "subtitle": "Croissance future" }
+      },
+      "steps": {
+        "1": { "title": "Plateforme d'accueil exécutif", "desc": "Accueil formel géré au plus haut niveau administratif pour identifier le client et son besoin réel." },
+        "2": { "title": "Porte de vérification initiale", "desc": "Vérification de l'identité, de l'activité, des sources du client et de sa conformité aux normes." },
+        "3": { "title": "Centre de collecte de données opérationnelles", "desc": "Collecte complète des données financières, opérationnelles, juridiques et des documents sensibles." },
+        "4": { "title": "Salle d'audit initial", "desc": "Vérification initiale de l'exactitude des données avant l'analyse avancée." },
+        "5": { "title": "Plateforme d'analyse financière stratégique", "desc": "Analyse des flux, engagements, durabilité et capacité de remboursement selon une méthodologie institutionnelle." },
+        "6": { "title": "Centre d'évaluation de la solvabilité", "desc": "Mesure de la solidité financière, de la stabilité opérationnelle et des faiblesses potentielles." },
+        "7": { "title": "Laboratoire d'évaluation des risques", "desc": "Analyse des risques opérationnels, financiers, de marché et structurels selon un modèle interne." },
+        "8": { "title": "Conseil de gouvernance et conformité", "desc": "Examen du dossier pour garantir la conformité aux réglementations et normes." },
+        "9": { "title": "Système de protection des données et confidentialité", "desc": "Application de protocoles de chiffrement et de contrôle d'accès aux informations sensibles." },
+        "10": { "title": "Plateforme de planification financière", "desc": "Élaboration d'un plan exécutif couvrant type, montant, durée, institution adaptée et stratégie de négociation." },
+        "11": { "title": "Centre de préparation du dossier exécutif", "desc": "Préparation d'un dossier professionnel reflétant la force du client et les justifications de financement." },
+        "12": { "title": "Comité d'audit interne", "desc": "Examen du dossier par une équipe spécialisée pour garantir qualité et conformité." },
+        "13": { "title": "Plateforme de mise en correspondance du financement", "desc": "Sélection de l'institution adaptée selon l'activité, le risque et la solvabilité." },
+        "14": { "title": "Canal de soumission formel", "desc": "Soumission du dossier à l'institution avec une formulation exécutive claire et convaincante." },
+        "15": { "title": "Salle de suivi opérationnel", "desc": "Suivi continu pour garantir l'avancement du dossier sans retard." },
+        "16": { "title": "Centre de gestion des demandes", "desc": "Réponse professionnelle et rapide aux demandes de l'institution et traitement des commentaires." },
+        "17": { "title": "Plateforme de négociation exécutive", "desc": "Amélioration du prix, de la durée, des garanties et des conditions au profit du client." },
+        "18": { "title": "Conseil de clôture financière", "desc": "Examen des contrats et garantie d'une clôture sans erreur ni risque." },
+        "19": { "title": "Canal de décaissement", "desc": "Suivi du décaissement jusqu'à son achèvement de manière officielle et sécurisée." },
+        "20": { "title": "Centre post-financement", "desc": "Suivi des engagements, des flux, recommandations et soutien à la restructuration si besoin." },
+        "21": { "title": "Gestion du contrôle opérationnel", "desc": "Contrôle de la qualité d'exécution et du respect des politiques." },
+        "22": { "title": "Gestion de l'assurance qualité", "desc": "Évaluation des performances et validation des améliorations opérationnelles." },
+        "23": { "title": "Gestion de l'audit périodique", "desc": "Révisions internes pour assurer la conformité à la gouvernance." },
+        "24": { "title": "Gestion de la confidentialité", "desc": "Contrôle d'accès, protection des documents et normes de sécurité." },
+        "25": { "title": "Gestion des rapports exécutifs", "desc": "Préparation de rapports complets sur les réalisations et les développements." },
+        "26": { "title": "Gestion de la conformité continue", "desc": "Suivi des changements réglementaires et mise à jour des politiques." },
+        "27": { "title": "Gestion de l'intégrité et de la transparence", "desc": "Garantie que chaque étape respecte les plus hauts standards d'intégrité." },
+        "28": { "title": "Gestion des relations avec les financeurs", "desc": "Renforcement de la confiance et de la coopération." },
+        "29": { "title": "Gestion des risques futurs", "desc": "Anticipation des risques et plans proactifs pour les traiter." },
+        "30": { "title": "Gestion du développement du parcours exécutif", "desc": "Mise à jour périodique du parcours selon les changements financiers et réglementaires." },
+        "31": { "title": "Plateforme d'analyse avancée", "desc": "Analyse des données historiques du client pour améliorer les performances." },
+        "32": { "title": "Centre des projections financières", "desc": "Construction de modèles pour les décisions de financement futures." },
+        "33": { "title": "Salle de restructuration", "desc": "Solutions de restructuration des engagements si nécessaire." },
+        "34": { "title": "Plateforme d'amélioration des flux de trésorerie", "desc": "Recommandations pour améliorer la liquidité et la stabilité des flux." },
+        "35": { "title": "Centre de gestion des relations à long terme", "desc": "Relation durable avec le client pour un soutien financier continu." },
+        "36": { "title": "Plateforme d'évaluation de la performance financière", "desc": "Mesure de l'impact du financement sur l'activité du client." },
+        "37": { "title": "Salle de développement de produits financiers", "desc": "Nouvelles solutions de financement adaptées au marché." },
+        "38": { "title": "Plateforme de gestion des défis", "desc": "Traitement des obstacles rencontrés par le client pendant le financement." },
+        "39": { "title": "Centre de conseil financier avancé", "desc": "Conseils pour des décisions financières stratégiques." },
+        "40": { "title": "Plateforme d'évaluation finale du parcours", "desc": "Rapport complet sur les réalisations et les développements futurs." }
+      }
+    },
+    "services": {
+      "badge": "Ce que nous offrons",
+      "title": "Nos services",
+      "titleHighlight": "de financement",
+      "lead": "Nous offrons un ensemble intégré de solutions financières conçues pour répondre aux besoins des entreprises et des particuliers selon les plus hauts standards de qualité et de conformité.",
+      "discoverMore": "Découvrir plus",
+      "realEstate": { "title": "Financement immobilier", "desc": "Solutions intégrées pour l'acquisition ou le développement de biens commerciaux et résidentiels à des conditions compétitives." },
+      "commercial": { "title": "Financement commercial", "desc": "Soutien à la trésorerie et au fonds de roulement pour la continuité et la croissance." },
+      "facilities": { "title": "Financement des établissements", "desc": "Programmes pour PME et grands projets avec des plans de remboursement flexibles." },
+      "restructuring": { "title": "Restructuration", "desc": "Étude et restructuration des engagements pour améliorer les flux et alléger les charges." },
+      "advisory": { "title": "Conseil financier", "desc": "Orientations stratégiques basées sur l'analyse du marché et des données pour des décisions d'investissement." },
+      "personal": { "title": "Financement personnel", "desc": "Solutions de financement pour les particuliers avec des procédures rapides et simples." }
+    },
+    "benefits": {
+      "title": "Valeur",
+      "titleHighlight": "ajoutée",
+      "lead": "Nous ne promettons pas seulement un financement ; nous promettons un système intégré qui travaille derrière le client et gère son dossier en toute confiance.",
+      "governance": { "title": "Gouvernance stricte", "desc": "Cadre réglementaire garantissant l'intégrité des procédures." },
+      "security": { "title": "Sécurité financière", "desc": "Protection complète des intérêts du client et réduction des risques." },
+      "oversight": { "title": "Contrôle complet", "desc": "Suivi précis de chaque étape du parcours de financement." },
+      "transparency": { "title": "Transparence totale", "desc": "Clarté sur les conditions, frais et engagements." },
+      "analysis": { "title": "Analyse approfondie", "desc": "Étude des données financières pour la capacité de remboursement." },
+      "followUp": { "title": "Suivi continu", "desc": "Accompagnement après le décaissement pour la stabilité du client." },
+      "confidentiality": { "title": "Confidentialité totale", "desc": "Protocoles stricts pour les données et informations sensibles." },
+      "quality": { "title": "Haute qualité", "desc": "Normes professionnelles pour la préparation des dossiers et la négociation." }
+    },
+    "stats": {
+      "badge": "Des réalisations dont nous sommes fiers",
+      "title": "Des chiffres qui parlent de notre",
+      "titleHighlight": "succès",
+      "lead": "Des résultats réels reflétant notre engagement pour l'excellence et la confiance de nos clients",
+      "stage": { "label": "Étape exécutive", "desc": "Étape étudiée avec précision" },
+      "clients": { "label": "Clients satisfaits", "desc": "Ils nous font confiance" },
+      "satisfaction": { "label": "Taux de satisfaction", "desc": "Évaluation des clients" },
+      "experience": { "label": "Années d'expérience", "desc": "Sur le marché financier" },
+      "projects": { "label": "Projets réussis", "desc": "Financés avec succès" },
+      "partners": { "label": "Partenaires financiers", "desc": "Partenariats stratégiques" },
+      "badgeBoard": "Approuvé par le conseil",
+      "badgeGovernance": "Gouvernance 100 %",
+      "badgeTransparency": "Transparence totale"
+    },
+    "partners": {
+      "title": "Nos partenaires du succès",
+      "lead": "Nous sommes fiers de nos partenariats avec les principales institutions financières du Royaume",
+      "names": ["Banque nationale", "Banque Al Rajhi", "Banque Riyad", "Banque Saudi Fransi", "Banque Al Bilad", "Banque AlJazira", "Banque Alinma", "Fonds de développement"]
+    },
+    "whyUs": {
+      "title": "Pourquoi choisir",
+      "titleHighlight": "KIB ?",
+      "lead": "Nous offrons un bouclier financier qui protège le client des risques et garantit un parcours sûr, une décision réfléchie et un résultat fiable face aux exigences des financeurs.",
+      "reason1": "Une méthodologie institutionnelle qui ne repose pas sur l'effort individuel.",
+      "reason2": "Une analyse financière stratégique garantissant la capacité de remboursement.",
+      "reason3": "Une négociation exécutive qui améliore les conditions en faveur du client.",
+      "reason4": "Une protection totale des données et informations sensibles.",
+      "reason5": "Un suivi continu même après la clôture financière.",
+      "reason6": "Une équipe spécialisée d'experts financiers.",
+      "successRate": "Taux de succès",
+      "cta": "Démarrez votre parcours avec nous"
+    },
+    "faq": {
+      "badge": "Nous répondons à vos questions",
+      "title": "Questions fréquentes",
+      "lead": "Réponses complètes aux questions les plus posées par nos clients",
+      "q1": "Qu'est-ce que le parcours exécutif ?",
+      "a1": "Le parcours exécutif est une méthodologie institutionnelle intégrée de 40 étapes précises, garantissant que votre dossier progresse selon un parcours étudié, basé sur des données précises, une évaluation stricte, une planification rigoureuse, une négociation calculée et une clôture sans erreur.",
+      "q2": "Combien de temps prend le processus de financement ?",
+      "a2": "La durée dépend du type et du montant du financement et de l'état des documents. En général de 2 à 6 semaines pour le financement personnel, et de 4 à 12 semaines pour le commercial et l'immobilier. Nous accélérons le processus tout en maintenant les plus hauts standards de qualité.",
+      "q3": "Vos services sont-ils disponibles pour tous les secteurs ?",
+      "a3": "Oui, nous servons tous les secteurs économiques : commercial, industriel, immobilier, services et technologie. Nous avons une large expérience des exigences de chaque secteur.",
+      "q4": "Quels documents sont requis ?",
+      "a4": "Les documents varient selon le type de financement, mais incluent généralement : l'extrait Kbis, les états financiers, les relevés bancaires, les contrats de bail ou de propriété, et la pièce d'identité. Notre équipe vous guidera en détail.",
+      "q5": "Proposez-vous des services après financement ?",
+      "a5": "Oui, nous assurons un suivi continu après le décaissement : surveillance des engagements, recommandations pour les flux de trésorerie, soutien à la restructuration si besoin, et conseil financier continu.",
+      "q6": "Comment garantissez-vous la confidentialité des informations ?",
+      "a6": "Nous appliquons les plus hauts standards de sécurité et de confidentialité : protocoles de chiffrement, contrôle strict de l'accès aux informations, accords de confidentialité, et systèmes de protection des données certifiés.",
+      "support": "Support continu"
+    },
+    "contactCta": {
+      "badge": "À la voix du conseil d'administration",
+      "title": "Le financement n'est pas une transaction...",
+      "titleHighlight": "c'est un métier piloté par la méthodologie et clôturé en confiance",
+      "lead": "En conclusion de ce parcours, le conseil d'administration de KIB affirme que ce modèle exécutif n'a pas été construit comme un simple cadre réglementaire, mais comme un bouclier financier qui protège le client des risques.",
+      "ctaPrimary": "Commencez avec nous aujourd'hui",
+      "ctaSecondary": "Appelez maintenant",
+      "governance": "Gouvernance certifiée",
+      "security": "Sécurité 100 %",
+      "confidentiality": "Confidentialité totale",
+      "support": "Support 24/7",
+      "finalMessage": "Laissez le parcours exécutif devenir la voie qui élève votre projet vers une plus grande stabilité, croissance et compétitivité."
     }
   }
 }

@@ -11,6 +11,20 @@ import { ClientsSection } from '@/components/screens/home/ClientsSection';
 import { PromiseSection } from '@/components/screens/home/PromiseSection';
 import { ContactCTASection } from '@/components/screens/home/ContactCTASection';
 import { useLocale } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'seo' });
+  return {
+    title: t('pages.home.title'),
+    description: t('pages.home.description'),
+  };
+}
 
 export default function Home() {
   const locale = useLocale();

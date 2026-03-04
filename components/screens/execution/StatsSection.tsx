@@ -9,57 +9,17 @@ import {
   Clock,
   Building2,
   Handshake,
-  Sparkles } from
-'lucide-react';
-const stats = [
-{
-  icon: TrendingUp,
-  value: 40,
-  suffix: '+',
-  label: 'مرحلة تنفيذية',
-  color: 'gold',
-  description: 'مرحلة مدروسة بدقة'
-},
-{
-  icon: Users,
-  value: 500,
-  suffix: '+',
-  label: 'عميل راضٍ',
-  color: 'teal',
-  description: 'يثقون في خدماتنا'
-},
-{
-  icon: Award,
-  value: 99,
-  suffix: '%',
-  label: 'نسبة الرضا',
-  color: 'coral',
-  description: 'تقييم العملاء'
-},
-{
-  icon: Clock,
-  value: 10,
-  suffix: '+',
-  label: 'سنوات خبرة',
-  color: 'fuchsia',
-  description: 'في السوق المالي'
-},
-{
-  icon: Building2,
-  value: 200,
-  suffix: '+',
-  label: 'مشروع ناجح',
-  color: 'purple',
-  description: 'تم تمويله بنجاح'
-},
-{
-  icon: Handshake,
-  value: 15,
-  suffix: '+',
-  label: 'جهة تمويلية',
-  color: 'sapphire',
-  description: 'شراكات استراتيجية'
-}];
+  Sparkles } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+
+const statsConfig = [
+  { key: 'stage', icon: TrendingUp, value: 40, suffix: '+', color: 'gold' as const },
+  { key: 'clients', icon: Users, value: 500, suffix: '+', color: 'teal' as const },
+  { key: 'satisfaction', icon: Award, value: 99, suffix: '%', color: 'coral' as const },
+  { key: 'experience', icon: Clock, value: 10, suffix: '+', color: 'fuchsia' as const },
+  { key: 'projects', icon: Building2, value: 200, suffix: '+', color: 'purple' as const },
+  { key: 'partners', icon: Handshake, value: 15, suffix: '+', color: 'sapphire' as const },
+];
 
 const colorConfig = {
   gold: {
@@ -248,6 +208,7 @@ function StatBox({
 
 }
 export function StatsSection() {
+  const t = useTranslations('executionPage.stats');
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
@@ -260,7 +221,7 @@ export function StatsSection() {
   const y1 = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
   const y2 = useTransform(scrollYProgress, [0, 1], ['0%', '-20%']);
   return (
-    <section className="relative p-[5%] bg-gradient-to-b from-cream-50 via-white to-cream-50 overflow-hidden">
+    <section className="relative px-[5%] py-[2%] bg-gradient-to-b from-cream-50 via-white to-cream-50 overflow-hidden">
       {/* Subtle background pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -347,117 +308,74 @@ export function StatsSection() {
 
       </motion.div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-20" ref={ref}>
+      <div className="w-full mx-auto px-4 md:px-6 relative z-20" ref={ref}>
         {/* Header */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 30
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0
-          }}
-          viewport={{
-            once: true
-          }}
-          className="text-center mb-16 md:mb-24">
-
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16 md:mb-24"
+        >
           <motion.div
-            initial={{
-              scale: 0
-            }}
-            whileInView={{
-              scale: 1
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              type: 'spring',
-              delay: 0.2
-            }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gold-500/10 border border-gold-500/30 mb-6">
-
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: 'spring', delay: 0.2 }}
+            className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-gold-500/10 border border-gold-500/30 mb-6"
+          >
             <Sparkles className="w-4 h-4 text-gold-500" />
-            <span className="text-gold-700 text-sm font-medium">
-              إنجازات نفخر بها
-            </span>
+            <span className="text-gold-700 text-sm font-medium">{t('badge')}</span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-navy-900 mb-5">
-            أرقام تتحدث عن <span className="text-gradient-gold">نجاحنا</span>
+            {t('title')} <span className="text-gradient-gold">{t('titleHighlight')}</span>
           </h2>
-          <p className="text-gray-500 text-lg md:text-xl  ">
-            نتائج حقيقية تعكس التزامنا بالتميز وثقة عملائنا
+          <p className="text-gray-500 text-lg md:text-xl text-center">
+            {t('lead')}
           </p>
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 ">
-          {stats.map((stat, index) =>
-          <StatBox
-            key={index}
-            icon={stat.icon}
-            value={stat.value}
-            suffix={stat.suffix}
-            label={stat.label}
-            description={stat.description}
-            color={stat.color as keyof typeof colorConfig}
-            isInView={isInView}
-            delay={index * 0.1}
-            index={index} />
-
-          )}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
+          {statsConfig.map((stat, index) => (
+            <StatBox
+              key={stat.key}
+              icon={stat.icon}
+              value={stat.value}
+              suffix={stat.suffix}
+              label={t(`${stat.key}.label`)}
+              description={t(`${stat.key}.desc`)}
+              color={stat.color}
+              isInView={isInView}
+              delay={index * 0.1}
+              index={index}
+            />
+          ))}
         </div>
 
         {/* Achievement badges */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 30
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0
-          }}
-          viewport={{
-            once: true
-          }}
-          transition={{
-            delay: 0.8
-          }}
-          className="flex flex-wrap justify-center gap-4 mt-16">
-
-          {['معتمد من مجلس الإدارة', 'حوكمة 100%', 'شفافية كاملة'].map(
-            (badge, i) =>
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.8 }}
+          className="flex flex-wrap justify-center gap-4 mt-16"
+        >
+          {(['badgeBoard', 'badgeGovernance', 'badgeTransparency'] as const).map((key, i) => (
             <motion.div
-              key={badge}
-              whileHover={{
-                scale: 1.05,
-                y: -5
-              }}
-              className="flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-gray-200 shadow-sm">
-
-                <motion.div
-                animate={{
-                  rotate: 360
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: 'linear',
-                  delay: i * 0.5
-                }}>
-
-                  <Sparkles className="w-4 h-4 text-gold-500" />
-                </motion.div>
-                <span className="text-navy-900 text-sm font-medium">
-                  {badge}
-                </span>
+              key={key}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white border border-gray-200 shadow-sm "
+            >
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 8, repeat: Infinity, ease: 'linear', delay: i * 0.5 }}
+              >
+                <Sparkles className="w-4 h-4 text-gold-500" />
               </motion.div>
-
-          )}
+              <span className="text-navy-900 text-sm font-medium">{t(key)}</span>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>);

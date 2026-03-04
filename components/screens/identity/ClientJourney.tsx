@@ -7,53 +7,51 @@ import {
   CheckCircle } from
 'lucide-react';
 import { motion } from 'framer-motion';
+import { useMessages } from 'next-intl';
+
+const STEP_STYLES = [
+  { color: 'text-dept-analysis', bg: 'bg-dept-analysis/10', border: 'border-dept-analysis/30' },
+  { color: 'text-dept-fileManagement', bg: 'bg-dept-fileManagement/10', border: 'border-dept-fileManagement/30' },
+  { color: 'text-dept-compliance', bg: 'bg-dept-compliance/10', border: 'border-dept-compliance/30' },
+  { color: 'text-dept-relations', bg: 'bg-dept-relations/10', border: 'border-dept-relations/30' },
+  { color: 'text-KIB-gold', bg: 'bg-KIB-gold/10', border: 'border-KIB-gold/30' },
+];
+const STEP_ICONS = [Search, FileText, CheckSquare, Handshake, CheckCircle];
+
+const DEFAULT_STEPS = [
+  { title: 'Analysis and assessment', desc: 'Accurate reading of financial reality and measured risk assessment' },
+  { title: 'Building the file', desc: 'Professional drafting and organised documents with a clear plan' },
+  { title: 'Matching and compliance', desc: 'Ensuring files meet regulations and institutional standards' },
+  { title: 'Negotiation', desc: 'Thoughtful selection of the right institution and professional negotiation of terms' },
+  { title: 'Closure', desc: 'Thorough closure, ongoing follow-up, and post-financing support' },
+];
+
 export function ClientJourney() {
-  const steps = [
-  {
-    icon: <Search className="w-6 h-6" />,
-    title: 'التحليل والتقييم',
-    desc: 'قراءة دقيقة للواقع المالي وتقييم محكم للمخاطر',
-    color: 'text-dept-analysis',
-    bg: 'bg-dept-analysis/10',
-    border: 'border-dept-analysis/30'
-  },
-  {
-    icon: <FileText className="w-6 h-6" />,
-    title: 'بناء الملف',
-    desc: 'صياغة احترافية وتجهيز مستندات مرتبة بخطة واضحة',
-    color: 'text-dept-fileManagement',
-    bg: 'bg-dept-fileManagement/10',
-    border: 'border-dept-fileManagement/30'
-  },
-  {
-    icon: <CheckSquare className="w-6 h-6" />,
-    title: 'المطابقة والامتثال',
-    desc: 'التأكد من مطابقة الملفات للأنظمة ومعايير الجهات',
-    color: 'text-dept-compliance',
-    bg: 'bg-dept-compliance/10',
-    border: 'border-dept-compliance/30'
-  },
-  {
-    icon: <Handshake className="w-6 h-6" />,
-    title: 'التفاوض',
-    desc: 'اختيار مدروس للجهة وتفاوض احترافي للشروط',
-    color: 'text-dept-relations',
-    bg: 'bg-dept-relations/10',
-    border: 'border-dept-relations/30'
-  },
-  {
-    icon: <CheckCircle className="w-6 h-6" />,
-    title: 'الإغلاق',
-    desc: 'إغلاق محكم ومتابعة مستمرة ودعم بعد التمويل',
-    color: 'text-kep-gold',
-    bg: 'bg-kep-gold/10',
-    border: 'border-kep-gold/30'
-  }];
+  const messages = useMessages();
+  const journey = (messages?.identityPage as Record<string, unknown>)?.journey as {
+    title?: string;
+    titleHighlight?: string;
+    lead?: string;
+    stepLabel?: string;
+    steps?: Array<{ title: string; desc: string }>;
+  } | undefined;
+  const stepLabelTemplate = journey?.stepLabel ?? 'Step {n}';
+  const journeySteps = (journey?.steps?.length ? journey.steps : DEFAULT_STEPS) as Array<{ title: string; desc: string }>;
+  const steps = journeySteps.map((s, idx) => {
+    const IconComponent = STEP_ICONS[idx];
+    const style = STEP_STYLES[idx] ?? STEP_STYLES[0];
+    return {
+      icon: IconComponent ? <IconComponent className="w-6 h-6" /> : null,
+      title: s.title,
+      desc: s.desc,
+      ...style,
+    };
+  });
 
   return (
     <section
       id="journey"
-      className=" p-[5%] bg-kep-bg2 relative overflow-hidden">
+      className=" p-[5%] bg-KIB-bg2 relative overflow-hidden">
 
       <div className=" ">
         <motion.div
@@ -70,11 +68,11 @@ export function ClientJourney() {
           }}
           className="text-center mb-16 md:mb-20">
 
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-kep-text mb-6">
-            رحلة <span className="text-kep-gold">العميل</span>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-KIB-text mb-6">
+            {journey?.title ?? 'Client'} <span className="text-KIB-gold">{journey?.titleHighlight ?? 'journey'}</span>
           </h2>
-          <p className="text-xl md:text-2xl text-kep-muted font-body leading-relaxed">
-            مسار محسوب يضمن للعميل وضوحاً مالياً ونتيجة يمكن الاعتماد عليها
+          <p className="text-xl md:text-2xl text-KIB-muted font-body leading-relaxed">
+            {journey?.lead ?? 'A calculated path that ensures financial clarity and a result you can rely on'}
           </p>
         </motion.div>
 
@@ -106,13 +104,13 @@ export function ClientJourney() {
                   {step.icon}
                 </div>
                 <div className="bg-white p-6 md:p-8 rounded-xl border border-gray-100 w-full h-full min-h-[220px] transition-shadow shadow-card-light group-hover:shadow-card-elevated flex flex-col">
-                  <div className="text-base font-bold text-kep-gold mb-3 font-heading tracking-wider">
-                    الخطوة 0{idx + 1}
+                  <div className="text-base font-bold text-KIB-gold mb-3 font-heading tracking-wider">
+                    {stepLabelTemplate.replace('{n}', String(idx + 1).padStart(2, '0'))}
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-kep-text font-heading mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold text-KIB-text font-heading mb-4">
                     {step.title}
                   </h3>
-                  <p className="text-lg text-kep-muted font-body leading-relaxed flex-1">
+                  <p className="text-lg text-KIB-muted font-body leading-relaxed flex-1">
                     {step.desc}
                   </p>
                 </div>

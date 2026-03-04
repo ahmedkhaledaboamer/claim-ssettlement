@@ -2,6 +2,31 @@
   "page": {
     "title": "Home Page"
   },
+  "seo": {
+    "siteName": "KIB Financing Brokerage",
+    "pages": {
+      "home": {
+        "title": "Home | KIB Financing Brokerage – Financing Brokerage & Executive Financial Solutions in UAE",
+        "description": "KIB Financing Brokerage L.L.C connects businesses and entrepreneurs with the right financing in the UAE. We analyze your needs, structure strong financing files, and negotiate optimal terms for commercial, corporate, real estate, and SME funding. Your trusted financial brokerage partner for sustainable growth and financial stability."
+      },
+      "services": {
+        "title": "Services | KIB Financing Brokerage – Commercial, Corporate & SME Financing Solutions",
+        "description": "Explore KIB Financing Brokerage's financing services: commercial brokerage, investment and real estate financing, corporate and SME solutions. We tailor funding options to your business size and goals across the UAE. Professional file preparation, negotiation, and follow-up until approval."
+      },
+      "administrativeDepartment": {
+        "title": "Administrative Department | KIB Financing Brokerage – Expert Team & Operational Excellence",
+        "description": "Meet the KIB Financing Brokerage administrative team and our operating system. We ensure quality standards, clear client journeys, and dedicated support for every financing file. Discover our methodology, service levels, and commitment to excellence in the UAE."
+      },
+      "identity": {
+        "title": "Identity | KIB Financing Brokerage – Our Mission, Vision & Values",
+        "description": "Discover KIB Financing Brokerage's identity: our mission, vision, values, and philosophy. We are your trusted financial brokerage partner in the UAE, committed to clarity, strong files, consistent results, fast execution, and complete confidentiality."
+      },
+      "execution": {
+        "title": "Execution | KIB Financing Brokerage – Claim Settlement & Execution Services",
+        "description": "KIB Financing Brokerage execution and claim settlement services in the UAE. From filing to settlement, we guide you through the executive path with expertise in claim execution, benefits, dedicated support, and proven results. Partner with professionals you can trust."
+      }
+    }
+  },
   "navbar": {
     "cta": "Book Your Consultation",
     "openMenu": "Open navigation menu",
@@ -711,6 +736,379 @@
         }
       },
       "cardSubtitle": "AED in completed financings"
+    }
+  },
+  "identityPage": {
+    "hero": {
+      "badge": "KIB Financing Brokerage",
+      "exploreCta": "Explore our identity",
+      "journeyCta": "Client journey",
+      "scrollAria": "Scroll down",
+      "goToSlideAria": "Go to {label}",
+      "slides": [
+        {
+          "title": "Financial identity",
+          "titleAccent": "that defines us",
+          "subtitle": "Not just a broker… a financial entity with a vision, a methodology, and operational capacity managed at board level.",
+          "label": "Our identity"
+        },
+        {
+          "title": "Strategic vision",
+          "titleAccent": "for financing",
+          "subtitle": "We read the financial reality in depth and build financing files to professional standards that ensure the best terms and lowest risks.",
+          "label": "Our vision"
+        },
+        {
+          "title": "Reliable",
+          "titleAccent": "and sustainable results",
+          "subtitle": "We measure our success by approval rates, quality of terms, and client satisfaction. We don’t promise financing… we promise a clear path to it.",
+          "label": "Our results"
+        }
+      ]
+    },
+    "journey": {
+      "title": "Client",
+      "titleHighlight": "journey",
+      "lead": "A calculated path that ensures financial clarity and a result you can rely on",
+      "stepLabel": "Step {n}",
+      "steps": [
+        { "title": "Analysis and assessment", "desc": "Accurate reading of financial reality and measured risk assessment" },
+        { "title": "Building the file", "desc": "Professional drafting and organised documents with a clear plan" },
+        { "title": "Matching and compliance", "desc": "Ensuring files meet regulations and institutional standards" },
+        { "title": "Negotiation", "desc": "Thoughtful selection of the right institution and professional negotiation of terms" },
+        { "title": "Closure", "desc": "Thorough closure, ongoing follow-up, and post-financing support" }
+      ]
+    },
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "content": [
+          "Amid rapid shifts in the financial sector, growing requirements from funders, and more complex approval criteria, the board of KIB Financing Brokerage announces a financial identity designed with care, shaped by methodology, and built on solid foundations of experience and discipline. Our identity rests on a clear conviction: that financing is not an administrative step but a strategic decision that shapes the future of companies. From this standpoint, we have adopted an operational model that ensures the client financial clarity, a calculated path, a strong file, and a result that can be relied on.",
+          "KIB is not just a broker… it is a financial entity with a vision, a methodology, and operational capacity managed at board level."
+        ]
+      },
+      "identity": {
+        "title": "Definition of our financial identity",
+        "content": [
+          "Our financial identity is the framework that defines how we think, how we make decisions, and the level of quality we commit to.",
+          "It is not an internal document… it is a financial operating system reflected in every file, every step, every negotiation, and every result."
+        ]
+      },
+      "philosophy": {
+        "title": "Our financing philosophy",
+        "content": [
+          "The board believes that the right financing is measured not by the amount but by its fit for the client, its ability to support growth, reduce risks, and improve financial stability.",
+          "Therefore, our philosophy is based on:"
+        ],
+        "bullets": [
+          "Accurate reading of financial reality",
+          "Measured risk assessment",
+          "Thoughtful selection of the right institution",
+          "Professional negotiation",
+          "Thorough closure"
+        ],
+        "conclusion": "We do not seek the fastest financing… we seek the most viable one."
+      },
+      "mission": {
+        "title": "Our financial mission",
+        "content": ["Our mission is to provide a financial system that gives the client:"],
+        "bullets": [
+          "Clarity of vision",
+          "Strength in the file",
+          "Confidence in the decision",
+          "Speed of execution",
+          "Better terms",
+          "Lower risk"
+        ],
+        "conclusion": "We are committed to the client being at ease before being funded."
+      },
+      "vision": {
+        "title": "Our financial vision",
+        "content": ["The board affirms that our vision is to become the entity known for:"],
+        "bullets": [
+          "Strength of files",
+          "Accuracy of analysis",
+          "Rigour of quality",
+          "Speed of execution",
+          "Confidentiality of dealings",
+          "Consistency of results"
+        ],
+        "conclusion": "We do not compete on volume… we compete on excellence."
+      },
+      "principles": {
+        "title": "Principles of our financial identity",
+        "content": ["The board has adopted seven core principles that form the essence of our identity:"],
+        "bullets": [
+          "Analysis before submission",
+          "Clarity before negotiation",
+          "Confidentiality before sharing",
+          "Quality before speed",
+          "Result before promises",
+          "Commitment before delivery",
+          "Professionalism above all"
+        ]
+      },
+      "reading": {
+        "title": "How we read financial reality",
+        "content": ["We do not only read numbers… we read:"],
+        "bullets": [
+          "Behaviour of flows",
+          "Pattern of obligations",
+          "Strength of operations",
+          "Level of risk",
+          "Repayment capacity",
+          "Weaknesses",
+          "Strengths",
+          "Financing opportunities",
+          "Likelihood of rejection"
+        ],
+        "conclusion": "This in-depth reading is what makes our decisions precise and our files strong."
+      },
+      "building": {
+        "title": "How we build financing files",
+        "content": ["Every financing file approved by the administrative body carries:"],
+        "bullets": [
+          "Comprehensive financial analysis",
+          "Professional drafting",
+          "Organised documents",
+          "Clear repayment plan",
+          "Strong justifications",
+          "Prior treatment of weaknesses",
+          "Convincing financial presentation",
+          "Operational vision that supports the decision"
+        ],
+        "conclusion": "We do not submit a file… we submit a complete financial case."
+      },
+      "partners": {
+        "title": "Dealing with funders",
+        "content": ["Funders trust us because:"],
+        "bullets": [
+          "Our files are strong",
+          "Our risks are calculated",
+          "Our dealings are professional",
+          "Our commitment is steady",
+          "Our results are clear"
+        ],
+        "conclusion": "We do not ask for approval… we present a file that deserves it."
+      },
+      "clients": {
+        "title": "Dealing with clients",
+        "content": ["We deal with the client as a financial partner, not as a transaction."],
+        "bullets": [
+          "We listen before we speak",
+          "We analyse before we decide",
+          "We clarify before we ask",
+          "We follow up before being asked",
+          "We work in silence… and show only results"
+        ],
+        "conclusion": "This is the culture of dealing adopted by the board."
+      },
+      "admin": {
+        "title": "Identity of the administrative body",
+        "content": ["The administrative body is the backbone of our identity and consists of an operational system that includes:"],
+        "bullets": [
+          "Analysis",
+          "Assessment",
+          "Matching",
+          "Negotiation",
+          "Closure",
+          "Follow-up",
+          "Post-financing support"
+        ],
+        "conclusion": "Every step is calculated… every decision is data-driven… every file carries our imprint."
+      },
+      "results": {
+        "title": "Identity of results",
+        "content": ["We measure our success by:"],
+        "bullets": [
+          "Approval rate",
+          "Speed of execution",
+          "Quality of terms",
+          "Client satisfaction",
+          "Continuity of the relationship"
+        ],
+        "conclusion": "We do not promise you financing… we promise you a clear path to it."
+      }
+    },
+    "conclusion": "In closing, the board of KIB affirms that this entity was not created to be a traditional broker, but to be an established financial identity that stands firmly behind the client, manages their file with confidence, opens doors that would not otherwise open, and creates a financial path that is second to none. We are the entity that does not raise its voice… because its results speak for it; does not overstate its promises… because the quality of its work is enough; and does not ask for trust… because it earns it from the first step. Financing is not chance… it is craft, and success is not luck… it is methodology. Start with us today, and let our financial identity become the force that drives your project toward greater stability, growth, and competitiveness.",
+    "introBadge": "KIB",
+    "lightboxClose": "Close",
+    "visionCardLabel": "Our vision"
+  },
+  "executionPage": {
+    "hero": {
+      "title": "Executive Path",
+      "subtitle": "An operational framework managed by governance, executed with discipline, and closed with confidence — Board of Directors",
+      "badge": "KIB Financing",
+      "ctaPrimary": "Start your financing journey",
+      "ctaSecondary": "Discover the path",
+      "scrollMore": "Discover more",
+      "statStage": "Executive stage",
+      "statGovernance": "Governance & compliance",
+      "statBoard": "Board certified",
+      "statBoardValue": "Certified",
+      "stat360": "Full oversight",
+      "stat24": "Continuous follow-up"
+    },
+    "about": {
+      "badge": "Who we are",
+      "titlePart1": "In a financial sector that does not tolerate hesitation,",
+      "titlePart2": "nor forgive uncalculated decisions",
+      "p1": "The KIB board has adopted an executive path that represents the framework through which every step of the client's financing journey is managed — not based on individual effort, but on an institutional methodology combining governance, security, compliance, oversight, and deep analysis.",
+      "p2": "This path was designed not as a mere series of procedures, but as an integrated operational structure ensuring every file moves through studied stages built on accurate data, strict assessment, careful planning, calculated negotiation, and closure that leaves no room for error.",
+      "quote": "We do not seek financing as an end in itself; we seek a secure, sustainable financial decision built on the board's vision.",
+      "teamLabel": "+500 satisfied clients",
+      "teamSub": "They trust our services",
+      "governance": "Governance",
+      "phase": "Stage",
+      "satisfaction": "Satisfaction"
+    },
+    "executivePath": {
+      "badge": "40 integrated stages",
+      "title": "Executive Path",
+      "lead": "A studied journey through 40 stations ensuring your financing file moves with precision, from initial analysis to successful closure",
+      "phaseLabel": "Phase",
+      "stations": "stations",
+      "stepPhase": "Stage",
+      "withinPhase": "Within phase:",
+      "phases": {
+        "1": { "title": "Reception & verification", "subtitle": "Analysis & assessment" },
+        "2": { "title": "Execution & closure", "subtitle": "Submission & negotiation" },
+        "3": { "title": "Oversight & compliance", "subtitle": "Quality & follow-up" },
+        "4": { "title": "Development & sustainability", "subtitle": "Future growth" }
+      },
+      "steps": {
+        "1": { "title": "Executive reception platform", "desc": "Formal reception managed at a high administrative level to identify the client and their real need." },
+        "2": { "title": "Initial verification gateway", "desc": "Review of client identity, activity, sources, and compliance with regulatory standards." },
+        "3": { "title": "Operational data collection centre", "desc": "Comprehensive collection of financial, operational, legal data and sensitive documents." },
+        "4": { "title": "Initial audit room", "desc": "Initial review to verify data accuracy before starting advanced analysis." },
+        "5": { "title": "Strategic financial analysis platform", "desc": "Analysis of flows, obligations, sustainability, and repayment capacity using an institutional methodology." },
+        "6": { "title": "Creditworthiness assessment centre", "desc": "Measuring financial strength, operational stability, and potential weaknesses." },
+        "7": { "title": "Risk assessment lab", "desc": "Analysis of operational, financial, market and structural risks according to an internal risk model." },
+        "8": { "title": "Governance and compliance council", "desc": "File review to ensure compliance with regulations, policies and supervisory standards." },
+        "9": { "title": "Data protection and confidentiality system", "desc": "Application of encryption, protection and access control protocols for sensitive information." },
+        "10": { "title": "Financial planning platform", "desc": "Drafting an executive plan covering type, amount, tenor, appropriate institution and negotiation strategy." },
+        "11": { "title": "Executive file preparation centre", "desc": "Preparation of a professional file reflecting the client's strength, addressing weaknesses and highlighting financing justifications." },
+        "12": { "title": "Internal audit committee", "desc": "File review by a specialised team to ensure the highest level of quality and compliance." },
+        "13": { "title": "Financing matching platform", "desc": "Selecting the appropriate institution based on activity, risk and creditworthiness criteria." },
+        "14": { "title": "Formal submission channel", "desc": "Submitting the file to the financing institution with a clear, convincing executive wording." },
+        "15": { "title": "Operational follow-up room", "desc": "Continuous follow-up to ensure the file proceeds without delay or shortfall." },
+        "16": { "title": "Inquiry management centre", "desc": "Responding to financing institution requests professionally and quickly, addressing any comments." },
+        "17": { "title": "Executive negotiation platform", "desc": "Improving price, tenor, guarantees, fees and closure terms in the client's favour." },
+        "18": { "title": "Financial closure council", "desc": "Contract review, approval of terms, and ensuring closure is executed without errors or risks." },
+        "19": { "title": "Disbursement channel", "desc": "Following the disbursement process until completion in an official and secure manner." },
+        "20": { "title": "Post-financing centre", "desc": "Monitoring obligations, tracking flows, providing recommendations, and supporting restructuring when needed." },
+        "21": { "title": "Operational oversight management", "desc": "Monitoring execution quality, policy compliance, and ensuring no breaches occur." },
+        "22": { "title": "Quality assurance management", "desc": "Performance evaluation, results review, and approval of operational improvements." },
+        "23": { "title": "Periodic audit management", "desc": "Conducting internal reviews to ensure compliance with governance and compliance standards." },
+        "24": { "title": "Confidentiality and sensitive information management", "desc": "Access control, document protection, and application of the highest security standards." },
+        "25": { "title": "Executive reporting management", "desc": "Preparation of comprehensive reports showing what was done, what was achieved, and what needs development." },
+        "26": { "title": "Ongoing compliance management", "desc": "Monitoring regulatory changes and updating operational policies accordingly." },
+        "27": { "title": "Integrity and transparency management", "desc": "Ensuring every step is executed to the highest professional integrity standards." },
+        "28": { "title": "Financing institution relationship management", "desc": "Building trust, improving communication, and ensuring continuity of cooperation." },
+        "29": { "title": "Future risk management", "desc": "Anticipating potential risks and developing proactive plans to address them." },
+        "30": { "title": "Executive path development management", "desc": "Periodic updating of the path to keep pace with financial and regulatory changes." },
+        "31": { "title": "Advanced analysis platform", "desc": "Analysis of client historical data to identify financial performance improvement opportunities." },
+        "32": { "title": "Financial projections centre", "desc": "Building projection models to support future financing decisions." },
+        "33": { "title": "Restructuring room", "desc": "Providing solutions for obligation restructuring when needed." },
+        "34": { "title": "Cash flow improvement platform", "desc": "Recommendations to improve liquidity and flow stability." },
+        "35": { "title": "Long-term relationship management centre", "desc": "Building a sustainable relationship with the client to ensure continuity of financial support." },
+        "36": { "title": "Financial performance assessment platform", "desc": "Measuring the impact of financing on client activity after execution." },
+        "37": { "title": "Financial product development room", "desc": "Developing new financing solutions that meet market needs." },
+        "38": { "title": "Challenge management platform", "desc": "Addressing any obstacles the client faces during the financing period." },
+        "39": { "title": "Advanced financial advisory centre", "desc": "Providing advisory that helps the client make strategic financial decisions." },
+        "40": { "title": "Final path assessment platform", "desc": "Preparation of a comprehensive report showing what was done, what was achieved, and what should be developed in the future." }
+      }
+    },
+    "services": {
+      "badge": "What we offer",
+      "title": "Our",
+      "titleHighlight": "financing services",
+      "lead": "We offer an integrated set of financial solutions designed to meet the needs of business and individuals to the highest standards of quality and compliance.",
+      "discoverMore": "Discover more",
+      "realEstate": { "title": "Real estate financing", "desc": "Integrated financing solutions for commercial and residential property ownership or development on competitive terms." },
+      "commercial": { "title": "Commercial financing", "desc": "Cash flow support and working capital financing to ensure continuity and growth of your business." },
+      "facilities": { "title": "Facilities financing", "desc": "Custom programmes for SMEs and major projects with flexible repayment plans." },
+      "restructuring": { "title": "Restructuring", "desc": "Study and restructuring of current financial obligations to improve cash flows and reduce burdens." },
+      "advisory": { "title": "Financial advisory", "desc": "Strategic guidance based on accurate market and financial data analysis for sound investment decisions." },
+      "personal": { "title": "Personal financing", "desc": "Financing solutions for individuals meeting diverse needs with fast, easy procedures." }
+    },
+    "benefits": {
+      "title": "Added",
+      "titleHighlight": "value",
+      "lead": "We do not promise the client only financing; we promise an integrated system working steadily behind them and managing their file with confidence.",
+      "governance": { "title": "Strict governance", "desc": "A regulatory framework ensuring procedural integrity and compliance with regulations." },
+      "security": { "title": "Financial security", "desc": "Full protection of client interests and reduction of potential risks." },
+      "oversight": { "title": "Full oversight", "desc": "Close follow-up of every step in the financing path to ensure quality." },
+      "transparency": { "title": "Full transparency", "desc": "Complete clarity on terms, fees, and obligations with no surprises." },
+      "analysis": { "title": "In-depth analysis", "desc": "Thorough study of financial data to ensure repayment capacity." },
+      "followUp": { "title": "Continuous follow-up", "desc": "Ongoing support even after disbursement to ensure client stability." },
+      "confidentiality": { "title": "Full confidentiality", "desc": "Strict protocols to protect client data and sensitive information." },
+      "quality": { "title": "High quality", "desc": "High professional standards in file preparation and negotiation with institutions." }
+    },
+    "stats": {
+      "badge": "Achievements we are proud of",
+      "title": "Numbers that speak of our",
+      "titleHighlight": "success",
+      "lead": "Real results reflecting our commitment to excellence and our clients' trust",
+      "stage": { "label": "Executive stage", "desc": "Stage studied with precision" },
+      "clients": { "label": "Satisfied clients", "desc": "They trust our services" },
+      "satisfaction": { "label": "Satisfaction rate", "desc": "Client rating" },
+      "experience": { "label": "Years of experience", "desc": "In the financial market" },
+      "projects": { "label": "Successful projects", "desc": "Successfully financed" },
+      "partners": { "label": "Funding partners", "desc": "Strategic partnerships" },
+      "badgeBoard": "Board certified",
+      "badgeGovernance": "100% governance",
+      "badgeTransparency": "Full transparency"
+    },
+    "partners": {
+      "title": "Our partners in success",
+      "lead": "We are proud to partner with leading financial institutions in the Kingdom",
+      "names": ["National Bank", "Al Rajhi Bank", "Riyad Bank", "Banque Saudi Fransi", "Al Bilad Bank", "Bank AlJazira", "Alinma Bank", "Development Fund"]
+    },
+    "whyUs": {
+      "title": "Why choose",
+      "titleHighlight": "KIB?",
+      "lead": "We offer a financial shield that protects the client from risks and ensures a secure path, a considered decision, and a reliable result when facing funders' requirements.",
+      "reason1": "An institutional methodology that does not rely on individual effort.",
+      "reason2": "Strategic financial analysis ensuring repayment capacity.",
+      "reason3": "Executive negotiation that improves terms in the client's favour.",
+      "reason4": "Full protection of data and sensitive information.",
+      "reason5": "Continuous follow-up even after financial closure.",
+      "reason6": "A specialised team of top financial experts.",
+      "successRate": "Success rate",
+      "cta": "Start your journey with us"
+    },
+    "faq": {
+      "badge": "We answer your questions",
+      "title": "Frequently asked questions",
+      "lead": "Comprehensive answers to the most common questions from our clients",
+      "q1": "What is the executive path?",
+      "a1": "The executive path is an integrated institutional methodology of 40 precise stages, ensuring your financing file moves through a studied path built on accurate data, strict assessment, careful planning, calculated negotiation, and closure that leaves no room for error.",
+      "q2": "How long does the financing process take?",
+      "a2": "The duration depends on the type and size of financing and completeness of required documents. It usually ranges from 2–6 weeks for personal financing, and 4–12 weeks for commercial and real estate financing. We strive to speed up the process while maintaining the highest quality standards.",
+      "q3": "Are your services available to all sectors?",
+      "a3": "Yes, we serve all economic sectors including commercial, industrial, real estate, services, and technology. We have broad experience in dealing with each sector's requirements and understanding its specific financing needs.",
+      "q4": "What documents are required?",
+      "a4": "Documents vary by type of financing, but typically include: commercial registration, financial statements, bank statements, lease or ownership contracts, and national ID. Our team will guide you through all requirements in detail.",
+      "q5": "Do you offer post-financing services?",
+      "a5": "Yes, we provide continuous follow-up after disbursement. Our services include: monitoring obligations, recommendations to improve cash flows, restructuring support when needed, and ongoing financial advisory to ensure your business stability.",
+      "q6": "How do you ensure information confidentiality?",
+      "a6": "We apply the highest security and confidentiality standards through: advanced encryption protocols, strict access control to information, binding confidentiality agreements, and certified data protection systems. Our clients' privacy is a top priority.",
+      "support": "Continuous support"
+    },
+    "contactCta": {
+      "badge": "In the voice of the Board",
+      "title": "Financing is not a transaction...",
+      "titleHighlight": "it is a craft managed by methodology and closed with confidence",
+      "lead": "At the end of this path, the KIB board affirms that this executive model was built not merely as a regulatory framework, but as a financial shield that protects the client from risks.",
+      "ctaPrimary": "Start with us today",
+      "ctaSecondary": "Call now",
+      "governance": "Certified governance",
+      "security": "100% security",
+      "confidentiality": "Full confidentiality",
+      "support": "24/7 support",
+      "finalMessage": "Let the executive path become the road that raises your project to a higher level of stability, growth, and competitiveness."
     }
   }
 }

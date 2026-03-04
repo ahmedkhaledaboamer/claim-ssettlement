@@ -2,50 +2,17 @@
 import { useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
-import { ArrowLeft, Sparkles } from 'lucide-react';
-const services = [
-{
-  title: 'التمويل العقاري',
-  desc: 'حلول تمويلية متكاملة لامتلاك أو تطوير العقارات التجارية والسكنية بشروط تنافسية.',
-  img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
-  color: 'teal',
-  icon: '🏢'
-},
-{
-  title: 'التمويل التجاري',
-  desc: 'دعم السيولة النقدية وتمويل رأس المال العامل لضمان استمرارية ونمو أعمالك التجارية.',
-  img: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=600&q=80',
-  color: 'gold',
-  icon: '💼'
-},
-{
-  title: 'تمويل المنشآت',
-  desc: 'برامج مخصصة لدعم الشركات الصغيرة والمتوسطة والمشاريع الكبرى بخطط سداد مرنة.',
-  img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80',
-  color: 'coral',
-  icon: '🏭'
-},
-{
-  title: 'إعادة الهيكلة',
-  desc: 'دراسة وإعادة هيكلة الالتزامات المالية الحالية لتحسين التدفقات النقدية وتخفيف الأعباء.',
-  img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80',
-  color: 'purple',
-  icon: '🔄'
-},
-{
-  title: 'الاستشارات المالية',
-  desc: 'توجيه استراتيجي مبني على تحليل دقيق للسوق والبيانات المالية لاتخاذ قرارات استثمارية صائبة.',
-  img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
-  color: 'fuchsia',
-  icon: '📊'
-},
-{
-  title: 'التمويل الشخصي',
-  desc: 'حلول تمويلية للأفراد تلبي احتياجاتهم المتنوعة بإجراءات سريعة وميسرة.',
-  img: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600&q=80',
-  color: 'green',
-  icon: '👤'
-}];
+import { ArrowLeft, ArrowRight, Sparkles } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
+
+const servicesConfig = [
+  { key: 'realEstate', img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80', color: 'teal', icon: '🏢' },
+  { key: 'commercial', img: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=600&q=80', color: 'gold', icon: '💼' },
+  { key: 'facilities', img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80', color: 'coral', icon: '🏭' },
+  { key: 'restructuring', img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80', color: 'purple', icon: '🔄' },
+  { key: 'advisory', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80', color: 'fuchsia', icon: '📊' },
+  { key: 'personal', img: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600&q=80', color: 'green', icon: '👤' },
+];
 
 const colorConfig = {
   teal: {
@@ -94,13 +61,22 @@ const colorConfig = {
 // 3D Tilt Card Component
 function ServiceCard({
   service,
-  index
-
-
-
-}: {service: (typeof services)[0];index: number;}) {
+  index,
+  title,
+  desc,
+  discoverMore,
+  isRTL,
+}: {
+  service: (typeof servicesConfig)[0];
+  index: number;
+  title: string;
+  desc: string;
+  discoverMore: string;
+  isRTL: boolean;
+}) {
   const cardRef = useRef<HTMLDivElement>(null);
   const config = colorConfig[service.color as keyof typeof colorConfig];
+  const ArrowIcon = isRTL ? ArrowLeft : ArrowRight;
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const mouseXSpring = useSpring(x, {
@@ -154,7 +130,7 @@ function ServiceCard({
         rotateY,
         transformStyle: 'preserve-3d'
       }}
-      className={`group relative bg-white rounded-3xl overflow-hidden shadow-xl ${config.shadow} ${config.glow} transition-all duration-500 border border-gray-100 ${config.border} flex flex-col h-full cursor-pointer`}>
+      className={`group relative bg-white rounded-3xl overflow-hidden shadow-xl ${config.shadow} ${config.glow} transition-all duration-500 border border-gray-100 ${config.border} flex flex-col h-full`}>
 
       {/* Number Badge */}
       <motion.div
@@ -191,7 +167,7 @@ function ServiceCard({
 
         <motion.img
           src={service.img}
-          alt={service.title}
+          alt={title}
           className="w-full h-full object-cover"
           style={{
             transform: 'translateZ(-20px) scale(1.1)'
@@ -206,12 +182,12 @@ function ServiceCard({
 
         {/* Title on image */}
         <motion.h4
-          className="absolute bottom-6 right-6 text-2xl md:text-3xl font-tajawal font-black text-white z-20 drop-shadow-lg"
+          className={`absolute bottom-6 text-2xl md:text-3xl font-tajawal font-black text-white z-20 drop-shadow-lg ${isRTL ? 'right-6' : 'left-6'}`}
           style={{
             transform: 'translateZ(25px)'
-          }}>
-
-          {service.title}
+          }}
+        >
+          {title}
         </motion.h4>
 
         {/* Lens flare effect */}
@@ -231,18 +207,9 @@ function ServiceCard({
         }}>
 
         <p className="text-gray-600 text-base md:text-lg mb-6 flex-1 leading-relaxed">
-          {service.desc}
+          {desc}
         </p>
 
-        <motion.div
-          className="flex items-center text-gold-600 font-bold text-base group-hover:text-gold-500 transition-colors"
-          whileHover={{
-            x: -10
-          }}>
-
-          <span>اكتشف المزيد</span>
-          <ArrowLeft className="w-5 h-5 mr-2 transform group-hover:-translate-x-2 transition-transform" />
-        </motion.div>
       </div>
 
       {/* Shine effect */}
@@ -251,11 +218,14 @@ function ServiceCard({
 
 }
 export function ServicesSection() {
+  const t = useTranslations('executionPage.services');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
   const { ref, controls, variants } = useScrollReveal();
   return (
     <section
       id="services"
-      className="p-[5%] bg-white relative overflow-hidden">
+        className="px-[5%] py-[2%] bg-white relative overflow-hidden">
 
       {/* Subtle Background */}
       <div className="absolute inset-0 z-0">
@@ -291,87 +261,62 @@ export function ServicesSection() {
         }} />
 
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="w-full mx-auto px-4 md:px-8 relative z-10">
         {/* Header */}
         <motion.div
           ref={ref}
           initial="hidden"
           animate={controls}
           variants={variants}
-          className="text-center   mb-20">
-
+          className="text-center mb-20"
+        >
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 20
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gold-500/10 border border-gold-500/30 mb-6">
-
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-gold-500/10 border border-gold-500/30 mb-6"
+          >
             <Sparkles className="w-4 h-4 text-gold-500" />
-            <span className="text-gold-600 font-bold tracking-wider text-sm uppercase">
-              ماذا نقدم
-            </span>
+            <span className="text-gold-600 font-bold tracking-wider text-sm uppercase">{t('badge')}</span>
           </motion.div>
 
           <motion.h2
-            initial={{
-              opacity: 0,
-              y: 30
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              delay: 0.1
-            }}
-            className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-navy-900 mb-6">
-
-            خدماتنا <span className="text-gradient-teal">التمويلية</span>
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-navy-900 mb-6"
+          >
+            {t('title')} <span className="text-gradient-teal">{t('titleHighlight')}</span>
           </motion.h2>
 
           <motion.p
-            initial={{
-              opacity: 0,
-              y: 20
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              delay: 0.2
-            }}
-            className="text-gray-600 text-lg md:text-xl leading-relaxed ">
-
-            نقدم مجموعة متكاملة من الحلول المالية المصممة خصيصاً لتلبية احتياجات
-            قطاع الأعمال والأفراد وفق أعلى معايير الجودة والامتثال.
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-gray-600 text-lg md:text-xl leading-relaxed text-center"
+          >
+            {t('lead')}
           </motion.p>
         </motion.div>
 
         {/* Services Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
-          style={{
-            perspective: '1000px'
-          }}>
-
-          {services.map((service, index) =>
-          <ServiceCard key={index} service={service} index={index} />
-          )}
+          style={{ perspective: '1000px' }}
+        >
+          {servicesConfig.map((service, index) => (
+            <ServiceCard
+              key={service.key}
+              service={service}
+              index={index}
+              title={t(`${service.key}.title`)}
+              desc={t(`${service.key}.desc`)}
+              discoverMore={t('discoverMore')}
+              isRTL={isRTL}
+            />
+          ))}
         </div>
       </div>
     </section>);
