@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
-import { ContentSection as ContentSectionType } from '../data/contentData';
+import { ContentSection as ContentSectionType } from '@/data/contentData';
 interface ContentSectionProps {
   data: ContentSectionType;
   index: number;
