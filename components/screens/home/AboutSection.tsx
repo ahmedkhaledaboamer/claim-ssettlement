@@ -74,11 +74,6 @@ export function AboutSection() {
       src: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80',
       alt: t('images.collaboration', { defaultValue: t('badge') }),
       height: 'h-56'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80',
-      alt: t('images.meeting', { defaultValue: t('badge') }),
-      height: 'h-40'
     }
   ];
 

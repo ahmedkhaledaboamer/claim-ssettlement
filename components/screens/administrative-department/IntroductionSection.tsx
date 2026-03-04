@@ -124,7 +124,7 @@ export function IntroductionSection({ locale }: { locale: string }) {
                 : feature.descriptionEn;
             return (
               <motion.div
-                key={feature.title}
+                key={title}
                 initial={{
                   opacity: 0,
                   y: 30
