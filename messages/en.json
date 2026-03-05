@@ -3,27 +3,27 @@
     "title": "Home Page"
   },
   "seo": {
-    "siteName": "KIB Financing Brokerage",
+    "siteName": "KIB Claims Settlement Services",
     "pages": {
       "home": {
-        "title": "Home | KIB Financing Brokerage – Financing Brokerage & Executive Financial Solutions in UAE",
-        "description": "KIB Financing Brokerage L.L.C connects businesses and entrepreneurs with the right financing in the UAE. We analyze your needs, structure strong financing files, and negotiate optimal terms for commercial, corporate, real estate, and SME funding. Your trusted financial brokerage partner for sustainable growth and financial stability."
+        "title": "Home | KIB Claims Settlement Services – Claims Settlement Services & Executive Financial Solutions in UAE",
+        "description": "KIB Claims Settlement Services L.L.C connects businesses and entrepreneurs with the right financing in the UAE. We analyze your needs, structure strong financing files, and negotiate optimal terms for commercial, corporate, real estate, and SME funding. Your trusted financial brokerage partner for sustainable growth and financial stability."
       },
       "services": {
-        "title": "Services | KIB Financing Brokerage – Commercial, Corporate & SME Financing Solutions",
-        "description": "Explore KIB Financing Brokerage's financing services: commercial brokerage, investment and real estate financing, corporate and SME solutions. We tailor funding options to your business size and goals across the UAE. Professional file preparation, negotiation, and follow-up until approval."
+        "title": "Services | KIB Claims Settlement Services – Commercial, Corporate & SME Financing Solutions",
+        "description": "Explore KIB Claims Settlement Services's financing services: commercial brokerage, investment and real estate financing, corporate and SME solutions. We tailor funding options to your business size and goals across the UAE. Professional file preparation, negotiation, and follow-up until approval."
       },
       "administrativeDepartment": {
-        "title": "Administrative Department | KIB Financing Brokerage – Expert Team & Operational Excellence",
-        "description": "Meet the KIB Financing Brokerage administrative team and our operating system. We ensure quality standards, clear client journeys, and dedicated support for every financing file. Discover our methodology, service levels, and commitment to excellence in the UAE."
+        "title": "Administrative Department | KIB Claims Settlement Services – Expert Team & Operational Excellence",
+        "description": "Meet the KIB Claims Settlement Services administrative team and our operating system. We ensure quality standards, clear client journeys, and dedicated support for every financing file. Discover our methodology, service levels, and commitment to excellence in the UAE."
       },
       "identity": {
-        "title": "Identity | KIB Financing Brokerage – Our Mission, Vision & Values",
-        "description": "Discover KIB Financing Brokerage's identity: our mission, vision, values, and philosophy. We are your trusted financial brokerage partner in the UAE, committed to clarity, strong files, consistent results, fast execution, and complete confidentiality."
+        "title": "Identity | KIB Claims Settlement Services – Our Mission, Vision & Values",
+        "description": "Discover KIB Claims Settlement Services's identity: our mission, vision, values, and philosophy. We are your trusted financial brokerage partner in the UAE, committed to clarity, strong files, consistent results, fast execution, and complete confidentiality."
       },
       "execution": {
-        "title": "Execution | KIB Financing Brokerage – Claim Settlement & Execution Services",
-        "description": "KIB Financing Brokerage execution and claim settlement services in the UAE. From filing to settlement, we guide you through the executive path with expertise in claim execution, benefits, dedicated support, and proven results. Partner with professionals you can trust."
+        "title": "Execution | KIB Claims Settlement Services – Claim Settlement & Execution Services",
+        "description": "KIB Claims Settlement Services execution and claim settlement services in the UAE. From filing to settlement, we guide you through the executive path with expertise in claim execution, benefits, dedicated support, and proven results. Partner with professionals you can trust."
       }
     }
   },
@@ -69,8 +69,8 @@
         { "label": "Execution", "href": "/execution" }
       ]
     },
-    "description": "KIB Financing Brokerage L.L.C — your executive financial arm connecting you with the right funding partner. We analyze your needs, structure a strong financing file, and negotiate optimal terms to secure funding that supports sustainable growth and financial stability.",
-    "copyright": "© 2026 KIB Financing Brokerage L.L.C. All rights reserved.",
+    "description": "KIB Claims Settlement Services L.L.C — your executive financial arm connecting you with the right funding partner. We analyze your needs, structure a strong financing file, and negotiate optimal terms to secure funding that supports sustainable growth and financial stability.",
+    "copyright": "© 2026 KIB Claims Settlement Services L.L.C. All rights reserved.",
     "socialMedia": {
       "linkedin": "LinkedIn",
       "twitter": "Twitter",
@@ -86,7 +86,7 @@
   },
   "home": {
     "hero": {
-      "badge": "KIB Financing Brokerage L.L.C",
+      "badge": "KIB Claims Settlement Services L.L.C",
       "headlineLine1": "We connect you with the right financing...",
       "headlineLine2": "and design for you a financial path that is",
       "headlineHighlight": "secure for growth",
@@ -104,7 +104,7 @@
       "badge": "Get to know us",
       "titleMain": "Who",
       "titleHighlight": "are we?",
-      "lead": "We are a company specialized in financing brokerage, providing advanced financial solutions for companies, entrepreneurs, and investment projects.",
+      "lead": "We are a company specialized in Claims Settlement Services, providing advanced financial solutions for companies, entrepreneurs, and investment projects.",
       "helpIntro": "We help you access the right financing through:",
       "bulletPoints": [
         "Analyzing your financial needs",
@@ -146,36 +146,36 @@
       "badge": "Integrated financing solutions",
       "titleMain": "Our core",
       "titleHighlight": "services",
-      "lead": "We offer a comprehensive financing brokerage system that covers all your financial needs.",
+      "lead": "We offer a comprehensive Claims Settlement Services system that covers all your financial needs.",
       "items": {
         "commercial": {
           "badge": "Commercial",
-          "title": "Commercial financing brokerage",
+          "title": "Commercial Claims Settlement Services",
           "description": "Integrated financing solutions for commercial activities."
         },
         "investment": {
           "badge": "Investment",
-          "title": "Investment financing brokerage",
+          "title": "Investment Claims Settlement Services",
           "description": "Financing for promising investment projects."
         },
         "realEstate": {
           "badge": "Real estate",
-          "title": "Real estate financing brokerage",
+          "title": "Real estate Claims Settlement Services",
           "description": "Financing for property acquisition and development."
         },
         "corporate": {
           "badge": "Corporate",
-          "title": "Corporate financing brokerage",
+          "title": "Corporate Claims Settlement Services",
           "description": "Structured financial solutions for large companies."
         },
         "sme": {
           "badge": "SME",
-          "title": "SME financing brokerage",
+          "title": "SME Claims Settlement Services",
           "description": "Supporting the growth of small and medium enterprises."
         },
         "islamic": {
           "badge": "Islamic",
-          "title": "Islamic financing brokerage",
+          "title": "Islamic Claims Settlement Services",
           "description": "Financing solutions compliant with Islamic Sharia."
         },
         "expansion": {
@@ -205,7 +205,7 @@
         },
         "mergersAcquisitions": {
           "badge": "M&A",
-          "title": "M&A financing brokerage",
+          "title": "M&A Claims Settlement Services",
           "description": "Structuring and financing merger and acquisition deals."
         }
       }
@@ -214,7 +214,7 @@
       "badge": "Real added value",
       "titleMain": "What do",
       "titleHighlight": "we offer?",
-      "lead": "We provide an integrated financing brokerage system that includes everything you need to reach the right financing.",
+      "lead": "We provide an integrated Claims Settlement Services system that includes everything you need to reach the right financing.",
       "hint": "Click any item to learn more.",
       "items": {
         "needsAnalysis": {
@@ -473,7 +473,7 @@
       "headlinePrefix": "Everything you need from",
       "headlineHighlight": "financing services",
       "headlineSuffix": "in one place",
-      "subheadline": "From financing brokerage to advanced financial advisory, we provide more than 30 financing services designed to make it easier for your business to grow and achieve its goals with confidence.",
+      "subheadline": "From Claims Settlement Services to advanced financial advisory, we provide more than 30 financing services designed to make it easier for your business to grow and achieve its goals with confidence.",
       "primaryCta": "Browse services",
       "meta": "+30 financing services • Over 15 years of experience",
       "cardTitle": "2B+ AED in completed financing",
@@ -505,7 +505,7 @@
       "lead": "We provide a complete range of financing solutions tailored to the needs of individuals and companies of all sizes.",
       "services": {
         "financeBrokerage": {
-          "title": "Financing brokerage",
+          "title": "Claims Settlement Services",
           "description": "We connect you with the right funding institutions on the best possible terms.",
           "feature1": "Needs analysis",
           "feature2": "Professional financing file preparation",
@@ -562,7 +562,7 @@
           "feature3": "Shipment follow‑up"
         },
         "investmentFinance": {
-          "title": "Investment financing brokerage",
+          "title": "Investment Claims Settlement Services",
           "description": "We connect you with the right investor at the right time.",
           "feature1": "Investment deal structuring",
           "feature2": "Strategic partnerships",
@@ -740,7 +740,7 @@
   },
   "identityPage": {
     "hero": {
-      "badge": "KIB Financing Brokerage",
+      "badge": "KIB Claims Settlement Services",
       "exploreCta": "Explore our identity",
       "journeyCta": "Client journey",
       "scrollAria": "Scroll down",
@@ -783,7 +783,7 @@
       "intro": {
         "title": "Introduction",
         "content": [
-          "Amid rapid shifts in the financial sector, growing requirements from funders, and more complex approval criteria, the board of KIB Financing Brokerage announces a financial identity designed with care, shaped by methodology, and built on solid foundations of experience and discipline. Our identity rests on a clear conviction: that financing is not an administrative step but a strategic decision that shapes the future of companies. From this standpoint, we have adopted an operational model that ensures the client financial clarity, a calculated path, a strong file, and a result that can be relied on.",
+          "Amid rapid shifts in the financial sector, growing requirements from funders, and more complex approval criteria, the board of KIB Claims Settlement Services announces a financial identity designed with care, shaped by methodology, and built on solid foundations of experience and discipline. Our identity rests on a clear conviction: that financing is not an administrative step but a strategic decision that shapes the future of companies. From this standpoint, we have adopted an operational model that ensures the client financial clarity, a calculated path, a strong file, and a result that can be relied on.",
           "KIB is not just a broker… it is a financial entity with a vision, a methodology, and operational capacity managed at board level."
         ]
       },
@@ -939,7 +939,7 @@
     "hero": {
       "title": "Executive Path",
       "subtitle": "An operational framework managed by governance, executed with discipline, and closed with confidence — Board of Directors",
-      "badge": "KIB Financing",
+      "badge": "KIB Claims Settlement Services",
       "ctaPrimary": "Start your financing journey",
       "ctaSecondary": "Discover the path",
       "scrollMore": "Discover more",

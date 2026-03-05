@@ -82,8 +82,9 @@ export default function MobileNavbar() {
     if (!isOpen) openButtonRef.current?.focus({ preventScroll: true });
   }, [isOpen]);
 
-  const panelSide = isRTL ? "left-0" : "right-0";
-  const slideFrom = isRTL ? "-100%" : "100%";
+  // Arabic: panel from right, slide in from right. English: panel from left, slide in from left.
+  const panelSide = isRTL ? "right-0" : "left-0";
+  const slideFrom = isRTL ? "100%" : "-100%";
 
   return (
     <div className="md:hidden relative" dir={isRTL ? "rtl" : "ltr"}>
@@ -122,13 +123,14 @@ export default function MobileNavbar() {
                   animate={{ x: 0 }}
                   exit={{ x: slideFrom }}
                   transition={panelTransition}
+                  dir={isRTL ? "rtl" : "ltr"}
                   className={cn(
                     "absolute top-0 bottom-0 w-80 max-w-[85vw] bg-(--color-navy-dark) shadow-2xl flex flex-col",
                     panelSide
                   )}
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="flex items-center justify-between px-4 py-4 border-b border-white/10 shrink-0">
+                  <div className={cn("flex items-center justify-between px-4 py-4 border-b border-white/10 shrink-0", isRTL ? "flex-row-reverse" : "")}>
                     <Logo className="w-24 h-auto" size={80} />
                     <button
                       type="button"
@@ -140,7 +142,7 @@ export default function MobileNavbar() {
                     </button>
                   </div>
 
-                  <nav className="flex-1 overflow-y-auto px-6 py-6" aria-label={t("navMenu")}>
+                  <nav className={cn("flex-1 overflow-y-auto px-6 py-6", isRTL ? "text-right" : "text-left")} aria-label={t("navMenu")}>
                     <ul className="space-y-1">
                       {routes.map((route, index) => (
                         <motion.li
@@ -157,6 +159,7 @@ export default function MobileNavbar() {
                             onClick={closeMenu}
                             className={cn(
                               "block font-tajawal text-lg py-3 px-2 -mx-2 rounded-lg transition-colors",
+                              isRTL ? "text-right" : "text-left",
                               isActive(route.href)
                                 ? "text-gold font-semibold bg-gold/10"
                                 : "text-white/80 hover:text-gold hover:bg-white/5"
@@ -172,7 +175,7 @@ export default function MobileNavbar() {
                     </div>
                   </nav>
 
-                  <div className="px-6 py-4 border-t border-white/10 shrink-0">
+                  <div className={cn("px-6 py-4 border-t border-white/10 shrink-0", isRTL ? "text-right" : "text-left")}>
                     <Link
                       href="/implementation-mechanism"
                       onClick={closeMenu}

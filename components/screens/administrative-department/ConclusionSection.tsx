@@ -338,7 +338,7 @@ export function ConclusionSection({ locale }: { locale: string }) {
               ? 'Conseil d’administration'
               : 'Board of Directors'}
           </div>
-          <div className="text-slate-500 text-sm">KIB Financing Brokerage</div>
+          <div className="text-slate-500 text-sm">KIB Claims Settlement Services Brokerage</div>
         </motion.div>
       </div>
     </section>);

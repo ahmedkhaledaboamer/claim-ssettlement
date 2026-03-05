@@ -89,7 +89,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
 
           <SparklesIcon className="w-4 h-4 text-teal-600" />
           <span className="text-fluid-label text-slate-600">
-            KIB Financing Brokerage
+            KIB Claims Settlement Services Brokerage
           </span>
         </motion.div>
 

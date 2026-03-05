@@ -3,27 +3,27 @@
     "title": "Page d'accueil"
   },
   "seo": {
-    "siteName": "KIB Financing Brokerage",
+    "siteName": "KIB Claims Settlement Services",
     "pages": {
       "home": {
-        "title": "Accueil | KIB Financing Brokerage – Médiation de financement et solutions financières exécutives aux EAU",
-        "description": "KIB Financing Brokerage L.L.C connecte les entreprises et les entrepreneurs au financement adapté aux EAU. Nous analysons vos besoins, structurons des dossiers de financement solides et négocions les meilleures conditions pour le financement commercial, corporate, immobilier et PME. Votre partenaire de médiation financière pour une croissance durable et une stabilité financière."
+        "title": "Accueil | KIB Claims Settlement Services – Médiation de financement et solutions financières exécutives aux EAU",
+        "description": "KIB Claims Settlement Services L.L.C connecte les entreprises et les entrepreneurs au financement adapté aux EAU. Nous analysons vos besoins, structurons des dossiers de financement solides et négocions les meilleures conditions pour le financement commercial, corporate, immobilier et PME. Votre partenaire de médiation financière pour une croissance durable et une stabilité financière."
       },
       "services": {
-        "title": "Services | KIB Financing Brokerage – Solutions de financement commercial, corporate et PME",
-        "description": "Découvrez les services de financement de KIB Financing Brokerage : médiation commerciale, financement d'investissement et immobilier, solutions corporate et PME. Nous adaptons les options de financement à la taille et aux objectifs de votre entreprise aux EAU. Préparation de dossiers, négociation et suivi jusqu'à l'acceptation."
+        "title": "Services | KIB Claims Settlement Services – Solutions de financement commercial, corporate et PME",
+        "description": "Découvrez les services de financement de KIB Claims Settlement Services : médiation commerciale, financement d'investissement et immobilier, solutions corporate et PME. Nous adaptons les options de financement à la taille et aux objectifs de votre entreprise aux EAU. Préparation de dossiers, négociation et suivi jusqu'à l'acceptation."
       },
       "administrativeDepartment": {
-        "title": "Département administratif | KIB Financing Brokerage – Équipe d'experts et excellence opérationnelle",
-        "description": "Découvrez l'équipe administrative de KIB Financing Brokerage et notre système opérationnel. Nous garantissons des normes de qualité, des parcours clients clairs et un accompagnement dédié pour chaque dossier de financement aux EAU. Méthodologie, niveaux de service et engagement envers l'excellence."
+        "title": "Département administratif | KIB Claims Settlement Services – Équipe d'experts et excellence opérationnelle",
+        "description": "Découvrez l'équipe administrative de KIB Claims Settlement Services et notre système opérationnel. Nous garantissons des normes de qualité, des parcours clients clairs et un accompagnement dédié pour chaque dossier de financement aux EAU. Méthodologie, niveaux de service et engagement envers l'excellence."
       },
       "identity": {
-        "title": "Identité | KIB Financing Brokerage – Notre mission, vision et valeurs",
-        "description": "Découvrez l'identité de KIB Financing Brokerage : notre mission, vision, valeurs et philosophie. Nous sommes votre partenaire de médiation financière de confiance aux EAU, engagés pour la clarté, des dossiers solides, des résultats constants, une exécution rapide et une confidentialité totale."
+        "title": "Identité | KIB Claims Settlement Services – Notre mission, vision et valeurs",
+        "description": "Découvrez l'identité de KIB Claims Settlement Services : notre mission, vision, valeurs et philosophie. Nous sommes votre partenaire de médiation financière de confiance aux EAU, engagés pour la clarté, des dossiers solides, des résultats constants, une exécution rapide et une confidentialité totale."
       },
       "execution": {
-        "title": "Exécution | KIB Financing Brokerage – Règlement de créances et services d'exécution",
-        "description": "Services d'exécution et de règlement de créances KIB Financing Brokerage aux EAU. Du dépôt du dossier au règlement, nous vous accompagnons sur le parcours exécutif avec une expertise en exécution de créances, avantages, soutien dédié et résultats éprouvés. Un partenaire de confiance."
+        "title": "Exécution | KIB Claims Settlement Services – Règlement de créances et services d'exécution",
+        "description": "Services d'exécution et de règlement de créances KIB Claims Settlement Services aux EAU. Du dépôt du dossier au règlement, nous vous accompagnons sur le parcours exécutif avec une expertise en exécution de créances, avantages, soutien dédié et résultats éprouvés. Un partenaire de confiance."
       }
     }
   },
@@ -69,8 +69,8 @@
         { "label": "Exécution", "href": "/execution" }
       ]
     },
-    "description": "KIB Financing Brokerage L.L.C — votre bras financier exécutif, vous reliant au partenaire de financement approprié. Nous analysons vos besoins, structurons un dossier solide et négocions les meilleures conditions afin de sécuriser un financement soutenant votre croissance durable et votre stabilité financière.",
-    "copyright": "© 2026 KIB Financing Brokerage L.L.C. Tous droits réservés.",
+    "description": "KIB Claims Settlement Services L.L.C — votre bras financier exécutif, vous reliant au partenaire de financement approprié. Nous analysons vos besoins, structurons un dossier solide et négocions les meilleures conditions afin de sécuriser un financement soutenant votre croissance durable et votre stabilité financière.",
+    "copyright": "© 2026 KIB Claims Settlement Services L.L.C. Tous droits réservés.",
     "socialMedia": {
       "linkedin": "LinkedIn",
       "twitter": "Twitter",
@@ -86,7 +86,7 @@
   },
   "home": {
     "hero": {
-      "badge": "KIB Financing Brokerage L.L.C",
+      "badge": "KIB Claims Settlement Services L.L.C",
       "headlineLine1": "Nous vous relions au financement adéquat...",
       "headlineLine2": "et nous traçons pour vous un parcours financier",
       "headlineHighlight": "sécurisé pour la croissance",
