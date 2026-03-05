@@ -141,7 +141,7 @@ export function IntroductionSection({ locale }: { locale: string }) {
 
                 <div className="bg-white rounded-2xl overflow-hidden h-full border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
                   {/* Feature Image */}
-                  <div className="relative h-36 md:h-44 min-h-[180px] overflow-hidden">
+                  <div className="relative h-[clamp(180px,22vw,600px)]   overflow-hidden">
                     <img
                       src={feature.image}
                     alt={title}

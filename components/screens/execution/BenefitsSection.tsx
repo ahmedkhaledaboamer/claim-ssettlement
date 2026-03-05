@@ -212,31 +212,31 @@ export function BenefitsSection() {
             className="lg:w-1/3 hidden lg:block">
 
             <div className="space-y-6">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl min-h-[260px]">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl  ">
                 <img
                   src="/imgs/A longterm capital partnership/image_9.webp"
                   alt="Modern Office"
                   width={600}
                   height={400}
-                  className="w-full h-64 min-h-[260px] object-cover" />
+                  className="w-full h-64 xl:h-80 2xl:h-120 object-cover" />
 
               </div>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl min-h-[200px]">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl  ">
                 <img
                   src="/imgs/A longterm investment concept/image_29.webp"
                   alt="Financial Analysis"
                   width={600}
                   height={400}
-                  className="w-full h-48 min-h-[200px] object-cover" />
+                  className="w-full h-48 xl:h-64 2xl:h-80 object-cover" />
 
               </div>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl min-h-[220px]">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl ">
                 <img
                   src="/imgs/A luxurious executive financia/image_39.webp"
                   alt="Team Collaboration"
                   width={600}
                   height={400}
-                  className="w-full h-56 min-h-[220px] object-cover" />
+                  className="w-full h-56 xl:h-72 2xl:h-96 object-cover" />
 
               </div>
             </div>

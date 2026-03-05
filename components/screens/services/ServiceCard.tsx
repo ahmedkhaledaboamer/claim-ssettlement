@@ -109,7 +109,7 @@ export function ServiceCard({
       className="group relative bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
 
       {/* Image Section */}
-      <div className="relative h-[clamp(180px,22vw,280px)] min-h-[180px] overflow-hidden">
+      <div className="relative h-[clamp(180px,22vw,600px)]   overflow-hidden">
         <img
           src={image}
           alt={title}

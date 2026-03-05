@@ -220,7 +220,7 @@ export function WhatWeDoSection({ locale }: { locale: string }) {
                 className="group relative bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
 
                 {/* Service Image */}
-                <div className="relative h-32 md:h-40 min-h-[160px] overflow-hidden">
+                <div className="relative h-[clamp(180px,22vw,500px)]   overflow-hidden">
                   <Image
                     src={service.image}
                     alt={title}

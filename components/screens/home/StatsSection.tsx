@@ -248,7 +248,7 @@ export function StatsSection() {
         </motion.div>
 
         {/* Stats Grid - First Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 mb-8">
           {stats.slice(0, 4).map((stat, index) => (
             <StatCard
               key={stat.id}
@@ -284,7 +284,7 @@ export function StatsSection() {
 
 
         {/* Stats Grid - Second Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6">
           {stats.slice(4).map((stat, index) => (
             <StatCard
               key={stat.id}

@@ -320,7 +320,7 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
       id="identity-section"
       className="p-[5%] relative overflow-hidden">
 
-      <div className="absolute inset-0 z-0 min-h-[400px]">
+      <div className="absolute inset-0 z-0 h-[400px] md:h-[600px] xl:h-[800px] 2xl:h-[1000px]">
         <img
           src={images.identity}
           alt=""
@@ -342,7 +342,7 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
             variants={fadeInRight}>
 
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.18)] h-[380px] md:h-[480px]">
+              <div className="rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.18)] h-[380px] md:h-[400px] xl:h-[600px] 2xl:h-[800px]">
                 <img
                   src={images.identity}
                   alt="Modern Office"
@@ -368,7 +368,7 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
                   type: 'spring',
                   stiffness: 200
                 }}
-                className="absolute -bottom-8 -left-6 w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.25)] border-4 border-white">
+                className="absolute -bottom-8 -left-6 w-40 h-40 md:w-48 md:h-48 xl:w-64 xl:h-64 rounded-2xl overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.25)] border-4 border-white">
 
                 <img
                   src={images.identityExtra}
@@ -504,7 +504,7 @@ function PhilosophySection({ data }: {data: ContentSectionType;}) {
             }}
             variants={scaleIn}>
 
-            <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.14)] h-[400px] md:h-[520px]">
+            <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.14)] h-[400px] md:h-[400px] xl:h-[600px] 2xl:h-[800px]">
               <Image
                 src={images.philosophy}
                 alt="Financial Analysis"
@@ -584,7 +584,7 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
             }}
             className="bg-white/80 backdrop-blur-md rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.14)] transition-shadow duration-400 overflow-hidden group border border-white/60">
 
-                <div className="relative h-48 md:h-56 overflow-hidden">
+                <div className="relative h-48 md:h-56 xl:h-72 2xl:h-120 overflow-hidden">
                   <Image
                     width={1200}
                     height={800}
@@ -679,7 +679,7 @@ function VisionSection({ data }: {data: ContentSectionType;}) {
             }}
             className="bg-white p-6 rounded-3xl shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_44px_rgba(0,0,0,0.12)] border border-gray-100 transition-shadow duration-300 group">
 
-                <div className="w-full h-44 rounded-2xl overflow-hidden mb-6 relative shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
+                <div className="w-full h-44 xl:h-60 2xl:h-120 rounded-2xl overflow-hidden mb-6 relative shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
                   <Image
                     width={1200}
                     height={800}
@@ -787,7 +787,7 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
                           [isEven ? 'right' : 'left']: '-2.75rem'
                         }} />
 
-                        <div className="h-40 md:h-48 w-full overflow-hidden relative">
+                        <div className="h-40 md:h-48 xl:h-60 2xl:h-120 w-full overflow-hidden relative">
                           <Image
                             width={1200}
                             height={800}
@@ -876,7 +876,7 @@ function ReadingSection({ data }: {data: ContentSectionType;}) {
 
   return (
     <section id="reading" className="p-[5%] relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 h-[400px] md:h-[600px] xl:h-[800px] 2xl:h-[1000px]">
         <Image
           width={1200}
           height={800}
@@ -1031,7 +1031,7 @@ function BuildingSection({ data }: {data: ContentSectionType;}) {
                 transition={{
                   delay: 0.2
                 }}
-                className="rounded-2xl overflow-hidden shadow-[0_12px_36px_rgba(0,0,0,0.1)] h-48 md:h-64 mb-8">
+                className="rounded-2xl overflow-hidden shadow-[0_12px_36px_rgba(0,0,0,0.1)] h-48 md:h-64 xl:h-80 2xl:h-120 mb-8">
 
                 <Image
                   width={1200}
@@ -1078,7 +1078,7 @@ function BuildingSection({ data }: {data: ContentSectionType;}) {
 
             <motion.div
               variants={scaleIn}
-              className="mb-8 rounded-3xl overflow-hidden shadow-[0_20px_55px_rgba(0,0,0,0.12)] h-72 md:h-96">
+              className="mb-8 rounded-3xl overflow-hidden shadow-[0_20px_55px_rgba(0,0,0,0.12)] h-72 md:h-96 xl:h-120 2xl:h-160">
 
               <Image
                 width={1200}
@@ -1452,7 +1452,7 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
             }}
             variants={scaleIn}>
 
-            <div className="rounded-3xl overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.35)] h-[400px] md:h-[520px]">
+            <div className="rounded-3xl overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.35)] h-[400px] md:h-[400px] xl:h-[600px] 2xl:h-[800px]">
               <Image
                 width={1200}
                 height={800}

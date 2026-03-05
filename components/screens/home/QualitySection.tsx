@@ -303,7 +303,7 @@ export function QualitySection() {
         </div>
 
         {/* Three Columns with Hexagonal Grids */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Quality Standards */}
           <div>
             <CategoryHeader

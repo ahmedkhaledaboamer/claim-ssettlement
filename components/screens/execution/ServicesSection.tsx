@@ -161,7 +161,7 @@ function ServiceCard({
       </motion.div>
 
       {/* Image Container */}
-      <div className="relative h-56 md:h-72 min-h-[240px] overflow-hidden">
+      <div className="relative h-56 md:h-72 xl:h-96 2xl:h-120 overflow-hidden">
         <motion.div
           className={`absolute inset-0 bg-gradient-to-t ${config.overlay} to-transparent z-10 transition-opacity duration-500`} />
 

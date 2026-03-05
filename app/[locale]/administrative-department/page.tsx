@@ -26,8 +26,7 @@ export default function AdministrativeApparatusPage() {
         <div className="section-divider" />
         <IntroductionSection locale={locale} />
         <div className="section-divider" />
-        <TeamShowcase locale={locale} />
-        <div className="section-divider" />
+          <div className="section-divider" />
         <WhatWeDoSection locale={locale} />
         <div className="section-divider" />
         <ClientJourneySection locale={locale} />

@@ -97,7 +97,7 @@ export function WhyUsSection() {
                   alt="Business Handshake"
                   width={800}
                   height={500}
-                  className="w-full h-80 min-h-[320px] object-cover" />
+                  className="w-full h-80 xl:h-96 2xl:h-120 object-cover" />
 
               </div>
 
@@ -109,7 +109,7 @@ export function WhyUsSection() {
                   alt="Team Collaboration"
                   width={800}
                   height={500}
-                  className="w-full h-64 min-h-[260px] object-cover" />
+                  className="w-full h-80 xl:h-80 2xl:h-120 object-cover" />
 
               </div>
             </div>

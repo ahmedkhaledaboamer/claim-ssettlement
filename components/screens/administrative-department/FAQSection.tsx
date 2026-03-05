@@ -235,7 +235,7 @@ export function FAQSection({ locale }: { locale: string }) {
           <div className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md">
             <div className="grid md:grid-cols-2">
               {/* Image Side */}
-              <div className="relative h-56 md:h-72 min-h-[280px]">
+              <div className="relative h-56 md:h-72 xl:h-94  2xl:h-120 ">
                 <Image
                   src="/imgs/A refined executive reception/image_78.webp"
                   alt="فريق الدعم"

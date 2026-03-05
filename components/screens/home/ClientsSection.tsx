@@ -187,10 +187,10 @@ function BentoCard({
         duration: 0.6,
         delay: index * 0.1
       }}
-      className={`relative rounded-3xl overflow-hidden group ${sizeClasses[client.size as keyof typeof sizeClasses]} ${client.size === 'large' ? 'min-h-[300px] md:min-h-[400px]' : client.size === 'medium' ? 'min-h-[250px] md:min-h-[400px]' : 'min-h-[200px]'}`}>
+      className={`relative rounded-3xl overflow-hidden group ${sizeClasses[client.size as keyof typeof sizeClasses]} ${client.size === 'large' ? 'min-h-[400px] md:min-h-[600px]' : client.size === 'medium' ? 'min-h-[250px] md:min-h-[400px]' : 'min-h-[200px]'}`}>
 
       {/* Background Image */}
-      <div className="absolute inset-0 min-h-[200px]">
+      <div className="absolute inset-0  ">
         <Image
           width={600}
           height={400}
@@ -320,7 +320,7 @@ export function ClientsSection() {
         </div>
 
         {/* Bento Grid - Desktop */}
-        <div className="hidden md:grid grid-cols-4 grid-rows-4 gap-4 lg:gap-6">
+        <div className="hidden  md:grid md:grid-cols-2 lg:grid-cols-4 grid-rows-4 gap-4 lg:gap-6">
           {clientTypes.map((client, index) =>
           <BentoCard key={index} client={client} index={index} />
           )}

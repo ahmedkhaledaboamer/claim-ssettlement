@@ -107,7 +107,7 @@ export function ClientTypesSection({ locale }: { locale: string }) {
                 }}>
 
                 {/* Client Image */}
-                <div className="relative h-40 md:h-48 min-h-[200px] overflow-hidden">
+                <div className="relative h-40 md:h-48 xl:h-94 overflow-hidden">
                   <Image
                     src={clientImages[client.id]}
                     alt={title}
