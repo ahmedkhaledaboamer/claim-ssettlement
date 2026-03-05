@@ -61,17 +61,17 @@ export function AboutSection() {
 
   const images = [
     {
-      src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
+      src: '/imgs/101 A secure information manag/image_18.webp',
       alt: t('images.team', { defaultValue: t('badge') }),
       height: 'h-72'
     },
     {
-      src: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80',
+      src: '/imgs/102 An executive reporting stu/image_8.webp',
       alt: t('images.workspace', { defaultValue: t('badge') }),
       height: 'h-48'
     },
     {
-      src: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80',
+      src: '/imgs/103 A continuous compliance op/image_19.webp',
       alt: t('images.collaboration', { defaultValue: t('badge') }),
       height: 'h-56'
     }
@@ -171,11 +171,12 @@ export function AboutSection() {
                   whileHover={{
                     scale: 1.03
                   }}
-                  className={`relative overflow-hidden rounded-2xl shadow-xl group ${image.height} ${index === 0 ? 'col-span-2' : ''}`}>
+                  className={`relative overflow-hidden rounded-2xl shadow-xl group min-h-[200px] ${index === 0 ? 'min-h-[280px] col-span-2' : ''} ${image.height}`}>
 
                     <Image
-                    width={100}
-                    height={100}
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     src={image.src}
                     alt={image.alt}
                     className="w-full h-full object-cover img-fluid-cover transition-transform duration-500 group-hover:scale-110" />
@@ -208,11 +209,12 @@ export function AboutSection() {
               className="relative bg-white rounded-3xl p-8 md:p-10 shadow-xl border-r-4 border-teal-500 h-full overflow-hidden group">
 
               {/* Background Image */}
-              <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
+              <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity min-h-[200px]">
                 <Image
-                  width={100}
-                  height={100}
-                  src="https://images.unsplash.com/photo-1507679799987-c73b7651ba67?w=600&q=80"
+                  width={800}
+                  height={600}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  src="/imgs/104 An integrityfocused corpor/image_9.webp"
                   alt=""
                   className="w-full h-full object-cover img-fluid-cover" />
 
@@ -245,11 +247,12 @@ export function AboutSection() {
               className="relative bg-white rounded-3xl p-8 md:p-10 shadow-xl border-r-4 border-gold-500 h-full overflow-hidden group">
 
               {/* Background Image */}
-              <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
+              <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity min-h-[200px]">
                 <Image
-                  width={100}
-                  height={100}
-                  src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80"
+                  width={800}
+                  height={600}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  src="/imgs/105 A longterm institutional r/image_20.webp"
                   alt=""
                   className="w-full h-full object-cover img-fluid-cover" />
 

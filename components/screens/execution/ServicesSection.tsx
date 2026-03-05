@@ -6,12 +6,12 @@ import { ArrowLeft, ArrowRight, Sparkles } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 
 const servicesConfig = [
-  { key: 'realEstate', img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80', color: 'teal', icon: '🏢' },
-  { key: 'commercial', img: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?w=600&q=80', color: 'gold', icon: '💼' },
-  { key: 'facilities', img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80', color: 'coral', icon: '🏭' },
-  { key: 'restructuring', img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80', color: 'purple', icon: '🔄' },
-  { key: 'advisory', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80', color: 'fuchsia', icon: '📊' },
-  { key: 'personal', img: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600&q=80', color: 'green', icon: '👤' },
+  { key: 'realEstate', img: '/imgs/A corporate expansion visualiz/image_18.webp', color: 'teal', icon: '🏢' },
+  { key: 'commercial', img: '/imgs/A corporate refinancing concep/image_38.webp', color: 'gold', icon: '💼' },
+  { key: 'facilities', img: '/imgs/A corporate refinancing concep/image_45.webp', color: 'coral', icon: '🏭' },
+  { key: 'restructuring', img: '/imgs/A financial restructuring conc/image_19.webp', color: 'purple', icon: '🔄' },
+  { key: 'advisory', img: '/imgs/A financial forecasting center/image_51.webp', color: 'fuchsia', icon: '📊' },
+  { key: 'personal', img: '/imgs/A financial optimization visua/image_17.webp', color: 'green', icon: '👤' },
 ];
 
 const colorConfig = {
@@ -161,13 +161,15 @@ function ServiceCard({
       </motion.div>
 
       {/* Image Container */}
-      <div className="relative h-56 md:h-64 overflow-hidden">
+      <div className="relative h-56 md:h-72 min-h-[240px] overflow-hidden">
         <motion.div
           className={`absolute inset-0 bg-gradient-to-t ${config.overlay} to-transparent z-10 transition-opacity duration-500`} />
 
         <motion.img
           src={service.img}
           alt={title}
+          width={600}
+          height={400}
           className="w-full h-full object-cover"
           style={{
             transform: 'translateZ(-20px) scale(1.1)'
@@ -228,11 +230,13 @@ export function ServicesSection() {
         className="px-[5%] py-[2%] bg-white relative overflow-hidden">
 
       {/* Subtle Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 min-h-[320px]">
         <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=20"
+          src="/imgs/A financial restructuring envi/image_7.webp"
           alt=""
-          className="w-full h-full object-cover opacity-[0.02]" />
+          width={1920}
+          height={1080}
+          className="w-full h-full object-cover opacity-[0.02] min-h-[320px]" />
 
       </div>
 

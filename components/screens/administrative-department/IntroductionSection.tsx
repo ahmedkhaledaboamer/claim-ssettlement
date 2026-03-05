@@ -19,8 +19,7 @@ const features = [
   descriptionFr:
   'Un système opérationnel rigoureux qui garantit la précision à chaque étape.',
   color: '#0E7490',
-  image:
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop'
+  image: '/imgs/A refined financial identity w/image_0.webp'
 },
 {
   icon: UsersIcon,
@@ -31,8 +30,7 @@ const features = [
   descriptionEn: 'Experts in every major field of financing.',
   descriptionFr: 'Des experts dans chaque grand domaine du financement.',
   color: '#0F52BA',
-  image:
-  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop'
+  image: '/imgs/A refined real estate financin/image_22.webp'
 },
 {
   icon: ShieldCheckIcon,
@@ -43,8 +41,7 @@ const features = [
   descriptionEn: 'Complete protection of your financial information.',
   descriptionFr: 'Protection complète de vos informations financières.',
   color: '#DC143C',
-  image:
-  'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop'
+  image: '/imgs/A resultsoriented visualizatio/image_62.webp'
 },
 {
   icon: TrendingUpIcon,
@@ -55,8 +52,7 @@ const features = [
   descriptionEn: 'A success rate exceeding 94% across files.',
   descriptionFr: 'Un taux de réussite supérieur à 94 % sur les dossiers.',
   color: '#D97706',
-  image:
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop'
+  image: '/imgs/A risk management control room/image_24.webp'
 }];
 
 export function IntroductionSection({ locale }: { locale: string }) {
@@ -145,10 +141,12 @@ export function IntroductionSection({ locale }: { locale: string }) {
 
                 <div className="bg-white rounded-2xl overflow-hidden h-full border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
                   {/* Feature Image */}
-                  <div className="relative h-32 overflow-hidden">
+                  <div className="relative h-36 md:h-44 min-h-[180px] overflow-hidden">
                     <img
                       src={feature.image}
                     alt={title}
+                      width={500}
+                      height={320}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       loading="lazy" />
 
@@ -220,9 +218,9 @@ export function IntroductionSection({ locale }: { locale: string }) {
           }}
           className="mt-16">
 
-          <div className="relative  rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative rounded-2xl overflow-hidden shadow-lg min-h-[280px]">
             <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=500&fit=crop"
+              src="/imgs/A seamless financial closure e/image_3.webp"
               alt={
                 locale === 'ar'
                   ? 'فريق العمل في اجتماع'
@@ -230,7 +228,9 @@ export function IntroductionSection({ locale }: { locale: string }) {
                   ? 'Équipe en réunion'
                   : 'Team in a meeting'
               }
-              className="w-full h-64 md:h-80 object-cover"
+              width={1200}
+              height={600}
+              className="w-full h-64 md:h-80 min-h-[280px] object-cover"
               loading="lazy" />
 
             <div className="absolute inset-0 bg-gradient-to-t from-teal-900/60 via-teal-900/20 to-transparent" />

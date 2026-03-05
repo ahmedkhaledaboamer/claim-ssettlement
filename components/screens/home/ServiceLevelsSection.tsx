@@ -20,48 +20,42 @@ const serviceLevels = [
     icon: FileTextIcon,
     highlighted: false,
     color: 'teal',
-    image:
-      'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80'
+    image: '/imgs/113 A funding performance eval/image_27.webp'
   },
   {
     id: 'advanced',
     icon: TrendingUpIcon,
     highlighted: false,
     color: 'coral',
-    image:
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80'
+    image: '/imgs/114 An innovation lab for fina/image_28.webp'
   },
   {
     id: 'executive',
     icon: CrownIcon,
     highlighted: true,
     color: 'gold',
-    image:
-      'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80'
+    image: '/imgs/115 A challenge management pla/image_29.webp'
   },
   {
     id: 'strategic',
     icon: TargetIcon,
     highlighted: false,
     color: 'purple',
-    image:
-      'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80'
+    image: '/imgs/116 An advanced financial advi/image_30.webp'
   },
   {
     id: 'businessOwners',
     icon: ShieldIcon,
     highlighted: false,
     color: 'navy',
-    image:
-      'https://images.unsplash.com/photo-1507679799987-c73b7651ba67?w=600&q=80'
+    image: '/imgs/117 A final evaluation chamber/image_31.webp'
   },
   {
     id: 'strategicPartnership',
     icon: RocketIcon,
     highlighted: false,
     color: 'indigo',
-    image:
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80'
+    image: '/imgs/118 A powerful boardlevel conc/image_32.webp'
   }
 ];
 
@@ -71,13 +65,14 @@ export function ServiceLevelsSection() {
   return (
     <section className="relative section-padding overflow-hidden px-[5%] py-[2%]">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 min-h-[280px]">
         <Image
-          width={100}
-          height={100}
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
+          width={1920}
+          height={1080}
+          sizes="100vw"
+          src="/imgs/12 A trustbased operational en/image_11.webp"
           alt={t('badge')}
-          className="w-full h-full object-cover opacity-5" />
+          className="w-full h-full object-cover opacity-5 min-h-[280px]" />
 
         <div className="absolute inset-0 bg-gradient-to-b from-champagne to-alabaster" />
       </div>
@@ -136,10 +131,11 @@ export function ServiceLevelsSection() {
 
                   <div className="relative z-10 h-full flex flex-col">
                     {/* Header Image */}
-                    <div className="h-40 w-full relative overflow-hidden">
+                    <div className="h-44 md:h-52 w-full relative overflow-hidden min-h-[200px]">
                       <Image
-                        width={100}
-                        height={100}
+                        width={600}
+                        height={400}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
                         src={level.image}
                         alt={levelsT(`${level.id}.title`)}
                         className="w-full h-full object-cover img-fluid-cover transition-transform duration-500 group-hover:scale-105" />

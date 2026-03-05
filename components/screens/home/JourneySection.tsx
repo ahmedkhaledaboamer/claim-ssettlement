@@ -18,56 +18,49 @@ const journeySteps = [
     id: 'discovery',
     number: '01',
     icon: MessageSquareIcon,
-    image:
-      'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&q=80',
+    image: '/imgs/106 A future risk management v/image_10.webp',
     color: 'teal'
   },
   {
     id: 'evaluation',
     number: '02',
     icon: BarChart3Icon,
-    image:
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&q=80',
+    image: '/imgs/107 An innovationdriven execut/image_21.webp',
     color: 'gold'
   },
   {
     id: 'lenderSelection',
     number: '03',
     icon: SearchIcon,
-    image:
-      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&q=80',
+    image: '/imgs/108 An advanced analytics plat/image_22.webp',
     color: 'coral'
   },
   {
     id: 'filePreparation',
     number: '04',
     icon: FileTextIcon,
-    image:
-      'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=300&q=80',
+    image: '/imgs/109 A financial forecasting ce/image_23.webp',
     color: 'teal'
   },
   {
     id: 'negotiation',
     number: '05',
     icon: HandshakeIcon,
-    image:
-      'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=300&q=80',
+    image: '/imgs/110 A restructuring chamber wi/image_24.webp',
     color: 'gold'
   },
   {
     id: 'approval',
     number: '06',
     icon: CheckCircle2Icon,
-    image:
-      'https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=300&q=80',
+    image: '/imgs/111 A cash flow optimization p/image_25.webp',
     color: 'coral'
   },
   {
     id: 'postFunding',
     number: '07',
     icon: HeadphonesIcon,
-    image:
-      'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=300&q=80',
+    image: '/imgs/112 A longterm relationship ma/image_26.webp',
     color: 'teal'
   }
 ];
@@ -142,11 +135,13 @@ function JourneyCard({
 
         {/* Thumbnail */}
         <div
-          className={`w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 ring-2 ring-offset-2 ${colors.ring}`}>
+          className={`w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden flex-shrink-0 ring-2 ring-offset-2 ${colors.ring} min-h-[80px]`}>
 
           <img
             src={step.image}
             alt={t(`${step.id}.title`)}
+            width={300}
+            height={200}
             className="w-full h-full object-cover img-fluid-cover group-hover:scale-110 transition-transform duration-500" />
 
         </div>
@@ -328,10 +323,12 @@ export function JourneySection() {
                   {/* Content Card */}
                   <div className="flex-1 bg-white rounded-2xl p-5 shadow-xl">
                     <div className="flex items-start gap-3">
-                      <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0">
+                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl overflow-hidden flex-shrink-0 min-h-[56px]">
                         <img
                           src={step.image}
                           alt={t(`steps.${step.id}.title`)}
+                          width={200}
+                          height={200}
                           className="w-full h-full object-cover img-fluid-cover" />
 
                       </div>

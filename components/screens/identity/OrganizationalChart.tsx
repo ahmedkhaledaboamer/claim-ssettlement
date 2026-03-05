@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 export function OrganizationalChart() {
   return (
     <section className="p-[5%] bg-white relative overflow-hidden border-y border-gray-100">
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] mix-blend-multiply" />
+      <div className="absolute inset-0 bg-[url('/imgs/A backbone identity scene insi/image_76.webp')] opacity-[0.03] mix-blend-multiply" />
 
       <div className="  relative z-10">
         <motion.div

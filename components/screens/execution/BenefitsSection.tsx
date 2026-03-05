@@ -212,25 +212,31 @@ export function BenefitsSection() {
             className="lg:w-1/3 hidden lg:block">
 
             <div className="space-y-6">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl min-h-[260px]">
                 <img
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
+                  src="/imgs/A longterm capital partnership/image_9.webp"
                   alt="Modern Office"
-                  className="w-full h-64 object-cover" />
+                  width={600}
+                  height={400}
+                  className="w-full h-64 min-h-[260px] object-cover" />
 
               </div>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl min-h-[200px]">
                 <img
-                  src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=600&q=80"
+                  src="/imgs/A longterm investment concept/image_29.webp"
                   alt="Financial Analysis"
-                  className="w-full h-48 object-cover" />
+                  width={600}
+                  height={400}
+                  className="w-full h-48 min-h-[200px] object-cover" />
 
               </div>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl min-h-[220px]">
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&q=80"
+                  src="/imgs/A luxurious executive financia/image_39.webp"
                   alt="Team Collaboration"
-                  className="w-full h-56 object-cover" />
+                  width={600}
+                  height={400}
+                  className="w-full h-56 min-h-[220px] object-cover" />
 
               </div>
             </div>

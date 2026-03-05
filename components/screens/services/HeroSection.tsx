@@ -64,11 +64,13 @@ export function HeroSection({ locale }: { locale: string }) {
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[350px]">
             <img
-              src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=900&q=80"
+              src="/imgs/92 An operational monitoring r/image_3.webp"
               alt="خدمات تمويلية"
-              className="w-full h-[clamp(350px,45vh,500px)] object-cover"
+              width={1920}
+              height={1080}
+              className="w-full h-[clamp(350px,45vh,500px)] min-h-[350px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/80 via-transparent to-transparent" />
           </div>

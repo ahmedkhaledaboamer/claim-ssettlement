@@ -25,8 +25,7 @@ const services = [
   descriptionEn: 'In‑depth analysis of financial data and cash flows.',
   descriptionFr: 'Analyse approfondie des données financières et des flux de trésorerie.',
   color: '#046307',
-  image:
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop'
+  image: '/imgs/A secured financing concept sh/image_51.webp'
 },
 {
   icon: ShieldIcon,
@@ -38,8 +37,7 @@ const services = [
   descriptionFr:
   'Identification et évaluation des risques potentiels, avec définition de stratégies d’atténuation.',
   color: '#FFBF00',
-  image:
-  'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=200&fit=crop'
+  image: '/imgs/A sophisticated financial ecos/image_53.webp'
 },
 {
   icon: FileTextIcon,
@@ -50,8 +48,7 @@ const services = [
   descriptionEn: 'Preparing complete, professional financing files.',
   descriptionFr: 'Préparation de dossiers de financement complets et professionnels.',
   color: '#9966CC',
-  image:
-  'https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=400&h=200&fit=crop'
+  image: '/imgs/A stability and competitivenes/image_4.webp'
 },
 {
   icon: UsersIcon,
@@ -63,8 +60,7 @@ const services = [
   descriptionFr:
   'Un vaste réseau de relations avec les banques et les institutions financières.',
   color: '#0F52BA',
-  image:
-  'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=200&fit=crop'
+  image: '/imgs/A strategic capital planning s/image_44.webp'
 },
 {
   icon: SendIcon,
@@ -76,8 +72,7 @@ const services = [
   descriptionFr:
   'Soumission professionnelle des dossiers auprès des institutions appropriées.',
   color: '#0047AB',
-  image:
-  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=200&fit=crop'
+  image: '/imgs/A strategic expansion visualiz/image_16.webp'
 },
 {
   icon: ScaleIcon,
@@ -88,8 +83,7 @@ const services = [
   descriptionEn: 'Expert negotiation to obtain the best terms.',
   descriptionFr: 'Négociation experte pour obtenir les meilleures conditions.',
   color: '#D97706',
-  image:
-  'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=400&h=200&fit=crop'
+  image: '/imgs/A strategic financial analysis/image_48.webp'
 },
 {
   icon: ClockIcon,
@@ -100,8 +94,7 @@ const services = [
   descriptionEn: 'Diligent follow‑up until approval is obtained.',
   descriptionFr: 'Suivi attentif jusqu’à l’obtention de l’approbation.',
   color: '#B87333',
-  image:
-  'https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=400&h=200&fit=crop'
+  image: '/imgs/A strategic financial partners/image_6.webp'
 },
 {
   icon: CheckCircleIcon,
@@ -112,8 +105,7 @@ const services = [
   descriptionEn: 'Smooth and professional deal closing.',
   descriptionFr: 'Clôture de l’opération de manière fluide et professionnelle.',
   color: '#DC143C',
-  image:
-  'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=200&fit=crop'
+  image: '/imgs/A structured financial ecosyst/image_47.webp'
 },
 {
   icon: LifeBuoyIcon,
@@ -125,8 +117,7 @@ const services = [
   descriptionFr:
   'Accompagnement continu et suivi après la mise en place du financement.',
   color: '#0E7490',
-  image:
-  'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=200&fit=crop'
+  image: '/imgs/A structured financial ecosyst/image_60.webp'
 },
 {
   icon: TrendingUpIcon,
@@ -138,8 +129,7 @@ const services = [
   descriptionFr:
   'Conseils pour développer et étendre votre activité.',
   color: '#DC143C',
-  image:
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop'
+  image: '/imgs/A structured information envir/image_62.webp'
 }];
 
 export function WhatWeDoSection({ locale }: { locale: string }) {
@@ -230,14 +220,15 @@ export function WhatWeDoSection({ locale }: { locale: string }) {
                 className="group relative bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
 
                 {/* Service Image */}
-                <div className="relative h-24 overflow-hidden">
+                <div className="relative h-32 md:h-40 min-h-[160px] overflow-hidden">
                   <Image
                     src={service.image}
                     alt={title}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     loading="lazy"
-                    width={400}
-                    height={200}
+                    width={600}
+                    height={400}
+                    sizes="(max-width: 768px) 100vw, 400px"
                     />
 
                   <div

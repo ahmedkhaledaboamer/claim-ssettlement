@@ -17,37 +17,12 @@ const systemLayers = [
     id: 'financialAnalysis',
     icon: BarChart3Icon,
     color: 'teal',
-    image:
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&q=80'
+    image: '/imgs/33 A mergers and acquisitions/image_24.webp'
   },
-  {
-    id: 'operationalAssessment',
-    icon: SettingsIcon,
-    color: 'navy',
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&q=80'
-  },
-  {
-    id: 'matching',
-    icon: LinkIcon,
-    color: 'gold',
-    image:
-      'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=300&q=80'
-  },
-  {
-    id: 'negotiation',
-    icon: MessageSquareIcon,
-    color: 'teal',
-    image:
-      'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&q=80'
-  },
-  {
-    id: 'closure',
-    icon: CheckCircle2Icon,
-    color: 'navy',
-    image:
-      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&q=80'
-  }
+  { id: 'operationalAssessment', icon: SettingsIcon, color: 'navy', image: '/imgs/34 A treasury operations scene/image_40.webp' },
+  { id: 'matching', icon: LinkIcon, color: 'gold', image: '/imgs/35 A portfolio diversification/image_25.webp' },
+  { id: 'negotiation', icon: MessageSquareIcon, color: 'teal', image: '/imgs/36 A financial stability conce/image_41.webp' },
+  { id: 'closure', icon: CheckCircle2Icon, color: 'navy', image: '/imgs/37 A capital injection scene s/image_26.webp' }
 ];
 
 const colorMap: Record<
@@ -153,10 +128,12 @@ function LayerCard({
             </div>
 
             {/* Thumbnail Image */}
-            <div className="hidden sm:block w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 shadow-sm">
+            <div className="hidden sm:block w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden flex-shrink-0 shadow-sm min-h-[80px]">
               <img
                 src={layer.image}
                 alt={t(`${layer.id}.title`)}
+                width={300}
+                height={200}
                 className="w-full h-full object-cover img-fluid-cover transition-transform duration-500 group-hover:scale-110" />
 
             </div>

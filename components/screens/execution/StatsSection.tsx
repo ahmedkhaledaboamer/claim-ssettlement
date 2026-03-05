@@ -273,12 +273,14 @@ export function StatsSection() {
         viewport={{
           once: true
         }}
-        className="absolute left-0 top-1/2 -translate-y-1/2 w-72 h-96 rounded-r-3xl overflow-hidden shadow-2xl hidden xl:block z-10">
+        className="absolute left-0 top-1/2 -translate-y-1/2 w-72 md:w-80 h-96 md:h-[420px] min-h-[320px] rounded-r-3xl overflow-hidden shadow-2xl hidden xl:block z-10">
 
         <div className="absolute inset-0 bg-gradient-to-r from-cream-50/60 to-transparent z-10" />
         <img
-          src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&q=80"
+          src="/imgs/A comprehensive institutional/image_30.webp"
           alt="Business Success"
+          width={500}
+          height={600}
           className="w-full h-full object-cover" />
 
       </motion.div>
@@ -298,12 +300,14 @@ export function StatsSection() {
         viewport={{
           once: true
         }}
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-72 h-96 rounded-l-3xl overflow-hidden shadow-2xl hidden xl:block z-10">
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-72 md:w-80 h-96 md:h-[420px] min-h-[320px] rounded-l-3xl overflow-hidden shadow-2xl hidden xl:block z-10">
 
         <div className="absolute inset-0 bg-gradient-to-l from-cream-50/60 to-transparent z-10" />
         <img
-          src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80"
+          src="/imgs/A confidential partnership env/image_20.webp"
           alt="Finance"
+          width={500}
+          height={600}
           className="w-full h-full object-cover" />
 
       </motion.div>

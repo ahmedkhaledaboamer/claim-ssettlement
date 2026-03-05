@@ -23,74 +23,19 @@ const services = [
     id: 'commercial',
     icon: BriefcaseIcon,
     color: 'gold',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80'
+    image: '/imgs/21 A refined corporate treasur/image_18.webp'
   },
-  {
-    id: 'investment',
-    icon: TrendingUpIcon,
-    color: 'teal',
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80'
-  },
-  {
-    id: 'realEstate',
-    icon: BuildingIcon,
-    color: 'coral',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80'
-  },
-  {
-    id: 'corporate',
-    icon: Building2Icon,
-    color: 'navy',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80'
-  },
-  {
-    id: 'sme',
-    icon: RocketIcon,
-    color: 'green',
-    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80'
-  },
-  {
-    id: 'islamic',
-    icon: BookOpenIcon,
-    color: 'purple',
-    image: 'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=600&q=80'
-  },
-  {
-    id: 'expansion',
-    icon: ExpandIcon,
-    color: 'gold',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80'
-  },
-  {
-    id: 'newProjects',
-    icon: LightbulbIcon,
-    color: 'teal',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80'
-  },
-  {
-    id: 'innovationTech',
-    icon: CpuIcon,
-    color: 'coral',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80'
-  },
-  {
-    id: 'fdi',
-    icon: GlobeIcon,
-    color: 'navy',
-    image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&q=80'
-  },
-  {
-    id: 'workingCapital',
-    icon: WalletIcon,
-    color: 'green',
-    image: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80'
-  },
-  {
-    id: 'mergersAcquisitions',
-    icon: HandshakeIcon,
-    color: 'purple',
-    image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&q=80'
-  }
+  { id: 'investment', icon: TrendingUpIcon, color: 'teal', image: '/imgs/22 A strategic expansion conce/image_34.webp' },
+  { id: 'realEstate', icon: BuildingIcon, color: 'coral', image: '/imgs/23 A financial restructuring s/image_19.webp' },
+  { id: 'corporate', icon: Building2Icon, color: 'navy', image: '/imgs/24 A working capital visualiza/image_35.webp' },
+  { id: 'sme', icon: RocketIcon, color: 'green', image: '/imgs/25 A risk management concept s/image_20.webp' },
+  { id: 'islamic', icon: BookOpenIcon, color: 'purple', image: '/imgs/26 A capital optimization scen/image_36.webp' },
+  { id: 'expansion', icon: ExpandIcon, color: 'gold', image: '/imgs/27 A liquidity support concept/image_21.webp' },
+  { id: 'newProjects', icon: LightbulbIcon, color: 'teal', image: '/imgs/28 A corporate advisory enviro/image_37.webp' },
+  { id: 'innovationTech', icon: CpuIcon, color: 'coral', image: '/imgs/29 A sustainable financial gro/image_22.webp' },
+  { id: 'fdi', icon: GlobeIcon, color: 'navy', image: '/imgs/3 A symbolic missiondriven env/image_2.webp' },
+  { id: 'workingCapital', icon: WalletIcon, color: 'green', image: '/imgs/30 A longterm investment visua/image_38.webp' },
+  { id: 'mergersAcquisitions', icon: HandshakeIcon, color: 'purple', image: '/imgs/31 A debt restructuring concep/image_23.webp' }
 ];
 
 const colorMap: Record<
@@ -176,10 +121,11 @@ function ServiceCard({
     >
 
       {/* Header Image */}
-      <div className="h-32 w-full overflow-hidden relative">
+      <div className="h-40 md:h-48 w-full overflow-hidden relative min-h-[180px]">
         <Image
-          width={100}
-          height={100}
+          width={600}
+          height={400}
+          sizes="(max-width: 768px) 100vw, 380px"
           src={service.image}
           alt={t(`${service.id}.title`)}
           className="w-full h-full object-cover img-fluid-cover transition-transform duration-500 group-hover:scale-105"

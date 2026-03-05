@@ -9,11 +9,8 @@ import type { LucideIcon } from 'lucide-react';
 const lucideIcons = Icons as unknown as Record<string, LucideIcon>;
 // Layer images
 const layerImages: string[] = [
-'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop'];
+  '/imgs/A promisedriven executive scen/image_55.webp', '/imgs/A promisedriven executive scen/image_57.webp', '/imgs/A refined executive financial/image_31.webp', '/imgs/A refined executive financial/image_53.webp', '/imgs/A refined executive reception/image_33.webp'
+];
 
 export function OperatingSystemSection({ locale }: { locale: string }) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
@@ -193,10 +190,12 @@ export function OperatingSystemSection({ locale }: { locale: string }) {
               }}>
 
               {/* Layer Image */}
-              <div className="relative h-44 overflow-hidden">
+              <div className="relative h-48 md:h-56 min-h-[220px] overflow-hidden">
                 <img
                   src={layerImages[activeLayer]}
                   alt={operatingLayers[activeLayer].titleAr}
+                  width={600}
+                  height={400}
                   className="w-full h-full object-cover"
                   loading="lazy" />
 

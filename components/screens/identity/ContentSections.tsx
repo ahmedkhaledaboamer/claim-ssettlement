@@ -27,61 +27,27 @@ interface ContentSectionsProps {
   sections: ContentSectionType[];
 }
 const images = {
-  intro: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200',
-  introStrip1:
-  'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400',
-  introStrip2:
-  'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400',
-  introStrip3:
-  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400',
-  introExtra1:
-  'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400',
-  identity:
-  'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
-  identityExtra:
-  'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600',
-  philosophy:
-  'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800',
-  missionBg: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200',
-  missionImages: [
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600',
-  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600',
-  'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600',
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600',
-  'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600',
-  'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600'],
-
-  visionThumbs: [
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400',
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400',
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
-  'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400',
-  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400',
-  'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400'],
-
-  principlesImages: [
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400',
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400',
-  'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400',
-  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400',
-  'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400',
-  'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400',
-  'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400'],
-
-  readingBg: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200',
-  building: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800',
-  buildingSide:
-  'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800',
-  partners:
-  'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800',
-  partnersBg: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800',
-  clients: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800',
-  adminBg:
-  'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200',
-  resultsBg:
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200',
-  resultsLeft:
-  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800'
+  intro: '/imgs/84 A futuristic risk laborator/image_3.webp',
+  introStrip1: '/imgs/85 A governance council chambe/image_4.webp',
+  introStrip2: '/imgs/86 A highsecurity data protect/image_0.webp',
+  introStrip3: '/imgs/87 A strategic planning studio/image_11.webp',
+  introExtra1: '/imgs/88 A premium executive file pr/image_1.webp',
+  identity: '/imgs/89 An internal audit room feat/image_12.webp',
+  identityExtra: '/imgs/90 A funding alignment platfor/image_2.webp',
+  philosophy: '/imgs/91 A formal submission channel/image_13.webp',
+  missionBg: '/imgs/92 An operational monitoring r/image_3.webp',
+  missionImages: ['/imgs/93 A responsive management cen/image_14.webp', '/imgs/94 An executive negotiation pl/image_4.webp', '/imgs/95 A financial closing chamber/image_15.webp', '/imgs/96 A secure disbursement chann/image_5.webp', '/imgs/97 A postfunding command cente/image_16.webp', '/imgs/98 An operational oversight hu/image_6.webp'],
+  visionThumbs: ['/imgs/99 A quality assurance platfor/image_17.webp', '/imgs/A boardlevel financial identit/image_71.webp', '/imgs/A clarityfocused financial ide/image_10.webp', '/imgs/A client journey visualization/image_47.webp', '/imgs/A disciplined operational tran/image_42.webp', '/imgs/A financial roadmap visualizat/image_41.webp'],
+  principlesImages: ['/imgs/A grand executive operations c/image_63.webp', '/imgs/A layered operational framewor/image_40.webp', '/imgs/A precisiondriven quality cont/image_43.webp', '/imgs/A refined executive financial/image_31.webp', '/imgs/A secure verification gateway/image_64.webp', '/imgs/A sophisticated corporate trea/image_11.webp', '/imgs/A strategic capital planning s/image_44.webp'],
+  readingBg: '/imgs/A structured information envir/image_59.webp',
+  building: '/imgs/A trustcentered financial envi/image_44.webp',
+  buildingSide: '/imgs/A capital injection scene symb/image_36.webp',
+  partners: '/imgs/A trusted institutional relati/image_75.webp',
+  partnersBg: '/imgs/A visionary financial skyline/image_73.webp',
+  clients: '/imgs/A welcoming premium corporate/image_70.webp',
+  adminBg: '/imgs/A powerful closing statement s/image_77.webp',
+  resultsBg: '/imgs/A resultsoriented visualizatio/image_62.webp',
+  resultsLeft: '/imgs/A deep financial analysis visu/image_74.webp'
 };
 // Enhanced animation variants
 const fadeInUp = {
@@ -279,8 +245,8 @@ function IntroSection({ data }: {data: ContentSectionType;}) {
   const t = useTranslations('identityPage');
   return (
     <section id="intro" className="relative p-[5%] overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img src={images.intro} alt="" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 z-0 min-h-[400px]">
+        <img src={images.intro} alt="" width={1200} height={800} className="w-full h-full object-cover min-h-[400px]" />
         <div className="absolute inset-0 backdrop-blur-sm bg-KIB-text/75" />
         <div className="absolute inset-0 bg-gradient-to-t from-KIB-text via-transparent to-KIB-text/50" />
       </div>
@@ -335,7 +301,9 @@ function IntroSection({ data }: {data: ContentSectionType;}) {
                 <img
                 src={src}
                 alt=""
-                className="w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
+                width={500}
+                height={280}
+                className="w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 min-h-[160px]" />
 
               </motion.div>
             )}
@@ -352,11 +320,13 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
       id="identity-section"
       className="p-[5%] relative overflow-hidden">
 
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 min-h-[400px]">
         <img
           src={images.identity}
           alt=""
-          className="w-full h-full object-cover" />
+          width={1200}
+          height={800}
+          className="w-full h-full object-cover min-h-[400px]" />
 
         <div className="absolute inset-0 backdrop-blur-xl bg-KIB-bg2/85" />
       </div>
@@ -538,8 +508,9 @@ function PhilosophySection({ data }: {data: ContentSectionType;}) {
               <Image
                 src={images.philosophy}
                 alt="Financial Analysis"
-                width={1000}
-                height={1000}
+                width={1200}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-full object-cover" />
 
               <div className="absolute inset-0 bg-KIB-gold/10 mix-blend-overlay" />
@@ -564,8 +535,9 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
     <section id="mission" className="p-[5%] relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          width={1000}
-          height={1000}
+          width={1200}
+          height={800}
+          sizes="(max-width: 768px) 100vw, 800px"
           src={images.missionBg}
           alt=""
           className="w-full h-full object-cover" />
@@ -614,8 +586,9 @@ function MissionSection({ data }: {data: ContentSectionType;}) {
 
                 <div className="relative h-48 md:h-56 overflow-hidden">
                   <Image
-                    width={1000}
-                    height={1000}
+                    width={1200}
+                    height={800}
+                    sizes="(max-width: 768px) 100vw, 600px"
                 src={images.missionImages[i % images.missionImages.length]}
                 alt={b}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -708,8 +681,9 @@ function VisionSection({ data }: {data: ContentSectionType;}) {
 
                 <div className="w-full h-44 rounded-2xl overflow-hidden mb-6 relative shadow-[0_4px_16px_rgba(0,0,0,0.08)]">
                   <Image
-                    width={1000}
-                    height={1000}
+                    width={1200}
+                    height={800}
+                    sizes="(max-width: 768px) 100vw, 600px"
                 src={images.visionThumbs[i % images.visionThumbs.length]}
                 alt=""
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -815,8 +789,9 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
 
                         <div className="h-40 md:h-48 w-full overflow-hidden relative">
                           <Image
-                            width={1000}
-                            height={1000}
+                            width={1200}
+                            height={800}
+                            sizes="(max-width: 768px) 100vw, 400px"
                           src={
                           images.principlesImages[
                           i % images.principlesImages.length]
@@ -903,8 +878,9 @@ function ReadingSection({ data }: {data: ContentSectionType;}) {
     <section id="reading" className="p-[5%] relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          width={1000}
-          height={1000}
+          width={1200}
+          height={800}
+          sizes="(max-width: 768px) 100vw, 800px"
           src={images.readingBg}
           alt=""
           className="w-full h-full object-cover opacity-10" />
@@ -1058,8 +1034,9 @@ function BuildingSection({ data }: {data: ContentSectionType;}) {
                 className="rounded-2xl overflow-hidden shadow-[0_12px_36px_rgba(0,0,0,0.1)] h-48 md:h-64 mb-8">
 
                 <Image
-                  width={1000}
-                  height={1000}
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 768px) 100vw, 600px"
                   src={images.buildingSide}
                   alt=""
                   className="w-full h-full object-cover" />
@@ -1104,8 +1081,9 @@ function BuildingSection({ data }: {data: ContentSectionType;}) {
               className="mb-8 rounded-3xl overflow-hidden shadow-[0_20px_55px_rgba(0,0,0,0.12)] h-72 md:h-96">
 
               <Image
-                width={1000}
-                height={1000}
+                width={1200}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 src={images.building}
                 alt=""
                 className="w-full h-full object-cover" />
@@ -1318,8 +1296,9 @@ function ClientsSection({ data }: {data: ContentSectionType;}) {
             }}>
 
             <Image
-              width={1000}
-              height={1000}
+              width={1200}
+              height={800}
+              sizes="(max-width: 768px) 100vw, 800px"
               src={images.clients}
               alt="Client Meeting"
               className="w-full h-full object-cover" />
@@ -1336,8 +1315,9 @@ function AdminSection({ data }: {data: ContentSectionType;}) {
     <section id="admin" className="py-24 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          width={1000}
-          height={1000}
+          width={1200}
+          height={800}
+          sizes="(max-width: 768px) 100vw, 800px"
           src={images.adminBg}
           alt=""
           className="w-full h-full object-cover opacity-15" />
@@ -1436,8 +1416,9 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
     <section id="results" className="p-[5%] relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          width={1000}
-          height={1000}
+          width={1200}
+          height={800}
+          sizes="(max-width: 768px) 100vw, 800px"
           src={images.resultsBg}
           alt=""
           className="w-full h-full object-cover" />
@@ -1473,8 +1454,9 @@ function ResultsSection({ data }: {data: ContentSectionType;}) {
 
             <div className="rounded-3xl overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.35)] h-[400px] md:h-[520px]">
               <Image
-                width={1000}
-                height={1000}
+                width={1200}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 src={images.resultsLeft}
                 alt="Dashboard Metrics"
                 className="w-full h-full object-cover" />

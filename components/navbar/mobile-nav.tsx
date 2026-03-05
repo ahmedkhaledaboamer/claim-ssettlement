@@ -123,7 +123,7 @@ export default function MobileNavbar() {
                   exit={{ x: slideFrom }}
                   transition={panelTransition}
                   className={cn(
-                    "absolute top-0 bottom-0 w-80 max-w-[85vw] bg-navy-dark shadow-2xl flex flex-col",
+                    "absolute top-0 bottom-0 w-80 max-w-[85vw] bg-(--color-navy-dark) shadow-2xl flex flex-col",
                     panelSide
                   )}
                   onClick={(e) => e.stopPropagation()}

@@ -256,9 +256,11 @@ export function HeroSection() {
 
         <div className="absolute inset-0 bg-gradient-to-b from-plum-800/95 via-navy-950/90 to-sapphire-800/95 z-10" />
         <img
-          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80"
+          src="/imgs/A highlevel financial operatio/image_46.webp"
           alt="Dubai Skyline at Golden Hour"
-          className="w-full h-full object-cover ken-burns" />
+          width={1920}
+          height={1080}
+          className="w-full h-full object-cover ken-burns min-h-[70vh]" />
 
       </motion.div>
 
@@ -270,9 +272,11 @@ export function HeroSection() {
         className="absolute inset-0 w-full h-full z-[1] opacity-40">
 
         <img
-          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80"
+          src="/imgs/A liquidity support concept po/image_26.webp"
           alt="Luxury Boardroom"
-          className="w-full h-full object-cover mix-blend-overlay" />
+          width={1920}
+          height={1080}
+          className="w-full h-full object-cover mix-blend-overlay min-h-[70vh]" />
 
       </motion.div>
 

@@ -90,22 +90,26 @@ export function WhyUsSection() {
 
             <div className="space-y-6">
               {/* Primary Image */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-navy-900/20">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-navy-900/20 min-h-[320px]">
                 <div className="absolute inset-0 bg-navy-900/10 z-10" />
                 <img
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80"
+                  src="/imgs/A global financial standards v/image_5.webp"
                   alt="Business Handshake"
-                  className="w-full h-80 object-cover" />
+                  width={800}
+                  height={500}
+                  className="w-full h-80 min-h-[320px] object-cover" />
 
               </div>
 
               {/* Secondary Image */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-teal-900/20 mr-16">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-teal-900/20 mr-16 min-h-[260px]">
                 <div className="absolute inset-0 bg-teal-900/10 z-10" />
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80"
+                  src="/imgs/A highlevel financial operatio/image_45.webp"
                   alt="Team Collaboration"
-                  className="w-full h-64 object-cover" />
+                  width={800}
+                  height={500}
+                  className="w-full h-64 min-h-[260px] object-cover" />
 
               </div>
             </div>

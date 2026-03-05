@@ -9,14 +9,8 @@ import Image from 'next/image';
 const lucideIcons = Icons as unknown as Record<string, LucideIcon>;
 // Client type images
 const clientImages: Record<number, string> = {
-  1: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop',
-  2: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
-  3: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop',
-  4: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=300&fit=crop',
-  5: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop',
-  6: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop',
-  7: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=300&fit=crop',
-  8: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=300&fit=crop'
+  1: '/imgs/A premium financial services w/image_54.webp', 2: '/imgs/A premium influence concept in/image_14.webp', 3: '/imgs/A prestigious governance counc/image_49.webp', 4: '/imgs/A prestigious institutional su/image_12.webp',
+  5: '/imgs/A principlesbased structure co/image_59.webp', 6: '/imgs/A professional funding file co/image_60.webp', 7: '/imgs/A project finance visualizatio/image_31.webp', 8: '/imgs/A promisedriven executive conc/image_60.webp'
 };
 export function ClientTypesSection({ locale }: { locale: string }) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
@@ -113,14 +107,15 @@ export function ClientTypesSection({ locale }: { locale: string }) {
                 }}>
 
                 {/* Client Image */}
-                <div className="relative h-36 overflow-hidden">
+                <div className="relative h-40 md:h-48 min-h-[200px] overflow-hidden">
                   <Image
                     src={clientImages[client.id]}
                     alt={title}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     loading="lazy"
-                    width={400}
-                    height={300}
+                    width={600}
+                    height={400}
+                    sizes="(max-width: 768px) 100vw, 400px"
                     />
 
                   <div

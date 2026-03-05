@@ -235,14 +235,15 @@ export function FAQSection({ locale }: { locale: string }) {
           <div className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md">
             <div className="grid md:grid-cols-2">
               {/* Image Side */}
-              <div className="relative h-48 md:h-auto">
+              <div className="relative h-56 md:h-72 min-h-[280px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=800&h=400&fit=crop"
+                  src="/imgs/A refined executive reception/image_78.webp"
                   alt="فريق الدعم"
                   className="w-full h-full object-cover"
                   loading="lazy"
                   width={800}
-                  height={400}
+                  height={500}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   />
 
                 <div className="absolute inset-0 bg-gradient-to-l from-teal-900/60 to-transparent md:bg-gradient-to-r" />

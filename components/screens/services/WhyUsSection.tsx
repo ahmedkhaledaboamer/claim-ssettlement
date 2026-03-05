@@ -72,13 +72,14 @@ export function WhyUsSection({ locale }: { locale: string }) {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl min-h-[350px]">
               <Image
-                width={1000}
-                height={1000}
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+                width={1200}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 800px"
+                src="/imgs/An executive negotiation envir/image_50.webp"
                 alt="فريق العمل"
-                className="w-full h-[clamp(350px,45vh,500px)] object-cover"
+                className="w-full h-[clamp(350px,45vh,500px)] min-h-[350px] object-cover"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/40 to-transparent" />

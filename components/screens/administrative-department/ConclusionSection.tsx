@@ -24,12 +24,13 @@ export function ConclusionSection({ locale }: { locale: string }) {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop"
+          src="/imgs/A powerful executive command c/image_40.webp"
           alt="مكتب حديث"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover min-h-[40vh]"
           loading="lazy"
           width={1920}
           height={1080}
+          sizes="100vw"
           />
 
         <div className="absolute inset-0 bg-white/85" />

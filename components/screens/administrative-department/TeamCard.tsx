@@ -9,21 +9,10 @@ import { departmentColors } from '@/data/departmentColors';
 const lucideIcons = Icons as unknown as Record<string, LucideIcon>;
 // Map team member IDs to professional portrait photos
 const teamPhotos: Record<number, string> = {
-  1: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-  2: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
-  3: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
-  4: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop',
-  5: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop',
-  6: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop',
-  7: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
-  8: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop',
-  9: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
-  10: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
-  11: 'https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=400&h=400&fit=crop',
-  12: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
-  13: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop',
-  14: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-  15: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop'
+  1: '/imgs/A structured information envir/image_69.webp', 2: '/imgs/A sustainable financial growth/image_28.webp', 3: '/imgs/A symbolic financial matching/image_36.webp', 4: '/imgs/A symbolic funding selection c/image_2.webp',
+  5: '/imgs/A tiered service concept insid/image_66.webp', 6: '/imgs/A tiered service concept repre/image_55.webp', 7: '/imgs/A tiered service concept visua/image_56.webp', 8: '/imgs/A traditional funding pathway/image_15.webp',
+  9: '/imgs/A treasury operations command/image_33.webp', 10: '/imgs/A trustcentered financial conc/image_53.webp', 11: '/imgs/A trustcentered financial scen/image_56.webp', 12: '/imgs/A working capital concept feat/image_23.webp',
+  13: '/imgs/An enterprise ecosystem visual/image_44.webp', 14: '/imgs/An enterprise growth ecosystem/image_29.webp', 15: '/imgs/An executive capital journey r/image_21.webp'
 };
 interface TeamCardProps {
   member: TeamMember;
@@ -132,11 +121,13 @@ export function TeamCard({ member, index, onClick, locale }: TeamCardProps) {
         }}>
 
         {/* Image Area with Photo */}
-        <div className={`relative ${style.imageHeight} overflow-hidden`}>
+        <div className={`relative min-h-[200px] ${style.imageHeight} overflow-hidden`}>
           <motion.img
             src={photoUrl}
             alt={name}
-            className="w-full h-full object-cover"
+            width={400}
+            height={300}
+            className="w-full h-full object-cover min-h-[200px]"
             loading="lazy"
             animate={{
               scale: isHovered ? 1.05 : 1

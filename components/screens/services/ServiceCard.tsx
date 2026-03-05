@@ -109,10 +109,12 @@ export function ServiceCard({
       className="group relative bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
 
       {/* Image Section */}
-      <div className="relative h-[clamp(140px,18vw,200px)] overflow-hidden">
+      <div className="relative h-[clamp(180px,22vw,280px)] min-h-[180px] overflow-hidden">
         <img
           src={image}
           alt={title}
+          width={600}
+          height={400}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/90 via-[#0A1628]/40 to-transparent" />

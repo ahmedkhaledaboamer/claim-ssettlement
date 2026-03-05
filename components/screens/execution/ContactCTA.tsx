@@ -27,11 +27,13 @@ export function ContactCTA() {
   return (
     <section className="relative px-[5%] py-[2%] bg-cream-50 overflow-hidden">
       {/* Background photo - visible and light */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 min-h-[320px]">
         <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
+          src="/imgs/A cash flow continuity concept/image_28.webp"
           alt="Modern Office"
-          className="w-full h-full object-cover opacity-10" />
+          width={1920}
+          height={1080}
+          className="w-full h-full object-cover opacity-10 min-h-[320px]" />
 
       </div>
 
@@ -81,11 +83,13 @@ export function ContactCTA() {
             className="lg:w-1/2 hidden lg:block">
 
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <div className="rounded-3xl overflow-hidden shadow-2xl min-h-[400px]">
                 <img
-                  src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&q=80"
+                  src="/imgs/A corporate advisory workspace/image_27.webp"
                   alt="Corporate Building"
-                  className="w-full h-[500px] object-cover" />
+                  width={800}
+                  height={600}
+                  className="w-full h-[500px] min-h-[400px] object-cover" />
 
               </div>
               {/* Overlapping smaller photo */}
@@ -104,11 +108,13 @@ export function ContactCTA() {
                 transition={{
                   delay: 0.3
                 }}
-                className="absolute -bottom-8 -right-8 w-64 h-48 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                className="absolute -bottom-8 -right-8 w-64 h-52 md:h-56 rounded-2xl overflow-hidden shadow-xl border-4 border-white min-h-[200px]">
 
                 <img
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&q=80"
+                  src="/imgs/A debt restructuring scene whe/image_30.webp"
                   alt="Business Handshake"
+                  width={400}
+                  height={300}
                   className="w-full h-full object-cover" />
 
               </motion.div>

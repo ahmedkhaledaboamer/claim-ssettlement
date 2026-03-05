@@ -9,9 +9,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useMessages } from 'next-intl';
 
 const HERO_IMAGES = [
-  { bg: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200', thumb: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300' },
-  { bg: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200', thumb: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300' },
-  { bg: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200', thumb: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=300' },
+  { bg: '/imgs/6 A premium service portfolio/image_5.webp', thumb: '/imgs/81 A minimalist audit chamber/image_0.webp' },
+  { bg: '/imgs/7 A capital journey corridor i/image_6.webp', thumb: '/imgs/82 A strategic financial analy/image_1.webp' },
+  { bg: '/imgs/8 A layered financial operatio/image_7.webp', thumb: '/imgs/83 A credit evaluation center/image_2.webp' },
 ];
 
 export function HeroSection() {
@@ -117,9 +117,9 @@ export function HeroSection() {
           initial="enter"
           animate="center"
           exit="exit"
-          className="absolute inset-0 z-0">
+          className="absolute inset-0 z-0 min-h-[70vh]">
 
-          <img src={slide.bg} alt="" className="w-full h-full object-cover" />
+          <img src={slide.bg} alt="" width={1200} height={800} className="w-full h-full object-cover min-h-[70vh]" />
           <div className="absolute inset-0 backdrop-blur-md bg-gradient-to-br from-KIB-text/65 via-KIB-text/45 to-KIB-gold/15" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-KIB-light" />
         </motion.div>
@@ -264,7 +264,9 @@ export function HeroSection() {
               <img
               src={s.thumb}
               alt={s.label}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              width={400}
+              height={300}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 min-h-[120px]" />
 
               <div
               className={`absolute inset-0 transition-all duration-300 ${activeSlide === i ? 'bg-KIB-gold/10' : 'bg-black/30 group-hover:bg-black/10'}`} />

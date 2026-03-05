@@ -12,9 +12,9 @@ interface StatItemProps {
   borderColor: string;
 }
 const heroImages = [
-  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80',
-  'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1920&q=80',
-  'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=1920&q=80'
+  '/imgs/1 A commanding executive finan/image_0.webp',
+  '/imgs/10 A precisiondriven quality s/image_9.webp',
+  '/imgs/100 A periodic audit environme/image_7.webp'
 ];
 
 // Luxury particles (champagne bubbles effect)
@@ -133,13 +133,15 @@ export function HeroSection() {
         style={{
           y
         }}
-        className="absolute inset-0 z-0">
+        className="absolute inset-0 z-0 min-h-[70vh]">
 
         <AnimatePresence mode="wait">
           <motion.img
             key={currentImageIndex}
             src={heroImages[currentImageIndex]}
             alt={t('backgroundAlt')}
+            width={1920}
+            height={1080}
             initial={{
               opacity: 0,
               scale: 1.05
@@ -155,7 +157,7 @@ export function HeroSection() {
               duration: 2,
               ease: 'easeInOut'
             }}
-            className="absolute inset-0 w-full h-full object-cover img-fluid-cover" />
+            className="absolute inset-0 w-full h-full object-cover img-fluid-cover min-h-[70vh]" />
 
         </AnimatePresence>
         {/* Luxury Dark Overlay */}
@@ -390,6 +392,7 @@ export function HeroSection() {
           duration: 1
         }}
         className="cursor-pointer absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3"
+        
       >
         <span className="cursor-pointer text-imperial-400/70 font-tajawal text-fluid-body-lg uppercase tracking-[0.2em]">
           {t('scrollCta')}

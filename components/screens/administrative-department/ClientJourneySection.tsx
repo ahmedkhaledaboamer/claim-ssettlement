@@ -8,15 +8,9 @@ import type { LucideIcon } from 'lucide-react';
 import Image from 'next/image';
 // Journey step images
 const journeyImages: string[] = [
-'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop',
-'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop'];
+  '/imgs/A powerful executive command c/image_46.webp', '/imgs/A powerful executive command c/image_48.webp', '/imgs/A precision qualitycontrol env/image_61.webp', '/imgs/A precisiondriven quality cont/image_43.webp',
+  '/imgs/A precisiondriven quality cont/image_52.webp', '/imgs/A premium corporate lobby inte/image_50.webp', '/imgs/A premium executive portfolio/image_8.webp', '/imgs/A premium financial services e/image_50.webp', '/imgs/A premium financial services v/image_41.webp'
+];
 
 export function ClientJourneySection({ locale }: { locale: string }) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
@@ -291,7 +285,7 @@ export function ClientJourneySection({ locale }: { locale: string }) {
             }}>
 
             {/* Step Image */}
-            <div className="relative h-40 overflow-hidden">
+            <div className="relative h-44 md:h-52 min-h-[220px] overflow-hidden">
               <Image
                 src={journeyImages[activeStep]}
                 alt={
@@ -303,8 +297,9 @@ export function ClientJourneySection({ locale }: { locale: string }) {
                 }
                 className="w-full h-full object-cover"
                 loading="lazy"
-                width={400}
-                height={200}
+                width={600}
+                height={400}
+                sizes="(max-width: 768px) 100vw, 500px"
                 />
 
               <div

@@ -125,9 +125,11 @@ export function FAQSection() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-gold-500/20 to-teal-500/20 rounded-3xl blur-xl" />
               <img
-                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80"
+                src="/imgs/A mergers and acquisitions con/image_32.webp"
                 alt="FAQ Support"
-                className="relative rounded-3xl shadow-2xl shadow-navy-900/20 w-full h-auto object-cover" />
+                width={600}
+                height={400}
+                className="relative rounded-3xl shadow-2xl shadow-navy-900/20 w-full h-auto min-h-[280px] object-cover" />
 
               {/* Floating Badge */}
               <motion.div

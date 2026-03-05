@@ -220,16 +220,15 @@ export function AboutSection() {
             >
               <div className={`flex -space-x-4 ${isRTL ? 'space-x-reverse' : ''}`}>
                 {[
-                  'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80',
-                  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80',
-                  'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80',
-                  'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&q=80',
+                  '/imgs/A missioncentered executive en/image_58.webp', '/imgs/A monumental executive operati/image_46.webp', '/imgs/A monumental financial operati/image_52.webp', '/imgs/A multinational corporate land/image_10.webp',
                 ].map((src, i) => (
                   <motion.img
                     key={i}
                     src={src}
                     alt=""
-                    className="w-14 h-14 rounded-full border-4 border-white shadow-lg object-cover"
+                    width={112}
+                    height={112}
+                    className="w-14 h-14 rounded-full border-4 border-white shadow-lg object-cover min-w-[56px] min-h-[56px]"
                     whileHover={{
                       scale: 1.1,
                       zIndex: 10
@@ -273,7 +272,7 @@ export function AboutSection() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-teal-900/60 to-transparent z-10 group-hover:opacity-70 transition-opacity" />
               <img
-                src="https://images.unsplash.com/photo-1560472355-536de3962603?w=800&q=80"
+                src="/imgs/A panoramic executive tower in/image_1.webp"
                 alt="Business Meeting"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
@@ -305,7 +304,7 @@ export function AboutSection() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-gold-900/50 to-transparent z-10" />
               <img
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
+                src="/imgs/A partnershipdriven executive/image_61.webp"
                 alt="Finance Work"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
@@ -335,7 +334,7 @@ export function AboutSection() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-coral-900/40 to-transparent z-10" />
               <img
-                src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=800&q=80"
+                src="/imgs/A philosophydriven funding con/image_72.webp"
                 alt="Modern Office"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
@@ -362,7 +361,7 @@ export function AboutSection() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-fuchsia-900/40 to-transparent z-10" />
               <img
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80"
+                src="/imgs/A portfolio diversification vi/image_34.webp"
                 alt="Team Collaboration"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
@@ -388,7 +387,7 @@ export function AboutSection() {
               className="absolute top-[15%] left-[35%] w-[30%] h-40 rounded-2xl overflow-hidden shadow-xl z-35 group">
 
               <img
-                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&q=80"
+                src="/imgs/A powerful boardlevel executiv/image_38.webp"
                 alt="Handshake"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 

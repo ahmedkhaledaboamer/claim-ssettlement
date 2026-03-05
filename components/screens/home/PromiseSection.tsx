@@ -13,13 +13,14 @@ export function PromiseSection() {
   return (
     <section className="relative section-padding overflow-hidden px-[5%] py-[2%]">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 min-h-[320px]">
         <Image
-          width={100}
-          height={100}
-          src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
+          width={1920}
+          height={1080}
+          sizes="100vw"
+          src="/imgs/32 A project finance environme/image_39.webp"
           alt="خلفية"
-          className="w-full h-full object-cover img-fluid-cover" />
+          className="w-full h-full object-cover img-fluid-cover min-h-[320px]" />
 
         <div className="absolute inset-0 bg-gradient-to-br from-imperial-500/95 via-imperial-500/90 to-imperial-600/95" />
       </div>

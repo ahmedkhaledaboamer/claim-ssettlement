@@ -19,8 +19,7 @@ const clientTypes = [
     id: 'entrepreneurs',
     icon: UserIcon,
     count: '+120',
-    image:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    image: '/imgs/13 A diverse enterprise landsc/image_12.webp',
     color: 'gold',
     size: 'large'
   },
@@ -28,8 +27,7 @@ const clientTypes = [
     id: 'sme',
     icon: Building2Icon,
     count: '+85',
-    image:
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
+    image: '/imgs/15 A welcoming yet premium fin/image_14.webp',
     color: 'teal',
     size: 'large'
   },
@@ -37,8 +35,7 @@ const clientTypes = [
     id: 'largeCorporates',
     icon: BuildingIcon,
     count: '+45',
-    image:
-      'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&q=80',
+    image: '/imgs/16 A sophisticated brokerage c/image_15.webp',
     color: 'coral',
     size: 'medium'
   },
@@ -46,8 +43,7 @@ const clientTypes = [
     id: 'industrialCommercial',
     icon: FactoryIcon,
     count: '+60',
-    image:
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80',
+    image: '/imgs/17 A corporate funding expansi/image_16.webp',
     color: 'green',
     size: 'medium'
   },
@@ -55,8 +51,7 @@ const clientTypes = [
     id: 'realEstateInvestors',
     icon: HomeIcon,
     count: '+90',
-    image:
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
+    image: '/imgs/18 A commercial project financ/image_32.webp',
     color: 'gold',
     size: 'small'
   },
@@ -64,8 +59,7 @@ const clientTypes = [
     id: 'techInnovative',
     icon: CpuIcon,
     count: '+35',
-    image:
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
+    image: '/imgs/19 An industrial funding visua/image_17.webp',
     color: 'purple',
     size: 'small'
   },
@@ -73,8 +67,7 @@ const clientTypes = [
     id: 'expansionRestructuring',
     icon: TrendingUpIcon,
     count: '+50',
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
+    image: '/imgs/2 A modern financial strategy/image_1.webp',
     color: 'teal',
     size: 'small'
   },
@@ -82,8 +75,7 @@ const clientTypes = [
     id: 'newInvestments',
     icon: RocketIcon,
     count: '+75',
-    image:
-      'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80',
+    image: '/imgs/20 A real estate financing con/image_33.webp',
     color: 'coral',
     size: 'small'
   }
@@ -198,10 +190,11 @@ function BentoCard({
       className={`relative rounded-3xl overflow-hidden group ${sizeClasses[client.size as keyof typeof sizeClasses]} ${client.size === 'large' ? 'min-h-[300px] md:min-h-[400px]' : client.size === 'medium' ? 'min-h-[250px] md:min-h-[400px]' : 'min-h-[200px]'}`}>
 
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 min-h-[200px]">
         <Image
-          width={100}
-          height={100}
+          width={600}
+          height={400}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
           src={client.image}
           alt={t(client.id)}
           className="w-full h-full object-cover img-fluid-cover transition-transform duration-700 group-hover:scale-110" />
