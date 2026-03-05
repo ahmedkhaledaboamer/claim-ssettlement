@@ -63,17 +63,17 @@ export function AboutSection() {
     {
       src: '/imgs/101 A secure information manag/image_18.webp',
       alt: t('images.team', { defaultValue: t('badge') }),
-      height: 'h-72'
+      height: 'h-64 sm:h-72 lg:h-[420px] xl:h-[600px]'
     },
     {
       src: '/imgs/102 An executive reporting stu/image_8.webp',
       alt: t('images.workspace', { defaultValue: t('badge') }),
-      height: 'h-48'
+      height: 'h-56 sm:h-64 lg:h-[380px] xl:h-[600px]'
     },
     {
       src: '/imgs/103 A continuous compliance op/image_19.webp',
       alt: t('images.collaboration', { defaultValue: t('badge') }),
-      height: 'h-56'
+      height: 'h-56 sm:h-64 lg:h-[380px] xl:h-[600px]'
     }
   ];
 
@@ -175,7 +175,7 @@ export function AboutSection() {
 
                     <Image
                     width={800}
-                    height={600}
+                    height={800}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     src={image.src}
                     alt={image.alt}

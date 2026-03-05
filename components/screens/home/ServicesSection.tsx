@@ -121,7 +121,7 @@ function ServiceCard({
     >
 
       {/* Header Image */}
-      <div className="h-40 md:h-48 w-full overflow-hidden relative min-h-[180px]">
+      <div className="h-40 md:h-72 lg:h-[420px] xl:h-[600px] w-full overflow-hidden relative min-h-[180px]">
         <Image
           width={600}
           height={400}
@@ -199,7 +199,7 @@ export function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-5">
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} t={t} />
           ))}

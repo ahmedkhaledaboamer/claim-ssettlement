@@ -131,7 +131,7 @@ export function ServiceLevelsSection() {
 
                   <div className="relative z-10 h-full flex flex-col">
                     {/* Header Image */}
-                    <div className="h-44 md:h-52 w-full relative overflow-hidden min-h-[200px]">
+                    <div className="h-56 sm:h-64 lg:h-[380px] xl:h-[600px] w-full relative overflow-hidden ">
                       <Image
                         width={600}
                         height={400}
