@@ -1,0 +1,1114 @@
+{
+  "page": {
+    "title": "主页"
+  },
+  "seo": {
+    "siteName": "KIB 索赔结算服务",
+    "pages": {
+      "home": {
+        "title": "主页 | KIB 索赔结算服务 – 阿联酋的索赔结算服务与执行金融解决方案",
+        "description": "KIB 索赔结算服务有限责任公司将企业和企业家与阿联酋合适的融资联系起来。我们分析您的需求，构建强大的融资文件，并谈判商业、企业、房地产和中小企业融资的最佳条款。您可信赖的金融经纪合作伙伴，支持可持续增长和财务稳定。"
+      },
+      "services": {
+        "title": "服务 | KIB 索赔结算服务 – 商业、企业与中小企业融资解决方案",
+        "description": "探索 KIB 索赔结算服务的融资服务：商业经纪、投资与房地产融资、企业与中小企业解决方案。我们根据您的企业规模和目标在阿联酋量身定制融资选项。专业的文件准备、谈判和跟进直至批准。"
+      },
+      "administrativeDepartment": {
+        "title": "行政部门 | KIB 索赔结算服务 – 专家团队与运营卓越",
+        "description": "认识 KIB 索赔结算服务的行政团队和我们的操作系统。我们确保质量标准、清晰的客户旅程以及每个融资文件的专用支持。发现我们的方法、服务水平以及在阿联酋的卓越承诺。"
+      },
+      "identity": {
+        "title": "身份 | KIB 索赔结算服务 – 我们的使命、愿景与价值观",
+        "description": "发现 KIB 索赔结算服务的身份：我们的使命、愿景、价值观和哲学。我们是您在阿联酋可信赖的金融经纪合作伙伴，致力于清晰、强大的文件、一致的结果、快速执行和完全保密。"
+      },
+      "execution": {
+        "title": "执行 | KIB 索赔结算服务 – 索赔结算与执行服务",
+        "description": "KIB 索赔结算服务在阿联酋的执行和索赔结算服务。从提交到结算，我们以索赔执行的专业知识、益处、专用支持和证明的结果引导您。与您可信赖的专业人士合作。"
+      }
+    }
+  },
+  "navbar": {
+    "cta": "预约您的咨询",
+    "openMenu": "打开导航菜单",
+    "closeMenu": "关闭导航菜单",
+    "navMenu": "主导航",
+    "routes": [
+      { "label": "主页", "href": "/" },
+      { "label": "服务", "href": "/services" },
+      { "label": "行政部门", "href": "/administrative-department" },
+      { "label": "身份", "href": "/identity" },
+      { "label": "执行", "href": "/execution" }
+    ]
+  },
+  "content": {
+    "title": "我的组件",
+    "description": "我的组件描述"
+  },
+  "header": {
+    "title": "优质法律咨询",
+    "subtitle": "以金标准可信赖的法律专业知识",
+    "cta": {
+      "bookConsultation": "预约您的咨询",
+      "exploreServices": "探索我们的服务"
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "联系我们",
+      "phone": "+971 521068882",
+      "email": "info@shazmlc.com",
+      "location": "阿拉伯联合酋长国"
+    },
+    "quickLinks": {
+      "title": "快速链接",
+      "links": [
+        { "label": "主页", "href": "/" },
+        { "label": "服务", "href": "/services" },
+        { "label": "行政部门", "href": "/administrative-department" },
+        { "label": "身份", "href": "/identity" },
+        { "label": "执行", "href": "/execution" }
+      ]
+    },
+    "description": "KIB 索赔结算服务有限责任公司 — 您的执行金融臂，将您与合适的融资伙伴联系起来。我们分析您的需求，构建强大的融资文件，并谈判最佳条款，以确保支持可持续增长和财务稳定的融资。",
+    "copyright": "© 2026 KIB 索赔结算服务有限责任公司。保留所有权利。",
+    "socialMedia": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    }
+  },
+  "notFound": {
+    "badge": "页面丢失",
+    "title": "我们找不到此页面",
+    "description": "您正在查找的页面可能已被移动、删除或从未存在。请检查 URL 或返回主页。",
+    "cta": "返回主页"
+  },
+  "home": {
+    "hero": {
+      "badge": "KIB 索赔结算服务有限责任公司",
+      "headlineLine1": "我们将您与合适的融资联系起来...",
+      "headlineLine2": "并为您设计一个金融路径，这是",
+      "headlineHighlight": "安全增长的",
+      "subheadline": "在融资条件快速变化、扩张需求不断上升的金融环境中，我们成为您的执行金融臂 — 我们分析、构建、谈判并关闭适合您的规模和抱负的融资。",
+      "backgroundAlt": "夜晚豪华金融区天际线",
+      "stats": {
+        "clients": "满意客户",
+        "fundingVolume": "十亿阿联酋迪拉姆融资",
+        "fundingPartners": "融资伙伴",
+        "approvalRate": "批准率"
+      },
+      "scrollCta": "发现旅程"
+    },
+    "about": {
+      "badge": "了解我们",
+      "titleMain": "我们",
+      "titleHighlight": "是谁？",
+      "lead": "我们是一家专注于索赔结算服务的公司，为公司、企业家和投资项目提供先进的金融解决方案。",
+      "helpIntro": "我们通过以下方式帮助您访问合适的融资：",
+      "bulletPoints": [
+        "分析您的金融需求",
+        "评估您的运营位置",
+        "选择最合适的融资伙伴",
+        "准备强大的融资文件",
+        "谈判最佳条款",
+        "跟进请求直至最终批准"
+      ],
+      "expertiseTitle": "我们的专业领域",
+      "expertise": {
+        "financialAnalysis": "金融分析",
+        "negotiation": "谈判",
+        "filePreparation": "文件准备",
+        "followUp": "跟进"
+      },
+      "commitmentText": "我们不寻求“只是融资”... 我们寻求合适的融资，它服务于您的目标、加强您的增长并减少您的风险。",
+      "missionCardTitle": "我们的使命",
+      "missionCardParagraph": "成为给予客户金融清晰度并通过专业管理引导他们到合适融资的实体，保证更好的条款、更少的时间和更低的风险。",
+      "missionCardBoxText": "我们的使命不仅仅是言语… 它是我们在每个文件、每个步骤和每个客户中应用的运营承诺。",
+      "visionCardTitle": "我们的愿景",
+      "visionIntro": "成为人们谈论以下内容时引用的金融实体：",
+      "visionTags": [
+        "专业经纪",
+        "强大的文件",
+        "一致的结果",
+        "快速执行",
+        "完全保密"
+      ],
+      "visionQuote": "我们不渴望成为“最大的”... 我们渴望成为最精确、最强大和最可信的。",
+      "images": {
+        "team": "战略会议中的专业团队",
+        "workspace": "优雅现代的工作空间",
+        "collaboration": "高性能协作和团队合作",
+        "meeting": "执行商业会议"
+      }
+    },
+    "services": {
+      "badge": "集成融资解决方案",
+      "titleMain": "我们的核心",
+      "titleHighlight": "服务",
+      "lead": "我们提供一个全面的索赔结算服务系统，涵盖您所有的金融需求。",
+      "items": {
+        "commercial": {
+          "badge": "商业",
+          "title": "商业索赔结算服务",
+          "description": "商业活动的集成融资解决方案。"
+        },
+        "investment": {
+          "badge": "投资",
+          "title": "投资索赔结算服务",
+          "description": "有前景的投资项目的融资。"
+        },
+        "realEstate": {
+          "badge": "房地产",
+          "title": "房地产索赔结算服务",
+          "description": "财产收购和开发的融资。"
+        },
+        "corporate": {
+          "badge": "企业",
+          "title": "企业索赔结算服务",
+          "description": "大型公司的结构化金融解决方案。"
+        },
+        "sme": {
+          "badge": "中小企业",
+          "title": "中小企业索赔结算服务",
+          "description": "支持中小企业的增长。"
+        },
+        "islamic": {
+          "badge": "伊斯兰",
+          "title": "伊斯兰索赔结算服务",
+          "description": "符合伊斯兰教法的融资解决方案。"
+        },
+        "expansion": {
+          "badge": "扩张",
+          "title": "扩张和发展融资",
+          "description": "扩张和增长计划的融资。"
+        },
+        "newProjects": {
+          "badge": "新",
+          "title": "新项目融资",
+          "description": "新想法和项目的融资。"
+        },
+        "innovationTech": {
+          "badge": "技术",
+          "title": "创新与技术融资",
+          "description": "创新技术项目的融资。"
+        },
+        "fdi": {
+          "badge": "国际",
+          "title": "外部融资 (FDI) 经纪",
+          "description": "吸引外国直接投资。"
+        },
+        "workingCapital": {
+          "badge": "流动性",
+          "title": "营运资金融资",
+          "description": "义务和现金流的快速流动性解决方案。"
+        },
+        "mergersAcquisitions": {
+          "badge": "并购",
+          "title": "并购索赔结算服务",
+          "description": "并购交易的结构化和融资。"
+        }
+      }
+    },
+    "offerings": {
+      "badge": "真正的附加值",
+      "titleMain": "我们提供",
+      "titleHighlight": "什么？",
+      "lead": "我们提供一个集成的索赔结算服务系统，包括您达到合适融资所需的一切。",
+      "hint": "点击任何项目了解更多。",
+      "items": {
+        "needsAnalysis": {
+          "title": "分析您的金融需求",
+          "description": "我们精确理解您的要求并识别最佳解决方案。"
+        },
+        "lenderSelection": {
+          "title": "选择合适的融资伙伴",
+          "description": "我们将您的需求与最佳融资机构匹配。"
+        },
+        "filePreparation": {
+          "title": "准备专业的融资文件",
+          "description": "我们构建强大的文件，提高批准的可能性。"
+        },
+        "termNegotiation": {
+          "title": "谈判最佳条款",
+          "description": "我们为您确保最佳利率、期限和契约。"
+        },
+        "followUp": {
+          "title": "跟进直至批准",
+          "description": "我们陪同您每一步直至融资支付。"
+        },
+        "postFundingSupport": {
+          "title": "融资后支持",
+          "description": "我们帮助您管理义务和现金流。"
+        },
+        "financialAdvisory": {
+          "title": "提供金融咨询",
+          "description": "我们帮助您做出明智的金融决策。"
+        }
+      }
+    },
+    "stats": {
+      "badge": "为我们说话的数字",
+      "titleMain": "我们的成就",
+      "titleHighlight": "以数字形式",
+      "lead": "我们为客户信任和多年专业工作的出色结果感到自豪。",
+      "items": {
+        "clients": "满意客户",
+        "fundingVolume": "十亿阿联酋迪拉姆融资",
+        "fundingPartners": "融资机构",
+        "approvalRate": "批准率",
+        "yearsExperience": "经验年限",
+        "fundedProjects": "资助项目",
+        "countries": "国家",
+        "bankingPartners": "银行伙伴"
+      }
+    },
+    "journey": {
+      "badge": "清晰定义的路径",
+      "titleMain": "客户旅程",
+      "titleHighlight": "与我们",
+      "lead": "您与我们的融资旅程不仅仅是交易… 它是完整的金融路径，我们一步步陪同您。",
+      "steps": {
+        "discovery": {
+          "title": "发现和需求分析会议",
+          "description": "我们倾听您，研究您的项目，并精确定义您的金融需求。"
+        },
+        "evaluation": {
+          "title": "金融和运营评估",
+          "description": "我们分析现金流、义务和偿还能力。"
+        },
+        "lenderSelection": {
+          "title": "选择合适的融资机构",
+          "description": "我们根据您的活动和规模列出最佳选项。"
+        },
+        "filePreparation": {
+          "title": "准备专业的融资文件",
+          "description": "我们组织文档并构建强大的文件，提高批准机会。"
+        },
+        "negotiation": {
+          "title": "谈判条款",
+          "description": "我们为您确保最佳定价、期限和契约。"
+        },
+        "approval": {
+          "title": "跟进直至批准",
+          "description": "我们陪同您直至合同签署和融资支付。"
+        },
+        "postFunding": {
+          "title": "融资后支持",
+          "description": "我们帮助您管理义务并优化现金流。"
+        }
+      }
+    },
+    "system": {
+      "badge": "集成的操作方法",
+      "titleMain": "金融",
+      "titleHighlight": "操作系统",
+      "lead": "我们的系统建立在精确的操作层上，这些层共同工作以提供最佳结果。",
+      "layers": {
+        "financialAnalysis": {
+          "title": "金融分析层",
+          "description": "我们读取数字、指标和融资能力。",
+          "details": "我们深入分析金融数据，以理解您的当前位置并定义最佳融资路径。"
+        },
+        "operationalAssessment": {
+          "title": "运营评估层",
+          "description": "我们评估项目的强度和可持续性。",
+          "details": "我们审查操作和组织结构，以确保您对融资的准备。"
+        },
+        "matching": {
+          "title": "融资匹配层",
+          "description": "我们将您的需求与合适的机构匹配。",
+          "details": "从我们的伙伴网络中，我们选择最适合您项目的融资机构。"
+        },
+        "negotiation": {
+          "title": "谈判层",
+          "description": "我们确保最佳可能的条款。",
+          "details": "我们专业谈判以获得最佳定价和条件。"
+        },
+        "closure": {
+          "title": "关闭和跟进层",
+          "description": "我们关闭交易并跟进到结束。",
+          "details": "我们陪同您直至收到融资并继续支持您以确保项目成功。"
+        }
+      }
+    },
+    "serviceLevels": {
+      "badge": "为每个需求量身定制的服务",
+      "titleMain": "服务",
+      "titleHighlight": "水平",
+      "lead": "我们通过不同的执行水平提供我们的服务，这些水平针对每个客户。",
+      "mostRequested": "最受欢迎",
+      "levels": {
+        "basic": {
+          "title": "基本水平",
+          "description": "文件准备并提交给融资机构。",
+          "features": [
+            "文件准备",
+            "提交给融资机构"
+          ]
+        },
+        "advanced": {
+          "title": "高级水平",
+          "description": "分析、文件准备、跟进和谈判。",
+          "features": [
+            "金融分析",
+            "文件准备",
+            "跟进",
+            "谈判"
+          ]
+        },
+        "executive": {
+          "title": "执行水平",
+          "description": "管理整个过程直至批准。",
+          "features": [
+            "端到端管理",
+            "持续跟进",
+            "专业谈判",
+            "直至批准"
+          ]
+        },
+        "strategic": {
+          "title": "战略水平",
+          "description": "构建融资计划、选择机构并管理多个谈判。",
+          "features": [
+            "融资计划",
+            "选择机构",
+            "多个谈判"
+          ]
+        },
+        "businessOwners": {
+          "title": "企业主水平",
+          "description": "个性化服务，带有完全保密和处理敏感文件。",
+          "features": [
+            "个性化服务",
+            "完全保密",
+            "敏感文件"
+          ]
+        },
+        "strategicPartnership": {
+          "title": "战略伙伴关系水平",
+          "description": "持续融资管理和长期扩张规划。",
+          "features": [
+            "管理与融资机构的关系",
+            "扩张规划",
+            "需要时的金融重组",
+            "未来融资机会"
+          ]
+        }
+      }
+    },
+    "quality": {
+      "badge": "我们对您的承诺",
+      "titleMain": "我们的价值观",
+      "titleHighlight": "和原则",
+      "qualityStandardsTitle": "质量标准",
+      "entityLanguageTitle": "实体语言",
+      "dealingPrinciplesTitle": "处理原则",
+      "qualityStandards": [
+        "需求分析的准确性",
+        "文件准备的速度",
+        "每一步的透明度",
+        "持续跟进",
+        "对结果的承诺",
+        "总保密"
+      ],
+      "entityLanguage": [
+        "基于数字的语言",
+        "尊重客户时间的语言",
+        "基于信息的语言",
+        "没有夸大承诺的语言",
+        "仅依赖结果的语言",
+        "每一步透明的语言"
+      ],
+      "dealingPrinciples": [
+        "我们在承诺前承诺",
+        "我们在询问前澄清",
+        "我们在您询问前跟进",
+        "我们安静工作… 让结果说话",
+        "我们将客户利益置于首位",
+        "我们对工作路径承担全部责任"
+      ]
+    },
+    "clients": {
+      "badge": "成功伙伴",
+      "titleMain": "我们服务",
+      "titleHighlight": "谁？",
+      "lead": "我们自豪地服务于多个部门的不同客户群体。",
+      "types": {
+        "entrepreneurs": "企业家和企业主",
+        "sme": "中小型企业",
+        "largeCorporates": "大型公司",
+        "industrialCommercial": "商业和工业项目",
+        "realEstateInvestors": "房地产投资者",
+        "techInnovative": "技术和创新项目",
+        "expansionRestructuring": "寻求扩张或重组的公司",
+        "newInvestments": "新投资项目"
+      }
+    },
+    "promise": {
+      "title": "我们对您的承诺",
+      "lines": [
+        "我们承诺成为为您打开融资大门、",
+        "增强您的财务实力、",
+        "并提供支持您的增长和稳定扩张的解决方案的伙伴。"
+      ],
+      "badges": {
+        "fullCommitment": "完全承诺",
+        "totalTransparency": "总透明度",
+        "absoluteConfidentiality": "绝对保密"
+      }
+    },
+    "contactCta": {
+      "badge": "现在开始",
+      "titleMain": "联系",
+      "titleHighlight": "我们",
+      "lead": "开始您的合适融资之旅。我们在这里将您与合适的机构在合适的时间联系起来。",
+      "primaryCta": "获取咨询",
+      "whatsappCta": "在 WhatsApp 上聊天"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "集成融资解决方案",
+      "headlinePrefix": "您需要的一切来自",
+      "headlineHighlight": "融资服务",
+      "headlineSuffix": "在一个地方",
+      "subheadline": "从索赔结算服务到高级金融咨询，我们提供超过 30 种融资服务，旨在让您的企业更容易增长并自信地实现目标。",
+      "primaryCta": "浏览服务",
+      "meta": "+30 种融资服务 • 超过 15 年经验",
+      "cardTitle": "超过 20 亿阿联酋迪拉姆完成的融资",
+      "cardSubtitle": "与超过 50 家融资机构的伙伴关系"
+    },
+    "features": {
+      "items": {
+        "customizedSolutions": {
+          "title": "定制解决方案",
+          "description": "我们设计适合您独特需求的融资解决方案"
+        },
+        "highReliability": {
+          "title": "高可靠性",
+          "description": "与领先的持牌金融机构的伙伴关系"
+        },
+        "speed": {
+          "title": "执行速度",
+          "description": "快速批准和简化流程"
+        },
+        "continuousSupport": {
+          "title": "持续支持",
+          "description": "一个专属团队在每一步支持您"
+        }
+      }
+    },
+    "grid": {
+      "badge": "我们的全面服务",
+      "title": "超过 30 种融资服务",
+      "lead": "我们提供全面的融资解决方案范围，针对所有规模的个人和公司的需求。",
+      "services": {
+        "financeBrokerage": {
+          "title": "索赔结算服务",
+          "description": "我们将您与合适的融资机构联系起来，以最佳可能的条款。",
+          "feature1": "需求分析",
+          "feature2": "专业融资文件准备",
+          "feature3": "谈判",
+          "feature4": "最终关闭"
+        },
+        "companyFinance": {
+          "title": "公司融资",
+          "description": "支持公司扩张和增长的金融解决方案。",
+          "feature1": "营运资金",
+          "feature2": "资产收购",
+          "feature3": "运营扩张"
+        },
+        "commercialProjects": {
+          "title": "商业项目融资",
+          "description": "需要运营提升的项目专用融资。",
+          "feature1": "启动阶段",
+          "feature2": "操作",
+          "feature3": "扩张"
+        },
+        "industrialProjects": {
+          "title": "工业项目融资",
+          "description": "工厂和生产线金融支持。",
+          "feature1": "设备",
+          "feature2": "原材料",
+          "feature3": "工业扩张"
+        },
+        "realEstateFinance": {
+          "title": "房地产融资",
+          "description": "投资者和开发商的财产解决方案。",
+          "feature1": "收购",
+          "feature2": "开发",
+          "feature3": "再融资"
+        },
+        "tradeFinance": {
+          "title": "贸易融资",
+          "description": "销售、采购和供应操作的融资。",
+          "feature1": "采购订单",
+          "feature2": "供应和采购",
+          "feature3": "收款"
+        },
+        "islamicFinance": {
+          "title": "伊斯兰融资",
+          "description": "符合伊斯兰教法的融资解决方案。",
+          "feature1": "Murabaha",
+          "feature2": "Ijara",
+          "feature3": "Mudaraba 和其他结构"
+        },
+        "lettersOfCredit": {
+          "title": "信用证",
+          "description": "国际贸易的全面支持。",
+          "feature1": "跟单信用证 (LC)",
+          "feature2": "银行担保",
+          "feature3": "装运跟进"
+        },
+        "investmentFinance": {
+          "title": "投资索赔结算服务",
+          "description": "我们在合适的时间将您与合适的投资者联系起来。",
+          "feature1": "投资交易结构化",
+          "feature2": "战略伙伴关系",
+          "feature3": "条款谈判"
+        },
+        "financialAdvisory": {
+          "title": "金融咨询",
+          "description": "帮助您做出强大决策的金融洞察。",
+          "feature1": "金融分析",
+          "feature2": "风险评估",
+          "feature3": "融资计划"
+        },
+        "entrepreneursFinance": {
+          "title": "企业家融资",
+          "description": "企业主的灵活解决方案。",
+          "feature1": "启动资金",
+          "feature2": "扩张资金",
+          "feature3": "设备融资"
+        },
+        "corporateExpansion": {
+          "title": "机构扩张融资",
+          "description": "支持成熟公司的增长。",
+          "feature1": "新分支",
+          "feature2": "系统开发",
+          "feature3": "区域扩张"
+        },
+        "innovationTechFinance": {
+          "title": "创新与技术融资",
+          "description": "数字和技术驱动项目的支持。",
+          "feature1": "软件融资",
+          "feature2": "系统和平台",
+          "feature3": "先进技术项目"
+        },
+        "newProjectsFinance": {
+          "title": "新项目融资",
+          "description": "覆盖设置和早期操作的融资。",
+          "feature1": "项目设置",
+          "feature2": "初始操作",
+          "feature3": "早期扩张"
+        },
+        "partnershipFinance": {
+          "title": "伙伴关系融资",
+          "description": "合资企业的金融解决方案。",
+          "feature1": "合资企业 (JV)",
+          "feature2": "商业联盟",
+          "feature3": "跨境伙伴关系"
+        },
+        "internationalTradeFinance": {
+          "title": "国际贸易融资",
+          "description": "进口和出口操作的全面支持。",
+          "feature1": "进口",
+          "feature2": "出口",
+          "feature3": "国际装运"
+        },
+        "overseasProjects": {
+          "title": "海外项目融资",
+          "description": "在您的祖国之外的安全扩张。",
+          "feature1": "国际项目",
+          "feature2": "外国资产",
+          "feature3": "区域扩张"
+        },
+        "shippingLogisticsFinance": {
+          "title": "航运与物流融资",
+          "description": "物流操作的金融解决方案。",
+          "feature1": "海运",
+          "feature2": "空运",
+          "feature3": "商业运输"
+        },
+        "foreignDirectInvestment": {
+          "title": "外国直接投资 (FDI) 经纪",
+          "description": "与全球资本联系。",
+          "feature1": "FDI 交易结构化",
+          "feature2": "投资文件准备",
+          "feature3": "国际谈判"
+        },
+        "smeFinance": {
+          "title": "中小企业项目融资",
+          "description": "灵活快速的解决方案。",
+          "feature1": "资本融资",
+          "feature2": "增长和扩张",
+          "feature3": "设备融资"
+        },
+        "restructuringFinance": {
+          "title": "重组融资",
+          "description": "重组您的金融义务。",
+          "feature1": "债务调度",
+          "feature2": "再融资",
+          "feature3": "现金流优化"
+        },
+        "supplyChainFinance": {
+          "title": "供应链融资",
+          "description": "您的供应链全面支持。",
+          "feature1": "库存融资",
+          "feature2": "供应商融资",
+          "feature3": "供应合同"
+        },
+        "governmentContracts": {
+          "title": "政府合同融资",
+          "description": "公共部门项目的解决方案。",
+          "feature1": "合同执行融资",
+          "feature2": "设备和准备",
+          "feature3": "预付款融资"
+        },
+        "heavyEquipmentFinance": {
+          "title": "重型设备融资",
+          "description": "工业和建筑项目的支持。",
+          "feature1": "设备融资",
+          "feature2": "资产融资",
+          "feature3": "运营融资"
+        },
+        "franchiseFinance": {
+          "title": "特许经营融资",
+          "description": "支持您进入特许经营世界。",
+          "feature1": "特许经营费",
+          "feature2": "分支装修",
+          "feature3": "运营资本"
+        },
+        "digitalTransformationFinance": {
+          "title": "数字转型融资",
+          "description": "系统和技术升级的支持。",
+          "feature1": "ERP 系统",
+          "feature2": "自动化",
+          "feature3": "云解决方案"
+        },
+        "internationalExpansion": {
+          "title": "国际扩张融资",
+          "description": "进入新市场的支持。",
+          "feature1": "海外分支",
+          "feature2": "国际资产",
+          "feature3": "外部操作"
+        },
+        "acquisitionFinance": {
+          "title": "收购融资",
+          "description": "购买公司和股权的解决方案。",
+          "feature1": "收购交易",
+          "feature2": "并购",
+          "feature3": "股权购买"
+        },
+        "ventureCapitalFinance": {
+          "title": "风险资本融资",
+          "description": "高增长初创企业的支持。",
+          "feature1": "投资轮次",
+          "feature2": "快速扩张",
+          "feature3": "新产品资金"
+        },
+        "serviceProjectsFinance": {
+          "title": "服务部门项目融资",
+          "description": "非工业部门的解决方案。",
+          "feature1": "医疗项目",
+          "feature2": "教育项目",
+          "feature3": "物流和服务"
+        }
+      }
+    },
+    "whyUs": {
+      "badge": "为什么是我们？",
+      "title": "您通往金融成功的可信伙伴",
+      "description": "我们带来超过 15 年的金融经纪和融资经验，并为我们在该地区领先金融机构的伙伴关系感到自豪。",
+      "bullets": {
+        "partners": {
+          "title": "广泛的伙伴网络",
+          "subtitle": "50+ 持牌金融机构"
+        },
+        "successRate": {
+          "title": "高成功率",
+          "subtitle": "95% 的融资申请获得批准"
+        },
+        "expertSupport": {
+          "title": "专业支持",
+          "subtitle": "认证金融专家团队"
+        }
+      },
+      "cardSubtitle": "完成的融资阿联酋迪拉姆"
+    }
+  },
+  "identityPage": {
+    "hero": {
+      "badge": "KIB 索赔结算服务",
+      "exploreCta": "探索我们的身份",
+      "journeyCta": "客户旅程",
+      "scrollAria": "向下滚动",
+      "goToSlideAria": "转到 {label}",
+      "slides": [
+        {
+          "title": "金融身份",
+          "titleAccent": "定义我们",
+          "subtitle": "不仅仅是经纪人… 一个具有愿景、方法和运营能力的金融实体，由董事会管理。",
+          "label": "我们的身份"
+        },
+        {
+          "title": "融资的战略愿景",
+          "titleAccent": "",
+          "subtitle": "我们深入阅读金融现实，并按照专业标准构建融资文件，确保最佳条款和最低风险。",
+          "label": "我们的愿景"
+        },
+        {
+          "title": "可靠",
+          "titleAccent": "和可持续结果",
+          "subtitle": "我们通过批准率、条款质量和客户满意度衡量我们的成功。我们不承诺融资… 我们承诺通往它的清晰路径。",
+          "label": "我们的结果"
+        }
+      ]
+    },
+    "journey": {
+      "title": "客户",
+      "titleHighlight": "旅程",
+      "lead": "一个计算路径，确保金融清晰度和您可以依赖的结果",
+      "stepLabel": "步骤 {n}",
+      "steps": [
+        { "title": "分析和评估", "desc": "准确阅读金融现实和测量的风险评估" },
+        { "title": "构建文件", "desc": "专业起草和有组织的文档，带有清晰计划" },
+        { "title": "匹配和合规", "desc": "确保文件符合法规和机构标准" },
+        { "title": "谈判", "desc": "深思熟虑选择合适的机构和专业条款谈判" },
+        { "title": "关闭", "desc": "彻底关闭、持续跟进和融资后支持" }
+      ]
+    },
+    "sections": {
+      "intro": {
+        "title": "引言",
+        "content": [
+          "在金融部门快速变化、融资者需求增长和批准标准更复杂的背景下，KIB 索赔结算服务的董事会宣布了一个精心设计的金融身份，由方法塑造，并建立在经验和纪律的坚实基础上。我们的身份基于一个清晰的信念：融资不是行政步骤，而是塑造公司未来的战略决策。从这个立场出发，我们采用了一个运营模式，确保客户金融清晰度、计算路径、强大文件和可靠结果。",
+          "KIB 不仅仅是经纪人… 它是一个具有愿景、方法和运营能力的金融实体，由董事会管理。"
+        ]
+      },
+      "identity": {
+        "title": "我们的金融身份定义",
+        "content": [
+          "我们的金融身份是定义我们如何思考、如何决策以及我们承诺的质量水平的框架。",
+          "它不是内部文档… 它是金融操作系统，在每个文件、每个步骤、每个谈判和每个结果中反映。"
+        ]
+      },
+      "philosophy": {
+        "title": "我们的融资哲学",
+        "content": [
+          "董事会相信，合适的融资不是由金额测量的，而是由其适合客户、支持增长、减少风险和改善财务稳定的能力测量的。",
+          "因此，我们的哲学基于："
+        ],
+        "bullets": [
+          "准确阅读金融现实",
+          "测量的风险评估",
+          "深思熟虑选择合适的机构",
+          "专业谈判",
+          "彻底关闭"
+        ],
+        "conclusion": "我们不寻求最快的融资… 我们寻求最可行的。"
+      },
+      "mission": {
+        "title": "我们的金融使命",
+        "content": ["我们的使命是为客户提供一个金融系统，提供："],
+        "bullets": [
+          "愿景清晰度",
+          "文件强度",
+          "决策信心",
+          "执行速度",
+          "更好条款",
+          "更低风险"
+        ],
+        "conclusion": "我们承诺客户在融资前安心。"
+      },
+      "vision": {
+        "title": "我们的金融愿景",
+        "content": ["董事会确认我们的愿景是成为知名实体："],
+        "bullets": [
+          "文件强度",
+          "分析准确性",
+          "质量严格",
+          "执行速度",
+          "处理保密",
+          "结果一致性"
+        ],
+        "conclusion": "我们不竞争体积… 我们竞争卓越。"
+      },
+      "principles": {
+        "title": "我们的金融身份原则",
+        "content": ["董事会采用了七个核心原则，形成我们身份的核心："],
+        "bullets": [
+          "提交前分析",
+          "谈判前清晰",
+          "分享前保密",
+          "速度前质量",
+          "承诺前结果",
+          "交付前承诺",
+          "专业性高于一切"
+        ]
+      },
+      "reading": {
+        "title": "我们如何阅读金融现实",
+        "content": ["我们不仅阅读数字… 我们阅读："],
+        "bullets": [
+          "流动行为",
+          "义务模式",
+          "操作强度",
+          "风险水平",
+          "偿还能力",
+          "弱点",
+          "优势",
+          "融资机会",
+          "拒绝可能性"
+        ],
+        "conclusion": "这种深入阅读使我们的决策精确，我们的文件强大。"
+      },
+      "building": {
+        "title": "我们如何构建融资文件",
+        "content": ["每个由行政机构批准的融资文件携带："],
+        "bullets": [
+          "全面金融分析",
+          "专业起草",
+          "有组织的文档",
+          "清晰偿还计划",
+          "强大理由",
+          "弱点预处理",
+          "说服性金融呈现",
+          "支持决策的操作愿景"
+        ],
+        "conclusion": "我们不提交文件… 我们提交完整的金融案例。"
+      },
+      "partners": {
+        "title": "与融资者的处理",
+        "content": ["融资者信任我们，因为："],
+        "bullets": [
+          "我们的文件强大",
+          "我们的风险计算",
+          "我们的处理专业",
+          "我们的承诺稳定",
+          "我们的结果清晰"
+        ],
+        "conclusion": "我们不要求批准… 我们呈现值得它的文件。"
+      },
+      "clients": {
+        "title": "与客户的处理",
+        "content": ["我们将客户视为金融伙伴，而不是交易。"],
+        "bullets": [
+          "我们说话前倾听",
+          "我们决策前分析",
+          "我们询问前澄清",
+          "我们被询问前跟进",
+          "我们安静工作… 只显示结果"
+        ],
+        "conclusion": "这是董事会采用的处理文化。"
+      },
+      "admin": {
+        "title": "行政机构的身份",
+        "content": ["行政机构是我们身份的支柱，由包括以下的操作系统组成："],
+        "bullets": [
+          "分析",
+          "评估",
+          "匹配",
+          "谈判",
+          "关闭",
+          "跟进",
+          "融资后支持"
+        ],
+        "conclusion": "每个步骤计算… 每个决策数据驱动… 每个文件携带我们的印记。"
+      },
+      "results": {
+        "title": "结果身份",
+        "content": ["我们通过以下衡量成功："],
+        "bullets": [
+          "批准率",
+          "执行速度",
+          "条款质量",
+          "客户满意度",
+          "关系连续性"
+        ],
+        "conclusion": "我们不承诺您融资… 我们承诺通往它的清晰路径。"
+      }
+    },
+    "conclusion": "最后，KIB 董事会确认，这个实体不是为了成为传统经纪人而创建的，而是为了成为一个坚定的金融身份，坚定地站在客户身后，以信心管理他们的文件，打开否则不会打开的门，并创建一个无与伦比的金融路径。我们是那个不提高声音的实体… 因为它的结果为其说话；不夸大承诺… 因为其工作质量足够；不要求信任… 因为它从第一步就赚取它。融资不是机会… 它是工艺，成功不是运气… 它是方法。今天与我们开始，让我们的金融身份成为驱动您的项目向更大稳定、增长和竞争力的力量。",
+    "introBadge": "KIB",
+    "lightboxClose": "关闭",
+    "visionCardLabel": "我们的愿景"
+  },
+  "executionPage": {
+    "hero": {
+      "title": "执行路径",
+      "subtitle": "由治理管理、以纪律执行并以信心关闭的操作框架 — 董事会",
+      "badge": "KIB 索赔结算服务",
+      "ctaPrimary": "开始您的融资旅程",
+      "ctaSecondary": "发现路径",
+      "scrollMore": "发现更多",
+      "statStage": "执行阶段",
+      "statGovernance": "治理与合规",
+      "statBoard": "董事会认证",
+      "statBoardValue": "认证",
+      "stat360": "全面监督",
+      "stat24": "持续跟进"
+    },
+    "about": {
+      "badge": "我们是谁",
+      "titlePart1": "在不容忍犹豫的金融部门，",
+      "titlePart2": "也不原谅未计算决策",
+      "p1": "KIB 董事会采用了代表客户融资旅程每个步骤管理框架的执行路径 — 不是基于个人努力，而是基于结合治理、安全、合规、监督和深入分析的机构方法。",
+      "p2": "这个路径不是作为简单程序系列设计的，而是作为集成操作结构，确保每个文件通过基于准确数据、严格评估、仔细规划、计算谈判和不留错误空间的关闭的研究阶段移动。",
+      "quote": "我们不寻求融资作为自身目的；我们寻求基于董事会愿景的安全、可持续金融决策。",
+      "teamLabel": "+500 满意客户",
+      "teamSub": "他们信任我们的服务",
+      "governance": "治理",
+      "phase": "阶段",
+      "satisfaction": "满意度"
+    },
+    "executivePath": {
+      "badge": "40 个集成阶段",
+      "title": "执行路径",
+      "lead": "通过 40 个站点的研究旅程，确保您的融资文件从初始分析到成功关闭以精确移动",
+      "phaseLabel": "阶段",
+      "stations": "站点",
+      "stepPhase": "阶段",
+      "withinPhase": "在阶段内：",
+      "phases": {
+        "1": { "title": "接收与验证", "subtitle": "分析与评估" },
+        "2": { "title": "执行与关闭", "subtitle": "提交与谈判" },
+        "3": { "title": "监督与合规", "subtitle": "质量与跟进" },
+        "4": { "title": "发展与可持续性", "subtitle": "未来增长" }
+      },
+      "steps": {
+        "1": { "title": "执行接收平台", "desc": "在高行政级别管理的正式接收，以识别客户及其真实需求。" },
+        "2": { "title": "初始验证网关", "desc": "审查客户身份、活动、来源以及与监管标准的合规。" },
+        "3": { "title": "运营数据收集中心", "desc": "全面收集金融、运营、法律数据和敏感文档。" },
+        "4": { "title": "初始审计室", "desc": "初始审查以在开始高级分析前验证数据准确性。" },
+        "5": { "title": "战略金融分析平台", "desc": "使用机构方法分析流动、义务、可持续性和偿还能力。" },
+        "6": { "title": "信用评估中心", "desc": "测量金融强度、运营稳定性和潜在弱点。" },
+        "7": { "title": "风险评估实验室", "desc": "根据内部风险模型分析运营、金融、市场和结构性风险。" },
+        "8": { "title": "治理和合规委员会", "desc": "审查文件以确保符合法规、政策和监督标准。" },
+        "9": { "title": "数据保护和保密系统", "desc": "应用加密、保护和访问控制协议用于敏感信息。" },
+        "10": { "title": "金融规划平台", "desc": "起草覆盖类型、金额、期限、合适机构和谈判策略的执行计划。" },
+        "11": { "title": "执行文件准备中心", "desc": "准备反映客户强度、解决弱点并突出融资理由的专业文件。" },
+        "12": { "title": "内部审计委员会", "desc": "由专业团队审查文件以确保最高质量和合规水平。" },
+        "13": { "title": "融资匹配平台", "desc": "基于活动、风险和信用标准选择合适的机构。" },
+        "14": { "title": "正式提交渠道", "desc": "以清晰、说服性的执行表述提交文件给融资机构。" },
+        "15": { "title": "运营跟进室", "desc": "持续跟进以确保文件无延迟或不足地前进。" },
+        "16": { "title": "查询管理中心", "desc": "专业快速响应融资机构请求，解决任何评论。" },
+        "17": { "title": "执行谈判平台", "desc": "改善价格、期限、担保、费用和关闭条款有利于客户。" },
+        "18": { "title": "金融关闭委员会", "desc": "审查合同、批准条款，并确保关闭无错误或风险执行。" },
+        "19": { "title": "支付渠道", "desc": "以官方和安全方式跟进支付过程直至完成。" },
+        "20": { "title": "融资后中心", "desc": "监控义务、跟踪流动、提供推荐，并在需要时支持重组。" },
+        "21": { "title": "运营监督管理", "desc": "监控执行质量、政策合规，并确保无违规发生。" },
+        "22": { "title": "质量保证管理", "desc": "绩效评估、结果审查和运营改进批准。" },
+        "23": { "title": "定期审计管理", "desc": "进行内部审查以确保符合治理和合规标准。" },
+        "24": { "title": "保密和敏感信息管理", "desc": "访问控制、文档保护和应用最高安全标准。" },
+        "25": { "title": "执行报告管理", "desc": "准备全面报告显示所做、所实现和需要开发的内容。" },
+        "26": { "title": "持续合规管理", "desc": "监控监管变化并相应更新运营政策。" },
+        "27": { "title": "诚信和透明管理", "desc": "确保每一步按照最高专业诚信标准执行。" },
+        "28": { "title": "融资机构关系管理", "desc": "建立信任、改善沟通并确保合作连续性。" },
+        "29": { "title": "未来风险管理", "desc": "预测潜在风险并开发主动计划来解决它们。" },
+        "30": { "title": "执行路径开发管理", "desc": "定期更新路径以跟上金融和监管变化。" },
+        "31": { "title": "高级分析平台", "desc": "分析客户历史数据以识别金融绩效改进机会。" },
+        "32": { "title": "金融预测中心", "desc": "构建预测模型以支持未来融资决策。" },
+        "33": { "title": "重组室", "desc": "在需要时提供义务重组解决方案。" },
+        "34": { "title": "现金流改进平台", "desc": "改进流动性和流动稳定性的推荐。" },
+        "35": { "title": "长期关系管理中心", "desc": "与客户建立可持续关系以确保金融支持的连续性。" },
+        "36": { "title": "金融绩效评估平台", "desc": "测量融资对客户活动的影响在执行后。" },
+        "37": { "title": "金融产品开发室", "desc": "开发满足市场需求的新融资解决方案。" },
+        "38": { "title": "挑战管理平台", "desc": "解决客户在融资期间面临的任何障碍。" },
+        "39": { "title": "高级金融咨询中心", "desc": "提供帮助客户做出战略金融决策的咨询。" },
+        "40": { "title": "最终路径评估平台", "desc": "准备全面报告显示所做、所实现和未来应开发的内容。" }
+      }
+    },
+    "services": {
+      "badge": "我们提供什么",
+      "title": "我们的",
+      "titleHighlight": "融资服务",
+      "lead": "我们提供一套集成的金融解决方案，旨在按照最高质量和合规标准满足企业和个人的需求。",
+      "discoverMore": "发现更多",
+      "realEstate": { "title": "房地产融资", "desc": "商业和住宅财产所有权或开发的集成融资解决方案，以竞争条款。" },
+      "commercial": { "title": "商业融资", "desc": "现金流支持和营运资金融资，以确保您的业务连续性和增长。" },
+      "facilities": { "title": "设施融资", "desc": "中小企业和大项目的自定义程序，带有灵活偿还计划。" },
+      "restructuring": { "title": "重组", "desc": "研究和重组当前金融义务以改善现金流并减少负担。" },
+      "advisory": { "title": "金融咨询", "desc": "基于准确市场和金融数据分析的战略指导，用于明智的投资决策。" },
+      "personal": { "title": "个人融资", "desc": "满足多样化需求的个人融资解决方案，带有快速简单程序。" }
+    },
+    "benefits": {
+      "title": "附加",
+      "titleHighlight": "价值",
+      "lead": "我们不只承诺客户融资；我们承诺一个稳定工作在他们背后的集成系统，并以信心管理他们的文件。",
+      "governance": { "title": "严格治理", "desc": "确保程序完整性和法规合规的监管框架。" },
+      "security": { "title": "金融安全", "desc": "完全保护客户利益并减少潜在风险。" },
+      "oversight": { "title": "全面监督", "desc": "融资路径中每一步的密切跟进以确保质量。" },
+      "transparency": { "title": "完全透明", "desc": "条款、费用和义务的完全清晰，无惊喜。" },
+      "analysis": { "title": "深入分析", "desc": "金融数据的彻底研究以确保偿还能力。" },
+      "followUp": { "title": "持续跟进", "desc": "即使在支付后也持续支持以确保客户稳定。" },
+      "confidentiality": { "title": "完全保密", "desc": "保护客户数据和敏感信息的严格协议。" },
+      "quality": { "title": "高质量", "desc": "文件准备和与机构谈判的高专业标准。" }
+    },
+    "stats": {
+      "badge": "我们引以为豪的成就",
+      "title": "数字讲述我们的",
+      "titleHighlight": "成功",
+      "lead": "真实结果反映我们对卓越的承诺和客户信任",
+      "stage": { "label": "执行阶段", "desc": "精确研究的阶段" },
+      "clients": { "label": "满意客户", "desc": "他们信任我们的服务" },
+      "satisfaction": { "label": "满意率", "desc": "客户评分" },
+      "experience": { "label": "经验年限", "desc": "在金融市场" },
+      "projects": { "label": "成功项目", "desc": "成功融资" },
+      "partners": { "label": "融资伙伴", "desc": "战略伙伴关系" },
+      "badgeBoard": "董事会认证",
+      "badgeGovernance": "100% 治理",
+      "badgeTransparency": "完全透明"
+    },
+    "partners": {
+      "title": "我们的成功伙伴",
+      "lead": "我们自豪地与王国领先金融机构合作",
+      "names": ["国家银行", "Al Rajhi 银行", "Riyad 银行", "Banque Saudi Fransi", "Al Bilad 银行", "Bank AlJazira", "Alinma 银行", "发展基金"]
+    },
+    "whyUs": {
+      "title": "为什么选择",
+      "titleHighlight": "KIB？",
+      "lead": "我们提供一个金融盾牌，保护客户免受风险，并在面对融资者要求时确保安全路径、考虑决策和可靠结果。",
+      "reason1": "不依赖个人努力的机构方法。",
+      "reason2": "确保偿还能力的战略金融分析。",
+      "reason3": "改善条款有利于客户的执行谈判。",
+      "reason4": "数据和敏感信息的完全保护。",
+      "reason5": "即使在金融关闭后的持续跟进。",
+      "reason6": "顶级金融专家的专业团队。",
+      "successRate": "成功率",
+      "cta": "与我们开始您的旅程"
+    },
+    "faq": {
+      "badge": "我们回答您的问题",
+      "title": "常见问题",
+      "lead": "我们客户最常见问题的全面答案",
+      "q1": "什么是执行路径？",
+      "a1": "执行路径是 40 个精确阶段的集成机构方法，确保您的融资文件通过基于准确数据、严格评估、仔细规划、计算谈判和不留错误空间的关闭的研究路径移动。",
+      "q2": "融资过程需要多长时间？",
+      "a2": "持续时间取决于融资类型和规模以及所需文档的完整性。通常个人融资为 2–6 周，商业和房地产融资为 4–12 周。我们努力加速过程，同时保持最高质量标准。",
+      "q3": "您的服务适用于所有部门吗？",
+      "a3": "是的，我们服务所有经济部门，包括商业、工业、房地产、服务和技术。我们有广泛经验处理每个部门的要求并理解其特定融资需求。",
+      "q4": "需要哪些文档？",
+      "a4": "文档因融资类型而异，但通常包括：商业注册、财务报表、银行对账单、租赁或所有权合同以及国家身份证。我们的团队将详细指导您所有要求。",
+      "q5": "您提供融资后服务吗？",
+      "a5": "是的，我们在支付后提供持续跟进。我们的服务包括：监控义务、改善现金流的推荐、需要时的重组支持以及持续金融咨询，以确保您的业务稳定。",
+      "q6": "您如何确保信息保密？",
+      "a6": "我们通过以下应用最高安全和保密标准：高级加密协议、对信息的严格访问控制、约束性保密协议和认证数据保护系统。我们客户的隐私是最高优先级。",
+      "support": "持续支持"
+    },
+    "contactCta": {
+      "badge": "在董事会的语音中",
+      "title": "融资不是交易...",
+      "titleHighlight": "它是方法管理的工艺并以信心关闭",
+      "lead": "在这个路径的结尾，KIB 董事会确认，这个执行模型不是仅仅作为监管框架构建的，而是作为保护客户免受风险的金融盾牌。",
+      "ctaPrimary": "今天与我们开始",
+      "ctaSecondary": "现在致电",
+      "governance": "认证治理",
+      "security": "100% 安全",
+      "confidentiality": "完全保密",
+      "support": "24/7 支持",
+      "finalMessage": "让执行路径成为将您的项目提升到更高稳定、增长和竞争力的道路。"
+    }
+  }
+}

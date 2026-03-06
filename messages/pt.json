@@ -1,0 +1,1114 @@
+{
+  "page": {
+    "title": "Página Inicial"
+  },
+  "seo": {
+    "siteName": "KIB Claims Settlement Services",
+    "pages": {
+      "home": {
+        "title": "Início | KIB Claims Settlement Services – Serviços de Liquidação de Reivindicações & Soluções Financeiras Executivas nos EAU",
+        "description": "KIB Claims Settlement Services L.L.C conecta empresas e empreendedores com o financiamento certo nos EAU. Analisamos suas necessidades, estruturamos arquivos de financiamento fortes e negociamos termos ótimos para financiamento comercial, corporativo, imobiliário e para PMEs. Seu parceiro de corretagem financeira confiável para crescimento sustentável e estabilidade financeira."
+      },
+      "services": {
+        "title": "Serviços | KIB Claims Settlement Services – Soluções de Financiamento Comercial, Corporativo & para PMEs",
+        "description": "Explore os serviços de financiamento da KIB Claims Settlement Services: corretagem comercial, financiamento de investimentos e imobiliário, soluções corporativas e para PMEs. Adaptamos opções de financiamento ao tamanho e objetivos do seu negócio nos EAU. Preparação profissional de arquivos, negociação e acompanhamento até a aprovação."
+      },
+      "administrativeDepartment": {
+        "title": "Departamento Administrativo | KIB Claims Settlement Services – Equipe Especializada & Excelência Operacional",
+        "description": "Conheça a equipe administrativa da KIB Claims Settlement Services e nosso sistema operacional. Garantimos padrões de qualidade, jornadas claras para o cliente e suporte dedicado para cada arquivo de financiamento. Descubra nossa metodologia, níveis de serviço e compromisso com a excelência nos EAU."
+      },
+      "identity": {
+        "title": "Identidade | KIB Claims Settlement Services – Nossa Missão, Visão & Valores",
+        "description": "Descubra a identidade da KIB Claims Settlement Services: nossa missão, visão, valores e filosofia. Somos seu parceiro de corretagem financeira confiável nos EAU, comprometidos com clareza, arquivos fortes, resultados consistentes, execução rápida e confidencialidade completa."
+      },
+      "execution": {
+        "title": "Execução | KIB Claims Settlement Services – Serviços de Liquidação de Reivindicações & Execução",
+        "description": "Serviços de execução e liquidação de reivindicações da KIB Claims Settlement Services nos EAU. Do arquivamento à liquidação, guiamos você pelo caminho executivo com expertise em execução de reivindicações, benefícios, suporte dedicado e resultados comprovados. Parceria com profissionais em quem você pode confiar."
+      }
+    }
+  },
+  "navbar": {
+    "cta": "Agende Sua Consulta",
+    "openMenu": "Abrir menu de navegação",
+    "closeMenu": "Fechar menu de navegação",
+    "navMenu": "Navegação principal",
+    "routes": [
+      { "label": "Início", "href": "/" },
+      { "label": "Serviços", "href": "/services" },
+      { "label": "Departamento Administrativo", "href": "/administrative-department" },
+      { "label": "Identidade", "href": "/identity" },
+      { "label": "Execução", "href": "/execution" }
+    ]
+  },
+  "content": {
+    "title": "Meu Componente",
+    "description": "Descrição do Meu Componente"
+  },
+  "header": {
+    "title": "Consultoria Jurídica Premium",
+    "subtitle": "Expertise Jurídica Confiável com Padrão de Ouro",
+    "cta": {
+      "bookConsultation": "Agende Sua Consulta",
+      "exploreServices": "Explore Nossos Serviços"
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Entre em Contato",
+      "phone": "+971 521068882",
+      "email": "info@shazmlc.com",
+      "location": "Emirados Árabes Unidos"
+    },
+    "quickLinks": {
+      "title": "Links Rápidos",
+      "links": [
+        { "label": "Início", "href": "/" },
+        { "label": "Serviços", "href": "/services" },
+        { "label": "Departamento Administrativo", "href": "/administrative-department" },
+        { "label": "Identidade", "href": "/identity" },
+        { "label": "Execução", "href": "/execution" }
+      ]
+    },
+    "description": "KIB Claims Settlement Services L.L.C — seu braço financeiro executivo conectando você ao parceiro de financiamento certo. Analisamos suas necessidades, estruturamos um arquivo de financiamento forte e negociamos termos ótimos para garantir financiamento que apoie o crescimento sustentável e a estabilidade financeira.",
+    "copyright": "© 2026 KIB Claims Settlement Services L.L.C. Todos os direitos reservados.",
+    "socialMedia": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    }
+  },
+  "notFound": {
+    "badge": "Página Ausente",
+    "title": "Não encontramos esta página",
+    "description": "A página que você está procurando pode ter sido movida, excluída ou nunca existiu. Verifique a URL ou retorne à página inicial.",
+    "cta": "Voltar à página inicial"
+  },
+  "home": {
+    "hero": {
+      "badge": "KIB Claims Settlement Services L.L.C",
+      "headlineLine1": "Conectamos você ao financiamento certo...",
+      "headlineLine2": "e projetamos para você um caminho financeiro que é",
+      "headlineHighlight": "seguro para o crescimento",
+      "subheadline": "Em um ambiente financeiro onde as condições mudam rapidamente e os requisitos de expansão estão aumentando, nos tornamos seu braço financeiro executivo — analisamos, estruturamos, negociamos e fechamos o financiamento que se adapta ao seu tamanho e à sua ambição.",
+      "backgroundAlt": "Horizonte de distrito financeiro de luxo à noite",
+      "stats": {
+        "clients": "Clientes satisfeitos",
+        "fundingVolume": "Bilhões de AED em financiamento",
+        "fundingPartners": "Parceiros de financiamento",
+        "approvalRate": "Taxa de aprovação"
+      },
+      "scrollCta": "Descubra a jornada"
+    },
+    "about": {
+      "badge": "Conheça-nos",
+      "titleMain": "Quem",
+      "titleHighlight": "somos?",
+      "lead": "Somos uma empresa especializada em Serviços de Liquidação de Reivindicações, fornecendo soluções financeiras avançadas para empresas, empreendedores e projetos de investimento.",
+      "helpIntro": "Ajudamos você a acessar o financiamento certo através de:",
+      "bulletPoints": [
+        "Analisando suas necessidades financeiras",
+        "Avaliando sua posição operacional",
+        "Selecionando o parceiro de financiamento mais adequado",
+        "Preparando um arquivo de financiamento forte",
+        "Negociando os melhores termos",
+        "Acompanhando a solicitação até a aprovação final"
+      ],
+      "expertiseTitle": "Nossas áreas de expertise",
+      "expertise": {
+        "financialAnalysis": "Análise financeira",
+        "negotiation": "Negociação",
+        "filePreparation": "Preparação de arquivos",
+        "followUp": "Acompanhamento"
+      },
+      "commitmentText": "Não estamos procurando 'apenas financiamento'... procuramos o financiamento certo que atenda ao seu objetivo, fortaleça seu crescimento e reduza seus riscos.",
+      "missionCardTitle": "Nossa missão",
+      "missionCardParagraph": "Ser a entidade que dá ao cliente clareza financeira e os leva ao financiamento certo através de uma gestão profissional que garante melhores termos, menos tempo e menor risco.",
+      "missionCardBoxText": "Nossa missão não é apenas palavras… é um compromisso operacional que aplicamos em cada arquivo, em cada etapa e com cada cliente.",
+      "visionCardTitle": "Nossa visão",
+      "visionIntro": "Tornar-se a entidade financeira referenciada quando as pessoas falam sobre:",
+      "visionTags": [
+        "Corretagem profissional",
+        "Arquivos fortes",
+        "Resultados consistentes",
+        "Execução rápida",
+        "Confidencialidade completa"
+      ],
+      "visionQuote": "Não aspiramos a ser 'os maiores'... aspiramos a ser os mais precisos, os mais fortes e os mais confiáveis.",
+      "images": {
+        "team": "Equipe profissional em uma reunião de estratégia",
+        "workspace": "Espaço de trabalho elegante e moderno",
+        "collaboration": "Colaboração e trabalho em equipe de alto desempenho",
+        "meeting": "Reunião executiva de negócios"
+      }
+    },
+    "services": {
+      "badge": "Soluções de financiamento integradas",
+      "titleMain": "Nossos principais",
+      "titleHighlight": "serviços",
+      "lead": "Oferecemos um sistema abrangente de Serviços de Liquidação de Reivindicações que cobre todas as suas necessidades financeiras.",
+      "items": {
+        "commercial": {
+          "badge": "Comercial",
+          "title": "Serviços de Liquidação de Reivindicações Comerciais",
+          "description": "Soluções de financiamento integradas para atividades comerciais."
+        },
+        "investment": {
+          "badge": "Investimento",
+          "title": "Serviços de Liquidação de Reivindicações de Investimento",
+          "description": "Financiamento para projetos de investimento promissores."
+        },
+        "realEstate": {
+          "badge": "Imobiliário",
+          "title": "Serviços de Liquidação de Reivindicações Imobiliários",
+          "description": "Financiamento para aquisição e desenvolvimento de propriedades."
+        },
+        "corporate": {
+          "badge": "Corporativo",
+          "title": "Serviços de Liquidação de Reivindicações Corporativos",
+          "description": "Soluções financeiras estruturadas para grandes empresas."
+        },
+        "sme": {
+          "badge": "PME",
+          "title": "Serviços de Liquidação de Reivindicações para PMEs",
+          "description": "Apoio ao crescimento de pequenas e médias empresas."
+        },
+        "islamic": {
+          "badge": "Islâmico",
+          "title": "Serviços de Liquidação de Reivindicações Islâmicos",
+          "description": "Soluções de financiamento compatíveis com a Sharia Islâmica."
+        },
+        "expansion": {
+          "badge": "Expansão",
+          "title": "Financiamento para expansão e desenvolvimento",
+          "description": "Financiamento para planos de expansão e crescimento."
+        },
+        "newProjects": {
+          "badge": "Novos",
+          "title": "Financiamento para novos projetos",
+          "description": "Financiamento para novas ideias e projetos."
+        },
+        "innovationTech": {
+          "badge": "Tecnologia",
+          "title": "Financiamento para inovação e tecnologia",
+          "description": "Financiamento para projetos de tecnologia inovadores."
+        },
+        "fdi": {
+          "badge": "Internacional",
+          "title": "Corretagem de financiamento externo (FDI)",
+          "description": "Atração de investimento direto estrangeiro."
+        },
+        "workingCapital": {
+          "badge": "Liquidez",
+          "title": "Financiamento de capital de giro",
+          "description": "Soluções rápidas de liquidez para obrigações e fluxos de caixa."
+        },
+        "mergersAcquisitions": {
+          "badge": "M&A",
+          "title": "Serviços de Liquidação de Reivindicações para M&A",
+          "description": "Estruturação e financiamento de negócios de fusão e aquisição."
+        }
+      }
+    },
+    "offerings": {
+      "badge": "Valor agregado real",
+      "titleMain": "O que",
+      "titleHighlight": "oferecemos?",
+      "lead": "Fornecemos um sistema integrado de Serviços de Liquidação de Reivindicações que inclui tudo o que você precisa para alcançar o financiamento certo.",
+      "hint": "Clique em qualquer item para saber mais.",
+      "items": {
+        "needsAnalysis": {
+          "title": "Analisar suas necessidades financeiras",
+          "description": "Entendemos suas exigências com precisão e identificamos a solução ótima."
+        },
+        "lenderSelection": {
+          "title": "Selecionar o parceiro de financiamento certo",
+          "description": "Combinamos suas necessidades com as melhores instituições de financiamento."
+        },
+        "filePreparation": {
+          "title": "Preparar um arquivo de financiamento profissional",
+          "description": "Construímos um arquivo forte que aumenta a probabilidade de aprovação."
+        },
+        "termNegotiation": {
+          "title": "Negociar os melhores termos",
+          "description": "Garantimos para você a melhor taxa, prazo e cláusulas."
+        },
+        "followUp": {
+          "title": "Acompanhamento até a aprovação",
+          "description": "Acompanhamos você em cada etapa até o desembolso do financiamento."
+        },
+        "postFundingSupport": {
+          "title": "Suporte após o financiamento",
+          "description": "Ajudamos você a gerenciar obrigações e fluxos de caixa."
+        },
+        "financialAdvisory": {
+          "title": "Fornecer consultoria financeira",
+          "description": "Ajudamos você a tomar decisões financeiras sólidas."
+        }
+      }
+    },
+    "stats": {
+      "badge": "Números que falam por nós",
+      "titleMain": "Nossas conquistas",
+      "titleHighlight": "em números",
+      "lead": "Estamos orgulhosos da confiança de nossos clientes e de nossos resultados excepcionais ao longo de anos de trabalho profissional.",
+      "items": {
+        "clients": "Clientes satisfeitos",
+        "fundingVolume": "Bilhões de AED em financiamento",
+        "fundingPartners": "Instituições de financiamento",
+        "approvalRate": "Taxa de aprovação",
+        "yearsExperience": "Anos de experiência",
+        "fundedProjects": "Projetos financiados",
+        "countries": "Países",
+        "bankingPartners": "Parceiros bancários"
+      }
+    },
+    "journey": {
+      "badge": "Um caminho claro e definido",
+      "titleMain": "A jornada do cliente",
+      "titleHighlight": "conosco",
+      "lead": "Sua jornada de financiamento conosco não é apenas uma transação… é um caminho financeiro completo que o acompanhamos passo a passo.",
+      "steps": {
+        "discovery": {
+          "title": "Sessão de descoberta e análise de necessidades",
+          "description": "Ouvimos você, estudamos seu projeto e definimos precisamente sua necessidade financeira."
+        },
+        "evaluation": {
+          "title": "Avaliação financeira e operacional",
+          "description": "Analisamos fluxos de caixa, obrigações e capacidade de reembolso."
+        },
+        "lenderSelection": {
+          "title": "Selecionando a instituição de financiamento certa",
+          "description": "Selecionamos as melhores opções com base em sua atividade e tamanho."
+        },
+        "filePreparation": {
+          "title": "Preparando um arquivo de financiamento profissional",
+          "description": "Organizamos documentos e construímos um arquivo forte que aumenta as chances de aprovação."
+        },
+        "negotiation": {
+          "title": "Negociando termos",
+          "description": "Garantimos para você o melhor preço, prazo e cláusulas."
+        },
+        "approval": {
+          "title": "Acompanhamento até a aprovação",
+          "description": "Ficamos com você até a assinatura do contrato e o desembolso do financiamento."
+        },
+        "postFunding": {
+          "title": "Suporte pós-financiamento",
+          "description": "Ajudamos você a gerenciar obrigações e otimizar fluxos de caixa."
+        }
+      }
+    },
+    "system": {
+      "badge": "Uma metodologia de trabalho integrada",
+      "titleMain": "O sistema operacional",
+      "titleHighlight": "financeiro",
+      "lead": "Nosso sistema é construído em camadas operacionais precisas que trabalham juntas para entregar o melhor resultado.",
+      "layers": {
+        "financialAnalysis": {
+          "title": "Camada de análise financeira",
+          "description": "Lemos os números, indicadores e capacidade de financiamento.",
+          "details": "Analisamos dados financeiros em profundidade para entender sua posição atual e definir o caminho de financiamento ótimo."
+        },
+        "operationalAssessment": {
+          "title": "Camada de avaliação operacional",
+          "description": "Avaliamos a força e sustentabilidade do projeto.",
+          "details": "Revisamos operações e estrutura organizacional para garantir sua prontidão para o financiamento."
+        },
+        "matching": {
+          "title": "Camada de correspondência de financiamento",
+          "description": "Combinamos sua necessidade com a instituição certa.",
+          "details": "De nossa rede de parceiros, selecionamos a instituição de financiamento que melhor se adapta ao seu projeto."
+        },
+        "negotiation": {
+          "title": "Camada de negociação",
+          "description": "Garantimos os melhores termos possíveis.",
+          "details": "Negociamos profissionalmente para obter o melhor preço e condições."
+        },
+        "closure": {
+          "title": "Camada de fechamento e acompanhamento",
+          "description": "Fechamos o negócio e acompanhamos até o fim.",
+          "details": "Acompanhamos você até o recebimento do financiamento e continuamos a apoiá-lo para garantir o sucesso do projeto."
+        }
+      }
+    },
+    "serviceLevels": {
+      "badge": "Serviços adaptados a cada necessidade",
+      "titleMain": "Níveis de",
+      "titleHighlight": "serviço",
+      "lead": "Entregamos nossos serviços através de diferentes níveis de execução adaptados a cada cliente.",
+      "mostRequested": "Mais solicitado",
+      "levels": {
+        "basic": {
+          "title": "Nível básico",
+          "description": "Preparação de arquivos e submissão à instituição de financiamento.",
+          "features": [
+            "Preparação de arquivos",
+            "Submissão à instituição de financiamento"
+          ]
+        },
+        "advanced": {
+          "title": "Nível avançado",
+          "description": "Análise, preparação de arquivos, acompanhamento e negociação.",
+          "features": [
+            "Análise financeira",
+            "Preparação de arquivos",
+            "Acompanhamento",
+            "Negociação"
+          ]
+        },
+        "executive": {
+          "title": "Nível executivo",
+          "description": "Gerenciamento de todo o processo até a aprovação.",
+          "features": [
+            "Gerenciamento de ponta a ponta",
+            "Acompanhamento contínuo",
+            "Negociação profissional",
+            "Até a aprovação"
+          ]
+        },
+        "strategic": {
+          "title": "Nível estratégico",
+          "description": "Construção de um plano de financiamento, seleção de instituições e gerenciamento de múltiplas negociações.",
+          "features": [
+            "Plano de financiamento",
+            "Seleção de instituições",
+            "Negociações múltiplas"
+          ]
+        },
+        "businessOwners": {
+          "title": "Nível para proprietários de negócios",
+          "description": "Serviço pessoal com confidencialidade total e tratamento de arquivos sensíveis.",
+          "features": [
+            "Serviço personalizado",
+            "Confidencialidade total",
+            "Arquivos sensíveis"
+          ]
+        },
+        "strategicPartnership": {
+          "title": "Nível de parceria estratégica",
+          "description": "Gerenciamento contínuo de financiamento e planejamento de expansão a longo prazo.",
+          "features": [
+            "Gerenciamento de relacionamentos com instituições de financiamento",
+            "Planejamento de expansão",
+            "Reestruturação financeira quando necessário",
+            "Oportunidades de financiamento futuro"
+          ]
+        }
+      }
+    },
+    "quality": {
+      "badge": "Nosso compromisso com você",
+      "titleMain": "Nossos valores",
+      "titleHighlight": "e princípios",
+      "qualityStandardsTitle": "Padrões de qualidade",
+      "entityLanguageTitle": "Linguagem da entidade",
+      "dealingPrinciplesTitle": "Princípios de negociação",
+      "qualityStandards": [
+        "Precisão na análise de necessidades",
+        "Velocidade na preparação de arquivos",
+        "Transparência em cada etapa",
+        "Acompanhamento contínuo",
+        "Compromisso com resultados",
+        "Confidencialidade total"
+      ],
+      "entityLanguage": [
+        "Uma linguagem fundamentada em números",
+        "Uma linguagem que respeita o tempo do cliente",
+        "Uma linguagem construída em informações",
+        "Uma linguagem sem promessas exageradas",
+        "Uma linguagem que se baseia apenas em resultados",
+        "Uma linguagem transparente em cada etapa"
+      ],
+      "dealingPrinciples": [
+        "Nos comprometemos antes de prometer",
+        "Esclarecemos antes de perguntar",
+        "Acompanhamos antes que você precise pedir",
+        "Trabalhamos em silêncio… e deixamos os resultados falarem",
+        "Colocamos o interesse do cliente acima de tudo",
+        "Assumimos total responsabilidade pelo caminho de trabalho"
+      ]
+    },
+    "clients": {
+      "badge": "Parceiros no sucesso",
+      "titleMain": "Quem",
+      "titleHighlight": "atendemos?",
+      "lead": "Estamos orgulhosos de atender um grupo diversificado de clientes em múltiplos setores.",
+      "types": {
+        "entrepreneurs": "Empreendedores e proprietários de negócios",
+        "sme": "Pequenas e médias empresas",
+        "largeCorporates": "Grandes corporações",
+        "industrialCommercial": "Projetos comerciais e industriais",
+        "realEstateInvestors": "Investidores imobiliários",
+        "techInnovative": "Projetos de tecnologia e inovação",
+        "expansionRestructuring": "Empresas buscando expansão ou reestruturação",
+        "newInvestments": "Novos projetos de investimento"
+      }
+    },
+    "promise": {
+      "title": "Nossa promessa para você",
+      "lines": [
+        "Nos comprometemos a ser o parceiro que abre as portas do financiamento para você,",
+        "melhora sua força financeira,",
+        "e entrega soluções que apoiam seu crescimento e expansão com estabilidade."
+      ],
+      "badges": {
+        "fullCommitment": "Compromisso total",
+        "totalTransparency": "Transparência total",
+        "absoluteConfidentiality": "Confidencialidade absoluta"
+      }
+    },
+    "contactCta": {
+      "badge": "Comece agora",
+      "titleMain": "Entre em contato",
+      "titleHighlight": "conosco",
+      "lead": "Inicie sua jornada rumo ao financiamento certo. Estamos aqui para conectá-lo à instituição certa no momento certo.",
+      "primaryCta": "Obtenha uma consulta",
+      "whatsappCta": "Converse no WhatsApp"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "Soluções de financiamento integradas",
+      "headlinePrefix": "Tudo o que você precisa de",
+      "headlineHighlight": "serviços de financiamento",
+      "headlineSuffix": "em um só lugar",
+      "subheadline": "De Serviços de Liquidação de Reivindicações a consultoria financeira avançada, fornecemos mais de 30 serviços de financiamento projetados para facilitar o crescimento do seu negócio e alcançar seus objetivos com confiança.",
+      "primaryCta": "Navegue pelos serviços",
+      "meta": "+30 serviços de financiamento • Mais de 15 anos de experiência",
+      "cardTitle": "2B+ AED em financiamentos concluídos",
+      "cardSubtitle": "Parcerias com mais de 50 instituições de financiamento"
+    },
+    "features": {
+      "items": {
+        "customizedSolutions": {
+          "title": "Soluções personalizadas",
+          "description": "Projetamos soluções de financiamento adaptadas às suas necessidades únicas"
+        },
+        "highReliability": {
+          "title": "Alta confiabilidade",
+          "description": "Parcerias com instituições financeiras líderes licenciadas"
+        },
+        "speed": {
+          "title": "Velocidade de execução",
+          "description": "Aprovações rápidas e processos simplificados"
+        },
+        "continuousSupport": {
+          "title": "Suporte contínuo",
+          "description": "Uma equipe especializada que apoia você em cada etapa"
+        }
+      }
+    },
+    "grid": {
+      "badge": "Nossos serviços abrangentes",
+      "title": "Mais de 30 serviços de financiamento",
+      "lead": "Fornecemos uma gama completa de soluções de financiamento adaptadas às necessidades de indivíduos e empresas de todos os tamanhos.",
+      "services": {
+        "financeBrokerage": {
+          "title": "Serviços de Liquidação de Reivindicações",
+          "description": "Conectamos você às instituições de financiamento certas nos melhores termos possíveis.",
+          "feature1": "Análise de necessidades",
+          "feature2": "Preparação profissional de arquivos de financiamento",
+          "feature3": "Negociação",
+          "feature4": "Fechamento final"
+        },
+        "companyFinance": {
+          "title": "Financiamento corporativo",
+          "description": "Soluções financeiras que apoiam a expansão e o crescimento da empresa.",
+          "feature1": "Capital de giro",
+          "feature2": "Aquisição de ativos",
+          "feature3": "Expansão operacional"
+        },
+        "commercialProjects": {
+          "title": "Financiamento de projetos comerciais",
+          "description": "Financiamento dedicado para projetos que precisam de um impulso operacional.",
+          "feature1": "Fase de inicialização",
+          "feature2": "Operações",
+          "feature3": "Expansão"
+        },
+        "industrialProjects": {
+          "title": "Financiamento de projetos industriais",
+          "description": "Suporte financeiro para fábricas e linhas de produção.",
+          "feature1": "Equipamentos",
+          "feature2": "Matérias-primas",
+          "feature3": "Expansão industrial"
+        },
+        "realEstateFinance": {
+          "title": "Financiamento imobiliário",
+          "description": "Soluções de propriedades para investidores e desenvolvedores.",
+          "feature1": "Aquisição",
+          "feature2": "Desenvolvimento",
+          "feature3": "Refinanciamento"
+        },
+        "tradeFinance": {
+          "title": "Financiamento comercial",
+          "description": "Financiamento para vendas, compras e operações de suprimento.",
+          "feature1": "Pedidos de compra",
+          "feature2": "Suprimento e aquisição",
+          "feature3": "Cobranças"
+        },
+        "islamicFinance": {
+          "title": "Financiamento islâmico",
+          "description": "Soluções de financiamento compatíveis com a Sharia.",
+          "feature1": "Murabaha",
+          "feature2": "Ijara",
+          "feature3": "Mudaraba e outras estruturas"
+        },
+        "lettersOfCredit": {
+          "title": "Cartas de crédito",
+          "description": "Suporte abrangente para comércio internacional.",
+          "feature1": "Créditos documentários (LC)",
+          "feature2": "Garantias bancárias",
+          "feature3": "Acompanhamento de envios"
+        },
+        "investmentFinance": {
+          "title": "Serviços de Liquidação de Reivindicações de Investimento",
+          "description": "Conectamos você ao investidor certo no momento certo.",
+          "feature1": "Estruturação de negócios de investimento",
+          "feature2": "Parcerias estratégicas",
+          "feature3": "Negociação de termos"
+        },
+        "financialAdvisory": {
+          "title": "Consultoria financeira",
+          "description": "Insights financeiros que ajudam você a tomar decisões fortes.",
+          "feature1": "Análise financeira",
+          "feature2": "Avaliação de riscos",
+          "feature3": "Planos de financiamento"
+        },
+        "entrepreneursFinance": {
+          "title": "Financiamento para empreendedores",
+          "description": "Soluções flexíveis para proprietários de negócios.",
+          "feature1": "Financiamento para startups",
+          "feature2": "Financiamento para expansão",
+          "feature3": "Financiamento de equipamentos"
+        },
+        "corporateExpansion": {
+          "title": "Financiamento de expansão institucional",
+          "description": "Apoio ao crescimento de empresas estabelecidas.",
+          "feature1": "Novas filiais",
+          "feature2": "Desenvolvimento de sistemas",
+          "feature3": "Expansão regional"
+        },
+        "innovationTechFinance": {
+          "title": "Financiamento para inovação e tecnologia",
+          "description": "Suporte para projetos digitais e impulsionados por tecnologia.",
+          "feature1": "Financiamento de software",
+          "feature2": "Sistemas e plataformas",
+          "feature3": "Projetos de tecnologia avançada"
+        },
+        "newProjectsFinance": {
+          "title": "Financiamento para novos projetos",
+          "description": "Financiamento que cobre configuração e operações iniciais.",
+          "feature1": "Configuração de projetos",
+          "feature2": "Operações iniciais",
+          "feature3": "Expansão inicial"
+        },
+        "partnershipFinance": {
+          "title": "Financiamento de parcerias",
+          "description": "Soluções financeiras para joint ventures.",
+          "feature1": "Joint ventures (JV)",
+          "feature2": "Alianças comerciais",
+          "feature3": "Parcerias transfronteiriças"
+        },
+        "internationalTradeFinance": {
+          "title": "Financiamento de comércio internacional",
+          "description": "Suporte completo para operações de importação e exportação.",
+          "feature1": "Importação",
+          "feature2": "Exportação",
+          "feature3": "Envios internacionais"
+        },
+        "overseasProjects": {
+          "title": "Financiamento de projetos no exterior",
+          "description": "Expansão segura fora do seu país de origem.",
+          "feature1": "Projetos internacionais",
+          "feature2": "Ativos estrangeiros",
+          "feature3": "Expansão regional"
+        },
+        "shippingLogisticsFinance": {
+          "title": "Financiamento de transporte e logística",
+          "description": "Soluções financeiras para operações de logística.",
+          "feature1": "Frete marítimo",
+          "feature2": "Frete aéreo",
+          "feature3": "Transporte comercial"
+        },
+        "foreignDirectInvestment": {
+          "title": "Corretagem de investimento direto estrangeiro (FDI)",
+          "description": "Conectando você ao capital global.",
+          "feature1": "Estruturação de transações FDI",
+          "feature2": "Preparação de arquivos de investimento",
+          "feature3": "Negociações internacionais"
+        },
+        "smeFinance": {
+          "title": "Financiamento de projetos para PMEs",
+          "description": "Soluções flexíveis e rápidas.",
+          "feature1": "Financiamento de capital",
+          "feature2": "Crescimento e expansão",
+          "feature3": "Financiamento de equipamentos"
+        },
+        "restructuringFinance": {
+          "title": "Financiamento de reestruturação",
+          "description": "Reorganização de suas obrigações financeiras.",
+          "feature1": "Agendamento de dívidas",
+          "feature2": "Refinanciamento",
+          "feature3": "Otimização de fluxo de caixa"
+        },
+        "supplyChainFinance": {
+          "title": "Financiamento de cadeia de suprimentos",
+          "description": "Suporte abrangente para sua cadeia de suprimentos.",
+          "feature1": "Financiamento de estoque",
+          "feature2": "Financiamento de fornecedores",
+          "feature3": "Contratos de suprimento"
+        },
+        "governmentContracts": {
+          "title": "Financiamento de contratos governamentais",
+          "description": "Soluções para projetos do setor público.",
+          "feature1": "Financiamento de execução de contratos",
+          "feature2": "Equipamentos e preparações",
+          "feature3": "Financiamento de pagamento antecipado"
+        },
+        "heavyEquipmentFinance": {
+          "title": "Financiamento de equipamentos pesados",
+          "description": "Suporte para projetos industriais e de construção.",
+          "feature1": "Financiamento de equipamentos",
+          "feature2": "Financiamento de ativos",
+          "feature3": "Financiamento operacional"
+        },
+        "franchiseFinance": {
+          "title": "Financiamento de franquias",
+          "description": "Apoio à sua entrada no mundo das franquias.",
+          "feature1": "Taxas de franquia",
+          "feature2": "Adequação de filiais",
+          "feature3": "Capital operacional"
+        },
+        "digitalTransformationFinance": {
+          "title": "Financiamento de transformação digital",
+          "description": "Suporte para atualizações de sistemas e tecnologia.",
+          "feature1": "Sistemas ERP",
+          "feature2": "Automação",
+          "feature3": "Soluções em nuvem"
+        },
+        "internationalExpansion": {
+          "title": "Financiamento de expansão internacional",
+          "description": "Suporte para entrar em novos mercados.",
+          "feature1": "Filiais no exterior",
+          "feature2": "Ativos internacionais",
+          "feature3": "Operações externas"
+        },
+        "acquisitionFinance": {
+          "title": "Financiamento de aquisições",
+          "description": "Soluções para comprar empresas e participações acionárias.",
+          "feature1": "Negócios de aquisição",
+          "feature2": "Fusões",
+          "feature3": "Compras de patrimônio"
+        },
+        "ventureCapitalFinance": {
+          "title": "Financiamento de capital de risco",
+          "description": "Suporte para startups de alto crescimento.",
+          "feature1": "Rodadas de investimento",
+          "feature2": "Expansão rápida",
+          "feature3": "Financiamento de novos produtos"
+        },
+        "serviceProjectsFinance": {
+          "title": "Financiamento de projetos do setor de serviços",
+          "description": "Soluções para setores não industriais.",
+          "feature1": "Projetos de saúde",
+          "feature2": "Projetos de educação",
+          "feature3": "Logística e serviços"
+        }
+      }
+    },
+    "whyUs": {
+      "badge": "Por que nós?",
+      "title": "Seu parceiro confiável no caminho para o sucesso financeiro",
+      "description": "Trazemos mais de 15 anos de experiência em corretagem financeira e financiamento, e estamos orgulhosos de nossas parcerias com instituições financeiras líderes na região.",
+      "bullets": {
+        "partners": {
+          "title": "Rede extensa de parceiros",
+          "subtitle": "50+ instituições financeiras licenciadas"
+        },
+        "successRate": {
+          "title": "Alta taxa de sucesso",
+          "subtitle": "95% das solicitações de financiamento obtêm aprovação"
+        },
+        "expertSupport": {
+          "title": "Suporte especializado",
+          "subtitle": "Uma equipe de especialistas financeiros certificados"
+        }
+      },
+      "cardSubtitle": "AED em financiamentos concluídos"
+    }
+  },
+  "identityPage": {
+    "hero": {
+      "badge": "KIB Claims Settlement Services",
+      "exploreCta": "Explore nossa identidade",
+      "journeyCta": "Jornada do cliente",
+      "scrollAria": "Role para baixo",
+      "goToSlideAria": "Ir para {label}",
+      "slides": [
+        {
+          "title": "Identidade financeira",
+          "titleAccent": "que nos define",
+          "subtitle": "Não apenas um corretor… uma entidade financeira com visão, metodologia e capacidade operacional gerenciada em nível de conselho.",
+          "label": "Nossa identidade"
+        },
+        {
+          "title": "Visão estratégica",
+          "titleAccent": "para financiamento",
+          "subtitle": "Lemos a realidade financeira em profundidade e construímos arquivos de financiamento em padrões profissionais que garantem os melhores termos e menores riscos.",
+          "label": "Nossa visão"
+        },
+        {
+          "title": "Resultados confiáveis",
+          "titleAccent": "e sustentáveis",
+          "subtitle": "Medimos nosso sucesso pelas taxas de aprovação, qualidade dos termos e satisfação do cliente. Não prometemos financiamento… prometemos um caminho claro para ele.",
+          "label": "Nossos resultados"
+        }
+      ]
+    },
+    "journey": {
+      "title": "Jornada do",
+      "titleHighlight": "cliente",
+      "lead": "Um caminho calculado que garante clareza financeira e um resultado em que você pode confiar",
+      "stepLabel": "Etapa {n}",
+      "steps": [
+        { "title": "Análise e avaliação", "desc": "Leitura precisa da realidade financeira e avaliação medida de riscos" },
+        { "title": "Construção do arquivo", "desc": "Redação profissional e documentos organizados com um plano claro" },
+        { "title": "Correspondência e conformidade", "desc": "Garantindo que os arquivos atendam às regulamentações e padrões institucionais" },
+        { "title": "Negociação", "desc": "Seleção pensada da instituição certa e negociação profissional de termos" },
+        { "title": "Fechamento", "desc": "Fechamento minucioso, acompanhamento contínuo e suporte pós-financiamento" }
+      ]
+    },
+    "sections": {
+      "intro": {
+        "title": "Introdução",
+        "content": [
+          "Em meio a mudanças rápidas no setor financeiro, requisitos crescentes dos financiadores e critérios de aprovação mais complexos, o conselho da KIB Claims Settlement Services anuncia uma identidade financeira projetada com cuidado, moldada por metodologia e construída em bases sólidas de experiência e disciplina. Nossa identidade repousa em uma convicção clara: que o financiamento não é um passo administrativo, mas uma decisão estratégica que molda o futuro das empresas. A partir dessa perspectiva, adotamos um modelo operacional que garante ao cliente clareza financeira, um caminho calculado, um arquivo forte e um resultado confiável.",
+          "KIB não é apenas um corretor… é uma entidade financeira com visão, metodologia e capacidade operacional gerenciada em nível de conselho."
+        ]
+      },
+      "identity": {
+        "title": "Definição da nossa identidade financeira",
+        "content": [
+          "Nossa identidade financeira é o quadro que define como pensamos, como tomamos decisões e o nível de qualidade ao qual nos comprometemos.",
+          "Não é um documento interno… é um sistema operacional financeiro refletido em cada arquivo, cada etapa, cada negociação e cada resultado."
+        ]
+      },
+      "philosophy": {
+        "title": "Nossa filosofia de financiamento",
+        "content": [
+          "O conselho acredita que o financiamento certo é medido não pelo valor, mas pela adequação ao cliente, sua capacidade de apoiar o crescimento, reduzir riscos e melhorar a estabilidade financeira.",
+          "Portanto, nossa filosofia é baseada em:"
+        ],
+        "bullets": [
+          "Leitura precisa da realidade financeira",
+          "Avaliação medida de riscos",
+          "Seleção pensada da instituição certa",
+          "Negociação profissional",
+          "Fechamento minucioso"
+        ],
+        "conclusion": "Não buscamos o financiamento mais rápido… buscamos o mais viável."
+      },
+      "mission": {
+        "title": "Nossa missão financeira",
+        "content": ["Nossa missão é fornecer um sistema financeiro que dê ao cliente:"],
+        "bullets": [
+          "Clareza de visão",
+          "Força no arquivo",
+          "Confiança na decisão",
+          "Velocidade de execução",
+          "Melhores termos",
+          "Menor risco"
+        ],
+        "conclusion": "Estamos comprometidos com o cliente estar à vontade antes de ser financiado."
+      },
+      "vision": {
+        "title": "Nossa visão financeira",
+        "content": ["O conselho afirma que nossa visão é nos tornarmos a entidade conhecida por:"],
+        "bullets": [
+          "Força dos arquivos",
+          "Precisão da análise",
+          "Rigor da qualidade",
+          "Velocidade de execução",
+          "Confidencialidade das negociações",
+          "Consistência dos resultados"
+        ],
+        "conclusion": "Não competimos em volume… competimos em excelência."
+      },
+      "principles": {
+        "title": "Princípios da nossa identidade financeira",
+        "content": ["O conselho adotou sete princípios centrais que formam a essência da nossa identidade:"],
+        "bullets": [
+          "Análise antes da submissão",
+          "Clareza antes da negociação",
+          "Confidencialidade antes do compartilhamento",
+          "Qualidade antes da velocidade",
+          "Resultado antes das promessas",
+          "Compromisso antes da entrega",
+          "Profissionalismo acima de tudo"
+        ]
+      },
+      "reading": {
+        "title": "Como lemos a realidade financeira",
+        "content": ["Não lemos apenas números… lemos:"],
+        "bullets": [
+          "Comportamento dos fluxos",
+          "Padrão das obrigações",
+          "Força das operações",
+          "Nível de risco",
+          "Capacidade de reembolso",
+          "Fraquezas",
+          "Forças",
+          "Oportunidades de financiamento",
+          "Probabilidade de rejeição"
+        ],
+        "conclusion": "Essa leitura em profundidade é o que torna nossas decisões precisas e nossos arquivos fortes."
+      },
+      "building": {
+        "title": "Como construímos arquivos de financiamento",
+        "content": ["Cada arquivo de financiamento aprovado pelo corpo administrativo carrega:"],
+        "bullets": [
+          "Análise financeira abrangente",
+          "Redação profissional",
+          "Documentos organizados",
+          "Plano de reembolso claro",
+          "Justificativas fortes",
+          "Tratamento prévio de fraquezas",
+          "Apresentação financeira convincente",
+          "Visão operacional que apoia a decisão"
+        ],
+        "conclusion": "Não submetemos um arquivo… submetemos um caso financeiro completo."
+      },
+      "partners": {
+        "title": "Negociação com financiadores",
+        "content": ["Os financiadores confiam em nós porque:"],
+        "bullets": [
+          "Nossos arquivos são fortes",
+          "Nossos riscos são calculados",
+          "Nossas negociações são profissionais",
+          "Nosso compromisso é constante",
+          "Nossos resultados são claros"
+        ],
+        "conclusion": "Não pedimos aprovação… apresentamos um arquivo que a merece."
+      },
+      "clients": {
+        "title": "Negociação com clientes",
+        "content": ["Tratamos o cliente como um parceiro financeiro, não como uma transação."],
+        "bullets": [
+          "Ouvimos antes de falar",
+          "Analisamos antes de decidir",
+          "Esclarecemos antes de perguntar",
+          "Acompanhamos antes de ser pedido",
+          "Trabalhamos em silêncio… e mostramos apenas resultados"
+        ],
+        "conclusion": "Essa é a cultura de negociação adotada pelo conselho."
+      },
+      "admin": {
+        "title": "Identidade do corpo administrativo",
+        "content": ["O corpo administrativo é a espinha dorsal da nossa identidade e consiste em um sistema operacional que inclui:"],
+        "bullets": [
+          "Análise",
+          "Avaliação",
+          "Correspondência",
+          "Negociação",
+          "Fechamento",
+          "Acompanhamento",
+          "Suporte pós-financiamento"
+        ],
+        "conclusion": "Cada etapa é calculada… cada decisão é baseada em dados… cada arquivo carrega nossa marca."
+      },
+      "results": {
+        "title": "Identidade dos resultados",
+        "content": ["Medimos nosso sucesso por:"],
+        "bullets": [
+          "Taxa de aprovação",
+          "Velocidade de execução",
+          "Qualidade dos termos",
+          "Satisfação do cliente",
+          "Continuidade do relacionamento"
+        ],
+        "conclusion": "Não prometemos financiamento… prometemos um caminho claro para ele."
+      }
+    },
+    "conclusion": "Em conclusão, o conselho da KIB afirma que esta entidade não foi criada para ser um corretor tradicional, mas para ser uma identidade financeira estabelecida que fica firmemente atrás do cliente, gerencia seu arquivo com confiança, abre portas que de outra forma não se abririam e cria um caminho financeiro inigualável. Somos a entidade que não eleva a voz… porque seus resultados falam por ela; não exagera nas promessas… porque a qualidade do seu trabalho é suficiente; e não pede confiança… porque a conquista desde o primeiro passo. O financiamento não é chance… é ofício, e o sucesso não é sorte… é metodologia. Comece conosco hoje, e deixe nossa identidade financeira se tornar a força que impulsiona seu projeto para maior estabilidade, crescimento e competitividade.",
+    "introBadge": "KIB",
+    "lightboxClose": "Fechar",
+    "visionCardLabel": "Nossa visão"
+  },
+  "executionPage": {
+    "hero": {
+      "title": "Caminho Executivo",
+      "subtitle": "Uma estrutura operacional gerenciada por governança, executada com disciplina e fechada com confiança — Conselho de Administração",
+      "badge": "KIB Claims Settlement Services",
+      "ctaPrimary": "Inicie sua jornada de financiamento",
+      "ctaSecondary": "Descubra o caminho",
+      "scrollMore": "Descubra mais",
+      "statStage": "Estágio executivo",
+      "statGovernance": "Governança & conformidade",
+      "statBoard": "Certificado pelo conselho",
+      "statBoardValue": "Certificado",
+      "stat360": "Supervisão completa",
+      "stat24": "Acompanhamento contínuo"
+    },
+    "about": {
+      "badge": "Quem somos",
+      "titlePart1": "Em um setor financeiro que não tolera hesitação,",
+      "titlePart2": "nem perdoa decisões não calculadas",
+      "p1": "O conselho da KIB adotou um caminho executivo que representa o quadro através do qual cada etapa da jornada de financiamento do cliente é gerenciada — não baseado em esforço individual, mas em uma metodologia institucional combinando governança, segurança, conformidade, supervisão e análise profunda.",
+      "p2": "Esse caminho foi projetado não como uma mera série de procedimentos, mas como uma estrutura operacional integrada garantindo que cada arquivo se mova através de etapas estudadas construídas em dados precisos, avaliação rigorosa, planejamento cuidadoso, negociação calculada e fechamento que não deixa espaço para erro.",
+      "quote": "Não buscamos financiamento como um fim em si mesmo; buscamos uma decisão financeira segura e sustentável construída na visão do conselho.",
+      "teamLabel": "+500 clientes satisfeitos",
+      "teamSub": "Eles confiam em nossos serviços",
+      "governance": "Governança",
+      "phase": "Fase",
+      "satisfaction": "Satisfação"
+    },
+    "executivePath": {
+      "badge": "40 etapas integradas",
+      "title": "Caminho Executivo",
+      "lead": "Uma jornada estudada através de 40 estações garantindo que seu arquivo de financiamento se mova com precisão, da análise inicial ao fechamento bem-sucedido",
+      "phaseLabel": "Fase",
+      "stations": "estações",
+      "stepPhase": "Etapa",
+      "withinPhase": "Dentro da fase:",
+      "phases": {
+        "1": { "title": "Recepção & verificação", "subtitle": "Análise & avaliação" },
+        "2": { "title": "Execução & fechamento", "subtitle": "Submissão & negociação" },
+        "3": { "title": "Supervisão & conformidade", "subtitle": "Qualidade & acompanhamento" },
+        "4": { "title": "Desenvolvimento & sustentabilidade", "subtitle": "Crescimento futuro" }
+      },
+      "steps": {
+        "1": { "title": "Plataforma de recepção executiva", "desc": "Recepção formal gerenciada em alto nível administrativo para identificar o cliente e sua necessidade real." },
+        "2": { "title": "Portal de verificação inicial", "desc": "Revisão da identidade do cliente, atividade, fontes e conformidade com padrões regulatórios." },
+        "3": { "title": "Centro de coleta de dados operacionais", "desc": "Coleta abrangente de dados financeiros, operacionais, legais e documentos sensíveis." },
+        "4": { "title": "Sala de auditoria inicial", "desc": "Revisão inicial para verificar a precisão dos dados antes de iniciar a análise avançada." },
+        "5": { "title": "Plataforma de análise financeira estratégica", "desc": "Análise de fluxos, obrigações, sustentabilidade e capacidade de reembolso usando uma metodologia institucional." },
+        "6": { "title": "Centro de avaliação de crédito", "desc": "Medição da força financeira, estabilidade operacional e fraquezas potenciais." },
+        "7": { "title": "Laboratório de avaliação de riscos", "desc": "Análise de riscos operacionais, financeiros, de mercado e estruturais de acordo com um modelo interno de riscos." },
+        "8": { "title": "Conselho de governança e conformidade", "desc": "Revisão do arquivo para garantir conformidade com regulamentações, políticas e padrões de supervisão." },
+        "9": { "title": "Sistema de proteção de dados e confidencialidade", "desc": "Aplicação de protocolos de criptografia, proteção e controle de acesso para informações sensíveis." },
+        "10": { "title": "Plataforma de planejamento financeiro", "desc": "Redação de um plano executivo cobrindo tipo, valor, prazo, instituição apropriada e estratégia de negociação." },
+        "11": { "title": "Centro de preparação de arquivos executivos", "desc": "Preparação de um arquivo profissional refletindo a força do cliente, abordando fraquezas e destacando justificativas de financiamento." },
+        "12": { "title": "Comitê de auditoria interna", "desc": "Revisão do arquivo por uma equipe especializada para garantir o mais alto nível de qualidade e conformidade." },
+        "13": { "title": "Plataforma de correspondência de financiamento", "desc": "Seleção da instituição apropriada com base em critérios de atividade, risco e crédito." },
+        "14": { "title": "Canal de submissão formal", "desc": "Submissão do arquivo à instituição de financiamento com uma redação executiva clara e convincente." },
+        "15": { "title": "Sala de acompanhamento operacional", "desc": "Acompanhamento contínuo para garantir que o arquivo prossiga sem atrasos ou deficiências." },
+        "16": { "title": "Centro de gerenciamento de consultas", "desc": "Resposta profissional e rápida às solicitações da instituição de financiamento, abordando quaisquer comentários." },
+        "17": { "title": "Plataforma de negociação executiva", "desc": "Melhoria de preço, prazo, garantias, taxas e termos de fechamento em favor do cliente." },
+        "18": { "title": "Conselho de fechamento financeiro", "desc": "Revisão do contrato, aprovação dos termos e garantia de execução de fechamento sem erros ou riscos." },
+        "19": { "title": "Canal de desembolso", "desc": "Acompanhamento do processo de desembolso até a conclusão de forma oficial e segura." },
+        "20": { "title": "Centro pós-financiamento", "desc": "Monitoramento de obrigações, rastreamento de fluxos, fornecimento de recomendações e suporte a reestruturação quando necessário." },
+        "21": { "title": "Gerenciamento de supervisão operacional", "desc": "Monitoramento da qualidade de execução, conformidade com políticas e garantia de ausência de violações." },
+        "22": { "title": "Gerenciamento de garantia de qualidade", "desc": "Avaliação de desempenho, revisão de resultados e aprovação de melhorias operacionais." },
+        "23": { "title": "Gerenciamento de auditoria periódica", "desc": "Realização de revisões internas para garantir conformidade com padrões de governança e conformidade." },
+        "24": { "title": "Gerenciamento de confidencialidade e informações sensíveis", "desc": "Controle de acesso, proteção de documentos e aplicação dos mais altos padrões de segurança." },
+        "25": { "title": "Gerenciamento de relatórios executivos", "desc": "Preparação de relatórios abrangentes mostrando o que foi feito, o que foi alcançado e o que precisa de desenvolvimento." },
+        "26": { "title": "Gerenciamento de conformidade contínua", "desc": "Monitoramento de mudanças regulatórias e atualização de políticas operacionais de acordo." },
+        "27": { "title": "Gerenciamento de integridade e transparência", "desc": "Garantia de que cada etapa seja executada nos mais altos padrões de integridade profissional." },
+        "28": { "title": "Gerenciamento de relacionamento com instituições de financiamento", "desc": "Construção de confiança, melhoria da comunicação e garantia de continuidade da cooperação." },
+        "29": { "title": "Gerenciamento de riscos futuros", "desc": "Antecipação de riscos potenciais e desenvolvimento de planos proativos para abordá-los." },
+        "30": { "title": "Gerenciamento de desenvolvimento do caminho executivo", "desc": "Atualização periódica do caminho para acompanhar mudanças financeiras e regulatórias." },
+        "31": { "title": "Plataforma de análise avançada", "desc": "Análise de dados históricos do cliente para identificar oportunidades de melhoria no desempenho financeiro." },
+        "32": { "title": "Centro de projeções financeiras", "desc": "Construção de modelos de projeção para apoiar decisões de financiamento futuras." },
+        "33": { "title": "Sala de reestruturação", "desc": "Fornecimento de soluções para reestruturação de obrigações quando necessário." },
+        "34": { "title": "Plataforma de melhoria de fluxo de caixa", "desc": "Recomendações para melhorar a liquidez e a estabilidade do fluxo." },
+        "35": { "title": "Centro de gerenciamento de relacionamento a longo prazo", "desc": "Construção de um relacionamento sustentável com o cliente para garantir continuidade do suporte financeiro." },
+        "36": { "title": "Plataforma de avaliação de desempenho financeiro", "desc": "Medição do impacto do financiamento na atividade do cliente após a execução." },
+        "37": { "title": "Sala de desenvolvimento de produtos financeiros", "desc": "Desenvolvimento de novas soluções de financiamento que atendam às necessidades do mercado." },
+        "38": { "title": "Plataforma de gerenciamento de desafios", "desc": "Abordagem de quaisquer obstáculos que o cliente enfrente durante o período de financiamento." },
+        "39": { "title": "Centro de consultoria financeira avançada", "desc": "Fornecimento de consultoria que ajuda o cliente a tomar decisões financeiras estratégicas." },
+        "40": { "title": "Plataforma de avaliação final do caminho", "desc": "Preparação de um relatório abrangente mostrando o que foi feito, o que foi alcançado e o que deve ser desenvolvido no futuro." }
+      }
+    },
+    "services": {
+      "badge": "O que oferecemos",
+      "title": "Nossos",
+      "titleHighlight": "serviços de financiamento",
+      "lead": "Oferecemos um conjunto integrado de soluções financeiras projetadas para atender às necessidades de negócios e indivíduos nos mais altos padrões de qualidade e conformidade.",
+      "discoverMore": "Descubra mais",
+      "realEstate": { "title": "Financiamento imobiliário", "desc": "Soluções de financiamento integradas para propriedade comercial e residencial ou desenvolvimento em termos competitivos." },
+      "commercial": { "title": "Financiamento comercial", "desc": "Suporte a fluxo de caixa e financiamento de capital de giro para garantir continuidade e crescimento do seu negócio." },
+      "facilities": { "title": "Financiamento de instalações", "desc": "Programas personalizados para PMEs e projetos principais com planos de reembolso flexíveis." },
+      "restructuring": { "title": "Reestruturação", "desc": "Estudo e reestruturação de obrigações financeiras atuais para melhorar fluxos de caixa e reduzir encargos." },
+      "advisory": { "title": "Consultoria financeira", "desc": "Orientação estratégica baseada em análise precisa de dados de mercado e financeiros para decisões de investimento sólidas." },
+      "personal": { "title": "Financiamento pessoal", "desc": "Soluções de financiamento para indivíduos atendendo a diversas necessidades com procedimentos rápidos e fáceis." }
+    },
+    "benefits": {
+      "title": "Valor",
+      "titleHighlight": "agregado",
+      "lead": "Não prometemos ao cliente apenas financiamento; prometemos um sistema integrado trabalhando firmemente atrás deles e gerenciando seu arquivo com confiança.",
+      "governance": { "title": "Governança rigorosa", "desc": "Um quadro regulatório garantindo integridade processual e conformidade com regulamentações." },
+      "security": { "title": "Segurança financeira", "desc": "Proteção total dos interesses do cliente e redução de riscos potenciais." },
+      "oversight": { "title": "Supervisão completa", "desc": "Acompanhamento próximo de cada etapa no caminho de financiamento para garantir qualidade." },
+      "transparency": { "title": "Transparência total", "desc": "Clareza completa sobre termos, taxas e obrigações sem surpresas." },
+      "analysis": { "title": "Análise em profundidade", "desc": "Estudo minucioso de dados financeiros para garantir capacidade de reembolso." },
+      "followUp": { "title": "Acompanhamento contínuo", "desc": "Suporte contínuo mesmo após o desembolso para garantir estabilidade do cliente." },
+      "confidentiality": { "title": "Confidencialidade total", "desc": "Protocolos rigorosos para proteger dados do cliente e informações sensíveis." },
+      "quality": { "title": "Alta qualidade", "desc": "Padrões profissionais elevados na preparação de arquivos e negociação com instituições." }
+    },
+    "stats": {
+      "badge": "Conquistas de que nos orgulhamos",
+      "title": "Números que falam do nosso",
+      "titleHighlight": "sucesso",
+      "lead": "Resultados reais refletindo nosso compromisso com a excelência e a confiança de nossos clientes",
+      "stage": { "label": "Estágio executivo", "desc": "Estágio estudado com precisão" },
+      "clients": { "label": "Clientes satisfeitos", "desc": "Eles confiam em nossos serviços" },
+      "satisfaction": { "label": "Taxa de satisfação", "desc": "Classificação do cliente" },
+      "experience": { "label": "Anos de experiência", "desc": "No mercado financeiro" },
+      "projects": { "label": "Projetos bem-sucedidos", "desc": "Financiados com sucesso" },
+      "partners": { "label": "Parceiros de financiamento", "desc": "Parcerias estratégicas" },
+      "badgeBoard": "Certificado pelo conselho",
+      "badgeGovernance": "100% governança",
+      "badgeTransparency": "Transparência total"
+    },
+    "partners": {
+      "title": "Nossos parceiros no sucesso",
+      "lead": "Estamos orgulhosos de fazer parceria com instituições financeiras líderes no Reino",
+      "names": ["Banco Nacional", "Al Rajhi Bank", "Riyad Bank", "Banque Saudi Fransi", "Al Bilad Bank", "Bank AlJazira", "Alinma Bank", "Fundo de Desenvolvimento"]
+    },
+    "whyUs": {
+      "title": "Por que escolher",
+      "titleHighlight": "KIB?",
+      "lead": "Oferecemos um escudo financeiro que protege o cliente de riscos e garante um caminho seguro, uma decisão considerada e um resultado confiável ao enfrentar os requisitos dos financiadores.",
+      "reason1": "Uma metodologia institucional que não depende de esforço individual.",
+      "reason2": "Análise financeira estratégica garantindo capacidade de reembolso.",
+      "reason3": "Negociação executiva que melhora termos em favor do cliente.",
+      "reason4": "Proteção total de dados e informações sensíveis.",
+      "reason5": "Acompanhamento contínuo mesmo após o fechamento financeiro.",
+      "reason6": "Uma equipe especializada dos melhores especialistas financeiros.",
+      "successRate": "Taxa de sucesso",
+      "cta": "Inicie sua jornada conosco"
+    },
+    "faq": {
+      "badge": "Respondemos suas perguntas",
+      "title": "Perguntas frequentes",
+      "lead": "Respostas abrangentes às perguntas mais comuns de nossos clientes",
+      "q1": "O que é o caminho executivo?",
+      "a1": "O caminho executivo é uma metodologia institucional integrada de 40 etapas precisas, garantindo que seu arquivo de financiamento se mova através de um caminho estudado construído em dados precisos, avaliação rigorosa, planejamento cuidadoso, negociação calculada e fechamento que não deixa espaço para erro.",
+      "q2": "Quanto tempo leva o processo de financiamento?",
+      "a2": "A duração depende do tipo e tamanho do financiamento e da completude dos documentos necessários. Geralmente varia de 2–6 semanas para financiamento pessoal, e 4–12 semanas para financiamento comercial e imobiliário. Esforçamo-nos para acelerar o processo mantendo os mais altos padrões de qualidade.",
+      "q3": "Seus serviços estão disponíveis para todos os setores?",
+      "a3": "Sim, atendemos todos os setores econômicos, incluindo comercial, industrial, imobiliário, serviços e tecnologia. Temos ampla experiência em lidar com os requisitos de cada setor e entender suas necessidades específicas de financiamento.",
+      "q4": "Quais documentos são necessários?",
+      "a4": "Os documentos variam pelo tipo de financiamento, mas tipicamente incluem: registro comercial, demonstrativos financeiros, extratos bancários, contratos de aluguel ou propriedade e identidade nacional. Nossa equipe o guiará através de todos os requisitos em detalhes.",
+      "q5": "Vocês oferecem serviços pós-financiamento?",
+      "a5": "Sim, fornecemos acompanhamento contínuo após o desembolso. Nossos serviços incluem: monitoramento de obrigações, recomendações para melhorar fluxos de caixa, suporte a reestruturação quando necessário e consultoria financeira contínua para garantir a estabilidade do seu negócio.",
+      "q6": "Como garantem a confidencialidade das informações?",
+      "a6": "Aplicamos os mais altos padrões de segurança e confidencialidade através de: protocolos de criptografia avançados, controle rigoroso de acesso à informação, acordos de confidencialidade vinculantes e sistemas certificados de proteção de dados. A privacidade de nossos clientes é uma prioridade máxima.",
+      "support": "Suporte contínuo"
+    },
+    "contactCta": {
+      "badge": "Na voz do Conselho",
+      "title": "Financiamento não é uma transação...",
+      "titleHighlight": "é um ofício gerenciado por metodologia e fechado com confiança",
+      "lead": "No final deste caminho, o conselho da KIB afirma que este modelo executivo foi construído não apenas como um quadro regulatório, mas como um escudo financeiro que protege o cliente de riscos.",
+      "ctaPrimary": "Comece conosco hoje",
+      "ctaSecondary": "Ligue agora",
+      "governance": "Governança certificada",
+      "security": "100% segurança",
+      "confidentiality": "Confidencialidade total",
+      "support": "Suporte 24/7",
+      "finalMessage": "Deixe o caminho executivo se tornar a estrada que eleva seu projeto a um nível superior de estabilidade, crescimento e competitividade."
+    }
+  }
+}

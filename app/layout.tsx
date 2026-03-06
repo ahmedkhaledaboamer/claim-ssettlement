@@ -1,5 +1,6 @@
 import { Cairo } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const cairo = Cairo({
   variable: "--font-cairo",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className={`${cairo.variable} antialiased`}>{children}</body>
+      <body className={`${cairo.variable} antialiased`}>
+        {children}
+        <ScrollToTop />
+      </body>
     </html>
   );
 }
