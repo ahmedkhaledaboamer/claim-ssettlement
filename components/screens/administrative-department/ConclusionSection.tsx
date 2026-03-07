@@ -1,4 +1,4 @@
- 'use client';
+'use client';
 import { motion } from 'framer-motion';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useCountUp } from '@/hooks/useCountUp';
@@ -10,8 +10,11 @@ import {
   AwardIcon,
   ArrowRightIcon } from
 'lucide-react';
+import { Link } from '@/i18n/routing';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 export function ConclusionSection({ locale }: { locale: string }) {
+  const t = useTranslations('administrativeDepartmentPage.conclusion');
   const isRTL = locale === 'ar';
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const clientCount = useCountUp({
@@ -25,7 +28,7 @@ export function ConclusionSection({ locale }: { locale: string }) {
       <div className="absolute inset-0">
         <Image
           src="/imgs/A powerful executive command c/image_40.webp"
-          alt="مكتب حديث"
+          alt={t('officeAlt')}
           className="w-full h-full object-cover min-h-[40vh]"
           loading="lazy"
           width={1920}
@@ -97,11 +100,7 @@ export function ConclusionSection({ locale }: { locale: string }) {
 
           <SparklesIcon className="w-4 h-4 text-teal-600" />
           <span className="text-fluid-label text-slate-600">
-            {locale === 'ar'
-              ? 'الخلاصة'
-              : locale === 'fr'
-              ? 'En résumé'
-              : 'In summary'}
+            {t('badge')}
           </span>
         </motion.div>
 
@@ -125,27 +124,9 @@ export function ConclusionSection({ locale }: { locale: string }) {
           }}
           className="text-fluid-section-title font-black mb-8">
 
-          {locale === 'ar' && (
-            <>
-              <span className="gradient-text-gold">شريكك الاستراتيجي</span>
-              <br />
-              <span className="text-slate-900">في رحلة التمويل</span>
-            </>
-          )}
-          {locale === 'en' && (
-            <>
-              <span className="gradient-text-gold">Your strategic partner</span>
-              <br />
-              <span className="text-slate-900">on the financing journey</span>
-            </>
-          )}
-          {locale === 'fr' && (
-            <>
-              <span className="gradient-text-gold">Votre partenaire stratégique</span>
-              <br />
-              <span className="text-slate-900">dans votre parcours de financement</span>
-            </>
-          )}
+          <span className="gradient-text-gold">{t('titleLine1')}</span>
+          <br />
+          <span className="text-slate-900">{t('titleLine2')}</span>
         </motion.h2>
 
         {/* Description */}
@@ -168,33 +149,8 @@ export function ConclusionSection({ locale }: { locale: string }) {
           }}
           className="text-fluid-section-lead text-slate-600   mb-12 leading-relaxed">
 
-          {locale === 'ar' && (
-            <>
-              جهاز إداري متكامل من{' '}
-              <span className="text-teal-600 font-bold">15 منصباً تنفيذياً</span>{' '}
-              يعمل بتناغم تام لتحويل طموحاتك التمويلية إلى واقع ملموس. من التحليل
-              المالي الأولي حتى دعم ما بعد التمويل، نحن معك في كل خطوة.
-            </>
-          )}
-          {locale === 'en' && (
-            <>
-              An integrated administrative apparatus of{' '}
-              <span className="text-teal-600 font-bold">15 executive positions</span>{' '}
-              working in complete harmony to turn your financing ambitions into reality.
-              From initial financial analysis to post‑financing support, we are with you
-              at every step.
-            </>
-          )}
-          {locale === 'fr' && (
-            <>
-              Un appareil administratif intégré composé de{' '}
-              <span className="text-teal-600 font-bold">15 postes exécutifs</span>{' '}
-              qui travaillent en parfaite harmonie pour transformer vos ambitions de
-              financement en réalité. De la première analyse financière à
-              l’accompagnement post‑financement, nous sommes à vos côtés à chaque étape.
-            </>
-          )}
-        </motion.p>
+          {t('description')}
+          </motion.p>
 
         {/* Stats Row */}
         <motion.div
@@ -223,11 +179,7 @@ export function ConclusionSection({ locale }: { locale: string }) {
                 {clientCount}+
               </div>
               <div className="text-fluid-body text-slate-500">
-                {locale === 'ar'
-                  ? 'عميل راضٍ'
-                  : locale === 'fr'
-                  ? 'Clients satisfaits'
-                  : 'Satisfied clients'}
+                {t('statClients')}
               </div>
             </div>
           </div>
@@ -236,11 +188,7 @@ export function ConclusionSection({ locale }: { locale: string }) {
             <div className="text-right">
               <div className="text-fluid-stat font-black text-data-emerald">94٪</div>
               <div className="text-fluid-body text-slate-500">
-                {locale === 'ar'
-                  ? 'نسبة النجاح'
-                  : locale === 'fr'
-                  ? 'Taux de réussite'
-                  : 'Success rate'}
+                {t('statSuccess')}
               </div>
             </div>
           </div>
@@ -249,11 +197,7 @@ export function ConclusionSection({ locale }: { locale: string }) {
             <div className="text-right">
               <div className="text-fluid-stat font-black text-relations-blue">50+</div>
               <div className="text-fluid-body text-slate-500">
-                {locale === 'ar'
-                  ? 'جهة تمويلية'
-                  : locale === 'fr'
-                  ? 'Institutions financières'
-                  : 'Funding institutions'}
+                {t('statInstitutions')}
               </div>
             </div>
           </div>
@@ -279,37 +223,32 @@ export function ConclusionSection({ locale }: { locale: string }) {
           }}
           className="flex flex-col sm:flex-row gap-4 justify-center">
 
-          <motion.a
-            href="/execution"
-            whileHover={{
-              scale: 1.05
-            }}
-            whileTap={{
-              scale: 0.95
-            }}
-            className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold text-lg shadow-lg overflow-hidden">
-
-            <span className="relative z-10 flex items-center justify-center gap-2">
-              {locale === 'ar'
-                ? 'ابدأ رحلتك الآن'
-                : locale === 'fr'
-                ? 'Commencez votre parcours maintenant'
-                : 'Start your journey now'}
-              {isRTL ? <ArrowLeftIcon className="w-5 h-5 transition-transform group-hover:-translate-x-1" /> : <ArrowRightIcon className="w-5 h-5 transition-transform group-hover:-translate-x-1" />}
-            </span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-400"
-              initial={{
-                x: '100%'
-              }}
-              whileHover={{
-                x: 0
-              }}
-              transition={{
-                duration: 0.3
-              }} />
-
-          </motion.a>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link
+              href="/execution"
+              className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold text-lg shadow-lg overflow-hidden block"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                {t('cta')}
+                {isRTL ? <ArrowLeftIcon className="w-5 h-5 transition-transform group-hover:-translate-x-1" /> : <ArrowRightIcon className="w-5 h-5 transition-transform group-hover:-translate-x-1" />}
+              </span>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-400"
+                initial={{
+                  x: '100%'
+                }}
+                whileHover={{
+                  x: 0
+                }}
+                transition={{
+                  duration: 0.3
+                }}
+              />
+            </Link>
+          </motion.div>
 
         </motion.div>
 
@@ -332,13 +271,9 @@ export function ConclusionSection({ locale }: { locale: string }) {
           className="mt-16 pt-8 border-t border-slate-200">
 
           <div className="text-teal-600 font-bold text-lg mb-2">
-            {locale === 'ar'
-              ? 'مجلس الإدارة'
-              : locale === 'fr'
-              ? 'Conseil d’administration'
-              : 'Board of Directors'}
+            {t('signature')}
           </div>
-          <div className="text-slate-500 text-sm">KIB Claims Settlement Services Brokerage</div>
+          <div className="text-slate-500 text-sm">{t('signatureSub')}</div>
         </motion.div>
       </div>
     </section>);

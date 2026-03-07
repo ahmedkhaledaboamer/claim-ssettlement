@@ -8,7 +8,7 @@ export function HeroSection({ locale }: { locale: string }) {
   const isRtl = locale === 'ar';
   const t = useTranslations('servicesPage.hero');
   return (
-    <section className="px-[5%] relative min-h-[70vh] flex items-center bg-gradient-to-b from-[#0A1628] via-[#0A1628] to-[#111827] overflow-hidden">
+    <section className="px-[5%] pt-[3%] relative min-h-[70vh] flex items-center bg-gradient-to-b from-[#0A1628] via-[#0A1628] to-[#111827] overflow-hidden">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute -right-32 -top-32 w-80 h-80 rounded-full bg-[#D4AF37]/30 blur-3xl" />
         <div className="absolute -left-32 bottom-0 w-96 h-96 rounded-full bg-emerald-500/20 blur-3xl" />

@@ -121,7 +121,7 @@ function ServiceCard({
     >
 
       {/* Header Image */}
-      <div className="h-40 md:h-72 lg:h-[420px] xl:h-[600px] w-full overflow-hidden relative min-h-[180px]">
+      <div className="h-40 md:h-72 lg:h-[420px] xl:h-[400px] w-full overflow-hidden relative min-h-[180px]">
         <Image
           width={600}
           height={400}
@@ -179,7 +179,7 @@ export function ServicesSection() {
         {/* Section Header */}
         <div className="text-center mb-14 md:mb-16">
           <FadeUp>
-            <span className="inline-block text-gold-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+            <span className="inline-block text-gold-600 font-cairo font-bold text-xl tracking-wider mb-4">
               {t('badge')}
             </span>
           </FadeUp>

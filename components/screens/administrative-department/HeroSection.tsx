@@ -1,15 +1,17 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ChevronDownIcon, SparklesIcon } from 'lucide-react';
+import { SparklesIcon } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 interface HeroSectionProps {
   locale: string;
 }
 
 export function HeroSection({ locale }: HeroSectionProps) {
+  const t = useTranslations('administrativeDepartmentPage.hero');
   const scrollToTeam = () => {
-    document.getElementById('team')?.scrollIntoView({
+    document.getElementById('introduction')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
@@ -22,7 +24,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
       <div className="absolute inset-0">
         <Image
           src="/imgs/A powerful commitment visualiz/image_13.webp"
-          alt="مبنى مكتبي حديث"
+          alt={t('backgroundAlt')}
           className="w-full h-full object-cover min-h-[50vh]"
           loading="eager"
           width={1920}
@@ -89,7 +91,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
 
           <SparklesIcon className="w-4 h-4 text-teal-600" />
           <span className="text-fluid-label text-slate-600">
-            KIB Claims Settlement Services Brokerage
+            {t('badge')}
           </span>
         </motion.div>
 
@@ -108,28 +110,9 @@ export function HeroSection({ locale }: HeroSectionProps) {
             delay: 0.2
           }}
           className="text-fluid-hero font-black mb-6">
-
-          {locale === 'ar' && (
-            <>
-              <span className="gradient-text-gold">الجهاز الإداري</span>
-              <br />
-              <span className="text-slate-900">المتكامل</span>
-            </>
-          )}
-          {locale === 'en' && (
-            <>
-              <span className="gradient-text-gold">The administrative</span>
-              <br />
-              <span className="text-slate-900">powerhouse</span>
-            </>
-          )}
-          {locale === 'fr' && (
-            <>
-              <span className="gradient-text-gold">Le dispositif</span>
-              <br />
-              <span className="text-slate-900">administratif intégré</span>
-            </>
-          )}
+          <span className="gradient-text-gold">{t('titleLine1')}</span>
+          <br />
+          <span className="text-slate-900">{t('titleLine2')}</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -147,34 +130,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
             delay: 0.4
           }}
           className="text-fluid-section-lead text-slate-600   mb-12 leading-relaxed">
-
-          {locale === 'ar' && (
-            <>
-              فريق متكامل من{' '}
-              <span className="text-teal-600 font-bold">15 منصباً تنفيذياً</span>{' '}
-              يعمل بتناغم تام
-              <br className="hidden md:block" />
-              لتحويل طموحاتك التمويلية إلى واقع ملموس
-            </>
-          )}
-          {locale === 'en' && (
-            <>
-              An integrated team of{' '}
-              <span className="text-teal-600 font-bold">15 executive positions</span>{' '}
-              working in complete harmony
-              <br className="hidden md:block" />
-              to turn your financing ambitions into tangible results.
-            </>
-          )}
-          {locale === 'fr' && (
-            <>
-              Une équipe intégrée composée de{' '}
-              <span className="text-teal-600 font-bold">15 postes exécutifs</span>{' '}
-              qui travaillent en parfaite harmonie
-              <br className="hidden md:block" />
-              pour transformer vos ambitions de financement en résultats concrets.
-            </>
-          )}
+          {t('subtitle')}
         </motion.p>
 
         {/* Stats Row */}
@@ -195,50 +151,34 @@ export function HeroSection({ locale }: HeroSectionProps) {
 
           <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
             <div className="text-fluid-stat font-black gradient-text-gold mb-2">
-              15
+              {t('stat1')}
             </div>
             <div className="text-fluid-body text-slate-500">
-              {locale === 'ar'
-                ? 'منصب تنفيذي'
-                : locale === 'fr'
-                ? 'Postes exécutifs'
-                : 'Executive positions'}
+              {t('stat1Label')}
             </div>
           </div>
           <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
             <div className="text-fluid-stat font-black gradient-text-gold mb-2">
-              9
+              {t('stat2')}
             </div>
             <div className="text-fluid-body text-slate-500">
-              {locale === 'ar'
-                ? 'مراحل متكاملة'
-                : locale === 'fr'
-                ? 'Étapes intégrées'
-                : 'Integrated stages'}
+              {t('stat2Label')}
             </div>
           </div>
           <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
             <div className="text-fluid-stat font-black gradient-text-gold mb-2">
-              5
+              {t('stat3')}
             </div>
             <div className="text-fluid-body text-slate-500">
-              {locale === 'ar'
-                ? 'مستويات خدمة'
-                : locale === 'fr'
-                ? 'Niveaux de service'
-                : 'Service levels'}
+              {t('stat3Label')}
             </div>
           </div>
           <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
             <div className="text-fluid-stat font-black gradient-text-gold mb-2">
-              94٪
+              {t('stat4')}
             </div>
             <div className="text-fluid-body text-slate-500">
-              {locale === 'ar'
-                ? 'نسبة النجاح'
-                : locale === 'fr'
-                ? 'Taux de réussite'
-                : 'Success rate'}
+              {t('stat4Label')}
             </div>
           </div>
         </motion.div>
@@ -267,11 +207,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
           className="cursor-pointer group relative px-8 py-4 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold text-fluid-body-lg shadow-lg overflow-hidden">
 
           <span className="relative z-10">
-            {locale === 'ar'
-              ? 'اكتشف الفريق التنفيذي'
-              : locale === 'fr'
-              ? "Découvrez l'équipe exécutive"
-              : 'Discover the executive team'}
+            {t('cta')}
           </span>
           <motion.div
             className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-teal-400"

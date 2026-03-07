@@ -92,16 +92,15 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-28 lg:mb-32">
           {/* Text Content */}
           <div className="order-2 lg:order-1">
-            <FadeUp>
-              <span className="inline-block text-gold-600 font-cairo font-bold text-fluid-label tracking-wider mb-5">
+            <FadeUp className={`text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+              <span className="inline-block mx-auto text-gold-600 font-cairo font-bold text-xl tracking-wider mb-5">
                 {t('badge')}
               </span>
             </FadeUp>
 
-            <FadeUp delay={0.1}>
+            <FadeUp delay={0.1} className={`text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
               <h2
                 className="text-fluid-section-title font-cairo font-bold text-navy-900 mb-8"
-                dir={isRTL ? 'rtl' : 'ltr'}
               >
                 {t('titleMain')}{' '}
                 <span className="gradient-text-gold">{t('titleHighlight')}</span>

@@ -5,6 +5,7 @@ import { clientTypes } from '@/data/journeyData';
 import * as Icons from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const lucideIcons = Icons as unknown as Record<string, LucideIcon>;
 // Client type images
@@ -13,21 +14,9 @@ const clientImages: Record<number, string> = {
   5: '/imgs/A principlesbased structure co/image_59.webp', 6: '/imgs/A professional funding file co/image_60.webp', 7: '/imgs/A project finance visualizatio/image_31.webp', 8: '/imgs/A promisedriven executive conc/image_60.webp'
 };
 export function ClientTypesSection({ locale }: { locale: string }) {
+  const t = useTranslations('administrativeDepartmentPage.clientTypes');
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const isRTL = locale === 'ar';
-  const headingTitle =
-    locale === 'ar'
-      ? { main: 'من', highlight: ' نخدم' }
-      : locale === 'fr'
-      ? { main: 'Qui', highlight: ' servons‑nous ?' }
-      : { main: 'Who', highlight: ' do we serve?' };
-
-  const headingDescription =
-    locale === 'ar'
-      ? 'نقدم حلولاً تمويلية متخصصة لمختلف أنواع العملاء والقطاعات'
-      : locale === 'fr'
-      ? 'Nous proposons des solutions de financement spécialisées pour différents types de clients et de secteurs.'
-      : 'We provide specialized financing solutions for different client types and sectors.';
   return (
     <section
       id="clients"
@@ -54,11 +43,11 @@ export function ClientTypesSection({ locale }: { locale: string }) {
           className="text-center mb-16">
 
           <h2 className="text-fluid-section-title font-black mb-6">
-            <span className="text-slate-900">{headingTitle.main}</span>
-            <span className="gradient-text-gold">{headingTitle.highlight}</span>
+            <span className="text-slate-900">{t('headingMain')}</span>
+            <span className="gradient-text-gold">{t('headingHighlight')}</span>
           </h2>
           <p className="text-fluid-section-lead text-slate-600  ">
-            {headingDescription}
+            {t('description')}
           </p>
         </motion.div>
 
@@ -67,18 +56,8 @@ export function ClientTypesSection({ locale }: { locale: string }) {
           {clientTypes.map((client, index) => {
             const IconComponent =
               lucideIcons[client.icon] || Icons.UserIcon;
-            const title =
-              locale === 'ar'
-                ? client.titleAr
-                : locale === 'fr'
-                ? client.titleFr
-                : client.titleEn;
-            const description =
-              locale === 'ar'
-                ? client.descriptionAr
-                : locale === 'fr'
-                ? client.descriptionFr
-                : client.descriptionEn;
+            const title = t(`types.${client.id}.title`);
+            const description = t(`types.${client.id}.description`);
             return (
               <motion.div
                 key={client.id}

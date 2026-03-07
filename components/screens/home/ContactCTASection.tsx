@@ -4,9 +4,9 @@ import {
   ArrowLeftIcon,
   PhoneIcon,
   MailIcon,
-  MessageCircleIcon,
   ArrowRightIcon
 } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 import { FadeUp } from './ScrollAnimations';
 import { useTranslations } from 'next-intl';
 
@@ -84,7 +84,7 @@ export function ContactCTASection({ locale }: { locale: string }) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Badge */}
         <FadeUp>
-          <span className="inline-block text-gold-600 font-cairo font-bold text-fluid-label tracking-wider mb-6">
+          <span className="inline-block text-gold-600 font-cairo font-bold text-xl tracking-wider mb-6">
             {t('badge')}
           </span>
         </FadeUp>
@@ -107,44 +107,28 @@ export function ContactCTASection({ locale }: { locale: string }) {
         {/* CTA Buttons */}
         <FadeUp delay={0.3}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <motion.a
-              href="/execution"
-              className="btn-luxury-gold px-10 py-5 rounded-full font-cairo font-bold text-fluid-body-lg flex items-center gap-3 shadow-gold-lg"
-              whileHover={{
-                scale: 1.05
-              }}
-              whileTap={{
-                scale: 0.95
-              }}>
-              {t('primaryCta')}
-              <motion.span
-                animate={{
-                  x: [0, -5, 0]
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity
-                }}>
-
-                {!isRTL ? <ArrowRightIcon size={20} /> : <ArrowLeftIcon size={20} />}
-              </motion.span>
-            </motion.a>
-
-            <motion.a
-              href="https://wa.me/971000000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-whatsapp px-8 py-5 rounded-full font-cairo font-bold text-fluid-body-lg flex items-center gap-3"
-              whileHover={{
-                scale: 1.05
-              }}
-              whileTap={{
-                scale: 0.95
-              }}>
-
-              <MessageCircleIcon size={20} />
-              {t('whatsappCta')}
-            </motion.a>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                href="/execution"
+                className="btn-luxury-gold px-10 py-5 rounded-full font-cairo font-bold text-fluid-body-lg flex items-center gap-3 shadow-gold-lg"
+              >
+                {t('primaryCta')}
+                <motion.span
+                  animate={{
+                    x: [0, -5, 0]
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity
+                  }}
+                >
+                  {!isRTL ? <ArrowRightIcon size={20} /> : <ArrowLeftIcon size={20} />}
+                </motion.span>
+              </Link>
+            </motion.div>
           </div>
         </FadeUp>
 
@@ -152,26 +136,26 @@ export function ContactCTASection({ locale }: { locale: string }) {
         <FadeUp delay={0.4}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
             <a
-              href="tel:+971000000000"
+              href="tel:+971521068882"
               className="flex flex-col items-center gap-3 bg-white rounded-2xl p-7 md:p-8 hover:shadow-xl transition-shadow group border border-navy-100 shadow-lg">
 
               <div className="w-16 h-16 bg-gold-100 group-hover:bg-gold-200 rounded-xl flex items-center justify-center transition-colors">
                 <PhoneIcon className="w-7 h-7 text-gold-600" />
               </div>
               <span className="text-navy-600 font-tajawal text-fluid-body" dir="ltr">
-                +971 00 000 0000
+                +971521068882
               </span>
             </a>
 
             <a
-              href="mailto:info@KIB.ae"
+              href="mailto:info@shazmlc.com"
               className="flex flex-col items-center gap-3 bg-white rounded-2xl p-7 md:p-8 hover:shadow-xl transition-shadow group border border-navy-100 shadow-lg">
 
               <div className="w-16 h-16 bg-teal-100 group-hover:bg-teal-200 rounded-xl flex items-center justify-center transition-colors">
                 <MailIcon className="w-7 h-7 text-teal-600" />
               </div>
               <span className="text-navy-600 font-tajawal text-fluid-body">
-                info@kib.ae
+                info@shazmlc.com
               </span>
             </a>
           </div>

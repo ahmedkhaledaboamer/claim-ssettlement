@@ -5,6 +5,7 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { operatingLayers } from '@/data/journeyData';
 import * as Icons from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const lucideIcons = Icons as unknown as Record<string, LucideIcon>;
 // Layer images
@@ -13,22 +14,10 @@ const layerImages: string[] = [
 ];
 
 export function OperatingSystemSection({ locale }: { locale: string }) {
+  const t = useTranslations('administrativeDepartmentPage.operatingSystem');
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const [activeLayer, setActiveLayer] = useState(0);
   const isRTL = locale === 'ar';
-  const headingTitle =
-    locale === 'ar'
-      ? { main: 'نظام', highlight: ' التشغيل' }
-      : locale === 'fr'
-      ? { main: 'Système', highlight: ' opérationnel' }
-      : { main: 'Operating', highlight: ' system' };
-
-  const headingDescription =
-    locale === 'ar'
-      ? '٥ طبقات متكاملة تعمل بتناغم لضمان أفضل النتائج'
-      : locale === 'fr'
-      ? '5 couches intégrées qui fonctionnent en harmonie pour garantir les meilleurs résultats.'
-      : '5 integrated layers working in harmony to deliver the best results.';
   return (
     <section id="system" className="relative p-[5%] overflow-hidden bg-white">
       <div ref={ref} className="relative z-10  ">
@@ -52,11 +41,11 @@ export function OperatingSystemSection({ locale }: { locale: string }) {
           className="text-center mb-16">
 
           <h2 className="text-fluid-section-title font-black mb-6">
-            <span className="text-slate-900">{headingTitle.main}</span>
-            <span className="gradient-text-gold">{headingTitle.highlight}</span>
+            <span className="text-slate-900">{t('headingMain')}</span>
+            <span className="gradient-text-gold">{t('headingHighlight')}</span>
           </h2>
           <p className="text-fluid-section-lead text-slate-600  ">
-            {headingDescription}
+            {t('description')}
           </p>
         </motion.div>
 
@@ -86,12 +75,7 @@ export function OperatingSystemSection({ locale }: { locale: string }) {
               {operatingLayers.map((layer, index) => {
                 const IconComponent = lucideIcons[layer.icon] || Icons.LayersIcon;
                 const isActive = activeLayer === index;
-                const layerTitle =
-                  locale === 'ar'
-                    ? layer.titleAr
-                    : locale === 'fr'
-                    ? layer.titleFr
-                    : layer.titleEn;
+                const layerTitle = t(`layers.${layer.id}.title`);
                 return (
                   <motion.button
                     key={layer.id}
@@ -193,7 +177,7 @@ export function OperatingSystemSection({ locale }: { locale: string }) {
               <div className="relative h-48 md:h-56 min-h-[220px] overflow-hidden">
                 <img
                   src={layerImages[activeLayer]}
-                  alt={operatingLayers[activeLayer].titleAr}
+                  alt={t(`layers.${operatingLayers[activeLayer].id}.title`)}
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
@@ -237,29 +221,17 @@ export function OperatingSystemSection({ locale }: { locale: string }) {
                         color: operatingLayers[activeLayer].color
                       }}>
 
-                      {locale === 'ar'
-                        ? `الطبقة ${operatingLayers[activeLayer].id}`
-                        : locale === 'fr'
-                        ? `Couche ${operatingLayers[activeLayer].id}`
-                        : `Layer ${operatingLayers[activeLayer].id}`}
+                      {t('layerLabel', { id: operatingLayers[activeLayer].id })}
                     </span>
                     <h3 className="text-fluid-2xl font-bold text-slate-900 mt-2">
-                      {locale === 'ar'
-                        ? operatingLayers[activeLayer].titleAr
-                        : locale === 'fr'
-                        ? operatingLayers[activeLayer].titleFr
-                        : operatingLayers[activeLayer].titleEn}
+                      {t(`layers.${operatingLayers[activeLayer].id}.title`)}
                     </h3>
                   </div>
                 </div>
 
                 {/* Description */}
                 <p className="text-fluid-body text-slate-600 leading-relaxed">
-                  {locale === 'ar'
-                    ? operatingLayers[activeLayer].descriptionAr
-                    : locale === 'fr'
-                    ? operatingLayers[activeLayer].descriptionFr
-                    : operatingLayers[activeLayer].descriptionEn}
+                  {t(`layers.${operatingLayers[activeLayer].id}.description`)}
                 </p>
 
                 {/* Visual Indicator */}

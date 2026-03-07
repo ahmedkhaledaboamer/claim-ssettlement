@@ -5,25 +5,14 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { serviceLevels } from '@/data/journeyData';
 import * as Icons from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const lucideIcons = Icons as unknown as Record<string, LucideIcon>;
 export function ServiceLevelsSection({ locale }: { locale: string }) {
+  const t = useTranslations('administrativeDepartmentPage.serviceLevels');
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const [selectedLevel, setSelectedLevel] = useState(2);
   const isRTL = locale === 'ar';
-  const headingTitle =
-    locale === 'ar'
-      ? { main: 'مستويات', highlight: ' الخدمة' }
-      : locale === 'fr'
-      ? { main: 'Niveaux de', highlight: ' service' }
-      : { main: 'Service', highlight: ' levels' };
-
-  const headingDescription =
-    locale === 'ar'
-      ? '٥ مستويات خدمة مصممة لتلبية احتياجاتك مهما كان حجم مشروعك'
-      : locale === 'fr'
-      ? '5 niveaux de service conçus pour répondre à vos besoins, quelle que soit la taille de votre projet.'
-      : '5 service levels designed to meet your needs, whatever the size of your project.';
   return (
     <section id="levels" className="relative p-[5%] overflow-hidden bg-slate-50">
       <div ref={ref} className="relative z-10  ">
@@ -47,11 +36,11 @@ export function ServiceLevelsSection({ locale }: { locale: string }) {
           className="text-center mb-16">
 
           <h2 className="text-fluid-section-title font-black mb-6">
-            <span className="text-slate-900">{headingTitle.main}</span>
-            <span className="gradient-text-gold">{headingTitle.highlight}</span>
+            <span className="text-slate-900">{t('headingMain')}</span>
+            <span className="gradient-text-gold">{t('headingHighlight')}</span>
           </h2>
           <p className="text-fluid-section-lead text-slate-600  ">
-            {headingDescription}
+            {t('description')}
           </p>
         </motion.div>
 
@@ -61,18 +50,8 @@ export function ServiceLevelsSection({ locale }: { locale: string }) {
             const IconComponent = lucideIcons[level.icon] || Icons.StarIcon;
             const isSelected = selectedLevel === index;
             const height = 200 + index * 40;
-            const title =
-              locale === 'ar'
-                ? level.titleAr
-                : locale === 'fr'
-                ? level.titleFr
-                : level.titleEn;
-            const features =
-              locale === 'ar'
-                ? level.features
-                : locale === 'fr'
-                ? level.featuresFr
-                : level.featuresEn;
+            const title = t(`levels.${level.id}.title`);
+            const features = t.raw(`levels.${level.id}.features`) as string[];
             return (
               <motion.div
                 key={level.id}
@@ -112,11 +91,7 @@ export function ServiceLevelsSection({ locale }: { locale: string }) {
                       backgroundColor: level.color
                     }}>
 
-                    {locale === 'ar'
-                      ? `المستوى ${level.id}`
-                      : locale === 'fr'
-                      ? `Niveau ${level.id}`
-                      : `Level ${level.id}`}
+                    {t('levelLabel', { id: level.id })}
                   </div>
 
                   {/* Icon */}
@@ -167,11 +142,7 @@ export function ServiceLevelsSection({ locale }: { locale: string }) {
                         color: level.color
                       }}>
 
-                        {locale === 'ar'
-                          ? `+${features.length - 3} مزايا أخرى`
-                          : locale === 'fr'
-                          ? `+${features.length - 3} avantages supplémentaires`
-                          : `+${features.length - 3} more features`}
+                        {t('moreFeatures', { count: features.length - 3 })}
                       </div>
                     }
                   </div>
@@ -179,7 +150,7 @@ export function ServiceLevelsSection({ locale }: { locale: string }) {
                   {/* Popular Badge for Executive */}
                   {index === 2 &&
                   <div className="absolute -top-3 left-4 px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-teal-600 to-cyan-500 text-white">
-                      الأكثر طلباً
+                      {t('mostPopular')}
                     </div>
                   }
                 </motion.button>
@@ -216,37 +187,20 @@ export function ServiceLevelsSection({ locale }: { locale: string }) {
                   color: serviceLevels[selectedLevel].color
                 }}>
 
-                {locale === 'ar'
-                  ? serviceLevels[selectedLevel].titleAr
-                  : locale === 'fr'
-                  ? serviceLevels[selectedLevel].titleFr
-                  : serviceLevels[selectedLevel].titleEn}
+                {t(`levels.${serviceLevels[selectedLevel].id}.title`)}
               </h3>
               <p className="text-fluid-body text-slate-600 leading-relaxed mb-6">
-                {locale === 'ar'
-                  ? serviceLevels[selectedLevel].descriptionAr
-                  : locale === 'fr'
-                  ? serviceLevels[selectedLevel].descriptionFr
-                  : serviceLevels[selectedLevel].descriptionEn}
+                {t(`levels.${serviceLevels[selectedLevel].id}.description`)}
               </p>
             </div>
 
             {/* Features */}
             <div className="flex-1">
               <h4 className="text-fluid-body-lg font-bold text-slate-900 mb-4">
-                {locale === 'ar'
-                  ? 'المزايا المتضمنة:'
-                  : locale === 'fr'
-                  ? 'Avantages inclus :'
-                  : 'Included features:'}
+                {t('includedFeatures')}
               </h4>
               <div className="space-y-3">
-                {(locale === 'ar'
-                  ? serviceLevels[selectedLevel].features
-                  : locale === 'fr'
-                  ? serviceLevels[selectedLevel].featuresFr
-                  : serviceLevels[selectedLevel].featuresEn
-                ).map((feature, i) =>
+                {(t.raw(`levels.${serviceLevels[selectedLevel].id}.features`) as string[]).map((feature, i) =>
                 <div
                   key={i}
                   className="flex items-center gap-3 p-3 rounded-xl bg-slate-50">

@@ -14,128 +14,35 @@ import {
   UsersIcon
 } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
-const services = [
-{
-  icon: SearchIcon,
-  titleAr: 'التحليل المالي الشامل',
-  titleEn: 'Comprehensive financial analysis',
-  titleFr: 'Analyse financière complète',
-  descriptionAr: 'تحليل عميق للبيانات المالية والتدفقات النقدية',
-  descriptionEn: 'In‑depth analysis of financial data and cash flows.',
-  descriptionFr: 'Analyse approfondie des données financières et des flux de trésorerie.',
-  color: '#046307',
-  image: '/imgs/A secured financing concept sh/image_51.webp'
-},
-{
-  icon: ShieldIcon,
-  titleAr: 'تقييم المخاطر',
-  titleEn: 'Risk assessment',
-  titleFr: 'Évaluation des risques',
-  descriptionAr: 'تحديد وتقييم المخاطر المحتملة ووضع استراتيجيات التخفيف',
-  descriptionEn: 'Identifying and assessing potential risks and defining mitigation strategies.',
-  descriptionFr:
-  'Identification et évaluation des risques potentiels, avec définition de stratégies d’atténuation.',
-  color: '#FFBF00',
-  image: '/imgs/A sophisticated financial ecos/image_53.webp'
-},
-{
-  icon: FileTextIcon,
-  titleAr: 'تجهيز الملفات',
-  titleEn: 'File preparation',
-  titleFr: 'Préparation des dossiers',
-  descriptionAr: 'إعداد ملفات تمويلية متكاملة ومحترفة',
-  descriptionEn: 'Preparing complete, professional financing files.',
-  descriptionFr: 'Préparation de dossiers de financement complets et professionnels.',
-  color: '#9966CC',
-  image: '/imgs/A stability and competitivenes/image_4.webp'
-},
-{
-  icon: UsersIcon,
-  titleAr: 'العلاقات مع جهات التمويل',
-  titleEn: 'Relationships with funding institutions',
-  titleFr: 'Relations avec les institutions financières',
-  descriptionAr: 'شبكة واسعة من العلاقات مع البنوك والمؤسسات المالية',
-  descriptionEn: 'A wide network of relationships with banks and financial institutions.',
-  descriptionFr:
-  'Un vaste réseau de relations avec les banques et les institutions financières.',
-  color: '#0F52BA',
-  image: '/imgs/A strategic capital planning s/image_44.webp'
-},
-{
-  icon: SendIcon,
-  titleAr: 'تقديم الملفات',
-  titleEn: 'File submission',
-  titleFr: 'Soumission des dossiers',
-  descriptionAr: 'تقديم احترافي للملفات للجهات المناسبة',
-  descriptionEn: 'Professional submission of files to the right institutions.',
-  descriptionFr:
-  'Soumission professionnelle des dossiers auprès des institutions appropriées.',
-  color: '#0047AB',
-  image: '/imgs/A strategic expansion visualiz/image_16.webp'
-},
-{
-  icon: ScaleIcon,
-  titleAr: 'التفاوض',
-  titleEn: 'Negotiation',
-  titleFr: 'Négociation',
-  descriptionAr: 'تفاوض خبير للحصول على أفضل الشروط',
-  descriptionEn: 'Expert negotiation to obtain the best terms.',
-  descriptionFr: 'Négociation experte pour obtenir les meilleures conditions.',
-  color: '#D97706',
-  image: '/imgs/A strategic financial analysis/image_48.webp'
-},
-{
-  icon: ClockIcon,
-  titleAr: 'المتابعة المستمرة',
-  titleEn: 'Continuous follow‑up',
-  titleFr: 'Suivi continu',
-  descriptionAr: 'متابعة دقيقة حتى الحصول على الموافقة',
-  descriptionEn: 'Diligent follow‑up until approval is obtained.',
-  descriptionFr: 'Suivi attentif jusqu’à l’obtention de l’approbation.',
-  color: '#B87333',
-  image: '/imgs/A strategic financial partners/image_6.webp'
-},
-{
-  icon: CheckCircleIcon,
-  titleAr: 'الإغلاق المالي',
-  titleEn: 'Financial closing',
-  titleFr: 'Clôture financière',
-  descriptionAr: 'إتمام الصفقة بسلاسة واحترافية',
-  descriptionEn: 'Smooth and professional deal closing.',
-  descriptionFr: 'Clôture de l’opération de manière fluide et professionnelle.',
-  color: '#DC143C',
-  image: '/imgs/A structured financial ecosyst/image_47.webp'
-},
-{
-  icon: LifeBuoyIcon,
-  titleAr: 'دعم ما بعد التمويل',
-  titleEn: 'Post‑financing support',
-  titleFr: 'Accompagnement post‑financement',
-  descriptionAr: 'دعم مستمر ومتابعة بعد إتمام التمويل',
-  descriptionEn: 'Ongoing support and follow‑up after financing is completed.',
-  descriptionFr:
-  'Accompagnement continu et suivi après la mise en place du financement.',
-  color: '#0E7490',
-  image: '/imgs/A structured financial ecosyst/image_60.webp'
-},
-{
-  icon: TrendingUpIcon,
-  titleAr: 'تطوير الأعمال',
-  titleEn: 'Business development',
-  titleFr: 'Développement des affaires',
-  descriptionAr: 'استشارات لتطوير وتوسيع أعمالك',
-  descriptionEn: 'Advisory services to develop and expand your business.',
-  descriptionFr:
-  'Conseils pour développer et étendre votre activité.',
-  color: '#DC143C',
-  image: '/imgs/A structured information envir/image_62.webp'
-}];
+const serviceIcons = [SearchIcon, ShieldIcon, FileTextIcon, UsersIcon, SendIcon, ScaleIcon, ClockIcon, CheckCircleIcon, LifeBuoyIcon, TrendingUpIcon];
+const serviceColors = ['#046307', '#FFBF00', '#9966CC', '#0F52BA', '#0047AB', '#D97706', '#B87333', '#DC143C', '#0E7490', '#DC143C'];
+const serviceImages = [
+  '/imgs/A secured financing concept sh/image_51.webp',
+  '/imgs/A sophisticated financial ecos/image_53.webp',
+  '/imgs/A stability and competitivenes/image_4.webp',
+  '/imgs/A strategic capital planning s/image_44.webp',
+  '/imgs/A strategic expansion visualiz/image_16.webp',
+  '/imgs/A strategic financial analysis/image_48.webp',
+  '/imgs/A strategic financial partners/image_6.webp',
+  '/imgs/A structured financial ecosyst/image_47.webp',
+  '/imgs/A structured financial ecosyst/image_60.webp',
+  '/imgs/A structured information envir/image_62.webp'
+];
 
 export function WhatWeDoSection({ locale }: { locale: string }) {
+  const t = useTranslations('administrativeDepartmentPage.whatWeDo');
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const isRTL = locale === 'ar';
-  const headingTitle =
+  const services = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => ({
+    icon: serviceIcons[i],
+    title: t(`services.${i}.title`),
+    description: t(`services.${i}.description`),
+    color: serviceColors[i],
+    image: serviceImages[i]
+  }));
+  const _headingTitle =
     locale === 'ar'
       ? { main: 'ماذا', highlight: ' نقدم' }
       : locale === 'fr'
@@ -171,11 +78,11 @@ export function WhatWeDoSection({ locale }: { locale: string }) {
           className="text-center mb-16">
 
           <h2 className="text-fluid-section-title font-black mb-6">
-            <span className="text-slate-900">{headingTitle.main}</span>
-            <span className="gradient-text-gold">{headingTitle.highlight}</span>
+            <span className="text-slate-900">{t('headingMain')}</span>
+            <span className="gradient-text-gold">{t('headingHighlight')}</span>
           </h2>
           <p className="text-fluid-section-lead text-slate-600  ">
-            {headingDescription}
+            {t('description')}
           </p>
         </motion.div>
 
@@ -183,18 +90,8 @@ export function WhatWeDoSection({ locale }: { locale: string }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           {services.map((service, index) => {
             const Icon = service.icon;
-            const title =
-              locale === 'ar'
-                ? service.titleAr
-                : locale === 'fr'
-                ? service.titleFr
-                : service.titleEn;
-            const description =
-              locale === 'ar'
-                ? service.descriptionAr
-                : locale === 'fr'
-                ? service.descriptionFr
-                : service.descriptionEn;
+            const title = service.title;
+            const description = service.description;
             return (
               <motion.div
                 key={title}

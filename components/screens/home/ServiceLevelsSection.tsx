@@ -85,7 +85,7 @@ export function ServiceLevelsSection() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <FadeUp>
-            <span className="inline-block text-gold-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+            <span className="inline-block text-gold-600 font-cairo font-bold text-xl tracking-wider mb-4">
               {t('badge')}
             </span>
           </FadeUp>
@@ -131,7 +131,7 @@ export function ServiceLevelsSection() {
 
                   <div className="relative z-10 h-full flex flex-col">
                     {/* Header Image */}
-                    <div className="h-56 sm:h-64 lg:h-[380px] xl:h-[600px] w-full relative overflow-hidden ">
+                    <div className="h-56 sm:h-64 lg:h-[380px] xl:h-[450px] w-full relative overflow-hidden ">
                       <Image
                         width={600}
                         height={400}
@@ -142,7 +142,7 @@ export function ServiceLevelsSection() {
 
                       {/* Gradient Overlay */}
                       <div
-                        className={`absolute inset-0 bg-gradient-to-t ${level.highlighted ? 'from-gold-500 via-gold-500/80 to-transparent' : 'from-white via-white/80 to-transparent'}`} />
+                        className={`absolute inset-0 bg-gradient-to-t ${level.highlighted ? 'from-gold-500/40 via-gold-500/10 to-transparent' : 'from-white/80 via-white/20 to-transparent'}`} />
 
 
                       {/* Recommended Badge */}

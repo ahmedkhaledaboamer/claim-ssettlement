@@ -191,7 +191,7 @@ export function JourneySection() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <FadeUp>
-            <span className="inline-block text-jade font-cairo font-bold text-fluid-label tracking-wider mb-4">
+            <span className="inline-block text-jade font-cairo font-bold text-xl tracking-wider mb-4">
               {t('badge')}
             </span>
           </FadeUp>
@@ -285,12 +285,9 @@ export function JourneySection() {
 
         {/* Mobile Timeline */}
         <div className="md:hidden relative">
-          {/* Vertical Line */}
-          <div className="absolute right-6 top-0 bottom-0 w-1 bg-gradient-to-b from-teal-500 via-gold-500 to-coral-500 rounded-full" />
 
           <div className="space-y-8">
             {journeySteps.map((step, index) => {
-              const IconComponent = step.icon;
               const colors = colorMap[step.color];
               return (
                 <motion.div
@@ -309,7 +306,7 @@ export function JourneySection() {
                   transition={{
                     delay: index * 0.1
                   }}
-                  className="relative flex items-start gap-4 pr-4">
+                  className="relative flex items-start gap-4">
 
                   {/* Number Node */}
                   <div

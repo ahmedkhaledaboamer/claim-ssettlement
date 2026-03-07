@@ -55,7 +55,7 @@
   "footer": {
     "contact": {
       "title": "联系我们",
-      "phone": "+971 521068882",
+      "phone": "+971521068882",
       "email": "info@shazmlc.com",
       "location": "阿拉伯联合酋长国"
     },
@@ -1109,6 +1109,166 @@
       "confidentiality": "完全保密",
       "support": "24/7 支持",
       "finalMessage": "让执行路径成为将您的项目提升到更高稳定、增长和竞争力的道路。"
+    }
+  },
+  "administrativeDepartmentPage": {
+    "hero": {
+      "badge": "KIB Claims Settlement Services",
+      "titleLine1": "行政",
+      "titleLine2": "体系核心",
+      "subtitle": "15个高管岗位协同工作，将您的融资目标转化为切实成果。",
+      "stat1": "15",
+      "stat1Label": "高管岗位",
+      "stat2": "9",
+      "stat2Label": "整合阶段",
+      "stat3": "5",
+      "stat3Label": "服务层级",
+      "stat4": "94٪",
+      "stat4Label": "成功率",
+      "cta": "了解高管团队",
+      "backgroundAlt": "现代办公楼"
+    },
+    "introduction": {
+      "headingMain": "一体化",
+      "headingHighlight": " 运营中心",
+      "description": "整合行政体系，汇聚深厚专业能力与精准协调；15个高管岗位从首次接洽到交割后全程管理您的融资案。",
+      "features": [
+        { "title": "运营精准", "description": "严谨的运营体系确保每一步准确无误。" },
+        { "title": "专业团队", "description": "覆盖融资各主要领域的专家。" },
+        { "title": "完全保密", "description": "对您的财务信息提供完整保护。" },
+        { "title": "可验证成果", "description": "案件成功率超过94%。" }
+      ],
+      "quote": "“我们不仅提供融资服务，更提供确保您财务成功的战略合作。”",
+      "quoteAuthor": "— 董事会"
+    },
+    "whatWeDo": {
+      "headingMain": "我们的",
+      "headingHighlight": " 服务",
+      "description": "从启动到交割后，覆盖您融资全程的一体化服务。",
+      "services": [
+        { "title": "全面财务分析", "description": "对财务数据与现金流的深入分析。" },
+        { "title": "风险评估", "description": "识别与评估潜在风险并制定缓释策略。" },
+        { "title": "案卷准备", "description": "编制完整、专业的融资案卷。" },
+        { "title": "与融资机构关系", "description": "与银行及金融机构的广泛合作网络。" },
+        { "title": "案卷提交", "description": "向合适机构进行专业提交。" },
+        { "title": "谈判", "description": "专业谈判以争取最优条件。" },
+        { "title": "持续跟进", "description": "直至获批的尽职跟进。" },
+        { "title": "融资交割", "description": "顺畅、专业的交易收官。" },
+        { "title": "融资后支持", "description": "融资完成后的持续支持与跟进。" },
+        { "title": "业务发展", "description": "助力业务发展与扩张的顾问服务。" }
+      ]
+    },
+    "clientJourney": {
+      "headingMain": "客户",
+      "headingHighlight": " 旅程",
+      "description": "9个整合阶段，从第一步到融资后支持全程陪伴。",
+      "stageLabel": "阶段 {id}",
+      "durationLabel": "时长：{duration}",
+      "prevStage": "上一阶段",
+      "nextStage": "下一阶段",
+      "steps": {
+        "1": { "title": "需求发现与分析会议", "description": "我们以深度发现会议开始，精准理解您的融资需求。我们分析您当前的财务状况并明确构建定制融资计划所需的目标。", "duration": "1–2 天" },
+        "2": { "title": "财务与运营评估", "description": "财务分析团队对您的财务与运营数据进行全面审阅，包括财务报表、现金流与可行性。", "duration": "3–5 天" },
+        "3": { "title": "制定融资计划", "description": "我们设计与您需求匹配的定制战略融资计划，包括建议结构、目标条款与时间表。", "duration": "2–3 天" },
+        "4": { "title": "准备融资案卷", "description": "我们准备包含所有所需文件与分析的完整融资案卷，并严格审阅以确保完整与质量。", "duration": "3–7 天" },
+        "5": { "title": "向合适机构提交案卷", "description": "我们为您的案卷选择最合适的融资机构并专业提交，呈现突出您优势的有力方案。", "duration": "1–2 天" },
+        "6": { "title": "条款谈判", "description": "我们的谈判团队争取最优条款，从定价与期限到约束与担保。", "duration": "5–10 天" },
+        "7": { "title": "跟进直至获批", "description": "我们与融资机构持续跟进、回应询问并按要求提供补充材料直至获得批准。", "duration": "7–14 天" },
+        "8": { "title": "融资交割", "description": "我们全程监督融资交割，从审阅最终合同到签署与放款。", "duration": "3–5 天" },
+        "9": { "title": "融资后支持", "description": "我们的关系不因交割而结束。我们提供持续支持，包括义务监控、财务顾问及所需时的再融资服务。", "duration": "持续" }
+      }
+    },
+    "operatingSystem": {
+      "headingMain": "运营",
+      "headingHighlight": " 体系",
+      "description": "5个整合层级协同运作，交付最佳结果。",
+      "layerLabel": "层级 {id}",
+      "layers": {
+        "1": { "title": "财务分析层", "description": "每项融资决策的基础。对财务数据、现金流与报表的深入分析，形成对您状况的清晰图景。" },
+        "2": { "title": "运营评估层", "description": "对运营、产能与效率的全面评估，确保融资的可持续性。" },
+        "3": { "title": "融资匹配层", "description": "在客户需求与可用融资方案之间精确匹配，实现最佳契合。" },
+        "4": { "title": "谈判层", "description": "在每条条款中保护客户利益的同时，通过专业谈判争取最佳条款与定价。" },
+        "5": { "title": "交割与跟进层", "description": "顺畅完成交易并持续跟进，确保融资成功与目标达成。" }
+      }
+    },
+    "serviceLevels": {
+      "headingMain": "服务",
+      "headingHighlight": " 层级",
+      "description": "5个服务层级，满足不同规模项目的需求。",
+      "levelLabel": "层级 {id}",
+      "moreFeatures": "另有 +{count} 项",
+      "includedFeatures": "包含内容：",
+      "mostPopular": "最受欢迎",
+      "levels": {
+        "1": { "title": "基础层级", "description": "包含初步财务分析、向一家机构提交案卷及基础跟进的必要融资服务。", "features": ["初步财务分析", "基础案卷准备", "向一家机构提交", "基础跟进"] },
+        "2": { "title": "进阶层级", "description": "包含全面财务分析、向多家机构提交及条款谈判的进阶服务。", "features": ["全面财务分析", "完整案卷准备", "向3家机构提交", "条款谈判", "持续跟进"] },
+        "3": { "title": "高管层级", "description": "配备专责团队、深度分析与顶尖融资机构专业谈判的卓越高管服务。", "features": ["专责团队", "深度分析", "向5家机构提交", "专业谈判", "融资后支持", "定期报告"] },
+        "4": { "title": "战略层级", "description": "面向重大项目的全面战略服务，含高级财务结构与多机构协调。", "features": ["高级财务结构", "多机构协调", "全面风险管理", "战略谈判", "法律支持", "VIP跟进"] },
+        "5": { "title": "企业主层级", "description": "面向企业主与重要投资者的最高级别专属服务，配备专责高管团队与24/7可用。", "features": ["专属高管团队", "24/7服务", "直接对接CEO", "完全定制结构", "顶级谈判", "终身全面支持", "优先处理"] }
+      }
+    },
+    "qualityStandards": {
+      "headingMain": "质量",
+      "headingHighlight": " 标准",
+      "description": "我们致力于在工作的方方面面达到最高质量标准。",
+      "approvedBy": "获50余家融资机构认可",
+      "standards": {
+        "1": "运营精准",
+        "2": "执行速度",
+        "3": "完全透明",
+        "4": "持续跟进",
+        "5": "完全保密",
+        "6": "结果承诺"
+      }
+    },
+    "clientTypes": {
+      "headingMain": "我们",
+      "headingHighlight": " 服务谁？",
+      "description": "为不同类型客户与行业提供专业化融资方案。",
+      "types": {
+        "1": { "title": "大型企业", "description": "为需求复杂的大型企业与机构提供一体化融资方案。" },
+        "2": { "title": "工厂主", "description": "为扩大产能与升级设备提供专项工业融资。" },
+        "3": { "title": "零售商户", "description": "为零售商扩大业务与增加库存提供灵活融资方案。" },
+        "4": { "title": "房地产开发商", "description": "从规划到交付的房地产项目融资，配以高级财务结构。" },
+        "5": { "title": "科技先锋", "description": "为科技与初创企业提供对数字商业模式有深入理解的创新融资。" },
+        "6": { "title": "初创项目", "description": "为初创项目提供含全面财务与战略指导的融资支持。" },
+        "7": { "title": "投资者", "description": "为最大化回报与分散投资组合提供广泛投资融资方案。" },
+        "8": { "title": "新创业者", "description": "为新创业者提供持续支持与跟进的专项融资计划。" }
+      }
+    },
+    "faq": {
+      "headingMain": "常见",
+      "headingHighlight": " 问题",
+      "description": "关于我们服务与工作方式的常见问题解答。",
+      "noAnswerTitle": "未找到您问题的答案？",
+      "noAnswerDesc": "我们的团队随时准备回答您的所有问题。",
+      "contactUs": "联系我们",
+      "supportTeamAlt": "支持团队",
+      "items": {
+        "1": { "question": "KIB行政部门提供哪些服务？", "answer": "行政部门提供全面服务，包括财务分析、风险评估、融资案卷准备、与融资机构谈判、融资交割及融资后支持。我们15个高管岗位组成的团队全程协调，确保最佳结果。", "category": "一般" },
+        "2": { "question": "从开始到获得融资需要多长时间？", "answer": "时长因融资类型与案卷复杂度而异。一般标准案卷为3至6周，大型复杂项目可能延长至8–12周。我们会在各阶段及时告知。", "category": "时间线" },
+        "3": { "question": "我的财务信息是否受保护并保密？", "answer": "是的。完全保密是我们工作的主要支柱之一。我们遵循数据保护与隐私的最高标准。所有财务信息均严格保密，仅在经批准的融资机构且经您事先同意的情况下共享。", "category": "保密" },
+        "4": { "question": "融资案卷的成功率是多少？", "answer": "我们处理的案卷成功率超过94%。这得益于我们在提交任何案卷前的严格分析与评估方法，确保向融资机构呈现扎实、完整的案卷。", "category": "一般" },
+        "5": { "question": "如何为我的案卷选择合适的融资机构？", "answer": "我们依靠考虑活动类型、所需融资额、偏好条款与信用记录的先进匹配系统。我们与银行及金融机构的广泛关系网络使我们能为每个案例选择最合适的选项。", "category": "流程" },
+        "6": { "question": "五个服务层级之间有何区别？", "answer": "服务层级从基础层级（分析与向一家机构提交）到企业主层级（专属高管团队与24/7服务）。每个层级提供更深度的分析、谈判与跟进。", "category": "服务" },
+        "7": { "question": "能否直接与负责我案卷的团队沟通？", "answer": "可以。我们相信完全透明。每位客户都会有一名专责案卷经理作为主要联系人。在更高服务层级，您可直接与高管沟通。", "category": "沟通" },
+        "8": { "question": "获得融资后会发生什么？", "answer": "我们的关系不会在融资完成后结束。融资后支持团队会跟进您以确保条款遵守、提供持续财务建议，并在需要时协助再融资或获取额外融资。", "category": "融资后" },
+        "9": { "question": "启动融资流程需要哪些文件？", "answer": "所需文件因融资类型而异。一般需要：最近3年财务报表、商业登记、银行对账单、商业计划及视活动性质而定的补充文件。我们团队将指导您准备全部所需材料。", "category": "流程" },
+        "10": { "question": "你们是否处理所有类型的融资？", "answer": "是的。我们覆盖广泛的融资类型：商业、房地产与投资融资，企业与项目融资，营运资金与扩张融资。我们在各领域的专业团队确保每种类型都有深厚专长。", "category": "服务" }
+      }
+    },
+    "conclusion": {
+      "badge": "总结",
+      "titleLine1": "您融资旅程上的",
+      "titleLine2": "战略伙伴",
+      "description": "15个高管岗位组成的整合行政体系，将您的融资目标变为现实。从初步财务分析到融资后支持，我们全程与您同行。",
+      "statClients": "满意客户",
+      "statSuccess": "成功率",
+      "statInstitutions": "融资机构",
+      "cta": "立即开启您的旅程",
+      "signature": "董事会",
+      "signatureSub": "KIB Claims Settlement Services",
+      "officeAlt": "现代办公室"
     }
   }
 }

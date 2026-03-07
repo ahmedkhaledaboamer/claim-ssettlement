@@ -10,7 +10,7 @@ import {
   ChevronDownIcon
 } from 'lucide-react';
 import { FadeUp } from './ScrollAnimations';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const systemLayers = [
   {
@@ -71,6 +71,8 @@ function LayerCard({
   const IconComponent = layer.icon;
   const colors = colorMap[layer.color];
   const t = useTranslations('home.system.layers');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
   return (
     <motion.div
       initial={{
@@ -93,7 +95,7 @@ function LayerCard({
       className="relative">
 
       {/* Connecting dot on the line (desktop only) */}
-      <div className="hidden md:block absolute right-0 top-8 translate-x-1/2 z-10">
+      <div className={`hidden md:block absolute top-8 end-0 z-10 ${isRTL ? '-translate-x-1/2' : 'translate-x-1/2'}`}>
         <motion.div
           animate={
           isActive ?
@@ -116,7 +118,7 @@ function LayerCard({
       {/* Card */}
       <div
         onClick={onClick}
-        className={`bg-white rounded-2xl shadow-lg border-t-4 ${colors.border} overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl md:mr-8 group`}>
+        className={`bg-white rounded-2xl shadow-lg border-t-4 ${colors.border} overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl md:me-8 group`}>
 
             <div className="p-6 md:p-8">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-5 text-center sm:text-left">
@@ -148,7 +150,7 @@ function LayerCard({
             </div>
 
             {/* Content */}
-            <div className="flex-1 min-w-0">
+            <div dir={isRTL ? 'rtl' : 'ltr'} className={`flex-1 min-w-0 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
               <h3
                 className={`text-fluid-body-lg font-cairo font-bold ${colors.text} mb-2`}
               >
@@ -224,7 +226,7 @@ export function SystemSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <FadeUp>
-            <span className="inline-block text-navy-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+            <span className="inline-block text-navy-600 font-cairo font-bold text-xl tracking-wider mb-4">
               {t('badge')}
             </span>
           </FadeUp>
@@ -246,7 +248,7 @@ export function SystemSection() {
         {/* Layers Container */}
         <div className="relative">
           {/* Connecting Line (desktop only) */}
-          <div className="hidden md:block absolute right-0 top-8 bottom-8 w-1 bg-gradient-to-b from-teal-500 via-gold-500 to-navy-700 rounded-full" />
+          <div className="hidden md:block absolute end-0 top-8 bottom-8 w-1 bg-gradient-to-b from-teal-500 via-gold-500 to-navy-700 rounded-full" />
 
           {/* Layer Cards */}
           <div className="space-y-6">

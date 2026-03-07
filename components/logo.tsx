@@ -1,6 +1,6 @@
 import { cn } from "@/utils/cn";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import Link from "next/link";
 
 interface LogoProps {
   className?: string;

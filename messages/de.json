@@ -55,7 +55,7 @@
   "footer": {
     "contact": {
       "title": "Kontaktieren Sie uns",
-      "phone": "+971 521068882",
+      "phone": "+971521068882",
       "email": "info@shazmlc.com",
       "location": "Vereinigte Arabische Emirate"
     },
@@ -1109,6 +1109,166 @@
       "confidentiality": "Vollständige Vertraulichkeit",
       "support": "24/7 Unterstützung",
       "finalMessage": "Lassen Sie den ausführenden Pfad der Weg werden, der Ihr Projekt auf ein höheres Niveau von Stabilität, Wachstum und Wettbewerbsfähigkeit hebt."
+    }
+  },
+  "administrativeDepartmentPage": {
+    "hero": {
+      "badge": "KIB Claims Settlement Services",
+      "titleLine1": "Der administrative",
+      "titleLine2": "Leistungsträger",
+      "subtitle": "Ein integriertes Team von 15 Führungspositionen, das in voller Harmonie arbeitet, um Ihre Finanzierungsambitionen in greifbare Ergebnisse zu verwandeln.",
+      "stat1": "15",
+      "stat1Label": "Führungspositionen",
+      "stat2": "9",
+      "stat2Label": "Integrierte Stufen",
+      "stat3": "5",
+      "stat3Label": "Service-Level",
+      "stat4": "94٪",
+      "stat4Label": "Erfolgsquote",
+      "cta": "Entdecken Sie das Führungsteam",
+      "backgroundAlt": "Modernes Bürogebäude"
+    },
+    "introduction": {
+      "headingMain": "Integriertes",
+      "headingHighlight": " Betriebszentrum",
+      "description": "Ein integrierter Verwaltungsapparat, der tiefe Expertise und präzise Koordination verbindet – 15 Führungspositionen arbeiten in voller Harmonie und betreuen Ihre Finanzierungsakte von der ersten Minute bis nach dem Abschluss.",
+      "features": [
+        { "title": "Operative Präzision", "description": "Ein rigoroses Betriebssystem, das Genauigkeit in jedem Schritt gewährleistet." },
+        { "title": "Spezialisiertes Team", "description": "Experten in jedem wichtigen Bereich der Finanzierung." },
+        { "title": "Absolute Vertraulichkeit", "description": "Vollständiger Schutz Ihrer Finanzinformationen." },
+        { "title": "Bewährte Ergebnisse", "description": "Eine Erfolgsquote von über 94 % bei allen Akten." }
+      ],
+      "quote": "\"Wir bieten nicht nur einen Finanzierungsservice, sondern eine strategische Partnerschaft, die Ihren finanziellen Erfolg sichert.\"",
+      "quoteAuthor": "— Vorstand"
+    },
+    "whatWeDo": {
+      "headingMain": "Was",
+      "headingHighlight": " wir tun",
+      "description": "Integrierte Dienstleistungen, die jeden Aspekt Ihrer Finanzierungsreise vom Start bis nach dem Abschluss abdecken.",
+      "services": [
+        { "title": "Umfassende Finanzanalyse", "description": "Tiefgehende Analyse von Finanzdaten und Cashflows." },
+        { "title": "Risikobewertung", "description": "Identifikation und Bewertung potenzieller Risiken sowie Definition von Minderungsstrategien." },
+        { "title": "Aktenvorbereitung", "description": "Erstellung vollständiger, professioneller Finanzierungsakten." },
+        { "title": "Beziehungen zu Finanzierungsinstitutionen", "description": "Ein breites Netzwerk von Beziehungen zu Banken und Finanzinstituten." },
+        { "title": "Akteneinreichung", "description": "Professionelle Einreichung von Akten bei den richtigen Institutionen." },
+        { "title": "Verhandlung", "description": "Expertenverhandlung für die besten Konditionen." },
+        { "title": "Kontinuierliche Nachverfolgung", "description": "Sorgfältige Nachverfolgung bis zur Genehmigung." },
+        { "title": "Finanzielle Schließung", "description": "Reibungsloser und professioneller Abschluss." },
+        { "title": "Unterstützung nach der Finanzierung", "description": "Laufende Unterstützung und Nachverfolgung nach Abschluss der Finanzierung." },
+        { "title": "Geschäftsentwicklung", "description": "Beratungsleistungen zur Entwicklung und Erweiterung Ihres Unternehmens." }
+      ]
+    },
+    "clientJourney": {
+      "headingMain": "Kunden",
+      "headingHighlight": " reise",
+      "description": "9 integrierte Stufen, in denen wir Sie vom ersten Schritt bis zur Unterstützung nach der Finanzierung begleiten.",
+      "stageLabel": "Stufe {id}",
+      "durationLabel": "Dauer: {duration}",
+      "prevStage": "Vorherige Stufe",
+      "nextStage": "Nächste Stufe",
+      "steps": {
+        "1": { "title": "Erkundungs- und Bedarfsanalyse", "description": "Wir beginnen mit einer vertieften Erkundungsphase, um Ihren Finanzierungsbedarf präzise zu verstehen. Wir analysieren Ihre aktuelle Finanzlage und definieren die Ziele für einen maßgeschneiderten Finanzierungsplan.", "duration": "1–2 Tage" },
+        "2": { "title": "Finanzielle und operative Bewertung", "description": "Das Finanzanalyse-Team führt eine umfassende Prüfung Ihrer finanziellen und operativen Daten durch, unter Einbeziehung von Abschlüssen, Cashflows und Machbarkeit.", "duration": "3–5 Tage" },
+        "3": { "title": "Erstellung des Finanzierungsplans", "description": "Wir entwerfen einen maßgeschneiderten strategischen Finanzierungsplan, der Ihre Bedürfnisse abdeckt – inkl. vorgeschlagener Struktur, Zielkonditionen und Zeitplan.", "duration": "2–3 Tage" },
+        "4": { "title": "Vorbereitung der Finanzierungsakte", "description": "Wir erstellen eine vollständige Finanzierungsakte mit allen erforderlichen Unterlagen und Analysen sowie gründlicher Prüfung für Vollständigkeit und Qualität.", "duration": "3–7 Tage" },
+        "5": { "title": "Einreichung bei der passenden Institution", "description": "Wir wählen die geeignetste Finanzierungsinstitution für Ihre Akte aus und reichen sie professionell ein, mit einem überzeugenden Fall, der Ihre Stärken hervorhebt.", "duration": "1–2 Tage" },
+        "6": { "title": "Verhandlung der Konditionen", "description": "Unser Verhandlungsteam arbeitet an den bestmöglichen Konditionen – von Preisen und Laufzeiten bis zu Covenants und Sicherheiten.", "duration": "5–10 Tage" },
+        "7": { "title": "Nachverfolgung bis zur Zusage", "description": "Wir bleiben in kontinuierlichem Austausch mit der Finanzierungsinstitution, beantworten Rückfragen und reichen bei Bedarf zusätzliche Unterlagen bis zur Zusage nach.", "duration": "7–14 Tage" },
+        "8": { "title": "Finanzielle Schließung", "description": "Wir begleiten den gesamten Schließungsprozess – von der Prüfung der Finalverträge bis zur Unterzeichnung und Auszahlung.", "duration": "3–5 Tage" },
+        "9": { "title": "Unterstützung nach der Finanzierung", "description": "Unsere Beziehung endet nicht mit der Schließung. Wir bieten laufende Unterstützung inkl. Überwachung von Verpflichtungen, Finanzberatung und bei Bedarf Refinanzierung.", "duration": "Laufend" }
+      }
+    },
+    "operatingSystem": {
+      "headingMain": "Betriebs",
+      "headingHighlight": " system",
+      "description": "5 integrierte Ebenen, die harmonisch zusammenarbeiten, um die besten Ergebnisse zu liefern.",
+      "layerLabel": "Ebene {id}",
+      "layers": {
+        "1": { "title": "Finanzanalyse-Ebene", "description": "Die Grundlage jeder Finanzierungsentscheidung. Vertiefte Analyse von Finanzdaten, Cashflows und Abschlüssen für ein klares Bild Ihrer Lage." },
+        "2": { "title": "Operative Bewertungsebene", "description": "Umfassende Bewertung von Abläufen, Produktionskapazität und Effizienz zur Sicherung der Nachhaltigkeit der Finanzierung." },
+        "3": { "title": "Finanzierungs-Matching-Ebene", "description": "Präzises Matching zwischen Ihrem Bedarf und verfügbaren Finanzierungsangeboten für die bestmögliche Passung." },
+        "4": { "title": "Verhandlungsebene", "description": "Professionelle Verhandlung zu besten Konditionen und Preisen unter Wahrung Ihrer Interessen in jeder Klausel." },
+        "5": { "title": "Schließungs- und Nachverfolgungsebene", "description": "Reibungslose Abschlussabwicklung mit kontinuierlicher Nachverfolgung für den Erfolg der Finanzierung und die Erreichung der Ziele." }
+      }
+    },
+    "serviceLevels": {
+      "headingMain": "Service",
+      "headingHighlight": " levels",
+      "description": "5 Service-Level, die auf Ihre Bedürfnisse zugeschnitten sind – unabhängig von der Größe Ihres Projekts.",
+      "levelLabel": "Level {id}",
+      "moreFeatures": "+{count} weitere Funktionen",
+      "includedFeatures": "Enthaltene Funktionen:",
+      "mostPopular": "Am beliebtesten",
+      "levels": {
+        "1": { "title": "Grundlevel", "description": "Ein grundlegendes Finanzierungsservice mit erster Finanzanalyse und Einreichung bei einer Institution mit Basis-Nachverfolgung.", "features": ["Erste Finanzanalyse", "Grundlegende Aktenvorbereitung", "Einreichung bei einer Institution", "Basis-Nachverfolgung"] },
+        "2": { "title": "Erweitertes Level", "description": "Ein erweitertes Service mit umfassender Finanzanalyse und Einreichung bei mehreren Institutionen inkl. Konditionenverhandlung.", "features": ["Umfassende Finanzanalyse", "Vollständige Aktenvorbereitung", "Einreichung bei 3 Institutionen", "Konditionenverhandlung", "Kontinuierliche Nachverfolgung"] },
+        "3": { "title": "Executive Level", "description": "Ein herausgehobenes Executive-Service mit dediziertem Team, vertiefter Analyse und professioneller Verhandlung mit Top-Finanzierungsinstitutionen.", "features": ["Dediziertes Team", "Vertiefte Analyse", "Einreichung bei 5 Institutionen", "Professionelle Verhandlung", "Unterstützung nach Finanzierung", "Periodische Berichte"] },
+        "4": { "title": "Strategisches Level", "description": "Ein umfassendes strategisches Service für große Vorhaben mit fortgeschrittener Finanzstrukturierung und Koordination mit mehreren Institutionen.", "features": ["Fortgeschrittene Finanzstrukturierung", "Multi-Institutions-Koordination", "Umfassendes Risikomanagement", "Strategische Verhandlung", "Rechtliche Unterstützung", "VIP-Nachverfolgung"] },
+        "5": { "title": "Level für Unternehmensinhaber", "description": "Das höchste exklusive Service für Unternehmensinhaber und große Investoren, mit dediziertem Executive-Team und 24/7-Verfügbarkeit.", "features": ["Exklusives Executive-Team", "24/7-Service", "Direkter Zugang zum CEO", "Vollständig maßgeschneiderte Strukturierung", "Verhandlung auf höchster Ebene", "Lebenslange umfassende Unterstützung", "Prioritätsbearbeitung"] }
+      }
+    },
+    "qualityStandards": {
+      "headingMain": "Qualitäts",
+      "headingHighlight": " standards",
+      "description": "Wir verpflichten uns zu höchsten Qualitätsstandards in allen Aspekten unserer Arbeit.",
+      "approvedBy": "Von mehr als 50 Finanzierungsinstitutionen anerkannt",
+      "standards": {
+        "1": "Operative Präzision",
+        "2": "Geschwindigkeit der Abwicklung",
+        "3": "Volle Transparenz",
+        "4": "Kontinuierliche Nachverfolgung",
+        "5": "Absolute Vertraulichkeit",
+        "6": "Ergebnisorientierung"
+      }
+    },
+    "clientTypes": {
+      "headingMain": "Wen",
+      "headingHighlight": " bedienen wir?",
+      "description": "Wir bieten maßgeschneiderte Finanzierungslösungen für verschiedene Kundentypen und Branchen.",
+      "types": {
+        "1": { "title": "Großunternehmen", "description": "Integrierte Finanzierungslösungen für Großunternehmen und Institutionen mit komplexen Anforderungen." },
+        "2": { "title": "Fabrikbesitzer", "description": "Spezialisierte Industriefinanzierung zur Erweiterung der Produktionskapazität und Modernisierung der Ausrüstung." },
+        "3": { "title": "Einzelhändler", "description": "Flexible Finanzierungslösungen für den Handel zur Erweiterung des Geschäfts und Aufstockung des Bestands." },
+        "4": { "title": "Immobilienentwickler", "description": "Finanzierung von Immobilienprojekten von der Planung bis zur Übergabe, mit fortgeschrittener Finanzstrukturierung." },
+        "5": { "title": "Technologiepioniere", "description": "Innovative Finanzierung für Technologie- und Start-up-Unternehmen mit tiefem Verständnis digitaler Geschäftsmodelle." },
+        "6": { "title": "Start-up-Projekte", "description": "Finanzierungsunterstützung für Start-up-Projekte mit umfassender finanzieller und strategischer Begleitung." },
+        "7": { "title": "Investoren", "description": "Ein breites Spektrum an Investitionsfinanzierungen zur Maximierung der Erträge und Diversifizierung der Portfolios." },
+        "8": { "title": "Neue Unternehmer", "description": "Spezielle Finanzierungsprogramme für neue Unternehmer mit kontinuierlicher Unterstützung und Nachverfolgung." }
+      }
+    },
+    "faq": {
+      "headingMain": "Häufig",
+      "headingHighlight": " gestellte Fragen",
+      "description": "Antworten auf die häufigsten Fragen zu unseren Dienstleistungen und unserer Arbeitsweise.",
+      "noAnswerTitle": "Keine Antwort auf Ihre Frage gefunden?",
+      "noAnswerDesc": "Unser Team beantwortet rund um die Uhr alle Ihre Fragen.",
+      "contactUs": "Kontaktieren Sie uns",
+      "supportTeamAlt": "Support-Team",
+      "items": {
+        "1": { "question": "Welche Dienstleistungen bietet die KIB-Verwaltungsabteilung?", "answer": "Die Verwaltungsabteilung bietet umfassende Dienstleistungen: Finanzanalyse, Risikobewertung, Vorbereitung von Finanzierungsakten, Verhandlung mit Finanzierungsinstitutionen, finanzielle Schließung und Unterstützung nach der Finanzierung. Unser Team aus 15 Führungspositionen arbeitet in voller Abstimmung für die besten Ergebnisse.", "category": "Allgemein" },
+        "2": { "question": "Wie lange dauert es, von Anfang bis Ende eine Finanzierung zu erhalten?", "answer": "Die Dauer hängt von der Art der Finanzierung und der Komplexität der Akte ab. In der Regel 3 bis 6 Wochen bei Standardakten, bei großen und komplexen Projekten 8–12 Wochen. Wir halten Sie in jeder Phase auf dem Laufenden.", "category": "Zeitrahmen" },
+        "3": { "question": "Sind meine Finanzdaten geschützt und vertraulich?", "answer": "Ja, absolute Vertraulichkeit ist eine unserer Grundsäulen. Wir halten die höchsten Standards bei Datenschutz und Vertraulichkeit ein. Alle Finanzinformationen werden streng vertraulich behandelt und nur mit genehmigten Finanzierungsinstitutionen und Ihrer vorherigen Zustimmung geteilt.", "category": "Vertraulichkeit" },
+        "4": { "question": "Wie hoch ist Ihre Erfolgsquote bei Finanzierungsakten?", "answer": "Wir erzielen eine Erfolgsquote von über 94 % bei den von uns betreuten Akten. Das liegt an unserer gründlichen Analyse- und Bewertungsmethodik vor jeder Einreichung, die starke und vollständige Akten bei den Institutionen sichert.", "category": "Allgemein" },
+        "5": { "question": "Wie wählen Sie die richtige Finanzierungsinstitution für meine Akte?", "answer": "Wir nutzen ein ausgeklügeltes Matching-System, das Aktivitätsart, benötigtes Finanzierungsvolumen, gewünschte Konditionen und Kredithistorie berücksichtigt. Unser breites Beziehungsnetz zu Banken und Finanzinstituten ermöglicht uns, die passendste Option pro Fall zu wählen.", "category": "Ablauf" },
+        "6": { "question": "Was unterscheidet die fünf Service-Level?", "answer": "Die Service-Level reichen vom Grundlevel (Analyse und Einreichung bei einer Institution) bis zum Level für Unternehmensinhaber (exklusives Executive-Team und 24/7-Service). Jedes Level bietet ein tieferes Maß an Analyse, Verhandlung und Nachverfolgung.", "category": "Dienstleistungen" },
+        "7": { "question": "Kann ich direkt mit dem Team kommunizieren, das meine Akte betreut?", "answer": "Absolut. Wir setzen auf volle Transparenz. Jedem Kunden wird ein fester Aktenmanager als Hauptansprechpartner zugewiesen. Bei höheren Service-Leveln können Sie direkt mit den Führungskräften kommunizieren.", "category": "Kommunikation" },
+        "8": { "question": "Was passiert nach Erhalt der Finanzierung?", "answer": "Unsere Beziehung endet nicht mit Abschluss der Finanzierung. Das Team für die Zeit nach der Finanzierung bleibt an Ihrer Seite, überwacht die Einhaltung der Konditionen, berät Sie laufend und unterstützt bei Refinanzierung oder zusätzlicher Finanzierung bei Bedarf.", "category": "Nach der Finanzierung" },
+        "9": { "question": "Welche Unterlagen werden für den Start des Finanzierungsprozesses benötigt?", "answer": "Die erforderlichen Unterlagen variieren je nach Finanzierungsart. In der Regel: Abschlüsse der letzten 3 Jahre, Handelsregisterauszug, Kontoauszüge, Geschäftsplan und ggf. weitere Unterlagen je nach Tätigkeit. Unser Team führt Sie durch die Vorbereitung.", "category": "Ablauf" },
+        "10": { "question": "Bearbeiten Sie alle Arten von Finanzierung?", "answer": "Ja, wir decken ein breites Spektrum ab: gewerbliche, immobilien- und investitionsbezogene Finanzierung, Unternehmens- und Projektfinanzierung, Working Capital und Expansion. Unsere spezialisierten Teams sichern fundierte Expertise je Typ.", "category": "Dienstleistungen" }
+      }
+    },
+    "conclusion": {
+      "badge": "Zusammenfassung",
+      "titleLine1": "Ihr strategischer Partner",
+      "titleLine2": "auf der Finanzierungsreise",
+      "description": "Ein integrierter Verwaltungsapparat mit 15 Führungspositionen, der in voller Harmonie arbeitet, um Ihre Finanzierungsambitionen in die Tat umzusetzen. Von der ersten Finanzanalyse bis zur Unterstützung nach der Finanzierung sind wir bei jedem Schritt an Ihrer Seite.",
+      "statClients": "Zufriedene Kunden",
+      "statSuccess": "Erfolgsquote",
+      "statInstitutions": "Finanzierungsinstitutionen",
+      "cta": "Starten Sie jetzt Ihre Reise",
+      "signature": "Vorstand",
+      "signatureSub": "KIB Claims Settlement Services",
+      "officeAlt": "Modernes Büro"
     }
   }
 }

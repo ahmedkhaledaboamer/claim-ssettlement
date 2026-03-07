@@ -55,7 +55,7 @@
   "footer": {
     "contact": {
       "title": "Entre em Contato",
-      "phone": "+971 521068882",
+      "phone": "+971521068882",
       "email": "info@shazmlc.com",
       "location": "Emirados Árabes Unidos"
     },
@@ -1109,6 +1109,166 @@
       "confidentiality": "Confidencialidade total",
       "support": "Suporte 24/7",
       "finalMessage": "Deixe o caminho executivo se tornar a estrada que eleva seu projeto a um nível superior de estabilidade, crescimento e competitividade."
+    }
+  },
+  "administrativeDepartmentPage": {
+    "hero": {
+      "badge": "KIB Claims Settlement Services",
+      "titleLine1": "O aparelho",
+      "titleLine2": "administrativo integrado",
+      "subtitle": "Uma equipa integrada de 15 cargos executivos que trabalham em harmonia para transformar as suas ambições de financiamento em resultados tangíveis.",
+      "stat1": "15",
+      "stat1Label": "Cargos executivos",
+      "stat2": "9",
+      "stat2Label": "Etapas integradas",
+      "stat3": "5",
+      "stat3Label": "Níveis de serviço",
+      "stat4": "94٪",
+      "stat4Label": "Taxa de sucesso",
+      "cta": "Conheça a equipa executiva",
+      "backgroundAlt": "Edifício de escritórios moderno"
+    },
+    "introduction": {
+      "headingMain": "Centro",
+      "headingHighlight": " operacional integrado",
+      "description": "Um aparelho administrativo integrado que combina experiência profunda e coordenação precisa, com 15 cargos executivos a gerir o seu processo de financiamento desde o primeiro momento até pós-fecho.",
+      "features": [
+        { "title": "Precisão operacional", "description": "Um sistema operacional rigoroso que garante exactidão em cada etapa." },
+        { "title": "Equipa especializada", "description": "Especialistas em todas as áreas principais de financiamento." },
+        { "title": "Confidencialidade total", "description": "Protecção completa das suas informações financeiras." },
+        { "title": "Resultados comprovados", "description": "Taxa de sucesso superior a 94% nos processos." }
+      ],
+      "quote": "\"Não oferecemos apenas um serviço de financiamento; oferecemos uma parceria estratégica que garante o seu sucesso financeiro.\"",
+      "quoteAuthor": "— Conselho de administração"
+    },
+    "whatWeDo": {
+      "headingMain": "O que",
+      "headingHighlight": " fazemos",
+      "description": "Serviços integrados que cobrem todos os aspectos do seu percurso de financiamento, do início ao pós-fecho.",
+      "services": [
+        { "title": "Análise financeira abrangente", "description": "Análise aprofundada de dados financeiros e fluxos de caixa." },
+        { "title": "Avaliação de riscos", "description": "Identificação e avaliação de riscos potenciais e definição de estratégias de mitigação." },
+        { "title": "Preparação de processos", "description": "Preparação de processos de financiamento completos e profissionais." },
+        { "title": "Relações com instituições de financiamento", "description": "Rede alargada de relações com bancos e instituições financeiras." },
+        { "title": "Submissão de processos", "description": "Submissão profissional de processos às instituições adequadas." },
+        { "title": "Negociação", "description": "Negociação especializada para obter as melhores condições." },
+        { "title": "Acompanhamento contínuo", "description": "Acompanhamento diligente até à aprovação." },
+        { "title": "Fecho financeiro", "description": "Fecho de operação de forma fluida e profissional." },
+        { "title": "Apoio pós-financiamento", "description": "Apoio e acompanhamento contínuos após a conclusão do financiamento." },
+        { "title": "Desenvolvimento de negócios", "description": "Serviços de consultoria para desenvolver e expandir o seu negócio." }
+      ]
+    },
+    "clientJourney": {
+      "headingMain": "Percurso",
+      "headingHighlight": " do cliente",
+      "description": "9 etapas integradas em que o acompanhamos desde o primeiro passo até ao apoio pós-financiamento.",
+      "stageLabel": "Etapa {id}",
+      "durationLabel": "Duração: {duration}",
+      "prevStage": "Etapa anterior",
+      "nextStage": "Etapa seguinte",
+      "steps": {
+        "1": { "title": "Sessão de descoberta e análise de necessidades", "description": "Começamos com uma sessão de descoberta aprofundada para compreender com precisão as suas necessidades de financiamento. Analisamos a sua situação financeira atual e definimos os objetivos necessários para construir um plano de financiamento à medida.", "duration": "1–2 dias" },
+        "2": { "title": "Avaliação financeira e operacional", "description": "A equipa de análise financeira realiza uma revisão abrangente dos seus dados financeiros e operacionais, estudando demonstrações financeiras, fluxos de caixa e viabilidade.", "duration": "3–5 dias" },
+        "3": { "title": "Construção do plano de financiamento", "description": "Concebemos um plano de financiamento estratégico à medida que corresponde às suas necessidades, incluindo a estrutura proposta, condições-alvo e cronograma.", "duration": "2–3 dias" },
+        "4": { "title": "Preparação do processo de financiamento", "description": "Preparamos um processo de financiamento completo que inclui todos os documentos e análises necessários, com revisão minuciosa para garantir integridade e qualidade.", "duration": "3–7 dias" },
+        "5": { "title": "Submissão do processo à instituição adequada", "description": "Selecionamos a instituição de financiamento mais adequada ao seu processo e submetemo-lo de forma profissional, apresentando um caso convincente que destaca os seus pontos fortes.", "duration": "1–2 dias" },
+        "6": { "title": "Negociação das condições", "description": "A nossa equipa de negociação trabalha para garantir as melhores condições possíveis, desde preços e prazo até covenants e garantias.", "duration": "5–10 dias" },
+        "7": { "title": "Acompanhamento até aprovação", "description": "Acompanhamos continuamente com a instituição de financiamento, respondemos às suas questões e fornecemos quaisquer documentos adicionais necessários até à aprovação.", "duration": "7–14 dias" },
+        "8": { "title": "Fecho financeiro", "description": "Supervisionamos todo o processo de fecho financeiro, da revisão dos contratos finais à assinatura e desembolso dos fundos.", "duration": "3–5 dias" },
+        "9": { "title": "Apoio pós-financiamento", "description": "A nossa relação não termina no fecho. Oferecemos apoio contínuo, incluindo monitorização de obrigações, aconselhamento financeiro e serviços de refinanciamento quando necessário.", "duration": "Contínuo" }
+      }
+    },
+    "operatingSystem": {
+      "headingMain": "Sistema",
+      "headingHighlight": " operativo",
+      "description": "5 níveis integrados que trabalham em harmonia para obter os melhores resultados.",
+      "layerLabel": "Nível {id}",
+      "layers": {
+        "1": { "title": "Camada de análise financeira", "description": "A base sobre a qual cada decisão de financiamento é construída. Análise aprofundada de dados financeiros, fluxos de caixa e demonstrações para formar uma visão clara da sua posição." },
+        "2": { "title": "Camada de avaliação operacional", "description": "Avaliação abrangente das operações, capacidade de produção e eficiência para garantir a sustentabilidade do financiamento." },
+        "3": { "title": "Camada de adequação de financiamento", "description": "Adequação precisa entre as necessidades do cliente e as ofertas de financiamento disponíveis para alcançar o melhor encaixe possível." },
+        "4": { "title": "Camada de negociação", "description": "Negociação profissional para garantir as melhores condições e preços, protegendo os interesses do cliente em cada cláusula." },
+        "5": { "title": "Camada de fecho e acompanhamento", "description": "Fecho fluido do negócio com acompanhamento contínuo para garantir o sucesso do financiamento e a concretização dos objetivos." }
+      }
+    },
+    "serviceLevels": {
+      "headingMain": "Níveis de",
+      "headingHighlight": " serviço",
+      "description": "5 níveis de serviço concebidos para as suas necessidades, independentemente da dimensão do seu projeto.",
+      "levelLabel": "Nível {id}",
+      "moreFeatures": "+{count} funcionalidades adicionais",
+      "includedFeatures": "Funcionalidades incluídas:",
+      "mostPopular": "Mais popular",
+      "levels": {
+        "1": { "title": "Nível básico", "description": "Um serviço de financiamento essencial que inclui análise financeira inicial e submissão do processo a uma instituição com acompanhamento básico.", "features": ["Análise financeira inicial", "Preparação básica do processo", "Submissão a uma instituição", "Acompanhamento básico"] },
+        "2": { "title": "Nível avançado", "description": "Um serviço avançado que inclui análise financeira abrangente e submissão a várias instituições com negociação de condições.", "features": ["Análise financeira abrangente", "Preparação completa do processo", "Submissão a 3 instituições", "Negociação de condições", "Acompanhamento contínuo"] },
+        "3": { "title": "Nível executivo", "description": "Um serviço executivo distinto com equipa dedicada, análise aprofundada e negociação profissional com as melhores instituições.", "features": ["Equipa dedicada", "Análise aprofundada", "Submissão a 5 instituições", "Negociação profissional", "Apoio pós-financiamento", "Relatórios periódicos"] },
+        "4": { "title": "Nível estratégico", "description": "Um serviço estratégico abrangente para projetos de grande dimensão, com estruturação financeira avançada e coordenação com múltiplas instituições.", "features": ["Estruturação financeira avançada", "Coordenação multi-institucional", "Gestão abrangente de risco", "Negociação estratégica", "Apoio jurídico", "Acompanhamento VIP"] },
+        "5": { "title": "Nível para empresários", "description": "O mais alto nível de serviço exclusivo para empresários e grandes investidores, com equipa executiva dedicada e disponibilidade 24/7.", "features": ["Equipa executiva exclusiva", "Serviço 24/7", "Acesso direto ao CEO", "Estruturação totalmente personalizada", "Negociação de topo", "Apoio abrangente vitalício", "Processamento prioritário"] }
+      }
+    },
+    "qualityStandards": {
+      "headingMain": "Normas de",
+      "headingHighlight": " qualidade",
+      "description": "Comprometemo-nos com os mais altos padrões de qualidade em todos os aspectos do nosso trabalho.",
+      "approvedBy": "Aprovados por mais de 50 instituições de financiamento",
+      "standards": {
+        "1": "Precisão operacional",
+        "2": "Rapidez de execução",
+        "3": "Transparência total",
+        "4": "Acompanhamento contínuo",
+        "5": "Confidencialidade total",
+        "6": "Compromisso com resultados"
+      }
+    },
+    "clientTypes": {
+      "headingMain": "A quem",
+      "headingHighlight": " servimos?",
+      "description": "Oferecemos soluções de financiamento especializadas para diferentes tipos de clientes e sectores.",
+      "types": {
+        "1": { "title": "Grandes corporações", "description": "Soluções de financiamento integradas para grandes corporações e instituições com necessidades complexas." },
+        "2": { "title": "Proprietários de fábricas", "description": "Financiamento industrial especializado para expandir a capacidade de produção e modernizar equipamentos." },
+        "3": { "title": "Comerciantes a retalho", "description": "Soluções de financiamento flexíveis para retalhistas expandirem o negócio e aumentarem o inventário." },
+        "4": { "title": "Promotores imobiliários", "description": "Financiamento de projetos imobiliários do planeamento à entrega, com estruturação financeira avançada." },
+        "5": { "title": "Pioneiros tecnológicos", "description": "Financiamento inovador para empresas de tecnologia e start-ups com profundo conhecimento de modelos de negócio digitais." },
+        "6": { "title": "Projetos start-up", "description": "Apoio ao financiamento de projetos start-up com orientação financeira e estratégica abrangente." },
+        "7": { "title": "Investidores", "description": "Uma vasta gama de soluções de financiamento de investimento para maximizar retornos e diversificar carteiras." },
+        "8": { "title": "Novos empreendedores", "description": "Programas de financiamento especiais para novos empreendedores com apoio e acompanhamento contínuos." }
+      }
+    },
+    "faq": {
+      "headingMain": "Perguntas",
+      "headingHighlight": " frequentes",
+      "description": "Respostas às perguntas mais comuns sobre os nossos serviços e forma de trabalhar.",
+      "noAnswerTitle": "Não encontrou resposta à sua pergunta?",
+      "noAnswerDesc": "A nossa equipa está pronta a responder a todas as suas questões a qualquer hora.",
+      "contactUs": "Contacte-nos",
+      "supportTeamAlt": "Equipa de apoio",
+      "items": {
+        "1": { "question": "Que serviços presta o departamento administrativo da KIB?", "answer": "O departamento administrativo presta serviços abrangentes, incluindo análise financeira, avaliação de risco, preparação de processos de financiamento, negociação com instituições de financiamento, fecho financeiro e apoio pós-financiamento. A nossa equipa de 15 cargos executivos trabalha em plena coordenação para garantir os melhores resultados.", "category": "Geral" },
+        "2": { "question": "Quanto tempo demora a obter financiamento do início ao fim?", "answer": "A duração varia consoante o tipo de financiamento e a complexidade do processo. Em geral, varia entre 3 a 6 semanas para processos padrão e pode estender-se a 8–12 semanas para projetos grandes e complexos. Mantemo-lo informado em cada etapa.", "category": "Calendarização" },
+        "3": { "question": "As minhas informações financeiras estão protegidas e são confidenciais?", "answer": "Sim. A confidencialidade total é um dos pilares do nosso trabalho. Respeitamos os mais elevados padrões de proteção de dados e privacidade. Toda a informação financeira é tratada de forma estritamente confidencial e só é partilhada com instituições de financiamento aprovadas e com o seu consentimento prévio.", "category": "Confidencialidade" },
+        "4": { "question": "Qual é a vossa taxa de sucesso em processos de financiamento?", "answer": "Alcançamos uma taxa de sucesso superior a 94% nos processos que tratamos. Isto deve-se à nossa metodologia rigorosa de análise e avaliação antes de submeter qualquer processo, garantindo que processos sólidos e completos são apresentados às instituições.", "category": "Geral" },
+        "5": { "question": "Como escolhem a instituição de financiamento certa para o meu processo?", "answer": "Baseamo-nos num sistema de adequação avançado que tem em conta o tipo de atividade, o montante de financiamento necessário, as condições preferidas e o histórico de crédito. A nossa vasta rede de relações com bancos e instituições financeiras permite-nos escolher a opção mais adequada para cada caso.", "category": "Processo" },
+        "6": { "question": "Qual é a diferença entre os cinco níveis de serviço?", "answer": "Os níveis de serviço variam do nível básico (análise e submissão a uma instituição) ao nível para empresários (equipa executiva exclusiva e serviço 24/7). Cada nível oferece um grau mais profundo de análise, negociação e acompanhamento.", "category": "Serviços" },
+        "7": { "question": "Posso comunicar diretamente com a equipa que trata do meu processo?", "answer": "Absolutamente. Acreditamos na total transparência. É atribuído um gestor de processo dedicado a cada cliente como principal ponto de contacto. Nos níveis de serviço superiores, pode comunicar diretamente com os gestores executivos.", "category": "Comunicação" },
+        "8": { "question": "O que acontece depois de obter o financiamento?", "answer": "A nossa relação não termina com a conclusão do financiamento. A equipa de apoio pós-financiamento acompanha-o para garantir o cumprimento das condições, presta aconselhamento financeiro contínuo e ajuda com refinanciamento ou financiamento adicional quando necessário.", "category": "Pós-financiamento" },
+        "9": { "question": "Que documentos são necessários para iniciar o processo de financiamento?", "answer": "Os documentos necessários variam consoante o tipo de financiamento; em geral precisamos de: demonstrações financeiras dos últimos 3 anos, registo comercial, extratos bancários, plano de negócios e quaisquer documentos adicionais consoante a natureza da atividade. A nossa equipa guiá-lo-á na preparação de tudo o que for necessário.", "category": "Processo" },
+        "10": { "question": "Tratam de todos os tipos de financiamento?", "answer": "Sim. Cobrimos um amplo espetro de tipos de financiamento: comercial, imobiliário e de investimento, financiamento corporativo e de projetos, capital de exploração e expansão. As nossas equipas especializadas em cada área garantem experiência profunda em cada tipo.", "category": "Serviços" }
+      }
+    },
+    "conclusion": {
+      "badge": "Em resumo",
+      "titleLine1": "O seu parceiro estratégico",
+      "titleLine2": "no percurso de financiamento",
+      "description": "Um aparelho administrativo integrado de 15 cargos executivos que trabalham em harmonia para transformar as suas ambições de financiamento em realidade. Da análise financeira inicial ao apoio pós-financiamento, estamos consigo em cada etapa.",
+      "statClients": "Clientes satisfeitos",
+      "statSuccess": "Taxa de sucesso",
+      "statInstitutions": "Instituições de financiamento",
+      "cta": "Comece o seu percurso agora",
+      "signature": "Conselho de administração",
+      "signatureSub": "KIB Claims Settlement Services",
+      "officeAlt": "Escritório moderno"
     }
   }
 }

@@ -1,4 +1,4 @@
- 'use client';
+'use client';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
@@ -8,36 +8,17 @@ import {
   HelpCircleIcon,
   MessageCircleIcon } from
 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 export function FAQSection({ locale }: { locale: string }) {
+  const t = useTranslations('administrativeDepartmentPage.faq');
   const isRTL = locale === 'ar';
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const categories = [
-    ...new Set(
-      faqItems.map((item) =>
-        locale === 'ar'
-          ? item.category
-          : locale === 'fr'
-          ? item.categoryFr
-          : item.categoryEn
-      )
-    )
+    ...new Set(faqItems.map((item) => t(`items.${item.id}.category`)))
   ];
-  const headingTitle =
-    locale === 'ar'
-      ? { main: 'الأسئلة', highlight: ' الشائعة' }
-      : locale === 'fr'
-      ? { main: 'Questions', highlight: ' fréquentes' }
-      : { main: 'Frequently', highlight: ' asked questions' };
-
-  const headingDescription =
-    locale === 'ar'
-      ? 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا وآلية عملنا'
-      : locale === 'fr'
-      ? 'Des réponses aux questions les plus fréquentes sur nos services et notre façon de travailler.'
-      : 'Answers to the most common questions about our services and how we work.';
   return (
     <section id="faq" className="relative p-[5%] overflow-hidden bg-white">
       <div ref={ref} className="relative z-10  ">
@@ -61,11 +42,11 @@ export function FAQSection({ locale }: { locale: string }) {
           className="text-center mb-16">
 
           <h2 className="text-fluid-section-title font-black mb-6">
-            <span className="text-slate-900">{headingTitle.main}</span>
-            <span className="gradient-text-gold">{headingTitle.highlight}</span>
+            <span className="text-slate-900">{t('headingMain')}</span>
+            <span className="gradient-text-gold">{t('headingHighlight')}</span>
           </h2>
           <p className="text-fluid-section-lead text-slate-600  ">
-            {headingDescription}
+            {t('description')}
           </p>
         </motion.div>
 
@@ -103,24 +84,9 @@ export function FAQSection({ locale }: { locale: string }) {
         <div className="space-y-4">
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;
-            const question =
-              locale === 'ar'
-                ? item.questionAr
-                : locale === 'fr'
-                ? item.questionFr
-                : item.questionEn;
-            const answer =
-              locale === 'ar'
-                ? item.answerAr
-                : locale === 'fr'
-                ? item.answerFr
-                : item.answerEn;
-            const categoryLabel =
-              locale === 'ar'
-                ? item.category
-                : locale === 'fr'
-                ? item.categoryFr
-                : item.categoryEn;
+            const question = t(`items.${item.id}.question`);
+            const answer = t(`items.${item.id}.answer`);
+            const categoryLabel = t(`items.${item.id}.category`);
             return (
               <motion.div
                 key={item.id}
@@ -238,7 +204,7 @@ export function FAQSection({ locale }: { locale: string }) {
               <div className="relative h-56 md:h-72 xl:h-94  2xl:h-120 ">
                 <Image
                   src="/imgs/A refined executive reception/image_78.webp"
-                  alt="فريق الدعم"
+                  alt={t('supportTeamAlt')}
                   className="w-full h-full object-cover"
                   loading="lazy"
                   width={800}
@@ -253,25 +219,13 @@ export function FAQSection({ locale }: { locale: string }) {
               <div className="p-8 flex flex-col justify-center items-center">
                 <MessageCircleIcon className="w-12 h-12 text-teal-600 mb-4" />
                 <h3 className="text-fluid-body-lg font-bold text-slate-900 mb-2">
-                  {locale === 'ar'
-                    ? 'لم تجد إجابة لسؤالك؟'
-                    : locale === 'fr'
-                    ? 'Vous n’avez pas trouvé de réponse à votre question ?'
-                    : 'Didn’t find an answer to your question?'}
+                  {t('noAnswerTitle')}
                 </h3>
                 <p className="text-fluid-body text-slate-600 mb-6">
-                  {locale === 'ar'
-                    ? 'فريقنا جاهز للإجابة على جميع استفساراتك على مدار الساعة'
-                    : locale === 'fr'
-                    ? 'Notre équipe est prête à répondre à toutes vos questions à tout moment.'
-                    : 'Our team is ready to answer all your questions around the clock.'}
+                  {t('noAnswerDesc')}
                 </p>
                 <Link href="/execution" className="px-8 py-3 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold text-fluid-body hover:opacity-90 transition-opacity w-fit">
-                  {locale === 'ar'
-                    ? 'تواصل معنا'
-                    : locale === 'fr'
-                    ? 'Contactez‑nous'
-                    : 'Contact us'}
+                  {t('contactUs')}
                 </Link>
               </div>
             </div>

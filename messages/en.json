@@ -55,7 +55,7 @@
   "footer": {
     "contact": {
       "title": "Contact Us",
-      "phone": "+971 521068882",
+      "phone": "+971521068882",
       "email": "info@shazmlc.com",
       "location": "United Arab Emirates"
     },
@@ -1109,6 +1109,166 @@
       "confidentiality": "Full confidentiality",
       "support": "24/7 support",
       "finalMessage": "Let the executive path become the road that raises your project to a higher level of stability, growth, and competitiveness."
+    }
+  },
+  "administrativeDepartmentPage": {
+    "hero": {
+      "badge": "KIB Claims Settlement Services",
+      "titleLine1": "The administrative",
+      "titleLine2": "powerhouse",
+      "subtitle": "An integrated team of 15 executive positions working in complete harmony to turn your financing ambitions into tangible results.",
+      "stat1": "15",
+      "stat1Label": "Executive positions",
+      "stat2": "9",
+      "stat2Label": "Integrated stages",
+      "stat3": "5",
+      "stat3Label": "Service levels",
+      "stat4": "94٪",
+      "stat4Label": "Success rate",
+      "cta": "Discover the executive team",
+      "backgroundAlt": "Modern office building"
+    },
+    "introduction": {
+      "headingMain": "Integrated",
+      "headingHighlight": " operations center",
+      "description": "An integrated administrative apparatus that combines deep expertise and precise coordination, where 15 executive positions work in full harmony to manage your financing file from the first moment through post‑closing.",
+      "features": [
+        { "title": "Operational precision", "description": "A rigorous operating system that ensures accuracy at every step." },
+        { "title": "Specialized team", "description": "Experts in every major field of financing." },
+        { "title": "Total confidentiality", "description": "Complete protection of your financial information." },
+        { "title": "Proven results", "description": "A success rate exceeding 94% across files." }
+      ],
+      "quote": "\"We do not only provide a financing service, we provide a strategic partnership that ensures your financial success.\"",
+      "quoteAuthor": "— Board of Directors"
+    },
+    "whatWeDo": {
+      "headingMain": "What",
+      "headingHighlight": " we do",
+      "description": "Integrated services that cover every aspect of your financing journey from start to post‑closing.",
+      "services": [
+        { "title": "Comprehensive financial analysis", "description": "In‑depth analysis of financial data and cash flows." },
+        { "title": "Risk assessment", "description": "Identifying and assessing potential risks and defining mitigation strategies." },
+        { "title": "File preparation", "description": "Preparing complete, professional financing files." },
+        { "title": "Relationships with funding institutions", "description": "A wide network of relationships with banks and financial institutions." },
+        { "title": "File submission", "description": "Professional submission of files to the right institutions." },
+        { "title": "Negotiation", "description": "Expert negotiation to obtain the best terms." },
+        { "title": "Continuous follow‑up", "description": "Diligent follow‑up until approval is obtained." },
+        { "title": "Financial closing", "description": "Smooth and professional deal closing." },
+        { "title": "Post‑financing support", "description": "Ongoing support and follow‑up after financing is completed." },
+        { "title": "Business development", "description": "Advisory services to develop and expand your business." }
+      ]
+    },
+    "clientJourney": {
+      "headingMain": "Client",
+      "headingHighlight": " journey",
+      "description": "9 integrated stages where we accompany you from the first step through post‑financing support.",
+      "stageLabel": "Stage {id}",
+      "durationLabel": "Duration: {duration}",
+      "prevStage": "Previous stage",
+      "nextStage": "Next stage",
+      "steps": {
+        "1": { "title": "Discovery and needs analysis session", "description": "We begin with an in‑depth discovery session to understand your financing needs precisely. We analyze your current financial position and define the objectives needed to build a tailored financing plan.", "duration": "1–2 days" },
+        "2": { "title": "Financial and operational assessment", "description": "The financial analysis team conducts a comprehensive review of your financial and operational data, studying financial statements, cash flows and feasibility.", "duration": "3–5 days" },
+        "3": { "title": "Building the financing plan", "description": "We design a tailored strategic financing plan that matches your needs, including the proposed structure, target terms and timeline.", "duration": "2–3 days" },
+        "4": { "title": "Preparing the financing file", "description": "We prepare a complete financing file that includes all required documents and analyses, with thorough review to ensure completeness and quality.", "duration": "3–7 days" },
+        "5": { "title": "Submitting the file to the right institution", "description": "We select the most suitable funding institution for your file and submit it professionally, presenting a compelling case that highlights your strengths.", "duration": "1–2 days" },
+        "6": { "title": "Negotiating the terms", "description": "Our negotiation team works to secure the best possible terms, from pricing and tenor to covenants and guarantees.", "duration": "5–10 days" },
+        "7": { "title": "Follow‑up until approval", "description": "We follow up continuously with the funding institution, respond to their queries and provide any additional documents required until approval is obtained.", "duration": "7–14 days" },
+        "8": { "title": "Financial closing", "description": "We oversee the full financial closing process, from reviewing final contracts to signing and disbursement of funds.", "duration": "3–5 days" },
+        "9": { "title": "Post‑financing support", "description": "Our relationship does not end at closing. We provide ongoing support including monitoring obligations, financial advisory and refinancing services when needed.", "duration": "Ongoing" }
+      }
+    },
+    "operatingSystem": {
+      "headingMain": "Operating",
+      "headingHighlight": " system",
+      "description": "5 integrated layers working in harmony to deliver the best results.",
+      "layerLabel": "Layer {id}",
+      "layers": {
+        "1": { "title": "Financial analysis layer", "description": "The foundation on which every financing decision is built. In‑depth analysis of financial data, cash flows and statements to form a clear picture of your position." },
+        "2": { "title": "Operational assessment layer", "description": "Comprehensive assessment of operations, production capacity and efficiency to ensure the sustainability of financing." },
+        "3": { "title": "Financing matching layer", "description": "Precise matching between the client's needs and available funding offers to reach the best possible fit." },
+        "4": { "title": "Negotiation layer", "description": "Professional negotiation to secure the best terms and pricing while protecting the client's interests in every clause." },
+        "5": { "title": "Closure and follow‑up layer", "description": "Smooth deal closure with continuous follow‑up to ensure the success of the financing and achievement of objectives." }
+      }
+    },
+    "serviceLevels": {
+      "headingMain": "Service",
+      "headingHighlight": " levels",
+      "description": "5 service levels designed to meet your needs, whatever the size of your project.",
+      "levelLabel": "Level {id}",
+      "moreFeatures": "+{count} more features",
+      "includedFeatures": "Included features:",
+      "mostPopular": "Most popular",
+      "levels": {
+        "1": { "title": "Basic level", "description": "An essential financing service including initial financial analysis and submission of the file to one funding institution with basic follow‑up.", "features": ["Initial financial analysis", "Basic file preparation", "Submission to one institution", "Basic follow‑up"] },
+        "2": { "title": "Advanced level", "description": "An advanced service including comprehensive financial analysis and submission to several funding institutions with terms negotiation.", "features": ["Comprehensive financial analysis", "Complete file preparation", "Submission to 3 institutions", "Terms negotiation", "Continuous follow‑up"] },
+        "3": { "title": "Executive level", "description": "A distinguished executive service with a dedicated team, in‑depth analysis and professional negotiation with top funding institutions.", "features": ["Dedicated team", "In‑depth analysis", "Submission to 5 institutions", "Professional negotiation", "Post‑financing support", "Periodic reports"] },
+        "4": { "title": "Strategic level", "description": "A comprehensive strategic service for major projects, including advanced financial structuring and coordination with multiple funding institutions.", "features": ["Advanced financial structuring", "Multi‑institution coordination", "Comprehensive risk management", "Strategic negotiation", "Legal support", "VIP follow‑up"] },
+        "5": { "title": "Business owners level", "description": "The highest level of exclusive service for business owners and major investors, with a dedicated executive team and 24/7 availability.", "features": ["Exclusive executive team", "24/7 service", "Direct access to the CEO", "Fully customized structuring", "Top‑level negotiation", "Lifetime comprehensive support", "Priority processing"] }
+      }
+    },
+    "qualityStandards": {
+      "headingMain": "Quality",
+      "headingHighlight": " standards",
+      "description": "We are committed to the highest quality standards in every aspect of our work.",
+      "approvedBy": "Approved by more than 50 funding institutions",
+      "standards": {
+        "1": "Operational accuracy",
+        "2": "Speed of execution",
+        "3": "Full transparency",
+        "4": "Continuous follow‑up",
+        "5": "Total confidentiality",
+        "6": "Commitment to results"
+      }
+    },
+    "clientTypes": {
+      "headingMain": "Who",
+      "headingHighlight": " do we serve?",
+      "description": "We provide specialized financing solutions for different client types and sectors.",
+      "types": {
+        "1": { "title": "Large corporations", "description": "Integrated financing solutions for large corporations and institutions with complex needs." },
+        "2": { "title": "Factory owners", "description": "Specialized industrial financing to expand production capacity and upgrade equipment." },
+        "3": { "title": "Retail traders", "description": "Flexible financing solutions for retailers to expand their business and increase inventory." },
+        "4": { "title": "Real estate developers", "description": "Financing for real estate projects from planning to delivery, with advanced financial structuring." },
+        "5": { "title": "Technology pioneers", "description": "Innovative financing for technology and start‑up companies with a deep understanding of digital business models." },
+        "6": { "title": "Start‑up projects", "description": "Financing support for start‑up projects with comprehensive financial and strategic guidance." },
+        "7": { "title": "Investors", "description": "A wide range of investment financing solutions to maximize returns and diversify portfolios." },
+        "8": { "title": "New entrepreneurs", "description": "Special financing programs for new entrepreneurs with continuous support and follow‑up." }
+      }
+    },
+    "faq": {
+      "headingMain": "Frequently",
+      "headingHighlight": " asked questions",
+      "description": "Answers to the most common questions about our services and how we work.",
+      "noAnswerTitle": "Didn't find an answer to your question?",
+      "noAnswerDesc": "Our team is ready to answer all your questions around the clock.",
+      "contactUs": "Contact us",
+      "supportTeamAlt": "Support team",
+      "items": {
+        "1": { "question": "What services does the KIB administrative department provide?", "answer": "The administrative department provides comprehensive services including financial analysis, risk assessment, preparation of financing files, negotiation with funding institutions, financial closing, and post‑financing support. Our team of 15 executive positions works in full coordination to ensure the best results.", "category": "General" },
+        "2": { "question": "How long does it take to obtain financing from start to finish?", "answer": "The duration varies depending on the type of financing and the complexity of the file. In general, it ranges from 3 to 6 weeks for standard files and may extend to 8–12 weeks for large and complex projects. We make sure to keep you informed at every stage.", "category": "Timeline" },
+        "3": { "question": "Is my financial information protected and confidential?", "answer": "Yes, complete confidentiality is one of the main pillars of our work. We adhere to the highest standards of data protection and privacy. All financial information is treated as strictly confidential and is shared only with approved funding institutions and with your prior consent.", "category": "Confidentiality" },
+        "4": { "question": "What is your success rate for financing files?", "answer": "We achieve a success rate exceeding 94% on the files we handle. This is due to our rigorous analysis and evaluation methodology before submitting any file, which ensures that strong and complete files are presented to funding institutions.", "category": "General" },
+        "5": { "question": "How do you choose the right funding institution for my file?", "answer": "We rely on an advanced matching system that takes into account the type of activity, required financing amount, preferred terms and credit history. Our wide network of relationships with banks and financial institutions allows us to choose the most suitable option for each case.", "category": "Process" },
+        "6": { "question": "What is the difference between the five service levels?", "answer": "The service levels range from the basic level (analysis and submission to one institution) to the business owners level (exclusive executive team and 24/7 service). Each level offers a deeper degree of analysis, negotiation and follow‑up.", "category": "Services" },
+        "7": { "question": "Can I communicate directly with the team handling my file?", "answer": "Absolutely. We believe in full transparency. A dedicated file manager is assigned to each client as the main point of contact. At higher service levels, you can communicate directly with executive managers.", "category": "Communication" },
+        "8": { "question": "What happens after I obtain the financing?", "answer": "Our relationship does not end once the financing is completed. The post‑financing support team follows up with you to ensure compliance with the terms, provides ongoing financial advice and helps you with refinancing or obtaining additional financing when needed.", "category": "Post‑financing" },
+        "9": { "question": "What documents are required to start the financing process?", "answer": "The required documents vary by type of financing, but in general we need: financial statements for the last 3 years, commercial registration, bank statements, business plan and any additional documents depending on the nature of the activity. Our team will guide you to prepare everything required.", "category": "Process" },
+        "10": { "question": "Do you handle all types of financing?", "answer": "Yes, we cover a wide spectrum of financing types: commercial, real estate and investment financing, corporate and project finance, working capital and expansion financing. Our specialized teams in each field ensure deep expertise in every type.", "category": "Services" }
+      }
+    },
+    "conclusion": {
+      "badge": "In summary",
+      "titleLine1": "Your strategic partner",
+      "titleLine2": "on the financing journey",
+      "description": "An integrated administrative apparatus of 15 executive positions working in complete harmony to turn your financing ambitions into reality. From initial financial analysis to post‑financing support, we are with you at every step.",
+      "statClients": "Satisfied clients",
+      "statSuccess": "Success rate",
+      "statInstitutions": "Funding institutions",
+      "cta": "Start your journey now",
+      "signature": "Board of Directors",
+      "signatureSub": "KIB Claims Settlement Services",
+      "officeAlt": "Modern office"
     }
   }
 }

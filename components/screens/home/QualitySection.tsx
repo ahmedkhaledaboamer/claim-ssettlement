@@ -289,7 +289,7 @@ export function QualitySection() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <FadeUp>
-            <span className="inline-block text-gold-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+            <span className="inline-block text-gold-600 font-cairo font-bold text-xl tracking-wider mb-4">
               {t('badge')}
             </span>
           </FadeUp>

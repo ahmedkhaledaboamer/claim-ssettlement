@@ -6,6 +6,7 @@ import { journeySteps } from '@/data/journeyData';
 import * as Icons from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 // Journey step images
 const journeyImages: string[] = [
   '/imgs/A powerful executive command c/image_46.webp', '/imgs/A powerful executive command c/image_48.webp', '/imgs/A precision qualitycontrol env/image_61.webp', '/imgs/A precisiondriven quality cont/image_43.webp',
@@ -13,22 +14,14 @@ const journeyImages: string[] = [
 ];
 
 export function ClientJourneySection({ locale }: { locale: string }) {
+  const t = useTranslations('administrativeDepartmentPage.clientJourney');
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const [activeStep, setActiveStep] = useState(0);
   const isRTL = locale === 'ar';
-  const headingTitle =
-    locale === 'ar'
-      ? { main: 'رحلة', highlight: ' العميل' }
-      : locale === 'fr'
-      ? { main: 'Parcours', highlight: ' client' }
-      : { main: 'Client', highlight: ' journey' };
+  const getStepTitle = (step: (typeof journeySteps)[0]) => t(`steps.${step.id}.title`);
+  const getStepDescription = (step: (typeof journeySteps)[0]) => t(`steps.${step.id}.description`);
+  const getStepDuration = (step: (typeof journeySteps)[0]) => t(`steps.${step.id}.duration`);
 
-  const headingDescription =
-    locale === 'ar'
-      ? '٩ مراحل متكاملة نرافقك فيها من اللحظة الأولى حتى ما بعد التمويل'
-      : locale === 'fr'
-      ? '9 étapes intégrées où nous vous accompagnons de la première prise de contact jusqu’après le financement.'
-      : '9 integrated stages where we accompany you from the first step through post‑financing support.';
   return (
     <section
       id="journey"
@@ -55,11 +48,11 @@ export function ClientJourneySection({ locale }: { locale: string }) {
           className="text-center mb-16">
 
           <h2 className="text-fluid-section-title font-black mb-6">
-            <span className="text-slate-900">{headingTitle.main}</span>
-            <span className="gradient-text-gold">{headingTitle.highlight}</span>
+            <span className="text-slate-900">{t('headingMain')}</span>
+            <span className="gradient-text-gold">{t('headingHighlight')}</span>
           </h2>
           <p className="text-fluid-section-lead text-slate-600  ">
-            {headingDescription}
+            {t('description')}
           </p>
         </motion.div>
 
@@ -76,18 +69,8 @@ export function ClientJourneySection({ locale }: { locale: string }) {
               const IconComponent =
               (Icons[step.icon as keyof typeof Icons] ??
                 Icons.CircleIcon) as LucideIcon;
-                const title =
-                  locale === 'ar'
-                    ? step.titleAr
-                    : locale === 'fr'
-                    ? step.titleFr
-                    : step.titleEn;
-                const duration =
-                  locale === 'ar'
-                    ? step.duration
-                    : locale === 'fr'
-                    ? step.durationFr
-                    : step.durationEn;
+                const title = getStepTitle(step);
+                const duration = getStepDuration(step);
                 const isActive = activeStep === index;
                 return (
                   <motion.div
@@ -171,18 +154,8 @@ export function ClientJourneySection({ locale }: { locale: string }) {
             const IconComponent =
             (Icons[step.icon as keyof typeof Icons] ??
               Icons.CircleIcon) as LucideIcon;
-              const title =
-                locale === 'ar'
-                  ? step.titleAr
-                  : locale === 'fr'
-                  ? step.titleFr
-                  : step.titleEn;
-              const duration =
-                locale === 'ar'
-                  ? step.duration
-                  : locale === 'fr'
-                  ? step.durationFr
-                  : step.durationEn;
+              const title = getStepTitle(step);
+              const duration = getStepDuration(step);
               const isActive = activeStep === index;
               return (
                 <motion.div
@@ -285,16 +258,10 @@ export function ClientJourneySection({ locale }: { locale: string }) {
             }}>
 
             {/* Step Image */}
-            <div className="relative h-44 md:h-52 min-h-[220px] overflow-hidden">
+            <div className="relative h-44 md:h-100 min-h-[220px] overflow-hidden">
               <Image
                 src={journeyImages[activeStep]}
-                alt={
-                  locale === 'ar'
-                    ? journeySteps[activeStep].titleAr
-                    : locale === 'fr'
-                    ? journeySteps[activeStep].titleFr
-                    : journeySteps[activeStep].titleEn
-                }
+                alt={getStepTitle(journeySteps[activeStep])}
                 className="w-full h-full object-cover"
                 loading="lazy"
                 width={600}
@@ -305,7 +272,7 @@ export function ClientJourneySection({ locale }: { locale: string }) {
               <div
                 className="absolute inset-0"
                 style={{
-                  background: `linear-gradient(to top, white, ${journeySteps[activeStep].color}20)`
+                  background: `linear-gradient(to top, rgba(255, 255, 255, 0.5), ${journeySteps[activeStep].color}50)`
                 }} />
 
             </div>
@@ -341,33 +308,19 @@ export function ClientJourneySection({ locale }: { locale: string }) {
                         backgroundColor: journeySteps[activeStep].color
                       }}>
 
-                      {locale === 'ar'
-                        ? `المرحلة ${journeySteps[activeStep].id}`
-                        : locale === 'fr'
-                        ? `Étape ${journeySteps[activeStep].id}`
-                        : `Stage ${journeySteps[activeStep].id}`}
+                      {t('stageLabel', { id: journeySteps[activeStep].id })}
                     </span>
                     <span className="text-fluid-label text-slate-500">
-                      {locale === 'ar'
-                        ? `المدة: ${journeySteps[activeStep].duration}`
-                        : locale === 'fr'
-                        ? `Durée : ${journeySteps[activeStep].durationFr}`
-                        : `Duration: ${journeySteps[activeStep].durationEn}`}
+                      {t('durationLabel', {
+                        duration: getStepDuration(journeySteps[activeStep])
+                      })}
                     </span>
                   </div>
                   <h3 className="text-fluid-2xl font-bold text-slate-900 mb-3">
-                    {locale === 'ar'
-                      ? journeySteps[activeStep].titleAr
-                      : locale === 'fr'
-                      ? journeySteps[activeStep].titleFr
-                      : journeySteps[activeStep].titleEn}
+                    {getStepTitle(journeySteps[activeStep])}
                   </h3>
                   <p className="text-fluid-body text-slate-600 leading-relaxed">
-                    {locale === 'ar'
-                      ? journeySteps[activeStep].descriptionAr
-                      : locale === 'fr'
-                      ? journeySteps[activeStep].descriptionFr
-                      : journeySteps[activeStep].descriptionEn}
+                    {getStepDescription(journeySteps[activeStep])}
                   </p>
                 </div>
               </div>
@@ -380,11 +333,7 @@ export function ClientJourneySection({ locale }: { locale: string }) {
                   className="cursor-pointer flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
 
                   {isRTL ? <Icons.ChevronRightIcon className="w-4 h-4" /> : <Icons.ChevronLeftIcon className="w-4 h-4" />}
-                  {locale === 'ar'
-                    ? 'المرحلة السابقة'
-                    : locale === 'fr'
-                    ? 'Étape précédente'
-                    : 'Previous stage'}
+                  {t('prevStage')}
                 </button>
                 <button
                   onClick={() =>
@@ -395,11 +344,7 @@ export function ClientJourneySection({ locale }: { locale: string }) {
                   disabled={activeStep === journeySteps.length - 1}
                   className="cursor-pointer flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
 
-                  {locale === 'ar'
-                    ? 'المرحلة التالية'
-                    : locale === 'fr'
-                    ? 'Étape suivante'
-                    : 'Next stage'}
+                  {t('nextStage')}
                   {isRTL ? <Icons.ChevronLeftIcon className="w-4 h-4" /> : <Icons.ChevronRightIcon className="w-4 h-4" />}
                 </button>
               </div>

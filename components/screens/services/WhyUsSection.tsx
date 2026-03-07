@@ -22,7 +22,7 @@ export function WhyUsSection({ locale }: { locale: string }) {
             <span className="inline-block text-fluid-sm font-medium text-[#D4AF37] bg-[#D4AF37]/10 px-4 py-2 rounded-full mb-4">
               {t('badge')}
             </span>
-            <h2 className={`font-heading font-bold text-fluid-4xl text-white mb-6 ${!isRtl ? 'text-center md:text-left' : 'text-center md:text-right'}`}>
+            <h2 className={`font-heading font-bold text-4xl text-white mb-6 ${!isRtl ? 'text-center md:text-left' : 'text-center md:text-right'}`}>
               {t('title')}
             </h2>
             <p className={`text-fluid-lg text-white/70 mb-8 ${!isRtl ? 'text-center md:text-left' : 'text-center md:text-right'}`}>
@@ -90,10 +90,10 @@ export function WhyUsSection({ locale }: { locale: string }) {
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
             >
-              <div className="text-fluid-3xl font-heading font-bold text-[#D4AF37]">
+              <div className="text-center text-fluid-3xl font-heading font-bold text-[#D4AF37]">
                 +2B
               </div>
-              <div className="text-fluid-sm text-[#64748B]">
+              <div className="text-center text-fluid-sm text-[#64748B]">
                 {t('cardSubtitle')}
               </div>
             </motion.div>

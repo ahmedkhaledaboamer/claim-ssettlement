@@ -110,7 +110,7 @@ function StatCard({
       }}
       className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border-r-4 ${colors.border}`}>
 
-      <div className="flex flex-col items-center md:flex-row md:items-center gap-4 text-center md:text-left">
+      <div className="flex flex-col items-center md:flex-row gap-4 text-center">
         {/* Icon */}
         <div
           className={`w-14 h-14 ${colors.iconBg} rounded-xl flex items-center justify-center flex-shrink-0`}>
@@ -235,7 +235,7 @@ export function StatsSection() {
           }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-gold-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+          <span className="inline-block text-gold-600 font-cairo font-bold text-xl tracking-wider mb-4">
             {t('badge')}
           </span>
           <h2 className="text-fluid-section-title font-cairo font-bold text-navy-900 mb-4">

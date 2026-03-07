@@ -121,7 +121,7 @@ export function HeroSection() {
   }, []);
 
   useEffect(() => {
-    setHasMounted(true);
+    queueMicrotask(() => setHasMounted(true));
   }, []);
   return (
     <section
@@ -392,7 +392,12 @@ export function HeroSection() {
           duration: 1
         }}
         className="cursor-pointer absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3"
-        
+        onClick={() => {
+          window.scrollTo({
+            top: window.innerHeight,
+            behavior: 'smooth'
+          });
+        }}
       >
         <span className="cursor-pointer text-imperial-400/70 font-tajawal text-fluid-body-lg uppercase tracking-[0.2em]">
           {t('scrollCta')}
@@ -413,7 +418,7 @@ export function HeroSection() {
       </motion.div>
 
       {/* Luxury Gradient Fade Transition (Replaces Wave) */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-pearl to-transparent z-20" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-pearl to-transparent z-1" />
     </section>);
 
 }

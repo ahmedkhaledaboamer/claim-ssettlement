@@ -11,6 +11,20 @@ import { ClientTypesSection } from '@/components/screens/administrative-departme
 import { FAQSection } from '@/components/screens/administrative-department/FAQSection';
 import { ConclusionSection } from '@/components/screens/administrative-department/ConclusionSection';
 import { useLocale } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'seo' });
+  return {
+    title: t('pages.administrativeDepartment.title'),
+    description: t('pages.administrativeDepartment.description'),
+  };
+}
 
 export default function AdministrativeApparatusPage() {
   const locale = useLocale();
@@ -26,7 +40,7 @@ export default function AdministrativeApparatusPage() {
         <div className="section-divider" />
         <IntroductionSection locale={locale} />
         <div className="section-divider" />
-          <div className="section-divider" />
+        <div className="section-divider" />
         <WhatWeDoSection locale={locale} />
         <div className="section-divider" />
         <ClientJourneySection locale={locale} />

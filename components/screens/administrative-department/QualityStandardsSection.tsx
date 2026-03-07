@@ -5,6 +5,7 @@ import { useCountUp } from '@/hooks/useCountUp';
 import { qualityStandards } from '@/data/journeyData';
 import * as Icons from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const lucideIcons = Icons as unknown as Record<string, LucideIcon>;
 function QualityGauge({
@@ -118,20 +119,8 @@ function QualityGauge({
 
 }
 export function QualityStandardsSection({ locale }: { locale: string }) {
+  const t = useTranslations('administrativeDepartmentPage.qualityStandards');
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
-  const headingTitle =
-    locale === 'ar'
-      ? { main: 'معايير', highlight: ' الجودة' }
-      : locale === 'fr'
-      ? { main: 'Normes de', highlight: ' qualité' }
-      : { main: 'Quality', highlight: ' standards' };
-
-  const headingDescription =
-    locale === 'ar'
-      ? 'نلتزم بأعلى معايير الجودة في كل جانب من جوانب عملنا'
-      : locale === 'fr'
-      ? 'Nous nous engageons à respecter les normes de qualité les plus élevées dans tous les aspects de notre travail.'
-      : 'We are committed to the highest quality standards in every aspect of our work.';
   return (
     <section id="quality" className="relative p-[5%] overflow-hidden bg-white">
       <div ref={ref} className="relative z-10  ">
@@ -155,11 +144,11 @@ export function QualityStandardsSection({ locale }: { locale: string }) {
           className="text-center mb-16">
 
           <h2 className="text-fluid-section-title font-black mb-6">
-            <span className="text-slate-900">{headingTitle.main}</span>
-            <span className="gradient-text-gold">{headingTitle.highlight}</span>
+            <span className="text-slate-900">{t('headingMain')}</span>
+            <span className="gradient-text-gold">{t('headingHighlight')}</span>
           </h2>
           <p className="text-fluid-section-lead text-slate-600  ">
-            {headingDescription}
+            {t('description')}
           </p>
         </motion.div>
 
@@ -170,12 +159,7 @@ export function QualityStandardsSection({ locale }: { locale: string }) {
             key={standard.id}
             standard={{
               ...standard,
-              titleAr:
-                locale === 'ar'
-                  ? standard.titleAr
-                  : locale === 'fr'
-                  ? standard.titleFr
-                  : standard.titleEn
+              titleAr: t(`standards.${standard.id}`)
             }}
             index={index}
             isVisible={isVisible} />
@@ -206,24 +190,7 @@ export function QualityStandardsSection({ locale }: { locale: string }) {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white border border-slate-200 shadow-sm">
             <Icons.AwardIcon className="w-6 h-6 text-teal-600" />
             <span className="text-slate-700 font-medium text-fluid-body">
-              {locale === 'ar' && (
-                <>
-                  معتمدون من أكثر من{' '}
-                  <span className="text-teal-600 font-bold">٥٠</span> جهة تمويلية
-                </>
-              )}
-              {locale === 'en' && (
-                <>
-                  Approved by more than{' '}
-                  <span className="text-teal-600 font-bold">50</span> funding institutions
-                </>
-              )}
-              {locale === 'fr' && (
-                <>
-                  Approuvés par plus de{' '}
-                  <span className="text-teal-600 font-bold">50</span> institutions financières
-                </>
-              )}
+              {t('approvedBy')}
             </span>
           </div>
         </motion.div>

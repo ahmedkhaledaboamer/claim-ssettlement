@@ -131,7 +131,7 @@ export default function MobileNavbar() {
                   onClick={(e) => e.stopPropagation()}
                 >
                   <div className={cn("flex items-center justify-between px-4 py-4 border-b border-white/10 shrink-0", isRTL ? "flex-row-reverse" : "")}>
-                    <Logo className="w-24 h-auto" size={80} />
+                    <Logo className="w-20 h-auto" size={70} />
                     <button
                       type="button"
                       onClick={closeMenu}

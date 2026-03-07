@@ -182,7 +182,7 @@ export function HeroSection() {
 
           <Shield className="w-7 h-7 text-KIB-gold mr-3" />
           <span className="text-white font-heading font-bold tracking-wider ml-3 text-fluid-label">
-            {hero?.badge ?? 'KIB Claims Settlement Services Brokerage'}
+            {hero?.badge ?? 'KIB Claims Settlement Services'}
           </span>
           <Sparkles className="w-5 h-5 text-KIB-gold/70 mr-3" />
         </motion.div>

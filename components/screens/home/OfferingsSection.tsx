@@ -65,7 +65,7 @@ export function OfferingsSection() {
         {/* Header */}
         <div dir={isRTL ? 'rtl' : 'ltr'} className="text-center mb-16 md:mb-24 mx-auto px-4">
           <FadeUp>
-            <span className="inline-block text-gold-600 font-cairo font-bold text-fluid-label tracking-wider mb-4">
+            <span className="inline-block text-gold-600 font-cairo font-bold text-xl tracking-wider mb-4">
               {t('badge')}
             </span>
           </FadeUp>

@@ -1,4 +1,4 @@
-import Logo from "@/components/logo";
+import Image from "next/image";
 
 export default function Loading() {
   return (
@@ -7,12 +7,25 @@ export default function Loading() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,171,60,0.09),_transparent_55%)]" />
 
       <div className="relative z-10 mx-4 w-full max-w-4xl rounded-3xl border border-white/5 bg-slate-900/70 p-8 shadow-2xl shadow-black/60 backdrop-blur-2xl">
-        {/* Logo + text */}
+        {/* Logo + text (plain Image only — no next-intl Link; root loading is outside [locale] provider) */}
         <div className="flex flex-col items-center gap-6">
           <div className="relative flex h-16 w-16 items-center justify-center">
             <div className="absolute inset-0 rounded-full border border-amber-500/30" />
             <div className="absolute inset-0 rounded-full border-2 border-t-amber-400 border-r-transparent border-b-transparent border-l-transparent animate-spin" />
-            <Logo size={40} />
+            <div
+              className="inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-black"
+              style={{ width: 40, height: 40 }}
+            >
+              <Image
+                src="/kib_logo.webp"
+                alt="Logo"
+                width={40}
+                height={40}
+                className="object-contain w-3/4 h-3/4"
+                loading="eager"
+                priority
+              />
+            </div>
           </div>
 
           <div className="space-y-2 text-center">
