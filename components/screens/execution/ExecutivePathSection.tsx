@@ -42,9 +42,7 @@ import {
   Flag,
   HeadphonesIcon,
   FlagTriangleRight,
-  X,
-  ChevronLeft,
-  ChevronRight } from
+  X,} from
 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
@@ -380,14 +378,6 @@ function Station({
   isActive,
   onClick,
   index,
-  totalInPhase
-
-
-
-
-
-
-
 }: {step: (typeof allSteps)[0];phaseColor: string;isActive: boolean;onClick: () => void;index: number;totalInPhase: number;}) {
   const Icon = step.icon;
   return (
@@ -500,7 +490,7 @@ function StepModal({
           <Icon className="w-10 h-10 text-white" />
         </div>
 
-        <h3 className={`text-2xl md:text-3xl font-tajawal font-bold text-white mb-4 text-center  ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+        <h3 className={`text-2xl md:text-3xl  font-bold text-white mb-4 text-center  ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
           {step.title}
         </h3>
 
@@ -598,7 +588,7 @@ export function ExecutivePathSection({ isRTL: isRTLProp }: { isRTL: boolean; }) 
             <span className="text-gold-700 text-sm font-medium">{t('badge')}</span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-gradient-gold mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl  font-black text-gradient-gold mb-6">
             {t('title')}
           </h2>
           <p className="text-lg md:text-xl text-gray-500 font-light leading-relaxed text-center">
@@ -615,7 +605,7 @@ export function ExecutivePathSection({ isRTL: isRTLProp }: { isRTL: boolean; }) 
                 onClick={() => setActivePhase(phase.id)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`relative px-5 md:px-8 py-3 md:py-4 rounded-2xl font-bold text-sm md:text-base transition-all cursor-pointer ${activePhase === phase.id ? `bg-gradient-to-r ${phase.gradient} text-white shadow-lg` : 'bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 border border-gray-200'}`}
+                className={`w-[calc(50%-12px)] md:w-fit relative px-3 md:px-8 py-3 md:py-4 rounded-2xl font-bold text-sm md:text-base transition-all cursor-pointer ${activePhase === phase.id ? `bg-gradient-to-r ${phase.gradient} text-white shadow-lg` : 'bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 border border-gray-200'}`}
               >
                 <span className="flex items-center gap-2">
                   <span className={`w-3 h-3 rounded-full ${phase.bgColor}`} />
@@ -664,7 +654,7 @@ export function ExecutivePathSection({ isRTL: isRTLProp }: { isRTL: boolean; }) 
                         {phase.id}
                       </div>
                       <div className="text-center md:text-left">
-                        <h3 className="text-2xl md:text-3xl font-tajawal font-bold text-navy-950">
+                        <h3 className="text-lg md:text-3xl  font-bold text-navy-950">
                           {t('phaseLabel')} {t(`phases.${phase.id}.title`)}
                         </h3>
                         <p className="text-gray-500">
@@ -717,40 +707,6 @@ export function ExecutivePathSection({ isRTL: isRTLProp }: { isRTL: boolean; }) 
               </motion.div>);
 
           })}
-        </div>
-
-        {/* Progress indicator */}
-        <div className="mt-16 flex justify-center">
-          <div className="flex items-center gap-2">
-            {phases.map((phase) => (
-            <button
-              key={phase.id}
-              onClick={() => setActivePhase(phase.id)}
-              className={`w-3 h-3 rounded-full transition-all cursor-pointer ${activePhase === phase.id ? `${phase.bgColor} scale-125` : 'bg-gray-300 hover:bg-gray-400'}`}
-              aria-label={t(`phases.${phase.id}.title`)}
-            />
-            ))}
-          </div>
-        </div>
-
-        {/* Navigation arrows - prev/next direction-aware */}
-        <div className="flex justify-center items-center gap-4 mt-8">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setActivePhase((prev) => (prev > 1 ? prev - 1 : 4))}
-            className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-navy-900 hover:bg-gold-500 hover:text-white transition-all border border-gray-200 cursor-pointer"
-          >
-            {isRTL ? <ChevronRight className="w-6 h-6" /> : <ChevronLeft className="w-6 h-6" />}
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setActivePhase((prev) => (prev < 4 ? prev + 1 : 1))}
-            className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-navy-900 hover:bg-gold-500 hover:text-white transition-all border border-gray-200 cursor-pointer"
-          >
-            {isRTL ? <ChevronLeft className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}
-          </motion.button>
         </div>
       </div>
 

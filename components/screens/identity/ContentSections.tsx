@@ -174,79 +174,13 @@ export function ContentSections({ sections }: ContentSectionsProps) {
     </div>);
 
 }
-// === Image Lightbox ===
-function ImageLightbox({
-  src,
-  alt,
-  onClose
-
-
-
-
-}: {src: string;alt: string;onClose: () => void;}) {
-  const t = useTranslations('identityPage');
-  return (
-    <AnimatePresence>
-      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-        <motion.div
-          initial={{
-            opacity: 0
-          }}
-          animate={{
-            opacity: 1
-          }}
-          exit={{
-            opacity: 0
-          }}
-          onClick={onClose}
-          className="absolute inset-0 bg-black/70 backdrop-blur-md" />
-
-        <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.8,
-            y: 30
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            y: 0
-          }}
-          exit={{
-            opacity: 0,
-            scale: 0.85
-          }}
-          transition={{
-            type: 'spring',
-            damping: 25,
-            stiffness: 300
-          }}
-          className="relative  w-full   z-10">
-
-          <button
-            onClick={onClose}
-            className="absolute -top-12 left-0 p-2 bg-white/20 hover:bg-white/40 rounded-full text-white transition-colors"
-            aria-label={t('lightboxClose')}>
-
-            <X className="w-6 h-6" />
-          </button>
-          <img
-            src={src}
-            alt={alt}
-            className="w-full h-full object-contain rounded-2xl shadow-[0_25px_70px_rgba(0,0,0,0.5)]" />
-
-        </motion.div>
-      </div>
-    </AnimatePresence>);
-
-}
 // 1. Intro
 function IntroSection({ data }: {data: ContentSectionType;}) {
   const t = useTranslations('identityPage');
   return (
     <section id="intro" className="relative p-[5%] overflow-hidden">
       <div className="absolute inset-0 z-0 min-h-[400px]">
-        <img src={images.intro} alt="" width={1200} height={800} className="w-full h-full object-cover min-h-[400px]" />
+        <Image src={images.intro} alt="" width={1200} height={800} className="w-full h-full object-cover min-h-[400px]" />
         <div className="absolute inset-0 backdrop-blur-sm bg-KIB-text/75" />
         <div className="absolute inset-0 bg-gradient-to-t from-KIB-text via-transparent to-KIB-text/50" />
       </div>
@@ -298,7 +232,7 @@ function IntroSection({ data }: {data: ContentSectionType;}) {
               variants={scaleIn}
               className="rounded-2xl overflow-hidden border border-KIB-gold/20 shadow-[0_8px_30px_rgba(0,0,0,0.35)] aspect-video group">
 
-                <img
+                <Image
                 src={src}
                 alt=""
                 width={500}
@@ -321,7 +255,7 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
       className="p-[5%] relative overflow-hidden">
 
       <div className="absolute inset-0 z-0 h-[400px] md:h-[600px] xl:h-[800px] 2xl:h-[1000px]">
-        <img
+        <Image
           src={images.identity}
           alt=""
           width={1200}
@@ -343,9 +277,11 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
 
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.18)] h-[380px] md:h-[400px] xl:h-[600px] 2xl:h-[800px]">
-                <img
+                <Image
                   src={images.identity}
                   alt="Modern Office"
+                  width={1200}
+                  height={800}
                   className="w-full h-full object-cover" />
 
               </div>
@@ -370,9 +306,11 @@ function IdentitySection({ data }: {data: ContentSectionType;}) {
                 }}
                 className="absolute -bottom-8 -left-6 w-40 h-40 md:w-48 md:h-48 xl:w-64 xl:h-64 rounded-2xl overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.25)] border-4 border-white">
 
-                <img
+                <Image
                   src={images.identityExtra}
                   alt=""
+                  width={400}
+                  height={400}
                   className="w-full h-full object-cover" />
 
               </motion.div>
@@ -729,9 +667,9 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
   return (
     <section
       id="principles"
-      className="p-[5%] bg-KIB-bg4 relative overflow-hidden">
+      className=" p-[5%] bg-KIB-bg4 relative overflow-hidden">
 
-      <div className="  relative z-10">
+      <div className=" relative z-10">
         <motion.div
           className="text-center mb-16 md:mb-20"
           initial="hidden"
@@ -800,7 +738,7 @@ function PrinciplesSection({ data }: {data: ContentSectionType;}) {
                           alt=""
                           className="w-full h-full object-cover" />
 
-                          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-transparent" />
                           <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-KIB-gold text-white flex items-center justify-center font-bold text-fluid-body-lg shadow-[0_4px_16px_rgba(197,160,40,0.4)]">
                             {i + 1}
                           </div>
@@ -1128,9 +1066,11 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
       className="p-[5%] bg-white relative overflow-hidden">
 
       <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block">
-        <img
+        <Image
           src={images.partnersBg}
           alt=""
+          width={1200}
+          height={800}
           className="w-full h-full object-cover opacity-[0.06]" />
 
       </div>
@@ -1145,9 +1085,11 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
             }}
             variants={scaleIn}>
 
-            <img
+            <Image
               src={images.partners}
               alt="Handshake"
+              width={600}
+              height={600}
               className="rounded-full w-full  aspect-square object-cover shadow-[0_24px_60px_rgba(0,0,0,0.14)] border-8 border-KIB-bg1" />
 
           </motion.div>
@@ -1180,7 +1122,7 @@ function PartnersSection({ data }: {data: ContentSectionType;}) {
               viewport={{
                 once: true
               }}
-              className="flex flex-wrap gap-4 md:gap-5 mb-10">
+              className="flex flex-wrap flex-col md:flex-row gap-4 md:gap-5 mb-10">
 
                 {data.bullets.map((b, i) =>
               <motion.span

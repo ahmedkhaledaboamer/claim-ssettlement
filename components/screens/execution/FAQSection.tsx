@@ -1,5 +1,6 @@
 "use client";
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PlusIcon, MinusIcon, HelpCircleIcon } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
@@ -40,7 +41,7 @@ export function FAQSection() {
                   {t('badge')}
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-tajawal font-bold text-navy-900 mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold text-navy-900 mb-4">
                 {t('title')}
               </h2>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed">
@@ -69,7 +70,7 @@ export function FAQSection() {
                         <HelpCircleIcon className="w-5 h-5" />
                       </div>
                       <span
-                        className={`font-tajawal font-bold text-lg transition-colors text-start ${openIndex === index ? 'text-gold-600' : 'text-navy-900'}`}
+                        className={` font-bold text-lg transition-colors text-start ${openIndex === index ? 'text-gold-600' : 'text-navy-900'}`}
                       >
                         {t(qKey)}
                       </span>
@@ -124,7 +125,7 @@ export function FAQSection() {
 
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-gold-500/20 to-teal-500/20 rounded-3xl blur-xl" />
-              <img
+              <Image
                 src="/imgs/A mergers and acquisitions con/image_32.webp"
                 alt="FAQ Support"
                 width={600}
@@ -148,7 +149,7 @@ export function FAQSection() {
                     <HelpCircleIcon className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="font-tajawal font-bold text-navy-900">
+                    <p className=" font-bold text-navy-900">
                       {t('support')}
                     </p>
                     <p className="text-sm text-gold-500">24/7</p>

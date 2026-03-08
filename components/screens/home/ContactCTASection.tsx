@@ -142,7 +142,7 @@ export function ContactCTASection({ locale }: { locale: string }) {
               <div className="w-16 h-16 bg-gold-100 group-hover:bg-gold-200 rounded-xl flex items-center justify-center transition-colors">
                 <PhoneIcon className="w-7 h-7 text-gold-600" />
               </div>
-              <span className="text-navy-600 font-tajawal text-fluid-body" dir="ltr">
+              <span className="text-navy-600  text-fluid-body" dir="ltr">
                 +971521068882
               </span>
             </a>
@@ -154,7 +154,7 @@ export function ContactCTASection({ locale }: { locale: string }) {
               <div className="w-16 h-16 bg-teal-100 group-hover:bg-teal-200 rounded-xl flex items-center justify-center transition-colors">
                 <MailIcon className="w-7 h-7 text-teal-600" />
               </div>
-              <span className="text-navy-600 font-tajawal text-fluid-body">
+              <span className="text-navy-600  text-fluid-body">
                 info@shazmlc.com
               </span>
             </a>

@@ -170,7 +170,7 @@ function HexagonItem({
 
         <div className="flex flex-col items-center justify-center h-full text-center">
           <Icon className={`w-6 h-6 md:w-8 md:h-8 ${colors.icon} mb-2`} />
-          <span className="text-navy-800 font-tajawal text-fluid-body leading-tight font-medium">
+          <span className="text-navy-800  text-fluid-body leading-tight font-medium">
             {text}
           </span>
         </div>

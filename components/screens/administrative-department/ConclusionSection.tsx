@@ -229,7 +229,7 @@ export function ConclusionSection({ locale }: { locale: string }) {
           >
             <Link
               href="/execution"
-              className="group relative px-10 py-4 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold text-lg shadow-lg overflow-hidden block"
+              className="w-fit mx-auto group relative px-10 py-4 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 text-white font-bold text-lg shadow-lg overflow-hidden block"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 {t('cta')}

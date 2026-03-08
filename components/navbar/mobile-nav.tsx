@@ -158,7 +158,7 @@ export default function MobileNavbar() {
                             href={route.href}
                             onClick={closeMenu}
                             className={cn(
-                              "block font-tajawal text-lg py-3 px-2 -mx-2 rounded-lg transition-colors",
+                              "block  text-lg py-3 px-2 -mx-2 rounded-lg transition-colors",
                               isRTL ? "text-right" : "text-left",
                               isActive(route.href)
                                 ? "text-gold font-semibold bg-gold/10"

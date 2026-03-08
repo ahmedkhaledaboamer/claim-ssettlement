@@ -18,7 +18,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[5%]">
 
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -149,7 +149,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
           }}
           className="flex flex-wrap justify-center gap-8 md:gap-16 mb-16">
 
-          <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
+          <div className="w-[calc(50%-32px)] md:w-[calc(25%-64px)] felx flex-col items-center justify-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
             <div className="text-fluid-stat font-black gradient-text-gold mb-2">
               {t('stat1')}
             </div>
@@ -157,7 +157,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
               {t('stat1Label')}
             </div>
           </div>
-          <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
+          <div className="w-[calc(50%-32px)] md:w-[calc(25%-64px)] felx  flex-col items-center justify-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
             <div className="text-fluid-stat font-black gradient-text-gold mb-2">
               {t('stat2')}
             </div>
@@ -165,7 +165,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
               {t('stat2Label')}
             </div>
           </div>
-          <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
+          <div className="w-[calc(50%-32px)] md:w-[calc(25%-64px)] felx  flex-col items-center justify-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
             <div className="text-fluid-stat font-black gradient-text-gold mb-2">
               {t('stat3')}
             </div>
@@ -173,7 +173,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
               {t('stat3Label')}
             </div>
           </div>
-          <div className="text-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
+          <div className="w-[calc(50%-32px)] md:w-[calc(25%-64px)] felx  flex-col items-center justify-center bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm">
             <div className="text-fluid-stat font-black gradient-text-gold mb-2">
               {t('stat4')}
             </div>

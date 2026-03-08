@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
   ShieldCheck,
@@ -114,7 +115,7 @@ export function BenefitsSection() {
               variants={variants}
               className={`text-center mb-14 ${isRTL ? 'lg:text-right' : 'lg:text-left'}`}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-tajawal font-bold text-navy-900 mb-5">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold text-navy-900 mb-5">
                 {t('title')} <span className="text-gradient-gold">{t('titleHighlight')}</span>
               </h2>
               <p className="text-gray-500 text-base md:text-lg leading-relaxed">
@@ -147,17 +148,17 @@ export function BenefitsSection() {
                     className="relative bg-white rounded-2xl p-5 md:p-7 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 border border-gray-100 hover:border-gold-300 overflow-hidden">
 
                     {/* Large Background Number */}
-                    <span className={`absolute -top-2 text-7xl md:text-8xl font-bold text-gray-100 opacity-40 font-tajawal select-none ${isRTL ? '-right-2' : '-left-2'}`}>
+                    <span className={`absolute -top-2 text-7xl md:text-8xl font-bold text-gray-100 opacity-40  select-none ${isRTL ? '-right-2' : '-left-2'}`}>
                       {String(index + 1).padStart(2, '0')}
                     </span>
 
-                    <div className="relative z-10 text-center md:text-left">
+                    <div className={`relative z-10 text-center md:text-left ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
                       <div
                         className={`w-12 h-12 md:w-14 md:h-14 rounded-full ${config.light} flex items-center justify-center ${config.text} mb-4 shadow-inner mx-auto md:mx-0`}
                       >
                         <benefit.icon className="w-6 h-6 md:w-7 md:h-7" />
                       </div>
-                      <h3 className="text-lg md:text-xl font-tajawal font-bold text-navy-900 mb-2">
+                      <h3 className="text-lg md:text-xl  font-bold text-navy-900 mb-2">
                         {t(`${benefit.key}.title`)}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed mb-4">
@@ -213,7 +214,7 @@ export function BenefitsSection() {
 
             <div className="space-y-6">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl  ">
-                <img
+                <Image
                   src="/imgs/A longterm capital partnership/image_9.webp"
                   alt="Modern Office"
                   width={600}
@@ -222,7 +223,7 @@ export function BenefitsSection() {
 
               </div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl  ">
-                <img
+                <Image
                   src="/imgs/A longterm investment concept/image_29.webp"
                   alt="Financial Analysis"
                   width={600}
@@ -231,7 +232,7 @@ export function BenefitsSection() {
 
               </div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl ">
-                <img
+                <Image
                   src="/imgs/A luxurious executive financia/image_39.webp"
                   alt="Team Collaboration"
                   width={600}

@@ -7,11 +7,18 @@ import {
 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMessages } from 'next-intl';
+import Image from 'next/image';
 
 const HERO_IMAGES = [
   { bg: '/imgs/6 A premium service portfolio/image_5.webp', thumb: '/imgs/81 A minimalist audit chamber/image_0.webp' },
   { bg: '/imgs/7 A capital journey corridor i/image_6.webp', thumb: '/imgs/82 A strategic financial analy/image_1.webp' },
   { bg: '/imgs/8 A layered financial operatio/image_7.webp', thumb: '/imgs/83 A credit evaluation center/image_2.webp' },
+];
+
+const DEFAULT_SLIDES = [
+  { title: 'Financial identity', titleAccent: 'that defines us', subtitle: 'Not just a broker… a financial entity with a vision, a methodology, and operational capacity managed at board level.', label: 'Our identity' },
+  { title: 'Strategic vision', titleAccent: 'for financing', subtitle: 'We read the financial reality in depth and build financing files to professional standards that ensure the best terms and lowest risks.', label: 'Our vision' },
+  { title: 'Reliable', titleAccent: 'and sustainable results', subtitle: 'We measure our success by approval rates, quality of terms, and client satisfaction.', label: 'Our results' },
 ];
 
 export function HeroSection() {
@@ -24,13 +31,8 @@ export function HeroSection() {
     goToSlideAria?: string;
     slides?: Array<{ title: string; titleAccent: string; subtitle: string; label: string }>;
   } | undefined;
-  const defaultSlides = [
-    { title: 'Financial identity', titleAccent: 'that defines us', subtitle: 'Not just a broker… a financial entity with a vision, a methodology, and operational capacity managed at board level.', label: 'Our identity' },
-    { title: 'Strategic vision', titleAccent: 'for financing', subtitle: 'We read the financial reality in depth and build financing files to professional standards that ensure the best terms and lowest risks.', label: 'Our vision' },
-    { title: 'Reliable', titleAccent: 'and sustainable results', subtitle: 'We measure our success by approval rates, quality of terms, and client satisfaction.', label: 'Our results' },
-  ];
   const heroSlides = useMemo(() => {
-    const slides = (hero?.slides?.length ? hero.slides : defaultSlides) as Array<{ title: string; titleAccent: string; subtitle: string; label: string }>;
+    const slides = (hero?.slides?.length ? hero.slides : DEFAULT_SLIDES) as Array<{ title: string; titleAccent: string; subtitle: string; label: string }>;
     return slides.map((s, id) => ({
       id,
       ...(HERO_IMAGES[id] ?? { bg: '', thumb: '' }),
@@ -52,7 +54,7 @@ export function HeroSection() {
   const nextSlide = useCallback(() => {
     setDirection(1);
     setActiveSlide((prev) => (prev + 1) % heroSlides.length);
-  }, []);
+  }, [heroSlides.length]);
   // Auto-advance every 6 seconds
   useEffect(() => {
     const timer = setInterval(nextSlide, 6000);
@@ -60,22 +62,24 @@ export function HeroSection() {
   }, [nextSlide]);
   const slide = heroSlides[activeSlide];
   const bgVariants = {
-    enter: (dir: number) => ({
+    enter: () => ({
       opacity: 0,
-      scale: 1.1
+      scale: 1.02
     }),
     center: {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.8
+        duration: 0.6,
+        ease: 'easeOut' as const
       }
     },
-    exit: (dir: number) => ({
+    exit: () => ({
       opacity: 0,
-      scale: 1.05,
+      scale: 1.02,
       transition: {
-        duration: 0.5
+        duration: 0.6,
+        ease: 'easeIn' as const
       }
     })
   };
@@ -106,10 +110,13 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center p-[5%] overflow-hidden">
+      className="relative min-h-screen flex items-center justify-center px-[5%] py-[8%] overflow-hidden bg-KIB-text">
+
+      {/* Dark underlay to prevent flash when slides crossfade */}
+      <div className="absolute inset-0 z-0 min-h-[70vh] bg-KIB-text" aria-hidden />
 
       {/* Animated Background */}
-      <AnimatePresence custom={direction} mode="popLayout">
+      <AnimatePresence custom={direction} mode="sync" initial={false}>
         <motion.div
           key={slide.id}
           custom={direction}
@@ -119,7 +126,7 @@ export function HeroSection() {
           exit="exit"
           className="absolute inset-0 z-0 min-h-[70vh]">
 
-          <img src={slide.bg} alt="" width={1200} height={800} className="w-full h-full object-cover min-h-[70vh]" />
+          <Image src={slide.bg} alt="" width={1200} height={800} className="w-full h-full object-cover min-h-[70vh]" />
           <div className="absolute inset-0 backdrop-blur-md bg-gradient-to-br from-KIB-text/65 via-KIB-text/45 to-KIB-gold/15" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-KIB-light" />
         </motion.div>
@@ -187,26 +194,29 @@ export function HeroSection() {
           <Sparkles className="w-5 h-5 text-KIB-gold/70 mr-3" />
         </motion.div>
 
-        <AnimatePresence custom={direction} mode="wait">
-          <motion.div
-            key={slide.id}
-            custom={direction}
-            variants={contentVariants}
-            initial="enter"
-            animate="center"
-            exit="exit">
+        <div className="min-h-[200px] sm:min-h-[220px] md:min-h-[240px] flex flex-col items-center justify-center">
+          <AnimatePresence custom={direction} mode="wait">
+            <motion.div
+              key={slide.id}
+              custom={direction}
+              variants={contentVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              className="w-full">
 
-            <h1 className="text-fluid-hero font-heading font-bold text-white mb-8 leading-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.3)]">
-              {slide.title} <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-KIB-goldLight via-KIB-gold to-yellow-300">
-                {slide.titleAccent}
-              </span>
-            </h1>
-            <p className="text-fluid-section-lead text-white/80 font-body   leading-relaxed mb-12 font-medium">
-              {slide.subtitle}
-            </p>
-          </motion.div>
-        </AnimatePresence>
+              <h1 className="text-fluid-hero font-heading font-bold text-white mb-8 leading-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.3)]">
+                {slide.title} <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-KIB-goldLight via-KIB-gold to-yellow-300">
+                  {slide.titleAccent}
+                </span>
+              </h1>
+              <p className="text-fluid-section-lead text-white/80 font-body   leading-relaxed mb-12 font-medium">
+                {slide.subtitle}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
         <motion.div
           initial={{
@@ -251,17 +261,17 @@ export function HeroSection() {
             duration: 0.7,
             delay: 0.9
           }}
-          className="flex justify-center items-center gap-5">
+          className="flex justify-center items-center gap-5 min-h-[8.5rem] md:min-h-[10.5rem]">
 
           {heroSlides.map((s, i) =>
           <button
             key={s.id}
             onClick={() => goToSlide(i)}
-            className={`cursor-pointer relative rounded-2xl overflow-hidden transition-all duration-500 shadow-[0_8px_24px_rgba(0,0,0,0.25)] group
-                ${activeSlide === i ? 'w-32 h-32 md:w-40 md:h-40 border-3 border-KIB-gold ring-4 ring-KIB-gold/30 scale-105' : 'w-24 h-24 md:w-32 md:h-32 border-2 border-white/25 opacity-60 hover:opacity-90 hover:scale-105'}`}
+            className={`cursor-pointer relative rounded-2xl overflow-hidden transition-all duration-300 shadow-[0_8px_24px_rgba(0,0,0,0.25)] group w-28 h-28 md:w-36 md:h-36 flex-shrink-0
+                ${activeSlide === i ? 'border-3 border-KIB-gold ring-4 ring-KIB-gold/30 opacity-100' : 'border-2 border-white/25 opacity-60 hover:opacity-90'}`}
             aria-label={hero?.goToSlideAria?.replace('{label}', s.label) ?? `Go to ${s.label}`}>
 
-              <img
+              <Image
               src={s.thumb}
               alt={s.label}
               width={400}

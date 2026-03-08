@@ -1,5 +1,6 @@
 'use client';
 import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform, type Variants } from 'framer-motion';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
 import { TrendingUp, Shield, Award, Sparkles } from 'lucide-react';
@@ -121,7 +122,7 @@ export function AboutSection() {
               transition={{
                 delay: 0.1
               }}
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-tajawal font-black text-navy-900 mb-8 leading-[1.15]"
+              className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl  font-black text-navy-900 mb-8 leading-[1.3]"
             >
               {t('titlePart1')}{' '}
               <span className="text-gradient-teal">
@@ -271,9 +272,11 @@ export function AboutSection() {
               className="absolute top-0 right-0 w-[70%] h-64 md:h-72 rounded-3xl overflow-hidden shadow-2xl z-20 group">
 
               <div className="absolute inset-0 bg-gradient-to-t from-teal-900/60 to-transparent z-10 group-hover:opacity-70 transition-opacity" />
-              <img
+              <Image
                 src="/imgs/A panoramic executive tower in/image_1.webp"
                 alt="Business Meeting"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
               {/* Golden overlay effect */}
@@ -303,9 +306,11 @@ export function AboutSection() {
               className="absolute bottom-32 right-8 w-[65%] h-72 md:h-80 rounded-3xl overflow-hidden shadow-2xl z-30 group">
 
               <div className="absolute inset-0 bg-gradient-to-t from-gold-900/50 to-transparent z-10" />
-              <img
+              <Image
                 src="/imgs/A partnershipdriven executive/image_61.webp"
                 alt="Finance Work"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
             </motion.div>
@@ -333,9 +338,11 @@ export function AboutSection() {
               className="absolute top-1/4 left-0 w-[55%] h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl z-10 group">
 
               <div className="absolute inset-0 bg-gradient-to-t from-coral-900/40 to-transparent z-10" />
-              <img
+              <Image
                 src="/imgs/A philosophydriven funding con/image_72.webp"
                 alt="Modern Office"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
             </motion.div>
@@ -360,9 +367,11 @@ export function AboutSection() {
               className="absolute bottom-0 left-4 w-[45%] h-56 rounded-3xl overflow-hidden shadow-2xl z-25 group">
 
               <div className="absolute inset-0 bg-gradient-to-t from-fuchsia-900/40 to-transparent z-10" />
-              <img
+              <Image
                 src="/imgs/A portfolio diversification vi/image_34.webp"
                 alt="Team Collaboration"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
             </motion.div>
@@ -386,9 +395,11 @@ export function AboutSection() {
               }}
               className="absolute top-[15%] left-[35%] w-[30%] h-40 rounded-2xl overflow-hidden shadow-xl z-35 group">
 
-              <img
+              <Image
                 src="/imgs/A powerful boardlevel executiv/image_38.webp"
                 alt="Handshake"
+                width={400}
+                height={300}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
             </motion.div>
@@ -418,7 +429,7 @@ export function AboutSection() {
               <span className="text-2xl md:text-3xl font-black text-gold-400">
                 100%
               </span>
-              <span className="text-xs font-tajawal text-center">{t('governance')}</span>
+              <span className="text-xs  text-center">{t('governance')}</span>
             </motion.div>
 
             {/* Floating Badge - Steps */}
@@ -444,7 +455,7 @@ export function AboutSection() {
 
               <TrendingUp className="w-6 h-6 text-white mb-1" />
               <span className="text-xl md:text-2xl font-black">40+</span>
-              <span className="text-xs font-tajawal">{t('phase')}</span>
+              <span className="text-xs ">{t('phase')}</span>
             </motion.div>
 
             {/* Floating Badge - Award */}
@@ -469,7 +480,7 @@ export function AboutSection() {
 
               <Award className="w-5 h-5 mb-1" />
               <span className="text-lg md:text-xl font-black">99%</span>
-              <span className="text-[10px] font-tajawal">{t('satisfaction')}</span>
+              <span className="text-[10px] ">{t('satisfaction')}</span>
             </motion.div>
           </div>
         </div>

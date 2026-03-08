@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
   CheckCircle2,
@@ -92,7 +93,7 @@ export function WhyUsSection() {
               {/* Primary Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-navy-900/20 min-h-[320px]">
                 <div className="absolute inset-0 bg-navy-900/10 z-10" />
-                <img
+                <Image
                   src="/imgs/A global financial standards v/image_5.webp"
                   alt="Business Handshake"
                   width={800}
@@ -104,7 +105,7 @@ export function WhyUsSection() {
               {/* Secondary Image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-teal-900/20 mr-16 min-h-[260px]">
                 <div className="absolute inset-0 bg-teal-900/10 z-10" />
-                <img
+                <Image
                   src="/imgs/A highlevel financial operatio/image_45.webp"
                   alt="Team Collaboration"
                   width={800}
@@ -131,7 +132,7 @@ export function WhyUsSection() {
                   <CheckCircle2 size={28} />
                 </div>
                 <div className="text-center md:text-left">
-                  <p className="font-tajawal font-bold text-navy-900 text-lg">
+                  <p className=" font-bold text-navy-900 text-lg">
                     {t('successRate')}
                   </p>
                   <p className="text-3xl font-bold text-gold-500">98%</p>
@@ -148,7 +149,7 @@ export function WhyUsSection() {
             variants={variants}
             className={`lg:w-1/2 w-full text-center md:text-center ${isRTL ? 'lg:text-right' : 'lg:text-left'}`}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-tajawal font-bold text-navy-900 mb-5">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold text-navy-900 mb-5">
               {t('title')} <span className="text-gradient-gold">{t('titleHighlight')}</span>
             </h2>
             <p className="text-gray-600 text-base md:text-lg mb-10 leading-[1.8]">

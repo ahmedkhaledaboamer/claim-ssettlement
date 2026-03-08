@@ -42,19 +42,6 @@ export function WhatWeDoSection({ locale }: { locale: string }) {
     color: serviceColors[i],
     image: serviceImages[i]
   }));
-  const _headingTitle =
-    locale === 'ar'
-      ? { main: 'ماذا', highlight: ' نقدم' }
-      : locale === 'fr'
-      ? { main: 'Ce que', highlight: ' nous offrons' }
-      : { main: 'What', highlight: ' we do' };
-
-  const headingDescription =
-    locale === 'ar'
-      ? 'خدمات متكاملة تغطي كل جوانب رحلتك التمويلية من البداية حتى ما بعد الإغلاق'
-      : locale === 'fr'
-      ? 'Des services intégrés qui couvrent tous les aspects de votre parcours de financement, du début jusqu’après la clôture.'
-      : 'Integrated services that cover every aspect of your financing journey from start to post‑closing.';
   return (
     <section id="services" className="relative p-[5%] overflow-hidden bg-white">
       <div ref={ref} className="relative z-10  ">
@@ -87,8 +74,8 @@ export function WhatWeDoSection({ locale }: { locale: string }) {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-          {services.map((service, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {services.slice(0, 9).map((service, index) => {
             const Icon = service.icon;
             const title = service.title;
             const description = service.description;

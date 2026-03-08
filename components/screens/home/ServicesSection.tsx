@@ -156,7 +156,7 @@ function ServiceCard({
         </h3>
 
         {/* Description */}
-        <p className="text-fluid-body text-navy-500 font-tajawal leading-relaxed flex-1">
+        <p className="text-fluid-body text-navy-500  leading-relaxed flex-1">
           {t(`${service.id}.description`)}
         </p>
       </div>

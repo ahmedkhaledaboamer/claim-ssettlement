@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SparklesIcon, ArrowLeftIcon, ArrowRightIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -65,7 +66,7 @@ export function HeroSection({ locale }: { locale: string }) {
           transition={{ duration: 0.7, delay: 0.1 }}
         >
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[350px]">
-            <img
+            <Image
               src="/imgs/92 An operational monitoring r/image_3.webp"
               alt="خدمات تمويلية"
               width={1920}

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   BarChart3Icon,
@@ -131,7 +132,7 @@ function LayerCard({
 
             {/* Thumbnail Image */}
             <div className="hidden sm:block w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden flex-shrink-0 shadow-sm min-h-[80px]">
-              <img
+              <Image
                 src={layer.image}
                 alt={t(`${layer.id}.title`)}
                 width={300}
@@ -156,7 +157,7 @@ function LayerCard({
               >
                 {t(`${layer.id}.title`)}
               </h3>
-              <p className="text-navy-600 font-tajawal text-fluid-body leading-relaxed">
+              <p className="text-navy-600  text-fluid-body leading-relaxed">
                 {t(`${layer.id}.description`)}
               </p>
 
@@ -183,7 +184,7 @@ function LayerCard({
                   className="overflow-hidden">
 
                     <div className="mt-4 pt-4 border-t border-navy-100">
-                      <p className="text-navy-500 font-tajawal text-fluid-body leading-relaxed">
+                      <p className="text-navy-500  text-fluid-body leading-relaxed">
                         {t(`${layer.id}.details`)}
                       </p>
                     </div>

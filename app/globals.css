@@ -285,6 +285,10 @@
   --font-body: var(--font-body-KIB);
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 html,
 body {
   font-family: var(--font-cairo) !important;

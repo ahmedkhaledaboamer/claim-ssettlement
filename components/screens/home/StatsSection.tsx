@@ -131,7 +131,7 @@ function StatCard({
             {count}
             {suffix}
           </div>
-          <div className="text-navy-600 font-tajawal text-fluid-body mt-1">
+          <div className="text-navy-600  text-fluid-body mt-1">
             {label}
           </div>
         </div>

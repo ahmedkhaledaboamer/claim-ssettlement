@@ -108,13 +108,13 @@ export function AboutSection() {
             </FadeUp>
 
             <FadeUp delay={0.2}>
-              <p className="text-fluid-section-lead text-navy-700 font-tajawal leading-relaxed mb-6">
+              <p className="text-fluid-section-lead text-navy-700  leading-relaxed mb-6">
                 {t('lead')}
               </p>
             </FadeUp>
 
             <FadeUp delay={0.3}>
-              <p className="text-navy-600 font-tajawal text-fluid-body mb-6">
+              <p className="text-navy-600  text-fluid-body mb-6">
                 {t('helpIntro')}
               </p>
             </FadeUp>
@@ -126,7 +126,7 @@ export function AboutSection() {
                     <div className="w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-teal">
                       <CheckCircleIcon className="w-4 h-4 text-white" />
                     </div>
-                    <span className="text-navy-700 font-tajawal text-fluid-body">
+                    <span className="text-navy-700  text-fluid-body">
                       {point}
                     </span>
                   </div>
@@ -153,7 +153,7 @@ export function AboutSection() {
 
             <FadeUp delay={0.6}>
               <div className="bg-navy-900 rounded-2xl p-6 shadow-xl shadow-navy/20">
-                <p className="text-white/90 font-tajawal text-fluid-body leading-relaxed">
+                <p className="text-white/90  text-fluid-body leading-relaxed">
                   {t('commitmentText')}
                 </p>
               </div>
@@ -181,7 +181,7 @@ export function AboutSection() {
                     className="w-full h-full object-cover img-fluid-cover transition-transform duration-500 group-hover:scale-110" />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                      <span className="text-white font-tajawal text-fluid-body">
+                      <span className="text-white  text-fluid-body">
                         {image.alt}
                       </span>
                     </div>
@@ -225,11 +225,11 @@ export function AboutSection() {
                 <h3 className="text-fluid-2xl font-cairo font-bold text-navy-900 mb-4">
                   {t('missionCardTitle')}
                 </h3>
-                <p className="text-navy-700 font-tajawal text-fluid-body leading-relaxed mb-4">
+                <p className="text-navy-700  text-fluid-body leading-relaxed mb-4">
                   {t('missionCardParagraph')}
                 </p>
                 <div className="bg-teal-50 rounded-xl p-4">
-                  <p className="text-teal-700 font-tajawal text-fluid-body">
+                  <p className="text-teal-700  text-fluid-body">
                     {t('missionCardBoxText')}
                   </p>
                 </div>
@@ -263,7 +263,7 @@ export function AboutSection() {
                 <h3 className="text-fluid-2xl font-cairo font-bold text-navy-900 mb-4">
                   {t('visionCardTitle')}
                 </h3>
-                <p className="text-navy-700 font-tajawal text-fluid-body leading-relaxed mb-4">
+                <p className="text-navy-700  text-fluid-body leading-relaxed mb-4">
                   {t('visionIntro')}
                 </p>
                 <div className="grid grid-cols-2 gap-2 mb-4 w-full">
@@ -272,7 +272,7 @@ export function AboutSection() {
                   ).map((tag, index) => (
                     <span
                       key={tag}
-                      className={`px-3 py-1.5 rounded-lg text-fluid-body font-tajawal text-center shadow-sm ${
+                      className={`px-3 py-1.5 rounded-lg text-fluid-body  text-center shadow-sm ${
                         index < 2
                           ? 'bg-gold-50 text-gold-700'
                           : index === 2
@@ -286,7 +286,7 @@ export function AboutSection() {
                     </span>
                   ))}
                 </div>
-                <p className="text-navy-600 font-tajawal text-fluid-body italic">
+                <p className="text-navy-600  text-fluid-body italic">
                   {t('visionQuote')}
                 </p>
               </div>

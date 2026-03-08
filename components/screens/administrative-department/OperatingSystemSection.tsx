@@ -6,6 +6,7 @@ import { operatingLayers } from '@/data/journeyData';
 import * as Icons from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const lucideIcons = Icons as unknown as Record<string, LucideIcon>;
 // Layer images
@@ -174,20 +175,14 @@ export function OperatingSystemSection({ locale }: { locale: string }) {
               }}>
 
               {/* Layer Image */}
-              <div className="relative h-48 md:h-56 min-h-[220px] overflow-hidden">
-                <img
+              <div className="relative h-48 md:h-56 min-h-120 overflow-hidden">
+                <Image
                   src={layerImages[activeLayer]}
                   alt={t(`layers.${operatingLayers[activeLayer].id}.title`)}
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
                   loading="lazy" />
-
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: `linear-gradient(to top, white, ${operatingLayers[activeLayer].color}20)`
-                  }} />
 
               </div>
 
@@ -223,7 +218,7 @@ export function OperatingSystemSection({ locale }: { locale: string }) {
 
                       {t('layerLabel', { id: operatingLayers[activeLayer].id })}
                     </span>
-                    <h3 className="text-fluid-2xl font-bold text-slate-900 mt-2">
+                    <h3 className="md:text-fluid-2xl text-fluid-xl font-bold text-slate-900 mt-2">
                       {t(`layers.${operatingLayers[activeLayer].id}.title`)}
                     </h3>
                   </div>

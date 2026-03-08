@@ -129,7 +129,7 @@ export function PromiseSection() {
             {lines.map((line) => (
               <p
                 key={line}
-                className="text-fluid-2xl font-tajawal text-navy-800 leading-relaxed"
+                className="text-fluid-2xl  text-navy-800 leading-relaxed"
               >
                 {line}
               </p>
@@ -187,19 +187,19 @@ export function PromiseSection() {
           <div className="flex flex-wrap justify-center gap-5 mt-14">
             <div className="flex items-center gap-2 bg-navy-900/10 rounded-full px-5 py-2.5">
               <CheckCircleIcon className="w-5 h-5 text-navy-900" />
-              <span className="font-tajawal text-navy-900 text-fluid-body">
+              <span className=" text-navy-900 text-fluid-body">
                 {badges.fullCommitment}
               </span>
             </div>
             <div className="flex items-center gap-2 bg-navy-900/10 rounded-full px-5 py-2.5">
               <SparklesIcon className="w-5 h-5 text-navy-900" />
-              <span className="font-tajawal text-navy-900 text-fluid-body">
+              <span className=" text-navy-900 text-fluid-body">
                 {badges.totalTransparency}
               </span>
             </div>
             <div className="flex items-center gap-2 bg-navy-900/10 rounded-full px-5 py-2.5">
               <ShieldCheckIcon className="w-5 h-5 text-navy-900" />
-              <span className="font-tajawal text-navy-900 text-fluid-body">
+              <span className=" text-navy-900 text-fluid-body">
                 {badges.absoluteConfidentiality}
               </span>
             </div>

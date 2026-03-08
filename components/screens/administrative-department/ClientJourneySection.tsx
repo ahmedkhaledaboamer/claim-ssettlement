@@ -316,7 +316,7 @@ export function ClientJourneySection({ locale }: { locale: string }) {
                       })}
                     </span>
                   </div>
-                  <h3 className="text-fluid-2xl font-bold text-slate-900 mb-3">
+                  <h3 className="md:text-fluid-2xl text-fluid-xl font-bold text-slate-900 mb-3">
                     {getStepTitle(journeySteps[activeStep])}
                   </h3>
                   <p className="text-fluid-body text-slate-600 leading-relaxed">

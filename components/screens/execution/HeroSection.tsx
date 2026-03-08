@@ -11,7 +11,6 @@ import {
 import {
   ArrowLeft,
   ArrowRight,
-  ChevronDown,
   ShieldCheck,
   TrendingUp,
   Users,
@@ -21,6 +20,7 @@ import {
   Star } from
 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
+import Image from 'next/image';
 import { useCountUp } from '@/hooks/useCountUpSec';
 
 type ParticleConfig = {
@@ -53,11 +53,6 @@ function Particle({
   startY,
   x1,
   x2
-
-
-
-
-
 }: {delay: number;duration: number;startX: string;startY: string;x1: number;x2: number;}) {
   return (
     <motion.div
@@ -78,8 +73,6 @@ function Particle({
         repeat: Infinity,
         ease: 'easeOut'
       }} />);
-
-
 }
 // Floating stat card with 3D rotation
 function FloatingStatCard({
@@ -88,12 +81,6 @@ function FloatingStatCard({
   label,
   color,
   delay
-
-
-
-
-
-
 }: {icon: React.ReactNode;value: string;label: string;color: string;delay: number;}) {
   return (
     <motion.div
@@ -128,7 +115,7 @@ function FloatingStatCard({
           {icon}
         </div>
         <div>
-          <p className="text-xl md:text-2xl font-bold text-white font-tajawal">
+          <p className="text-xl md:text-2xl font-bold text-white ">
             {value}
           </p>
           <p className="text-xs md:text-sm text-gray-300">{label}</p>
@@ -244,7 +231,7 @@ export function HeroSection() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[2%]">
 
       {/* Layer 1: Deep Background with Ken Burns */}
       <motion.div
@@ -255,7 +242,7 @@ export function HeroSection() {
         className="absolute inset-0 w-full h-full z-0">
 
         <div className="absolute inset-0 bg-gradient-to-b from-plum-800/95 via-navy-950/90 to-sapphire-800/95 z-10" />
-        <img
+        <Image
           src="/imgs/A highlevel financial operatio/image_46.webp"
           alt="Dubai Skyline at Golden Hour"
           width={1920}
@@ -271,7 +258,7 @@ export function HeroSection() {
         }}
         className="absolute inset-0 w-full h-full z-[1] opacity-40">
 
-        <img
+        <Image
           src="/imgs/A liquidity support concept po/image_26.webp"
           alt="Luxury Boardroom"
           width={1920}
@@ -517,7 +504,7 @@ export function HeroSection() {
         </motion.div>
 
         {/* Animated Title - Word by Word with Elastic Bounce */}
-        <h1 className="text-5xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-tajawal font-black text-white mb-8 leading-[1.05] flex flex-wrap justify-center gap-4 md:gap-6">
+        <h1 className="text-5xl md:text-7xl lg:text-[6rem] xl:text-[7rem]  font-black text-white mb-8 leading-[1.05] flex flex-wrap justify-center gap-4 md:gap-6">
           {titleWords.map((word, i) =>
           <motion.span
             key={i}
@@ -584,7 +571,8 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto mb-16">
 
           {/* Primary CTA - Magnetic Button */}
-          <motion.button
+          <motion.a
+            href="#contact"
             style={{
               x: magneticX,
               y: magneticY
@@ -619,8 +607,8 @@ export function HeroSection() {
             <span className="relative text-navy-950 z-10">
               {t('ctaPrimary')}
             </span>
-            <ArrowCta className={`relative w-5 h-5 md:w-6 md:h-6 text-navy-950 z-10 transition-transform ${isRTL ? 'group-hover:translate-x-2' : 'group-hover:-translate-x-2'}`} />
-          </motion.button>
+            <ArrowCta className={`relative w-5 h-5 md:w-6 md:h-6 text-navy-950 z-10 transition-transform ${!isRTL ? 'group-hover:translate-x-2' : 'group-hover:-translate-x-2'}`} />
+          </motion.a>
 
           {/* Secondary CTA */}
           <motion.a
@@ -792,7 +780,7 @@ function StatItem({
       </motion.div>
       <div className="flex items-baseline gap-1 mb-1">
         <span
-          className={`text-3xl md:text-4xl lg:text-5xl font-bold ${numberColors[color]} font-tajawal`}>
+          className={`text-3xl md:text-4xl lg:text-5xl font-bold ${numberColors[color]} `}>
 
           {count}
         </span>

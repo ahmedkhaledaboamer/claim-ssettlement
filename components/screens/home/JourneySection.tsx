@@ -1,5 +1,6 @@
 'use client';
 import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import {
   MessageSquareIcon,
@@ -137,7 +138,7 @@ function JourneyCard({
         <div
           className={`w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden flex-shrink-0 ring-2 ring-offset-2 ${colors.ring} min-h-[80px]`}>
 
-          <img
+          <Image
             src={step.image}
             alt={t(`${step.id}.title`)}
             width={300}
@@ -157,7 +158,7 @@ function JourneyCard({
           <h3 className="text-fluid-body-lg font-cairo font-bold text-navy-900 mb-2">
             {t(`${step.id}.title`)}
           </h3>
-          <p className="text-navy-600 font-tajawal text-fluid-body leading-relaxed">
+          <p className="text-navy-600  text-fluid-body leading-relaxed">
             {t(`${step.id}.description`)}
           </p>
         </div>
@@ -321,7 +322,7 @@ export function JourneySection() {
                   <div className="flex-1 bg-white rounded-2xl p-5 shadow-xl">
                     <div className="flex items-start gap-3">
                       <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl overflow-hidden flex-shrink-0 min-h-[56px]">
-                        <img
+                        <Image
                           src={step.image}
                           alt={t(`steps.${step.id}.title`)}
                           width={200}
@@ -333,7 +334,7 @@ export function JourneySection() {
                         <h3 className="text-fluid-body-lg font-cairo font-bold text-navy-900 mb-1">
                           {t(`steps.${step.id}.title`)}
                         </h3>
-                        <p className="text-navy-600 font-tajawal text-fluid-body leading-relaxed">
+                        <p className="text-navy-600  text-fluid-body leading-relaxed">
                           {t(`steps.${step.id}.description`)}
                         </p>
                       </div>

@@ -1,5 +1,6 @@
 "use client";
 import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { useCountUp } from '@/hooks/useCountUpSec';
 import {
@@ -150,7 +151,7 @@ function StatBox({
         {/* Number with animation */}
         <div className="relative flex items-baseline gap-1 mb-2">
           <motion.span
-            className={`text-4xl md:text-5xl lg:text-6xl font-black ${config.text} font-tajawal`}>
+            className={`text-4xl md:text-5xl lg:text-6xl font-black ${config.text} `}>
 
             {count}
           </motion.span>
@@ -276,7 +277,7 @@ export function StatsSection() {
         className="absolute left-0 top-1/2 -translate-y-1/2 w-72 md:w-80 h-96 md:h-[420px] min-h-[320px] rounded-r-3xl overflow-hidden shadow-2xl hidden xl:block z-10">
 
         <div className="absolute inset-0 bg-gradient-to-r from-cream-50/60 to-transparent z-10" />
-        <img
+        <Image
           src="/imgs/A comprehensive institutional/image_30.webp"
           alt="Business Success"
           width={500}
@@ -303,7 +304,7 @@ export function StatsSection() {
         className="absolute right-0 top-1/2 -translate-y-1/2 w-72 md:w-80 h-96 md:h-[420px] min-h-[320px] rounded-l-3xl overflow-hidden shadow-2xl hidden xl:block z-10">
 
         <div className="absolute inset-0 bg-gradient-to-l from-cream-50/60 to-transparent z-10" />
-        <img
+        <Image
           src="/imgs/A confidential partnership env/image_20.webp"
           alt="Finance"
           width={500}
@@ -331,7 +332,7 @@ export function StatsSection() {
             <span className="text-gold-700 text-sm font-medium">{t('badge')}</span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-navy-900 mb-5">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl  font-black text-navy-900 mb-5">
             {t('title')} <span className="text-gradient-gold">{t('titleHighlight')}</span>
           </h2>
           <p className="text-gray-500 text-lg md:text-xl text-center">

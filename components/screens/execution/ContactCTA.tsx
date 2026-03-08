@@ -1,8 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
 import {
-  ArrowLeft,
-  ArrowRight,
   ShieldCheck,
   Lock,
   Award,
@@ -11,13 +9,13 @@ import {
   MessageCircle } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
 import { useTranslations, useLocale } from 'next-intl';
+import Image from 'next/image';
 
 export function ContactCTA() {
   const t = useTranslations('executionPage.contactCta');
   const locale = useLocale();
   const isRTL = locale === 'ar';
   const { ref, controls, variants } = useScrollReveal();
-  const ArrowIcon = isRTL ? ArrowLeft : ArrowRight;
   const trustBadges = [
     { key: 'governance' as const, icon: ShieldCheck },
     { key: 'security' as const, icon: Lock },
@@ -25,10 +23,10 @@ export function ContactCTA() {
     { key: 'support' as const, icon: MessageCircle },
   ];
   return (
-    <section className="relative px-[5%] py-[2%] bg-cream-50 overflow-hidden">
+    <section id="contact" className="relative px-[5%] py-[2%] bg-cream-50 overflow-hidden">
       {/* Background photo - visible and light */}
       <div className="absolute inset-0 z-0 min-h-[320px]">
-        <img
+        <Image
           src="/imgs/A cash flow continuity concept/image_28.webp"
           alt="Modern Office"
           width={1920}
@@ -84,7 +82,7 @@ export function ContactCTA() {
 
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl min-h-[400px]">
-                <img
+                <Image
                   src="/imgs/A corporate advisory workspace/image_27.webp"
                   alt="Corporate Building"
                   width={800}
@@ -110,7 +108,7 @@ export function ContactCTA() {
                 }}
                 className="absolute -bottom-8 -right-8 w-64 h-52 md:h-56 rounded-2xl overflow-hidden shadow-xl border-4 border-white min-h-[200px]">
 
-                <img
+                <Image
                   src="/imgs/A debt restructuring scene whe/image_30.webp"
                   alt="Business Handshake"
                   width={400}
@@ -146,7 +144,7 @@ export function ContactCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-navy-900 mb-8 leading-[1.15]"
+              className="text-4xl md:text-5xl lg:text-6xl  font-black text-navy-900 mb-8 leading-[1.15]"
             >
               {t('title')}{' '}
               <span className="text-gradient-gold block mt-2">
@@ -173,7 +171,7 @@ export function ContactCTA() {
             >
 
               <motion.a
-                href="tel:+0000000000"
+                href="tel:+971521068882"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center justify-center gap-3 bg-navy-900 hover:bg-navy-800 text-white px-10 py-6 rounded-full font-bold text-lg transition-all shadow-lg cursor-pointer"

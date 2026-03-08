@@ -207,7 +207,7 @@ export function ServiceLevelsSection() {
 
                       {/* Description */}
                       <p
-                        className={`text-fluid-body font-tajawal mb-6 leading-relaxed ${level.highlighted ? 'text-navy-800' : 'text-navy-600'}`}>
+                        className={`text-fluid-body  mb-6 leading-relaxed ${level.highlighted ? 'text-navy-800' : 'text-navy-600'}`}>
                         {levelsT(`${level.id}.description`)}
                       </p>
 
@@ -219,7 +219,7 @@ export function ServiceLevelsSection() {
                             className={`w-1.5 h-1.5 rounded-full ${level.highlighted ? 'bg-navy-900' : level.color === 'teal' ? 'bg-teal-500' : level.color === 'coral' ? 'bg-coral-500' : level.color === 'purple' ? 'bg-purple-500' : level.color === 'navy' ? 'bg-navy-500' : 'bg-gold-500'}`} />
 
                             <span
-                            className={`text-fluid-body font-tajawal ${level.highlighted ? 'text-navy-800' : 'text-navy-600'}`}>
+                            className={`text-fluid-body  ${level.highlighted ? 'text-navy-800' : 'text-navy-600'}`}>
 
                               {feature}
                             </span>

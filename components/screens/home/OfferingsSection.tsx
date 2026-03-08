@@ -184,7 +184,7 @@ export function OfferingsSection() {
             })}
           </svg>
 
-          <p dir={isRTL ? 'rtl' : 'ltr'} className="text-center text-navy-400 font-tajawal text-fluid-body mt-6">
+          <p dir={isRTL ? 'rtl' : 'ltr'} className="text-center text-navy-400  text-fluid-body mt-6">
             {t('hint')}
           </p>
         </div>
@@ -210,7 +210,7 @@ export function OfferingsSection() {
                     <h4 className="text-gold-600 font-cairo font-bold text-fluid-body mb-1">
                       {t(`items.${o.id}.title`)}
                     </h4>
-                    <p className="text-navy-600 font-tajawal text-fluid-body">
+                    <p className="text-navy-600  text-fluid-body">
                       {t(`items.${o.id}.description`)}
                     </p>
                   </div>

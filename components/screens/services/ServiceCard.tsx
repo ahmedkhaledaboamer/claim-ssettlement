@@ -1,5 +1,6 @@
 'use client';
 import { ComponentType } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
   BriefcaseIcon,
@@ -110,7 +111,7 @@ export function ServiceCard({
 
       {/* Image Section */}
       <div className="relative h-[clamp(180px,22vw,600px)]   overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={title}
           width={600}

@@ -71,7 +71,7 @@ function StatItem({ value, suffix, label, delay, borderColor }: StatItemProps) {
         {suffix === '%' ? count : `+${count}`}
         {suffix === '%' ? '%' : ''}
       </div>
-      <div className="text-white/70 font-tajawal text-fluid-body tracking-wide">
+      <div className="text-white/70  text-fluid-body tracking-wide">
         {label}
       </div>
     </motion.div>
@@ -126,7 +126,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-midnight">
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-midnight ">
 
       {/* Cinematic Background Slideshow */}
       <motion.div
@@ -261,7 +261,7 @@ export function HeroSection() {
           <div className="absolute inset-0 bg-imperial-500/20 blur-xl rounded-full group-hover:bg-imperial-500/30 transition-all duration-500" />
           <div className="relative glass-luxury rounded-full px-6 py-2.5 flex items-center gap-3">
             <SparklesIcon className="w-4 h-4 text-imperial-400 animate-pulse" />
-            <span className="text-white/90 font-tajawal text-fluid-label tracking-wider">
+            <span className="text-white/90  text-fluid-label tracking-wider">
               {t('badge')}
             </span>
             <SparklesIcon className="w-4 h-4 text-imperial-400 animate-pulse" />
@@ -321,7 +321,7 @@ export function HeroSection() {
             delay: 1.2,
             duration: 1
           }}
-          className="text-fluid-section-lead text-white/70 font-tajawal max-w-4xl mx-auto mb-16 leading-relaxed min-h-[5rem] font-light"
+          className="text-fluid-section-lead text-white/70  max-w-4xl mx-auto mb-16 leading-relaxed min-h-[5rem] font-light"
           dir={isRTL ? 'rtl' : 'ltr'}
         >
           <TypingText text={t('subheadline')} delay={1400} />
@@ -399,7 +399,7 @@ export function HeroSection() {
           });
         }}
       >
-        <span className="cursor-pointer text-imperial-400/70 font-tajawal text-fluid-body-lg uppercase tracking-[0.2em]">
+        <span className="cursor-pointer text-imperial-400/70  text-fluid-body-lg uppercase tracking-[0.2em]">
           {t('scrollCta')}
         </span>
         <div className="w-[1px] h-16 bg-white/10 relative overflow-hidden">

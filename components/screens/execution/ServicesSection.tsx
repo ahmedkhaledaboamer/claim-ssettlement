@@ -1,5 +1,6 @@
 "use client";
 import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useScrollReveal } from '@/hooks/useScrollRevealSec';
 import { ArrowLeft, ArrowRight, Sparkles } from 'lucide-react';
@@ -184,7 +185,7 @@ function ServiceCard({
 
         {/* Title on image */}
         <motion.h4
-          className={`absolute bottom-6 text-2xl md:text-3xl font-tajawal font-black text-white z-20 drop-shadow-lg ${isRTL ? 'right-6' : 'left-6'}`}
+          className={`absolute bottom-6 text-2xl md:text-3xl  font-black text-white z-20 drop-shadow-lg ${isRTL ? 'right-6' : 'left-6'}`}
           style={{
             transform: 'translateZ(25px)'
           }}
@@ -231,7 +232,7 @@ export function ServicesSection() {
 
       {/* Subtle Background */}
       <div className="absolute inset-0 z-0 min-h-[320px]">
-        <img
+        <Image
           src="/imgs/A financial restructuring envi/image_7.webp"
           alt=""
           width={1920}
@@ -289,7 +290,7 @@ export function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-tajawal font-black text-navy-900 mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl  font-black text-navy-900 mb-6"
           >
             {t('title')} <span className="text-gradient-teal">{t('titleHighlight')}</span>
           </motion.h2>
